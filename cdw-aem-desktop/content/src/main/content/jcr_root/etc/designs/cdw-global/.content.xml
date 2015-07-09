@@ -8,7 +8,5 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="CDW Global"
         sling:resourceType="wcm/core/components/designer"/>
-    <css/>
-    <js/>
-    <images/>
+    <clientlibs/>
 </jcr:root>

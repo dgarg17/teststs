@@ -1,2 +1,4 @@
 /cdw-aem-desktop/bundle/target/
 /cdw-aem-desktop/content/target/
+
+/cdw-aem-desktop/content/src/main/content/jcr_root/etc/designs/.DS_Store
