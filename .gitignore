@@ -1,2 +1,2 @@
-$GIT_DIR/cdw-aem-desktop/content/target/*
-$GIT_DIR/cdw-aem-desktop/bundle/target/*
+/cdw-aem-desktop/bundle/target/
+/cdw-aem-desktop/content/target/
