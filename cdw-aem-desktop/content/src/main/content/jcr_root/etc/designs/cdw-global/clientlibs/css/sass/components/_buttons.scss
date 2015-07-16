@@ -1,0 +1,97 @@
+﻿/* Buttons */
+.button { 
+    padding:5px 20px;
+    font-family:'Prelo-Bold', verdana, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+    text-decoration:none;
+	color: $color-white;
+    cursor:pointer;
+    white-space:nowrap;
+    display: inline-block;
+
+    &:active, &:link, &:visited {
+       color: $color-white;
+    }
+
+    &:hover { text-decoration: none; }
+
+    /* Color Variations */
+    &.-blue { 
+        @include vertical-gradient(#527fa5, #42739c);
+        border:1px solid #3a678d;
+
+        &:hover { @include vertical-gradient(#5f93bf, #4d85b5); }
+    }
+
+    //Red
+    &.-red { background-color: $color-red;
+        &:hover { background-color: lighten($color-red, 10%); }
+
+        &.-border { border: 1px solid $color-red; color: $color-red; background: #fff; }
+    }
+    //Gray
+    &.-gray { background-color: $color-gray80;
+        &:hover { background-color: lighten($color-gray80, 10%); }
+
+        &.-border { border: 1px solid $color-gray80; color: $color-gray80; background: #fff; }
+    }
+
+    &.-green { 
+        background-color: #6fb600;
+        &:hover { background-color: #7ecb00; }
+    }
+
+    &.-orange { 
+        @include vertical-gradient(#ffa245, #ff9933);
+        border:1px solid #dd7f21;
+
+        &:hover { @include vertical-gradient(#ffba4f, #ff9933); }
+    }
+    &.-white { 
+        @include vertical-gradient(#fafaf8, #f4f4ea);
+        border:1px solid #cacaca;
+        color: #0c73b6;
+        &:hover { @include vertical-gradient(#fff, #f4f4ea); }
+    }
+    &.-clear { 
+        background-color: none;
+         border: 1px solid $color-white;
+
+        &:hover { color: $color-white; background: rgba(255, 255, 255, 0.1); }
+    }
+
+    &.-disabled { opacity:.5; cursor:not-allowed; }
+
+
+    //Versions
+    /*&.-border { border: 2px solid $color-white; 
+        &.-white { border-color: #616265; 
+            &:hover { border-color: $color-white;  }
+        }
+
+    }*/
+
+    &.-shadow { 
+       -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.24);
+-moz-box-shadow:    0px 0px 4px 0px rgba(0, 0, 0, 0.24);
+box-shadow:         0px 0px 4px 0px rgba(0, 0, 0, 0.24);
+    }
+
+    &.-rounded { border-radius:5px;  }
+
+
+    &.-large { padding: 6px 18px; font-size: 15px; }
+
+
+}
+
+
+/* Support Legacy */
+.blueButton { @extend .button; @extend .-blue; }
+.redButton { @extend .button; @extend .-red; }
+.yellowButton { @extend .button; @extend .-orange; }
+.whiteButton { @extend .button; @extend .-white; }
+.disabledButton { @extend .button; @extend .-disabled; }
+.bigButton { @extend .-large; }
+/* Let's remove legacy support soon please! */

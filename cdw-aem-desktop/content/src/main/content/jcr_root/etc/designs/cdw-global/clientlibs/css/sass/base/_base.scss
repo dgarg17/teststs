@@ -1,0 +1,89 @@
+/* Base Elements */
+body { margin: 0; padding: 0; font-family: "Prelo-Book", verdana, sans-serif; font-size: 18px; line-height: 18px; color: $base-color; }
+
+input { color: $base-color; }
+
+a { color: $link-color; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+hr { margin: 30px 0; border: none; height: 1px; line-height: 1px; background-color: #ccc; }
+
+b, strong { font-family: 'Prelo-SemiBold'; }
+
+/* Red Bar Highlight */
+.red-highlight{
+    background-color: $color-red;
+    display: inline;
+    color: white;
+    padding:  0 5px;    
+}
+
+/* Disclaimer */
+.disclaimer{font-size: 14px;}
+/* Header Tags */
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-family: 'Prelo-Black';  
+    small { 
+        font-size: 50%; line-height: 75%; display: block; text-transform: none; font-family: 'Prelo-Medium'; font-weight: normal;
+     }
+     &.-red{color: $color-red;}
+}
+h1 { margin: 16px 0; font-size: 54px; line-height: 56px; text-transform: uppercase; }
+h2 { margin: 10px 0; font-size: 50px; line-height: 52px; text-transform: uppercase; font-family: 'Prelo-Bold'}
+        span {text-transform: none; }
+h3 { margin: 10px 0; font-size: 32px; line-height: 34px;  text-transform: uppercase;
+        span { 
+            &.-black{
+                font-family: 'Prelo-Black'; text-transform: none; 
+            }
+            &.-semi-bold{
+                font-family: 'Prelo-SemiBold'; text-transform: none;
+            }
+    }
+}
+h4 {
+    margin: 10px 0; font-size: 24px; line-height: 26px; font-family: "Prelo-Book"; text-transform: none;
+    &.-bold{font-family:'Prelo-SemiBold';}
+}
+
+h5 { font-size: 14px; line-height: 16px; font-family: 'Prelo-Medium'; }
+h6 { margin: 0; font-size: 12px; line-height: 20px; font-family: 'Prelo-Medium'; }
+
+// Paragraph Tag
+p {
+    margin: 10px 0; font-size: 18px; line-height: 26px; font-family: "Prelo-Book"; text-transform: none;
+    &.-bold{font-family:'Prelo-SemiBold';}
+}
+
+/* Tables */
+table {
+    tr {
+        &:nth-child(even) { background-color: $color-gray10; }
+        td { padding: 5px 30px; }
+    }
+}
+
+
+
+/* Helpers */
+.visually-hidden { @include visually-hidden; }
+
+.hide { display: none; }
+
+
+/* Color Helpers */
+.red { color: $primary-color; }
+
+.red-arrows { color: $primary-color; font-size: 18px; font-weight: bold; font-family: Georgia,"Times New Roman",Times,serif; /*position: relative; top: 1px;*/ }
+
+.-bg-red { background-color: $color-red; }
+.-bg-blue { background-color: $color-blue; }
+.-bg-green { background-color: $color-green; }
+
+.-bg-gray10 { background-color: $color-gray10; }
+.-bg-gray20 { background-color: $color-gray20; }
+.-bg-gray40 { background-color: $color-gray40; }
+.-bg-gray50 { background-color: $color-gray50; }
+.-bg-gray60 { background-color: $color-gray60; }
+.-bg-gray80 { background-color: $color-gray80; }
+.-bg-gray90 { background-color: $color-gray90; }
+

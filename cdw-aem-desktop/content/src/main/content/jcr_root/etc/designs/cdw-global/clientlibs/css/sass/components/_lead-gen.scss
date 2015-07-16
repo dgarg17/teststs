@@ -1,0 +1,37 @@
+.form{
+	margin-top:-275px;
+	min-height: 700px !important;
+}
+.copy{
+	
+		.-sub-font{
+			font-size:14px;
+			line-height: 16px;
+		}	
+}
+
+.partner-lockup-area{
+	@include shift(8);
+	.partner-lockup{
+		.cdw-logo-hold{
+			display:inline;
+			&::before{
+				content: "";
+		        display: inline;
+		        position: relative;
+		        z-index: 1;
+		        left: 0;
+		        top: 0;
+		        bottom: 0;
+		        border: 3px solid $color-gray90;
+		        border-width: 45px 0 0 1px;
+				margin: 0 20px;
+			}
+		}
+	}
+}
+.product-spot{
+	.row{
+		@include outer-container; 
+	}
+}

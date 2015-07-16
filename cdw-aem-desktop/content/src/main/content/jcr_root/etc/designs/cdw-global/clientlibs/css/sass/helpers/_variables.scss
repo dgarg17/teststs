@@ -1,0 +1,75 @@
+// Variables ===================================================================================== /
+
+// Typography variables
+$base-color:                  #616265;
+$font-family:                 sans-serif;
+$line-height:                 18px;
+$vertical-measure:            18px;
+
+/* Color Scheme */
+$color-red: #cc0000;
+$color-green: #6fb600;
+$color-blue: #3a678d;
+$color-black: #000;
+$color-white: #fff;
+$color-link: #0070bc;
+
+/* 7 Shades of Grey */
+$color-gray10: #efefef;
+$color-gray20: #d6d6d4;
+$color-gray40: #bdbdbd;
+$color-gray50: #afafaf;
+$color-gray60: #8c8d8e;
+$color-gray80: #616265;
+$color-gray90: #4d4e53;
+
+/* Error Colors */
+$color-error-border: $color-red;
+$color-error-bg: #f7dbe0;
+$color-error: #d15454;
+$color-warning-border:  #f5b324;
+$color-warning-bg: #f6e6c2;
+$color-warning: #f5c355;
+$color-info-border: $color-link;
+$color-info-bg: #c9e5ef;
+$color-info: #3294b6;
+$color-success-border: #76bd22;
+$color-success-bg: #dfeecc;
+$color-success: #92c556;
+
+//Social Colors
+$color-twitter: #5eb5e3;
+$color-linkedIn: #3158a9;
+$color-facebook: #0975a3; 
+$color-spiceworks: #fc5900;
+
+//Legacy Colors
+$primary-color: $color-red;
+$link-color: $color-link;
+$black: $color-black;
+$white: $color-white;
+
+/* Bourbo.io and Neat.io */
+$max-width: 1170px;
+//$visual-grid: true;
+$border-box-sizing: false;
+
+//Media Queries
+$site-width: 1138px;
+$screen-lg-min: 1170px;
+$screen-md-min: 970px;
+$screen-sm-min: 750px;
+$screen-xs-min: 580px;
+
+//340
+//500
+//620
+//820
+//1044
+//1170
+
+
+$screen-md-max: $screen-lg-min - 1;
+$screen-sm-max: $screen-md-min - 1;
+$screen-xs-max: $screen-sm-min - 1;
+
