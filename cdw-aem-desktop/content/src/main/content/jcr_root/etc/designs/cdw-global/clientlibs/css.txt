@@ -1,5 +1,2 @@
 #base=css
-vendor.css
-base.css
-components.css
-layout.css
+main.css
