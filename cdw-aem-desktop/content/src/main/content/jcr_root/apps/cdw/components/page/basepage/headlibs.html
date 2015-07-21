@@ -1,0 +1,5 @@
+<div data-sly-use.head="head.js" data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"  data-sly-unwrap><!--/* /data-sly-unwrap */-->
+<meta data-sly-test="${wcmmode.edit || wcmmode.design}" data-sly-call="${clientLib.all @ categories='cq.foundation-main'}" data-sly-unwrap></meta><!--/* /data-sly-unwrap */-->
+<link data-sly-test="${head.designPath}" href="${head.designPath}/clientlibs.css" rel="stylesheet" type="text/css" /> 
+<div data-sly-include="headlibs-extra.html" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
+<div data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
