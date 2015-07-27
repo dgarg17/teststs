@@ -20,7 +20,11 @@
     <name>cdw-aem-desktop Package</name>
 
     <dependencies>
-       
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cdw-aem-desktop-bundle</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
     <build>
         <resources>
@@ -51,7 +55,11 @@
                     <group>CDW AEM Desktop</group>
                     <filterSource>src/main/content/META-INF/vault/filter.xml</filterSource>
                     <embeddeds>
-                        
+                        <embedded>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>cdw-aem-desktop-bundle</artifactId>
+                            <target>/apps/cdw/install</target>
+                        </embedded>
                     </embeddeds>
                     <targetURL>http://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
                 </configuration>
