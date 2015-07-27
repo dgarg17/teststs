@@ -1936,7 +1936,7 @@ table tr td {
   line-height: inherit; }
 
 .hero {
-  background-image: url(../images/hero1.jpg);
+  
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1972,7 +1972,7 @@ table tr td {
         line-height: 22px; }
 
 .lead-gen-hero {
-  background-image: url(../images/lead-gen2.jpg);
+ 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
