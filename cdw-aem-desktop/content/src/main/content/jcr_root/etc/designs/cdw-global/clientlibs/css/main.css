@@ -1950,14 +1950,14 @@ table tr td {
   line-height: inherit; }
 
 .hero {
-  background-image: url(../images/hero1.jpg);
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   /* should use button class */
   min-height: 320px;
   margin-bottom: 20px;
-  color: white; }
+ }
   .hero .btn {
     font-weight: bold;
     font-size: 18px; }
