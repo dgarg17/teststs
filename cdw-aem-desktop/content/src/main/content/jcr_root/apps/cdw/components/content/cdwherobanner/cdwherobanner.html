@@ -1,8 +1,4 @@
 <!--/* Hero Banner Image */ -->
-<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
-	<clientlib data-sly-call="${clientLib.all @ categories=['cdw-global']}"
-		data-sly-unwrap />
-</head>
 
 <div class="hero align-${properties.textalignment}"
 	style="background-image:url('${properties.backgroundimage @ context='styleString'}');color:#${properties.textcolor @ context='styleString'};background-color:#${properties.backgroundcolor @ context='styleString'};">
@@ -20,8 +16,10 @@
 				<h6>
 					${properties.bodytext}
 					<p></p>
-					<div data-sly-test="${properties.ctalink}" class="btn button -red">${properties.cdwctalabel}
-					</div>
+
+					<a href="${properties.ctalink}" data-sly-test="${properties.ctalink}" class="btn button -red">${properties.cdwctalabel}
+
+					</a>
 				</h6>
 
 		</div>
