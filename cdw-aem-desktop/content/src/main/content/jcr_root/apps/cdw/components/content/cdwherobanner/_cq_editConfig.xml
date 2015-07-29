@@ -27,4 +27,10 @@
         active="{Boolean}true"
         configPath="../../dialog/items/tab1/items/text"
         editorType="textimage"/>
+    <cq:listeners
+        jcr:primaryType="cq:EditListenersConfig"
+        aftercopy="REFRESH_PAGE"
+        afterdelete="REFRESH_PAGE"
+        afteredit="REFRESH_PAGE"
+        afterinsert="REFRESH_PAGE"/>
 </jcr:root>
