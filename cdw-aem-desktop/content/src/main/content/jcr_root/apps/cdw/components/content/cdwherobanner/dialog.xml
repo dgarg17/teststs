@@ -103,7 +103,7 @@
                     xtype="pathfield"/>
                 <textcolor
                     jcr:primaryType="cq:Widget"
-                    colors="[4d4d4f,FFFFFF,cc0000,0072bc]"
+                    colors="[4D4D4F,FFFFFF,CC0000,0072BC]"
                     fieldLabel="Text Color"
                     name="./textcolor"
                     xtype="colorfield"/>
@@ -128,7 +128,7 @@
                 </textalignment>
                 <backgroundcolor
                     jcr:primaryType="cq:Widget"
-                    colors="[cc0000,d02c30,fe4a5d,ff828a,ffb0c0,eec7ce,c20430,d8292f,e74c39,e57e3e,f2bd7d,f28b00,f5b324,f8bf00,ffd200,ffe900,009d4f,3daf2c,76bd22,a6ce39,c3d600,009483,00a19c,00afab,63ccca,9adada,007299,007cbb,00a8e2,00b3e3,54c9e8,76236d,923a80,a45b96,b588b9,ceadd0,b42573,e01783,ea6cb0,f6a7d7,e8bcd8,898b8e,63656a,54565b,4d4d4f]"
+                    colors="[CC0000,D02CC30,FE4A5D,FF828A,FFB0C0,EEC7CE,C20430,D8292F,E74C39,E57E3E,F2Bd7D,F28B00,F5B324,F8BF00,FFD200,FFE900,009D4F,3DAF2C,76BD22,A6CE39,C3D600,009483,00A19cC,00AFAB,63CCCA,9ADADA,007299,007CBB,00A8E2,00B3E3,54C9E8,76236d,923a80,A45B96,B588B9,CEADD0,B42573,E01783,EA6CB0,F6A7D7,E8BCD8,898B8E,63656A,54565B,4d4D4F]"
                     fieldLabel="Background Color"
                     name="./backgroundcolor"
                     xtype="colorfield"/>
