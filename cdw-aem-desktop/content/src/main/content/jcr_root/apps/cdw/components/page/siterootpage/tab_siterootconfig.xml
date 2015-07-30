@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Site Root Config">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <siterootconfig
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <sitedomain
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Site Domain"
+                    name="./siteDomain"
+                    xtype="textfield"/>
+                <s7PartnerLogoCDWTreatment
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="This field defines the Scene7 image that will be used for the CDW image treatment on partner logo lockups."
+                    fieldLabel="Scene7 CDW Partner Logo Treatment"
+                    name="./s7CDWPartnerLogoTreatment"
+                    xtype="textfield"/>
+            </items>
+        </siterootconfig>
+    </items>
+</jcr:root>
