@@ -14,12 +14,12 @@
                     fieldLabel="Site Domain"
                     name="./siteDomain"
                     xtype="textfield"/>
-                <s7PartnerLogoCDWTreatment
-                    jcr:primaryType="cq:Widget"
-                    fieldDescription="This field defines the Scene7 image that will be used for the CDW image treatment on partner logo lockups."
-                    fieldLabel="Scene7 CDW Partner Logo Treatment"
-                    name="./s7CDWPartnerLogoTreatment"
-                    xtype="textfield"/>
+                <s7PartnerLogoCDWTreatment 
+                    jcr:primaryType="cq:Widget" 
+                    fieldDescription="This field defines the Scene7 image that will be used for the CDW image treatment on partner logo lockups. Drag a S7 image into the pathfield to define the logo." 
+                    fieldLabel="Scene7 CDW Partner Logo Treatment" 
+                    name="./s7CDWPartnerLogoTreatment" 
+                    xtype="pathfield"/>
             </items>
         </siterootconfig>
     </items>
