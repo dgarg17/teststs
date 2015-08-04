@@ -30,9 +30,9 @@ public class UtilityWCMUseHelper extends BaseComponent {
 		if(getWcmMode().isDisabled()){
 			isPublish =true;
 		}
-		siteRootPagePath = Utility.getSiteRootPath(getCurrentPage());
+		siteRootPage = Utility.getSiteRootPage(getCurrentPage());
 		
-	    siteRootPage = Utility.getSiteRootPage(getCurrentPage());
+		siteRootPagePath = Utility.getSiteRootPath(getCurrentPage());
 		
 		siteRootInheritedProperty = null;
 		if(propertyName!=null ){
