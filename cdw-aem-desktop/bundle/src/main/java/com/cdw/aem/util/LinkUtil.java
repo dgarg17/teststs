@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 public class LinkUtil {
 
     private static boolean isInternalUrl( String url){
-        return  Pattern.compile("^/content/(.*)").matcher(url).find();
+        return  Pattern.compile("^(?!/content/dam)/content/(.*)").matcher(url).find();
     }
 
     private static boolean isExternalUrl( String url){
