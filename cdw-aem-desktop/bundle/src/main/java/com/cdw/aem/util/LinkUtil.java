@@ -12,15 +12,15 @@ import java.util.regex.Pattern;
  */
 public class LinkUtil {
 
-    private  boolean  isInternalUrl( String url){
-        return  Pattern.compile("^/content/(.*)").matcher(url).find();
+    private static boolean isInternalUrl( String url){
+        return  Pattern.compile("^(?!/content/dam)/content/(.*)").matcher(url).find();
     }
 
-    private  boolean  isExternalUrl( String url){
+    private static boolean isExternalUrl( String url){
         return Pattern.compile("^((http|https):\\/\\/)?(([\\w+]{1,}[.]{1,}){1,})(.*)").matcher(url).find();
     }
 
-    private  boolean  isExternalUrlWithProtocol( String url){
+    private static boolean isExternalUrlWithProtocol( String url){
         return Pattern.compile("^((http|https):\\/\\/)(([\\w+]{1,}[.]{1,}){1,})(.*)").matcher(url).find();
     }
 
@@ -29,7 +29,7 @@ public class LinkUtil {
     1. validate and add ".html" to local url(relative)
     2. add "//" to the url with any protocol (http://,https://,//)
      */
-    public  String updateUrl(String url) {
+    public static  String updateUrl(String url) {
         if(isInternalUrl(url)&&!url.endsWith(".html")){
                 return url + ".html";
         }else if(!isInternalUrl(url)&&isExternalUrl(url)&&!isExternalUrlWithProtocol(url)){
