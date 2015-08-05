@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+          group.pathPrefix=""
+          group.expirationTime="1d"
+          user.membershipExpTime="1h"
+          user.pathPrefix=""
+          user.propertyMapping="rep:fullname\=cn"
+        handler.name="com.cdw.SyncHandler.AD"
+        user.autoMembership="contributor"
+        user.expirationTime="1h"
+        group.propertyMapping=""
+        user.membershipNestingDepth="0"
+        group.autoMembership=""
+        />
