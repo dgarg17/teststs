@@ -38,15 +38,9 @@ public class Utility {
 	 */
 	public static String getSiteRootPath(Page currentPage) {		
 		String siteRootPath = null;
-		boolean siteRootTemplateFound = false;
 		try{
-			while (!siteRootTemplateFound && currentPage!=null){
-				if( currentPage.getProperties().get("cq:template","").matches("(.*)siterootpage")) { 
-					siteRootTemplateFound = true;
-					siteRootPath= currentPage.getPath();
-				} else 
-					currentPage = currentPage.getParent();
-			}
+			Page siteRootPage = Utility.getSiteRootPage(currentPage);
+			siteRootPath = (siteRootPage != null) ? siteRootPage.getPath() : "";
 		}
 		catch (Exception e) {
 			log.error("Utility : Exception",e);
@@ -112,7 +106,7 @@ public class Utility {
 		try {
 			while (!siteRootTemplateFound && currentPage != null) {
 				if (currentPage.getProperties().get("cq:template", "")
-						.matches("(.*)siteroottemplate")) {
+						.matches("(.*)siterootpage")) {
 					siteRootTemplateFound = true;
 					siteRootPage = currentPage;
 				} else
