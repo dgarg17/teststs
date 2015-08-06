@@ -1,0 +1,44 @@
+<!--/* CDW Petite Header */ -->
+
+<div
+	data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"
+	class="container">
+	<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.homepageurl}"
+			href="${link.urlUpdate}"><img
+		src="${utility.s7CDWPartnerLogoTreatmentInheritedProperty}"
+		alt="CDW Logo" class="logo">
+	</a>
+
+	<div class="nav-collapsed">
+		<i class="ico-menu"></i>
+	</div>
+	<ul class="nav">
+		<li data-sly-test="${properties.link1path}"><a
+			data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.link1path}"
+			href="${link.urlUpdate}">
+				<div data-sly-test="${properties.link1label}" data-sly-unwrap>${properties.link1label}</div>
+				<div data-sly-test="${!properties.link1label}" data-sly-unwrap>${link.getHeaderLinkLabel}</div>
+		</a></li>
+		<li data-sly-test="${properties.link2path}"><a
+			data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.link2path}"
+			href="${link.urlUpdate}">
+				<div data-sly-test="${properties.link2label}" data-sly-unwrap>${properties.link2label}</div>
+				<div data-sly-test="${!properties.link2label}" data-sly-unwrap>${link.getHeaderLinkLabel}</div>
+		</a></li>
+		<li data-sly-test="${properties.link3path}"><a
+			data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.link3path}"
+			href="${link.urlUpdate}">
+				<div data-sly-test="${properties.link3label}" data-sly-unwrap>${properties.link3label}</div>
+				<div data-sly-test="${!properties.link3label}" data-sly-unwrap>${link.getHeaderLinkLabel}</div>
+		</a></li>
+		<li data-sly-test="${properties.phoneno}"><a href="tel:${properties.phoneno}"
+			data-sly-use.phoneno="${'com.cdw.aem.util.components.UtilityWCMUseHelper' @phoneno=properties.phoneno}">${phoneno.getFormatPhoneNumber}
+		</a></li>
+	</ul>
+</div>
+
+
+
+
+
+
