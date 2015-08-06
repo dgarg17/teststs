@@ -7,6 +7,9 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.regex.Pattern;
 
+import com.day.cq.wcm.api.Page;
+import com.day.cq.wcm.api.PageManager;
+
 /**
  * Created by goutved on 7/29/2015.
  */
@@ -37,4 +40,21 @@ public class LinkUtil {
         }
         return url;
     }
+    
+
+    /*
+    Determine the link label with below condition
+    1. if the url corresponds to a valid page , get the page title
+    2. else return the link
+     */
+    public  static String getLinkLabel(String url, PageManager pageManager) {
+		String pageTitle = "";
+		Page page = pageManager.getPage(url);
+		if (page != null)
+			pageTitle = page.getTitle();
+		else
+			pageTitle = url;
+		return pageTitle;
+
+	}
 }
