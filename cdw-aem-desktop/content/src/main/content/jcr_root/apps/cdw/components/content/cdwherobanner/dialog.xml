@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Dialog"
+    height="{Long}500"
     title="dialog"
-    xtype="dialog"
-    height="{Long}500">
+    xtype="dialog">
     <items
         jcr:primaryType="cq:Widget"
         xtype="tabpanel">
@@ -42,8 +42,7 @@
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Body Copy"
                         name="./bodytext"
-                        xtype="textarea">
-                    </text>
+                        xtype="textarea"/>
                     <ctalabel
                         jcr:primaryType="cq:Widget"
                         fieldDescription="Max character limit is 24"
@@ -58,7 +57,7 @@
                         xtype="pathfield"/>
                     <textcolor
                         jcr:primaryType="cq:Widget"
-                        colors="[4D4D4F,FFFFFF,CC0000,0072BC]"
+                        colors="[4D4D4F,FFFFFF,CC0000]"
                         fieldLabel="Text Color"
                         name="./textcolor"
                         xtype="colorfield"/>
