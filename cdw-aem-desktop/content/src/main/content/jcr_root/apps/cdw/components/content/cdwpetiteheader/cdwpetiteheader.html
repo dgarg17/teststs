@@ -3,12 +3,14 @@
 <div
 	data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"
 	class="container">
+    <div data-sly-test="${properties.homepageurl}"data-sly-unwrap>
 	<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.homepageurl}"
-			href="${link.urlUpdate}"><img
-		src="${utility.s7CDWPartnerLogoTreatmentInheritedProperty}"
-		alt="CDW Logo" class="logo">
+			href="${link.urlUpdate}"><img data-sly-test="${properties.fileReference}" src="${properties.fileReference}"
+				alt="CDW Logo" class="logo"/>
 	</a>
-
+    </div>
+    <img data-sly-test="${!properties.homepageurl}" src="${properties.fileReference}"
+				alt="CDW Logo" class="logo"/>
 	<div class="nav-collapsed">
 		<i class="ico-menu"></i>
 	</div>

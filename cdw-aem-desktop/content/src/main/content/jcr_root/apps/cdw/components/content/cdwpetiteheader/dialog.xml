@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Dialog"
-    deferredRender="false"
-    height="{Long}500"
+    height="{Long}600"
     title="CDW Petite Header"
     xtype="tabpanel">
     <items jcr:primaryType="cq:WidgetCollection">
+        <layout
+            jcr:primaryType="cq:Widget"
+            ddGroups="[s7media]"
+            fileNameParameter="./fileName"
+            fileReferenceParameter="./fileReference"
+            name="./file"
+            requestSuffix=".img.png"
+            title="Logo Image"
+            xtype="s7html5smartimage"/>
         <advanced
             jcr:primaryType="cq:Widget"
             title="CDW Header"
