@@ -65,8 +65,4 @@ public class UtilityWCMUseHelper extends BaseComponent {
 		return formatPhoneNumber;
 	}
 	
-	public String getPetiteHeaderConfigPath(){
-		return siteRootPagePath+"/jcr:content/petiteHeader";
 	}
-
-}
