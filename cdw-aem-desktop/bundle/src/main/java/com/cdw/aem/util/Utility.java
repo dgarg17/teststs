@@ -23,46 +23,47 @@ import com.day.cq.wcm.api.Page;
 
 /**
  * @author Adobe
- *
+ * 
  */
 public class Utility {
-	
+
 	private static final Logger log = LoggerFactory.getLogger(Utility.class);
-	
-		
+
 	/**
-	 * Finds the nearest parent site root page path with respect to current page(passed as input param)
+	 * Finds the nearest parent site root page path with respect to current
+	 * page(passed as input param)
 	 * 
 	 * @param currentPage
 	 * @return
 	 */
-	public static String getSiteRootPath(Page currentPage) {		
+	public static String getSiteRootPath(Page currentPage) {
 		String siteRootPath = null;
-		try{
+		try {
 			Page siteRootPage = Utility.getSiteRootPage(currentPage);
 			siteRootPath = (siteRootPage != null) ? siteRootPage.getPath() : "";
-		}
-		catch (Exception e) {
-			log.error("Utility : Exception",e);
+		} catch (Exception e) {
+			log.error("Utility : Exception", e);
 		}
 		return siteRootPath;
 	}
-			
+
 	/**
-	 * Get the nearest configured property value from site root page. 
-	 * Method search for the nearest parent page where property is configured.
+	 * Get the nearest configured property value from site root page. Method
+	 * search for the nearest parent page where property is configured.
 	 * 
 	 * @param resource
 	 * @param propertyName
 	 * @param defaultValue
 	 * @return
 	 */
-	public static String getSiteRootInheritedProperty(Resource resource, String propertyName, String defaultValue) {
-		InheritanceValueMap properties = new HierarchyNodeInheritanceValueMap(resource);
+	public static String getSiteRootInheritedProperty(Resource resource,
+			String propertyName, String defaultValue) {
+		InheritanceValueMap properties = new HierarchyNodeInheritanceValueMap(
+				resource);
 		String staticRoot = properties.getInherited(propertyName, defaultValue);
 		return staticRoot;
 	}
-	
+
 	/**
 	 * It returns formatted phone number. If input phone number is of length 10,
 	 * then it automatically adds 1 as the country code and returns number in
@@ -74,17 +75,17 @@ public class Utility {
 	public static String formatPhoneNumber(String phoneNumber) {
 		String formattedNumber = "";
 		if (phoneNumber != null) {
-				// add 1 as the country code
-				formattedNumber = String.format("1 %s %s %s",
-						phoneNumber.substring(0, 3),
-						phoneNumber.substring(3, 6),
-						phoneNumber.substring(6, 10));
-			} 
+			// add 1 as the country code
+			formattedNumber = phoneNumber.substring(0, 3) + "."
+					+ phoneNumber.substring(3, 6) + "."
+					+ phoneNumber.substring(6, 10);
+		}
 		return formattedNumber;
-	}	
-	
+	}
+
 	/**
-	 * Finds the nearest parent site root page with respect to current page(passed as input param)
+	 * Finds the nearest parent site root page with respect to current
+	 * page(passed as input param)
 	 * 
 	 * @param currentPage
 	 * @return
@@ -106,5 +107,5 @@ public class Utility {
 		}
 		return siteRootPage;
 	}
-	
+
 }
