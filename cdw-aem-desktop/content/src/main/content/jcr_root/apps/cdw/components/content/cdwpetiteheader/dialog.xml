@@ -59,10 +59,10 @@
                     xtype="pathfield"/>
                 <phoneno
                     jcr:primaryType="cq:Widget"
-                    fieldDescription="Only 10 or 11 digit US phone number . No special characters allowed."
+                    fieldDescription="Only 10 digit US phone number . No special characters allowed."
                     fieldLabel="Phone number"
                     name="./phoneno"
-                    regex="/^1?([1-9])([0-9]{9})$/"
+                    regex="/^([1-9])([0-9]{9})$/"
                     regexText="Please enter a valid phone number."
                     xtype="textfield"/>
             </items>
