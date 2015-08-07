@@ -20,6 +20,10 @@
                         type="select"
                         xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
+                            <layout-12
+                                jcr:primaryType="nt:unstructured"
+                                text="Full Width Layout (Default)"
+                                value="./layouts/layout_12.html"/>
                             <layout-3-6-3
                                 jcr:primaryType="nt:unstructured"
                                 text="Layout 3-6-3"
