@@ -1,7 +1,7 @@
 <!--/* Hero Banner Image */ -->
 
 <div class="hero align-${properties.textalignment}"
-	style="background-image:url('${properties.backgroundimage @ context='styleString'}');color:#${properties.textcolor @ context='styleString'};background-color:#${properties.backgroundcolor @ context='styleString'};">
+	style="background-image:url('${currentNode.path @ context='styleString'}.img.png');color:#${properties.textcolor @ context='styleString'};background-color:#${properties.backgroundcolor @ context='styleString'};">
 	<div class="row">
 		<div class="copy">
 			<h1>
@@ -17,7 +17,7 @@
 					${properties.bodytext}
 					<p></p>
 
-					<a href="${properties.ctalink}" data-sly-test="${properties.ctalink}" class="btn button -red">${properties.cdwctalabel}
+					<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"  href="${link.urlUpdate}" data-sly-test="${properties.ctalink}" class="btn button -red">${properties.cdwctalabel}
 
 					</a>
 				</h6>

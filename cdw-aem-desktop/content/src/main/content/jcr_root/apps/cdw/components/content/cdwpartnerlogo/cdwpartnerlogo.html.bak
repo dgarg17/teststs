@@ -1,0 +1,15 @@
+<!--/* CDW Partner Logo */ -->
+
+<div class="layout">
+	<div class="partner-lockup">
+		<div class="logo">
+			<img src="${properties.fileReference}?$partnerLockup$" alt="${properties.alt}" />
+		</div>
+		<div data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" class="logo">
+			<img
+				src="${utility.s7CDWPartnerLogoTreatmentInheritedProperty}?$partnerLockup$"
+				alt="CDW Logo" />
+		</div>
+	</div>
+</div>
+

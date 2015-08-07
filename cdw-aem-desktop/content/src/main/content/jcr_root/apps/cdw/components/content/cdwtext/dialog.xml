@@ -99,7 +99,7 @@
                         sheet1="/etc/designs/cdw-global/clientlibs/css/main.css"/>
                     <cssStyles
                         jcr:primaryType="nt:unstructured"
-                        _x002d_highlight="Red Highlight"
+                        _x002d_highlight="Red Highlight(Only use for heading)"
                         disclaimer="Disclaimer"/>
                 </text>
                 <isRichTextFlag
