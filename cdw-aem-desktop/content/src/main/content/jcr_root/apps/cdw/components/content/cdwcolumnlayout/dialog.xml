@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Config for Column Layout"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Configuration of Column Layout"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <layout
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Column Layout"
+                        name="./layout"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <layout-3-6-3
+                                jcr:primaryType="nt:unstructured"
+                                text="Layout 3-6-3"
+                                value="./layouts/layout_3-6-3.html"/>
+                            <layout-6-3-3
+                                jcr:primaryType="nt:unstructured"
+                                text="Layout 6-3-3"
+                                value="./layouts/layout_6-3-3.html"/>
+                            <layout-3-3-3-3
+                                jcr:primaryType="nt:unstructured"
+                                text="Layout 3-3-3-3"
+                                value="./layouts/layout_3-3-3-3.html"/>
+                            <layout-4-4-4
+                                jcr:primaryType="nt:unstructured"
+                                text="Layout 4-4-4"
+                                value="./layouts/layout_4-4-4.html"/>
+                            <layout-4-4-2-2
+                                jcr:primaryType="nt:unstructured"
+                                text="Layout 4-4-2-2"
+                                value="./layouts/layout_4-4-2-2.html"/>
+                            <layout-6-6
+                                jcr:primaryType="nt:unstructured"
+                                text="Layout 6-6"
+                                value="./layouts/layout_6-6.html"/>
+                            <layout-7-5
+                                jcr:primaryType="nt:unstructured"
+                                text="Layout 7-5"
+                                value="./layouts/layout_7-5.html"/>
+                            <layout-5-7
+                                jcr:primaryType="nt:unstructured"
+                                text="Layout 5-7"
+                                value="./layouts/layout_5-7.html"/>
+                            <layout-9-3
+                                jcr:primaryType="nt:unstructured"
+                                text="Layout 9-3"
+                                value="./layouts/layout_9-3.html"/>
+                            <layout-3-9
+                                jcr:primaryType="nt:unstructured"
+                                text="Layout 3-9"
+                                value="./layouts/layout_3-9.html"/>
+                            <layout-8-4
+                                jcr:primaryType="nt:unstructured"
+                                text="Layout 8-4"
+                                value="./layouts/layout_8-4.html"/>
+                            <layout-4-8
+                                jcr:primaryType="nt:unstructured"
+                                text="Layout 4-8"
+                                value="./layouts/layout_4-8.html"/>
+                        </options>
+                    </layout>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

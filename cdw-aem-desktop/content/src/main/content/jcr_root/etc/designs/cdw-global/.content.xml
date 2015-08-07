@@ -7,6 +7,35 @@
         cq:template="/libs/wcm/core/templates/designpage"
         jcr:primaryType="cq:PageContent"
         jcr:title="CDW Global"
-        sling:resourceType="wcm/core/components/designer"/>
+        sling:resourceType="wcm/core/components/designer">
+        <leadgenpage jcr:primaryType="nt:unstructured">
+            <mainpar
+                jcr:lastModified="{Date}2015-08-05T09:38:55.159-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:CDW - General,group:CDW - Layout]">
+                <section jcr:primaryType="nt:unstructured"/>
+                <cdwcolumnlayout jcr:primaryType="nt:unstructured">
+                    <parsys
+                        jcr:lastModified="{Date}2015-08-05T09:59:43.604-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys"
+                        components="group:CDW - General">
+                        <section jcr:primaryType="nt:unstructured"/>
+                    </parsys>
+                </cdwcolumnlayout>
+            </mainpar>
+            <leftpar
+                jcr:lastModified="{Date}2015-08-05T09:38:55.159-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:CDW - General]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </leftpar>
+        </leadgenpage>
+    </jcr:content>
     <clientlibs/>
 </jcr:root>
