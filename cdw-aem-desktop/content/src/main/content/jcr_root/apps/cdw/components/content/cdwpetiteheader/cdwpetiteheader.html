@@ -33,7 +33,7 @@
 				<div data-sly-test="${properties.link3label}" data-sly-unwrap>${properties.link3label}</div>
 				<div data-sly-test="${!properties.link3label}" data-sly-unwrap>${link.getHeaderLinkLabel}</div>
 		</a></li>
-		<li data-sly-test="${properties.phoneno}"><a href="tel:${properties.phoneno}"
+		<li data-sly-test="${properties.phoneno}"><a href="tel:+1${properties.phoneno}"
 			data-sly-use.phoneno="${'com.cdw.aem.util.components.UtilityWCMUseHelper' @phoneno=properties.phoneno}">${phoneno.getFormatPhoneNumber}
 		</a></li>
 	</ul>
