@@ -5,7 +5,7 @@
 	class="container">
     <div data-sly-test="${properties.homepageurl}"data-sly-unwrap>
 	<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.homepageurl}"
-			href="${link.urlUpdate}"><img data-sly-test="${properties.fileReference}" src="${properties.fileReference}"
+			href="${link.urlUpdate}"><img data-sly-test="${properties.fileReference}?$partnerLockup$" src="${properties.fileReference}?$partnerLockup$"
 				alt="CDW Logo" class="logo"/>
 	</a>
     </div>
