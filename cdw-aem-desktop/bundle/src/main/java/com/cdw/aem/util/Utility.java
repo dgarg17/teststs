@@ -74,11 +74,10 @@ public class Utility {
 	public static String formatPhoneNumber(String phoneNumber) {
 		String formattedNumber = "";
 		if (phoneNumber != null) {
-				// add 1 as the country code
-				formattedNumber = String.format("1 %s %s %s",
-						phoneNumber.substring(0, 3),
-						phoneNumber.substring(3, 6),
-						phoneNumber.substring(6, 10));
+			formattedNumber = String.format("%s.%s.%s",
+					phoneNumber.substring(0, 3),
+					phoneNumber.substring(3, 6),
+					phoneNumber.substring(6, 10));		
 			} 
 		return formattedNumber;
 	}	
