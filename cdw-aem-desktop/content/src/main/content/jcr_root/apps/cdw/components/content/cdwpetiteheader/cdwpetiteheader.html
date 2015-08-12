@@ -1,8 +1,7 @@
 <!--/* CDW Petite Header */ -->
 
 <div
-	data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"
-	class="container">
+	data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
     <div data-sly-test="${properties.homepageurl}"data-sly-unwrap>
 	<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.homepageurl}"
 			href="${link.urlUpdate}"><img data-sly-test="${properties.fileReference}" src="${properties.fileReference}?$partnerLockup$"
@@ -38,9 +37,3 @@
 		</a></li>
 	</ul>
 </div>
-
-
-
-
-
-
