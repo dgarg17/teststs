@@ -14,7 +14,7 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="foundation/components/parsys"
-                components="[group:CDW - General,group:CDW - Layout]">
+                components="[group:CDW - Layout]">
                 <section jcr:primaryType="nt:unstructured"/>
                 <cdwcolumnlayout jcr:primaryType="nt:unstructured">
                     <parsys
