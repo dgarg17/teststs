@@ -1,7 +1,7 @@
 <!--/* CDW Column Layout component. */ -->
-<div data-sly-test="${properties.layoutType && properties.layoutType != ''}" 
+<div data-sly-test="${properties.layoutType && properties.layoutType != 'normal'}" 
      class="layout${properties.layoutType}"
      style="background-image:url('${currentNode.path @ context='styleString'}.img.png');background-color:#${properties.backgroundColor @ context='styleString'};background-size:cover;background-repeat:no-repeat;background-position:center;">
   <div data-sly-include="inner-layout.html" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
 </div>
-<div data-sly-test="${!properties.layoutType || properties.layoutType == ''}" data-sly-include="inner-layout.html" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
+<div data-sly-test="${!properties.layoutType || properties.layoutType == 'normal'}" data-sly-include="inner-layout.html" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->

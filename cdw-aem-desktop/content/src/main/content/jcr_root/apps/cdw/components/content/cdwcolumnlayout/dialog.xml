@@ -84,7 +84,7 @@
                             <normal
                                 jcr:primaryType="nt:unstructured"
                                 text="Normal (Default)"
-                                value=""/>
+                                value="normal"/>
                             <extended
                                 jcr:primaryType="nt:unstructured"
                                 text="Extended"
