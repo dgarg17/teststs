@@ -1,0 +1,27 @@
+
+<!--/* CDW LiveClicker Video and Text Component */ -->
+
+<div data-sly-test="${properties.widgetId}" class="media">
+	<div data-sly-test="${properties.textalignment=='top'}" data-sly-unwrap>
+		<div class="caption" data-sly-test="${properties.title||properties.desc}">
+			<h5 data-sly-test="${properties.title}">${properties.title}</h5>
+			<p data-sly-test="${properties.desc}">${properties.desc}</p>
+		</div>	
+	</div>
+	<div data-sly-test="${!properties.layout}" class="video-wrapper">
+		<script id="27734" type="text/javascript" src="https://sc.liveclicker.net/service/getEmbed?client_id=1526&amp;widget_id=${properties.widgetId}&amp;width=inherit&amp;height=inherit&amp;player_custom_id=2198"></script>
+	</div>
+	<div data-sly-test="${properties.layout}" class="${properties.layout}">
+		<script id="27734" type="text/javascript" src="https://sc.liveclicker.net/service/getEmbed?client_id=1526&amp;widget_id=${properties.widgetId}&amp;width=inherit&amp;height=inherit&amp;player_custom_id=2198"></script>
+	</div>
+	<div data-sly-test="${properties.textalignment=='bottom'}" data-sly-unwrap>
+		<div class="caption" data-sly-test="${properties.title||properties.desc}">
+			<h5 data-sly-test="${properties.title}">${properties.title}</h5>
+			<p data-sly-test="${properties.desc}">${properties.desc}</p>
+		</div>	
+	</div>
+</div>
+
+<div data-sly-test="${!properties.widgetId && (wcmmode.edit || wcmmode.design)}" class="media">
+	<h6>Please define a video Widget Id.</h6>
+</div>
