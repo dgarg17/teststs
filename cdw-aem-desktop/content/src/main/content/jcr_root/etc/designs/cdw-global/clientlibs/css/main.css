@@ -2134,24 +2134,13 @@ table tr td {
 /* Layouts */
 .layout-full {
   padding-top: 20px;
-  background-color: #333; 
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position:center;}
+  background-color: #333;}
 
 
-/* Layouts */
-.layout-normal {
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position:center;}
 
 
 
 .layout-extended {
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position:center;
   max-width: 1400px;
   background-color: #f00;
   position: relative;
