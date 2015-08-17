@@ -1869,8 +1869,7 @@ table tr td {
   margin-bottom: 60px; }
   .media .caption {
     padding: 12px;
-    color: #fff;
-    background-color: #00a8e2; }
+    }
     .media .caption p {
       margin: 0; }
   .media .video-wrapper {
@@ -2099,7 +2098,9 @@ table tr td {
       width: 46%; } }
 
 .layout-extended {
+
   padding-bottom: 40px; }
+
   .layout-extended .hero-full {
     background-image: url(../images/hero2.jpg);
     background-repeat: no-repeat;
@@ -2133,9 +2134,24 @@ table tr td {
 /* Layouts */
 .layout-full {
   padding-top: 20px;
-  background-color: #333; }
+  background-color: #333; 
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;}
+
+
+/* Layouts */
+.layout-normal {
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;}
+
+
 
 .layout-extended {
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
   max-width: 1400px;
   background-color: #f00;
   position: relative;
