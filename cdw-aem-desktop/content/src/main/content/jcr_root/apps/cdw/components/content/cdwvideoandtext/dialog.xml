@@ -16,6 +16,8 @@
                     fieldDescription="Widget Id for Liveclicker video."
                     fieldLabel="Widget Id"
                     name="./widgetId"
+                    regex="/^([0-9]+)$/"
+                    regexText="Only numbers are allowed."
                     xtype="textfield"/>
                 <layout
                     jcr:primaryType="cq:Widget"

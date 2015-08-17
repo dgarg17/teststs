@@ -96,11 +96,11 @@
                         </options>
                     </layoutType>
                     <backgroundcolor
-                        jcr:primaryType="cq:Widget"                       
+                        jcr:primaryType="cq:Widget"
                         colors="[FFFFFF,898B8E,4D4E53,CC0000]"
-                        fieldLabel="Background Color"
-                        fieldDescription="Background color and background image will only take effect given 'Extended' or 'Full Bleed' layout options."
                         defaultValue="FFFFFF"
+                        fieldDescription="Background color and background image will only take effect given 'Extended' or 'Full Bleed' layout options."
+                        fieldLabel="Background Color"
                         name="./backgroundColor"
                         xtype="colorfield"/>
                 </items>
