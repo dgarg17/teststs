@@ -20,6 +20,18 @@
                     fieldLabel="Scene7 CDW Partner Logo Treatment" 
                     name="./s7CDWPartnerLogoTreatment" 
                     xtype="pathfield"/>
+                <serviceDonaim
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This field defines the Service Domain for product picker."
+                        fieldLabel="Service Domain"
+                        name="./serviceDomain"
+                        xtype="textfield"/>
+                <productService
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This field defines Product Service relative URL."
+                        fieldLabel="Product Service"
+                        name="./productService"
+                        xtype="textfield"/>
             </items>
         </siterootconfig>
     </items>

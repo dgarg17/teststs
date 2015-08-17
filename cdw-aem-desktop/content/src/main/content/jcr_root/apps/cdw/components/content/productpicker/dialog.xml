@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Dialog"
+          helpPath="en/cq/current/wcm/default_components.html#Text"
+          title="Text1"
+          xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <product
+                jcr:primaryType="cq:Widget"
+                title="products"
+                xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <productPicker
+                        jcr:primaryType="cq:Widget"
+                        autoScroll="{Boolean}true"
+                        name="./products"
+                        xtype="multifield">
+                    <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                                         autoHeight="true"
+                                        autoWidth="true"
+                                         xtype="multifieldpanel">
+                                <items jcr:primaryType="cq:WidgetCollection">
+                                    <s7Image
+
+                                            jcr:primaryType="cq:Widget"
+                                            autoHeight="true"
+                                            autoWidth="true"
+                                            key="s7Image"
+                                            title="Logo Image"
+                                            xtype="pathfield"
+                                            grow="true"
+                                            fieldLabel="S7 Image"/>
+                                    <s7MImage
+                                            jcr:primaryType="cq:Widget"
+                                            key="s7MImage"
+                                            requestSuffix=".img.png"
+                                            title="S7 Manufacturer Logo"
+                                            xtype="pathfield"
+                                            fieldLabel="S7 Manufacturer Logo"/>
+                                    <productEDC
+                                            allowBlank="{Boolean}false"
+                                            jcr:primaryType="cq:Widget"
+                                            name="./productEDC"
+                                            fieldLabel="Product EDC"
+                                            key="productCode"
+                                            autoWidth="true"
+                                            xtype="textfield"/>
+                                    <productName
+                                            jcr:primaryType="cq:Widget"
+                                            fieldLabel="Product Name"
+                                            key="name"
+                                            maxLength="[L]70"
+                                            xtype="textfield"/>
+                                    <productDesc
+                                            jcr:primaryType="cq:Widget"
+                                            maxLength="[L]250"
+                                            fieldLabel="Product Description"
+                                            key="description"
+                                            xtype="textarea"/>
+                                    <ctaLink
+                                            jcr:primaryType="cq:Widget"
+                                            fieldLabel="CTA Link"
+                                            key="pctaklink"
+                                            name="./ctaLink"
+                                            xtype="pathfield"/>
+                                    <ctaText
+                                            name="./ctatext"
+                                            jcr:primaryType="cq:Widget"
+                                            fieldLabel="CTA Text"
+                                            defaultValue="view"
+                                            maxLength="[L]24"
+                                            key="ctaText"
+                                            xtype="textfield"/>
+                                    <campaignId
+
+                                            jcr:primaryType="cq:Widget"
+                                            fieldLabel="Campaign ID"
+                                            key="campaignid"
+                                            xtype="textfield"/>
+                                </items>
+
+                    </fieldConfig>
+                </productPicker>
+            </items>
+        </product>
+        <tab2
+                jcr:primaryType="cq:Widget"
+                title="Global"
+                xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <ctaButtonStyle
+                        jcr:primaryType="cq:Widget"
+                        colors="[FFFFFF,CC0000]"
+                        defaultValue="#CC0000"
+                        fieldLabel="Text Color"
+                        name="./ctaStyle"
+                        xtype="colorfield"/>
+                <imagePoition
+                        jcr:primaryType="cq:Widget"
+                        name="./imagePosition"
+                        fieldLabel="Text Color"
+                        type="select"
+                        defaultValue="Top"
+                        xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <Top
+                                jcr:primaryType="nt:unstructured"
+                                text="Top"
+                                value="top"/>
+                        <left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="left"/>
+                        <right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="right"/>
+
+                    </options>
+                </imagePoition>
+            </items>
+        </tab2>
+    </items>
+</jcr:root>

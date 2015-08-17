@@ -1,0 +1,132 @@
+/* original override for link entry dialog box getting cut off due to system generated
+ inline css attached to elements. Overrides for edit modes
+*/
+#CQ .cq-dialog-globalHeader .x-panel,
+#CQ .cq-dialog-globalHeader .x-panel-body{
+    width:auto !important;
+}
+/* 2 col layout overrides in edit mode  */
+.navGroup, .contactGroup {
+    height: auto;
+}
+#contactGroup.sticky, #rightRail.sticky {
+    position: relative;
+    width:100%;
+}
+#pageNav,
+#pageNav.sticky {
+    width: 72.91667%;
+    position: relative;
+}
+.contactGroupSmallView.visible-phone {
+    display: block !important;
+    background: #b85b5a;
+    clear:both;
+    width:50%;
+}
+.contactGroupSmallView.visible-phone:after {
+    content: "CONTACT CTA BUTTON VISIBLE ON SMALL SCREEN PARSYS";
+    font-size: 20px;
+}
+.heroPromoCallout {
+    background: #7ab5d3;
+}
+.heroPromoCallout:after {
+    content: "HERO BANNER AREA PARSYS";
+    font-size: 20px;
+}
+.primaryContent > div[class*='primaryItem_0'] {background: #fafafa;}
+.primaryContent > div[class*='primaryItem_0']:after {
+    content: "PARIMARY CONTENT AREA PARSYS";
+    font-size: 20px;
+}
+.topLevelItem_01 {
+    background: #bababa;
+
+}
+.topLevelItem_01:after {
+    content: "Navigation Area";
+    font-size: 20px;
+}
+.secondaryItem_01:after {
+    content: "PHONE EGAIN CONTACT AREA PARSYS";
+    font-size: 16px;
+    background: #fefefe;
+}
+.secondaryItem_02:after {
+    content: "RIGHT RAIL LEAD SHEET SIDE ITEMS";
+    font-size: 16px;
+    background: #fafafa;
+}
+
+/* 1 col layout overrides in edit mode  */
+.heroFullWidth-phoneContact { background: peachpuff;}
+.heroFullWidth-eGainChat {background: peachpuff;}
+.dynamicAds-HeroArea {background: peachpuff;}
+.ctaBtn-HeroArea {background: peachpuff;}
+
+.oneColWideLeadSheet {
+    /* In normal it would be position absolute due to breakpoint */
+    position:relative;
+}
+.primaryContentFullWidth > div[class*='primaryItem_0'] {background: #fafafa;}
+.primaryContentFullWidth > div[class*='primaryItem_0']:after {
+    content: "PARIMARY CONTENT AREA PARSYS ^^^";
+    font-size: 20px;
+    background: fuchsia;
+}
+.constrainContent.heroFullWidth {
+    border:5px dotted #005580;
+}
+.heroBlockFullWidth:after {
+    content: "HERO AREA HERE ^";
+    font-size: 16px;
+    background: fuchsia;
+}
+.row-fluid.oneColWideLeadSheet.constrainContent.oneCol {
+    border:5px dotted #002a80;
+}
+.row-fluid.primaryContentFullWidth.constrainContent.oneCol {
+    border:5px dotted #ff0000;
+}
+.oneColWideLeadSheet > div[class*='formItem_0']:after {
+    content: "LEED SHEET HERE / FORM AREA ^";
+    font-size: 16px;
+    background: fuchsia;
+}
+.variableColumnWidths .block {
+    min-height: 50px;;
+    border:3px dotted #000;
+}
+.variableWidthWrap {
+    position: relative;
+    overflow: hidden;
+}
+.constrainContent.subNavigationBlock:after {
+    content: "ADD NAVIGATION HERE ^";
+    font-size: 20px;
+    font-weight: bold;
+    background: #fff;
+}
+.constrainContent.subNavigationBlock {
+    position: relative;
+    overflow: hidden;
+    background: #ffbbbb;
+    height: auto;
+    border: 5px dotted #003bb3;
+}
+.section.looseImageAndText {
+    position: relative;
+    overflow: hidden;
+    background: chartreuse;
+    height: auto;
+    border: 5px dotted #000;
+}
+.section.looseImageAndText .advice {
+    display:block;
+    width: auto;
+
+}
+.img-left .col1 {
+    position: relative;
+}

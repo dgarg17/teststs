@@ -50,8 +50,9 @@
 <!--/* WCM initialization code end */-->
 
 <!--/* Support for page view statistics and MVT start */-->
-<meta data-sly-call="${clientLib.all @ categories='cq.jquery'}" data-sly-unwrap></meta>
-<script data-sly-test="${stats.pvsTrackUrl}" type="text/javascript">
+    <meta data-sly-call="${clientLib.all @ categories='cq.jquery'}" data-sly-unwrap></meta>
+    <meta data-sly-call="${clientLib.all @ categories=' apps.cdw.cq'}" data-sly-unwrap></meta>
+    <script data-sly-test="${stats.pvsTrackUrl}" type="text/javascript">
     {
         window.setTimeout(function() {
             $CQ.getScript("${stats.pvsTrackUrl @ context='uri'}?path=${stats.containingPage.path @ context='uri'}");
