@@ -1,37 +1,6 @@
 
 <div data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"></div>
 <input type="hidden" id="productService" name="productService" value="${utility.serviceDomain}${utility.productService}?f=${properties.productEDC}">
-<div>goutham test</div>
-
-<!--<h1>${properties.products}</h1>
-<h1>${properties.productEDC}</h1>
-<h1>${properties.ctaStyle}</h1>
-<h1>${properties.imagePosition}</h1>-->
-
-<div data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">${utility.serviceDomain} \ ${utility.productService} </div>
-<input type="hidden" id="productService" name="productService" value="${utility.serviceDomain}+${utility.productService}?f=${properties.productEDC}">
 <input type="hidden" id="productEDC" name="productService" value="${properties.productEDC}">
 <input type="hidden" id="ctaStyle" name="productService" value="${properties.ctaStyle}">
 <input type="hidden" id="imagePosition" name="productService" value="${properties.imagePosition}">
-
-
-<script type="text/javascript">
-
-	$.ajax({
-
-		type: "GET", 
-		dataType: "json", 
-		contentType: "application/json; charset=utf-8", 
-		cache: false, 
-		url: "https://webdev3vhb.corp.cdw.com/api/cms/products?f=2972386,3173855,3036378,3339330,3394320", 
-		success: function(response) {
-			alert("success: " + response);
-		}, 
-		error: function(hr, txtStatus, error) {
-			console.log(hr);
-			alert("error! " + txtStatus);
-		}
-
-	});
-
-</script>
