@@ -17,19 +17,17 @@
                         xtype="multifield">
                     <fieldConfig
                             jcr:primaryType="cq:Widget"
-                                         autoHeight="true"
-                                        autoWidth="true"
+
                                          xtype="multifieldpanel">
                                 <items jcr:primaryType="cq:WidgetCollection">
                                     <s7Image
 
                                             jcr:primaryType="cq:Widget"
-                                            autoHeight="true"
-                                            autoWidth="true"
+
                                             key="s7Image"
                                             title="Logo Image"
                                             xtype="pathfield"
-                                            grow="true"
+                                            width="80%"
                                             fieldLabel="S7 Image"/>
                                     <s7MImage
                                             jcr:primaryType="cq:Widget"
@@ -37,6 +35,7 @@
                                             requestSuffix=".img.png"
                                             title="S7 Manufacturer Logo"
                                             xtype="pathfield"
+                                            width="80%"
                                             fieldLabel="S7 Manufacturer Logo"/>
                                     <productEDC
                                             allowBlank="{Boolean}false"
@@ -44,25 +43,28 @@
                                             name="./productEDC"
                                             fieldLabel="Product EDC"
                                             key="productCode"
-                                            autoWidth="true"
+
+                                            width="80%"
                                             xtype="textfield"/>
                                     <productName
                                             jcr:primaryType="cq:Widget"
                                             fieldLabel="Product Name"
                                             key="name"
                                             maxLength="[L]70"
+                                            width="80%"
                                             xtype="textfield"/>
                                     <productDesc
                                             jcr:primaryType="cq:Widget"
                                             maxLength="[L]250"
                                             fieldLabel="Product Description"
                                             key="description"
+                                            width="80%"
                                             xtype="textarea"/>
                                     <ctaLink
                                             jcr:primaryType="cq:Widget"
                                             fieldLabel="CTA Link"
                                             key="pctaklink"
-                                            name="./ctaLink"
+                                            width="80%"
                                             xtype="pathfield"/>
                                     <ctaText
                                             name="./ctatext"
@@ -71,12 +73,14 @@
                                             defaultValue="view"
                                             maxLength="[L]24"
                                             key="ctaText"
+                                            width="80%"
                                             xtype="textfield"/>
                                     <campaignId
 
                                             jcr:primaryType="cq:Widget"
                                             fieldLabel="Campaign ID"
                                             key="campaignid"
+                                            width="80%"
                                             xtype="textfield"/>
                                 </items>
 
