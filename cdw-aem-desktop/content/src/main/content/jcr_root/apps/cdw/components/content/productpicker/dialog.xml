@@ -17,15 +17,22 @@
                         xtype="multifield">
                     <fieldConfig
                             jcr:primaryType="cq:Widget"
-
+                                         cls="cssmultifieldpanel"
                                          xtype="multifieldpanel">
                                 <items jcr:primaryType="cq:WidgetCollection">
-                                    <s7Image
-
+                                    <productEDC
+                                            allowBlank="{Boolean}false"
                                             jcr:primaryType="cq:Widget"
-
+                                            name="./productEDC"
+                                            fieldLabel="Product EDC"
+                                            key="productCode"
+                                            width="80%"
+                                            xtype="textfield"/>
+                                    <s7Image
+                                            jcr:primaryType="cq:Widget"
                                             key="s7Image"
                                             title="Logo Image"
+                                            cls="csspathfield"
                                             xtype="pathfield"
                                             width="80%"
                                             fieldLabel="S7 Image"/>
@@ -34,28 +41,20 @@
                                             key="s7MImage"
                                             requestSuffix=".img.png"
                                             title="S7 Manufacturer Logo"
+                                            cls="csspathfield"
                                             xtype="pathfield"
                                             width="80%"
                                             fieldLabel="S7 Manufacturer Logo"/>
-                                    <productEDC
-                                            allowBlank="{Boolean}false"
-                                            jcr:primaryType="cq:Widget"
-                                            name="./productEDC"
-                                            fieldLabel="Product EDC"
-                                            key="productCode"
-
-                                            width="80%"
-                                            xtype="textfield"/>
                                     <productName
                                             jcr:primaryType="cq:Widget"
                                             fieldLabel="Product Name"
                                             key="name"
-                                            maxLength="[L]70"
+                                            maxLength="{Long}70"
                                             width="80%"
                                             xtype="textfield"/>
                                     <productDesc
                                             jcr:primaryType="cq:Widget"
-                                            maxLength="[L]250"
+                                            maxLength="{Long}250"
                                             fieldLabel="Product Description"
                                             key="description"
                                             width="80%"
@@ -65,13 +64,14 @@
                                             fieldLabel="CTA Link"
                                             key="pctaklink"
                                             width="80%"
+                                            cls="csspathfield"
                                             xtype="pathfield"/>
                                     <ctaText
                                             name="./ctatext"
                                             jcr:primaryType="cq:Widget"
                                             fieldLabel="CTA Text"
                                             defaultValue="view"
-                                            maxLength="[L]24"
+                                            maxLength="{Long}24"
                                             key="ctaText"
                                             width="80%"
                                             xtype="textfield"/>
