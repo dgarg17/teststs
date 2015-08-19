@@ -1,14 +1,12 @@
 
-<div data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
+<div data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"  data-sly-test="${properties.productEDC}">
 
     <div  data-sly-use.productpicker="${'com.cdw.aem.util.components.ProductPickerWCMUseHelper' @json=properties.products}"></div>
-    <input type="hidden" class="productService" id="productService_${properties.productEDC[0]}" name="productService" value="${utility.serviceDomain}${utility.productService}?f=${properties.productEDC}">
-    <input type="hidden" class="productEDC" id="productEDC+${properties.productEDC[0]}" name="productEDC" value="${properties.productEDC}">
-    <input type="hidden" class id="ctaStyle_${properties.productEDC[0]}" name="ctaStyle" value="${properties.ctaStyle}">
-    <input type="hidden" id="products_${properties.productEDC[0]}" class="products" name="products" value='[${productpicker.updateProductPickerJson @context="scriptComment"}]'>
-
-
+    <input type="hidden" class="productService" id="productService-${properties.productEDC[0]}" name="productService" value="${utility.serviceDomain}${utility.productService}?f=${properties.productEDC}">
+    <input type="hidden" class="productEDC" id="productEDC-${properties.productEDC[0]}" name="productEDC" value="${properties.productEDC}">
+    <input type="hidden" class id="ctaStyle-${properties.productEDC[0]}" name="ctaStyle" value="${properties.ctaStyle}">
+    <input type="hidden" id="products-${properties.productEDC[0]}" class="products" name="products" value='${productpicker.updateProductPickerJson @context="scriptComment"}'>
     <input type="hidden" id="imagePosition_${properties.productEDC[0]}" class="imagePosition" name="imagePosition" value="${properties.imagePosition}">
 </div>
-<div id="productContainer_${properties.productEDC[0]}" class="productContainer" ><div>
+<div id="productContainer-${properties.productEDC[0]}" class="productContainer" ><div>
 

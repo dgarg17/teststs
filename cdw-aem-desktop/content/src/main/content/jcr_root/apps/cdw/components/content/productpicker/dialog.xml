@@ -36,7 +36,7 @@
                         key="imageUrl"
                         title="product Image"
                         xtype="pathfield"/>
-                    <s7MImage
+                    <manufacturerImage
                         jcr:primaryType="cq:Widget"
                         cls="csspathfield"
                         fieldLabel="Manufacturer image"

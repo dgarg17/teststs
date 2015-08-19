@@ -23,8 +23,12 @@ public class ProductPickerWCMUseHelper extends WCMUse {
     public void activate() throws Exception {
 
         productPickerJson=get("json",String[].class);
-      /*  log.debug("productPicker Json string array"+get("json",String[].class));
-        log.debug("productPicker Json string "+get("json",String.class));*/
+        if(productPickerJson==null){
+            productPickerJson=new String[1];
+            productPickerJson[0]=get("json",String.class);
+        }
+        // log.debug("productPicker Json string array"+get("json",String[].class));
+        //log.debug("productPicker Json string "+get("json",String.class));
     }
 
     public String updateProductPickerJson() {
@@ -42,20 +46,27 @@ public class ProductPickerWCMUseHelper extends WCMUse {
         return new Gson().toJson(productPickers);
     }
     private String toJson(String[] jsons){
-       // log.debug("productPickerinside tojson" +jsons);
+        //   log.debug("productPickerinside tojson" +jsons);
         String json="";
         if(jsons==null){
             return json;
         }
         for(String i:jsons){
-         //   log.debug("productPicker Json string jsons" +i);
+            //        log.debug("productPicker Json string jsons" +i);
             json+=i+",";
 
         }
         if(json.length()>2){
-          //  log.debug("productPicker exit tojson" +json);
-            String output= "["+json.substring(0,json.lastIndexOf(',')) +"]";
-           // log.debug("productPicker exit tojson output" +output);
+            //     log.debug("productPicker exit tojson" +json);
+            if(json.charAt(json.length()-1)==',')
+            {
+                //     log.debug("productPicker has char ,");
+                json=json.substring(0,json.lastIndexOf(','));
+                //   log.debug("productPicker after removing  ,");
+            }
+
+            String output= "["+json +"]";
+            // log.debug("productPicker exit tojson output" +output);
             return output;
         }
         //log.debug("productPicker exit tojson" +json);
