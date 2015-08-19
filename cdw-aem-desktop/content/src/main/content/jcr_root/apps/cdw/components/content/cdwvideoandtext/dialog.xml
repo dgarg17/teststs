@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}600"
+    title="LiveClicker Video and Text"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <video
+            jcr:primaryType="cq:Widget"
+            title="Video Attributes"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <widgetId
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    fieldDescription="Widget Id for Liveclicker video."
+                    fieldLabel="Widget Id"
+                    name="./widgetId"
+                    regex="/^([0-9]+)$/"
+                    regexText="Only numbers are allowed."
+                    xtype="textfield"/>
+                <layout
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="video-wrapper"
+                    fieldLabel="Video Styling"
+                    name="./layout"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <standard
+                            jcr:primaryType="nt:unstructured"
+                            text="Standard (Default)"
+                            value="video-wrapper"/>
+                        <_x0034_X3
+                            jcr:primaryType="nt:unstructured"
+                            text="4X3 (Adds Top padding to standard format)"
+                            value="video-wrapper -r4x3"/>
+                        <controls
+                            jcr:primaryType="nt:unstructured"
+                            text="Controls ( Adds Bottom padding to standard format)"
+                            value="video-wrapper -controls"/>
+                    </options>
+                </layout>
+            </items>
+        </video>
+        <advanced
+            jcr:primaryType="cq:Widget"
+            title="Text Attributes"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <tite
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Max character limit is 80."
+                    fieldLabel="Title"
+                    maxLength="80"
+                    name="./title"
+                    xtype="textfield"/>
+                <description
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Max character limit is 160."
+                    fieldLabel="Description"
+                    maxLength="160"
+                    name="./desc"
+                    xtype="textarea"/>
+                <textcolor
+                    jcr:primaryType="cq:Widget"
+                    colors="[4D4E53,FFFFFF]"
+                    defaultValue="4D4E53"
+                    fieldDescription="Default font color i s Dark Grey (#4D4E53)."
+                    fieldLabel="Text Color"
+                    name="./textcolor"
+                    showHexValue="{Boolean}true"
+                    xtype="colorfield"/>
+                <backgroundcolor
+                    jcr:primaryType="cq:Widget"
+                    colors="[CC0000,D02CC30,FE4A5D,FF828A,FFB0C0,EEC7CE,C20430,D8292F,E74C39,E57E3E,F2Bd7D,F28B00,F5B324,F8BF00,FFD200,FFE900,009D4F,3DAF2C,76BD22,A6CE39,C3D600,009483,00A19cC,00AFAB,63CCCA,9ADADA,007299,007CBB,00A8E2,00B3E3,54C9E8,76236d,923a80,A45B96,B588B9,CEADD0,B42573,E01783,EA6CB0,F6A7D7,E8BCD8,898B8E,63656A,54565B,4d4D4F]"
+                    defaultValue="EFEFEF"
+                    fieldDescription="Default text background color i s Light Grey (#EFEFEF)."
+                    fieldLabel="Text Background Color"
+                    name="./backgroundcolor"
+                    showHexValue="{Boolean}true"
+                    xtype="colorfield"/>
+                <textalignment
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="top"
+                    fieldLabel="Text Alignment"
+                    name="./textalignment"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <top
+                            jcr:primaryType="nt:unstructured"
+                            text="Top Placement (Above the video)"
+                            value="top"/>
+                        <bottom
+                            jcr:primaryType="nt:unstructured"
+                            text="Bottom Placement (Below the video)."
+                            value="bottom"/>
+                    </options>
+                </textalignment>
+            </items>
+        </advanced>
+    </items>
+</jcr:root>

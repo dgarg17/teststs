@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Dialog"
     deferredRender="false"
     title="Scene7 Dynamic Image"
@@ -25,6 +25,30 @@
                     fieldLabel="Alt Text"
                     name="./alt"
                     xtype="textfield"/>
+                <partnerogourl
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Partner Logo URL"
+                    name="./partnerlogourl"
+                    xtype="pathfield"/>
+                <target
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="0"
+                    fieldDescription=" Partner logo url opens in same window by default."
+                    fieldLabel="Link  Target"
+                    name="./target"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <new
+                            jcr:primaryType="nt:unstructured"
+                            text="New Window"
+                            value="1"/>
+                        <same
+                            jcr:primaryType="nt:unstructured"
+                            text="Same Window"
+                            value="0"/>
+                    </options>
+                </target>
             </items>
         </advanced>
     </items>

@@ -74,8 +74,51 @@
                                 value="./layouts/layout_4-8.html"/>
                         </options>
                     </layout>
+                    <layoutType
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Layout Type"
+                        name="./layoutType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <normal
+                                jcr:primaryType="nt:unstructured"
+                                text="Normal (Default)"
+                                value="normal"/>
+                            <extended
+                                jcr:primaryType="nt:unstructured"
+                                text="Extended"
+                                value="-extended"/>
+                            <full
+                                jcr:primaryType="nt:unstructured"
+                                text="Full Bleed"
+                                value="-full"/>
+                        </options>
+                    </layoutType>
+                    <backgroundcolor
+                        jcr:primaryType="cq:Widget"
+                        colors="[FFFFFF,898B8E,4D4E53,CC0000]"
+                        defaultValue="FFFFFF"
+                        fieldDescription="Background color and background image will only take effect given 'Extended' or 'Full Bleed' layout options."
+                        fieldLabel="Background Color"
+                        name="./backgroundColor"
+                        xtype="colorfield"/>
                 </items>
             </tab1>
+            <image
+                jcr:primaryType="cq:Widget"
+                allowUpload="{Boolean}false"
+                cropParameter=""
+                ddGroups="[media]"
+                disableZoom="{Boolean}true"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter=""
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter=""
+                title="Background Image"
+                xtype="html5smartimage"/>
         </items>
     </items>
 </jcr:root>
