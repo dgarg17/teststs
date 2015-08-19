@@ -33,6 +33,7 @@
                         jcr:primaryType="cq:Widget"
                         cls="csspathfield"
                         fieldLabel="Product Image"
+                        fieldDescription="product image override"
                         key="imageUrl"
                         title="product Image"
                         xtype="pathfield"/>
@@ -40,6 +41,7 @@
                         jcr:primaryType="cq:Widget"
                         cls="csspathfield"
                         fieldLabel="Manufacturer image"
+                        fieldDescription="product manufacturer image"
                         key="manufacturerImage"
                         requestSuffix=".img.png"
                         title="manufacturer image"
@@ -47,6 +49,7 @@
                     <productName
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Product Name"
+                        fieldDescription="Product Name with a maximum of 70 characters override"
                         key="name"
                         maxLength="{Long}70"
                         width="80%"
@@ -54,6 +57,7 @@
                     <productDesc
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Product Description"
+                        fieldDescription="Product Name with a maximum of 250 characters override"
                         key="description"
                         maxLength="{Long}250"
                         width="80%"
@@ -69,6 +73,7 @@
                         jcr:primaryType="cq:Widget"
                         defaultValue="view"
                         fieldLabel="CTA Text"
+                        fieldDescription="CTA text with a maximum of 24 characters"
                         key="ctaText"
                         maxLength="{Long}]24"
                         name="./ctatext"
