@@ -1,15 +1,12 @@
 package com.cdw.aem.util.components;
 
 import com.adobe.cq.sightly.WCMUse;
-import com.cdw.aem.util.LinkUtil;
 import com.cdw.aem.util.ProductPicker;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.Type;
 import java.util.List;
-import java.util.logging.Logger;
 
 /**
  * Created by goutved on 7/29/2015.
@@ -22,54 +19,41 @@ public class ProductPickerWCMUseHelper extends WCMUse {
     @Override
     public void activate() throws Exception {
 
-        productPickerJson=get("json",String[].class);
-        if(productPickerJson==null){
-            productPickerJson=new String[1];
-            productPickerJson[0]=get("json",String.class);
+        productPickerJson = get("json", String[].class);
+        if (productPickerJson == null) {
+            productPickerJson = new String[1];
+            productPickerJson[0] = get("json", String.class);
         }
-        // log.debug("productPicker Json string array"+get("json",String[].class));
-        //log.debug("productPicker Json string "+get("json",String.class));
     }
 
     public String updateProductPickerJson() {
-        List<ProductPicker> productPickers = new Gson().fromJson(toJson(productPickerJson), new TypeToken<List<ProductPicker>>() {
+        List<ProductPicker> productPickers = new Gson().fromJson(concatJson(productPickerJson), new TypeToken<List<ProductPicker>>() {
         }.getType());
-       /* log.debug("productPicker Json string"+productPickerJson);
-        log.debug("productPicker Json json object "+productPickers);
-        log.debug("productPicker Json converted "+ new Gson().toJson(productPickers));*/
-        if(productPickers!=null&& (productPickers.size()>0)){
-            for(ProductPicker  productPicker: productPickers){
+        if (productPickers != null && (productPickers.size() > 0)) {
+            for (ProductPicker productPicker : productPickers) {
                 productPicker.updatePctaklink();
             }
+        }else{
+            return null;
         }
-
-        return new Gson().toJson(productPickers);
+        return (new Gson().toJson(productPickers)).replaceAll("\"","'");
     }
-    private String toJson(String[] jsons){
-        //   log.debug("productPickerinside tojson" +jsons);
-        String json="";
-        if(jsons==null){
+
+    private String concatJson(String[] jsonArray) {
+
+        String json = "";
+        if (jsonArray == null || jsonArray.length < 1) {
             return json;
+        } else if (jsonArray.length == 1) {
+            return "["+jsonArray[0]+"]";
         }
-        for(String i:jsons){
-            //        log.debug("productPicker Json string jsons" +i);
-            json+=i+",";
+        for (String i : jsonArray) {
+            json += i + ",";
+        }
+        json = json.substring(0, json.lastIndexOf(','));
 
-        }
-        if(json.length()>2){
-            //     log.debug("productPicker exit tojson" +json);
-            if(json.charAt(json.length()-1)==',')
-            {
-                //     log.debug("productPicker has char ,");
-                json=json.substring(0,json.lastIndexOf(','));
-                //   log.debug("productPicker after removing  ,");
-            }
 
-            String output= "["+json +"]";
-            // log.debug("productPicker exit tojson output" +output);
-            return output;
-        }
-        //log.debug("productPicker exit tojson" +json);
-        return json;
+    return"["+json+"]";
+
     }
 }
