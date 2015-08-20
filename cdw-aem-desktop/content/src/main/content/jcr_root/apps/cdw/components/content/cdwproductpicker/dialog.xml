@@ -71,7 +71,8 @@
                         xtype="pathfield"/>
                     <ctaText
                         jcr:primaryType="cq:Widget"
-                        defaultValue="view"
+                        emptyText="view"
+                        value="view"
                         fieldLabel="CTA Text"
                         fieldDescription="CTA text with a maximum of 24 characters"
                         key="ctaText"

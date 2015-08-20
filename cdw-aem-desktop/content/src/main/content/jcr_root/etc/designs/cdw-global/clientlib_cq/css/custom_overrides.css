@@ -123,9 +123,8 @@
     border: 5px dotted #000;
 }
 .section.looseImageAndText .advice {
-    display:block;
+    display: block;
     width: auto;
-
 }
 .img-left .col1 {
     position: relative;
@@ -139,4 +138,8 @@ width:97%!important
 
 div.multifieldpanelbasecls-body.multifieldpanelbasecls-body-noheader,div.multifieldpanelbasecls.cssmultifieldpanel {
 width:100%!important
+}
+div.multifieldpanelcollapsedctcls{
+    border-bottom-style: solid!important;
+    border-width: 2px!important;
 }

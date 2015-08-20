@@ -1,5 +1,5 @@
 
-<div data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"  data-sly-test="${properties.productEDC}">
+<div data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"  data-sly-test="${properties.productEDC&&properties.products}">
 
     <div  data-sly-use.productpicker="${'com.cdw.aem.util.components.ProductPickerWCMUseHelper' @json=properties.products}"></div>
     <input type="hidden" class="productService" id="productService-${properties.productEDC[0]}" name="productService" value="${utility.serviceDomain}/${utility.productService}?f=${properties.productEDC}">
@@ -10,47 +10,14 @@
 </div>
 <div id="productContainer-${properties.productEDC[0]}" class="productContainer" ><div>
 
-<!--
-    <script>
-    $(document).ready(function(){
-    $(".productService").each(function( index ) {
- alert($( this ).attr("id")+index);
- var id=$(this).attr("id");
- console.log($("#"+id).val());
-productdata(id);
 
-});
 
-    });
-
-function productdata(productid){
-url=$("#"+productid).val();
-$.ajax({
-type: "GET",
-dataType: "json",
-url: url,
-success: function(response) {
-var output=eval(response);
-console.log(output);
-if(output.length>1){
-
-console.log("ajax responce "+output[1].productCode);
-
-}else{
-console.log("no responce");
-}
-
-},
-error: function(hr, txtStatus, error) {
-console.log(hr);
-alert("error! " + txtStatus);
-}
-});
 $.ajax({
 type: "GET",
 dataType: "json",
 url: "https://webdev3vhb.corp.cdw.com/api/cms/products?f=2972386,3173855,3036378,3339330,3394320",
 success: function(response) {
+
 console.log(eval(response));
 },
 error: function(hr, txtStatus, error) {
@@ -58,5 +25,5 @@ console.log(hr);
 alert("error! " + txtStatus);
 }
 });
-}
- </script>-->
+
+ </script>
