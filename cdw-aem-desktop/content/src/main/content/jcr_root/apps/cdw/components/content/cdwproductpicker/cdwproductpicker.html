@@ -25,7 +25,7 @@
 		        //alert("success! dynamic"+eval(response));
 		        //alert("success author"+$('#products-'+productedc).val());
 		        console.log("success! dynamic"+eval(response));
-		        
+
 		        //Uncomment this call when API is working and temporary static call is removed
 		        //compareProductJSON(response, $("#products-"+productedc).val());
 		    },
@@ -43,14 +43,24 @@
 		console.log(override);
 
 		//Create override string
-		var productsOverride;
+		var productsOverride = response;
 
 		for (var i=0; i < override.length; i++) {
 			//Create FrankenJSON from both objects
+			for (var key in override[i]) {
+				if (override[i].hasOwnProperty(key)) {
+					if (override[i][key] != '') {
+						//console.log(key + " -> " + override[i][key]);
+						productsOverride[i][key] = override[i][key];
 
+					}
+				}
+			}
 		}
 
-		popProducts(response);
+		console.log(productsOverride);
+
+		popProducts(productsOverride);
 
 	}
 
