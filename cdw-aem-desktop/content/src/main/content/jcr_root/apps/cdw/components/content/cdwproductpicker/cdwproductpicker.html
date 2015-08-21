@@ -15,11 +15,6 @@
 
 <script type="text/javascript">
 
-    $(document).ready(function(){
-	    
-
-    });
-
 	function productdata(url ,productedc){
 
 		$.ajax({
@@ -32,31 +27,32 @@
 		        console.log("success! dynamic"+eval(response));
 		    },
 		    error: function(hr, txtStatus, error) {
-		        console.log("success! dynamic"+eval(error));
+		        console.log("success! dynamic" + eval(error));
 		        console.log(hr);
-		        alert("error! " + txtStatus);
+		        //alert("error! " + txtStatus);
 		    }
 		});
 
 	}
 
-	
-	$(document).ready(function() {
+	function compareProductJSON(response, override) {
 
-		$(".productService").each(function( index ) {
-			//alert($( this ).attr("id")+index);
-			var id=$(this).attr("id");
-			url=$("#"+id).val();
-			var productedc=id.replace("productService-", "");
-			console.log($("#"+id).val());
-			productdata(url,productedc);
+		console.log(override);
 
-		});
+		//Create override string
+		var productsOverride;
 
+		for (var i=0; i < override.length; i++) {
+			//Create FrankenJSON from both objects
 
+		}
 
+		popProducts(response);
 
-		
+	}
+
+	function popProducts(products) {
+
 		var contentString;
 		for (var i=0; i < products.length; i++) {
 			contentString = '';
@@ -86,15 +82,27 @@
 			contentString += "</div>";
 			$('.productContainer').append(contentString);
 		}
+
+	}
+
+
+	$(document).ready(function() {
+
+		$(".productService").each(function( index ) {
+			//alert($( this ).attr("id")+index);
+			var id=$(this).attr("id");
+			url=$("#"+id).val();
+			var productedc=id.replace("productService-", "");
+			console.log($("#"+id).val());
+			productdata(url,productedc);
+
+		});
+
+		compareProductJSON(products, overrideJSON);
 		
 	});
 
-
-	//var products = '[{ "key1": "value1", "key2": "value2", "key3": "value3", "key4": "value4", "key5": "value5" }]';
-
-	//var products = '[{"productCode": "2972386", "name": "HP Pro 3500 - Core i5 3470 3.2 GHz - 4 GB - 500 GB", "description": "Micro tower - 1 x Core i5 3470 / 3.2 GHz - RAM 4 GB - HDD 500 GB - DVD SuperMulti - HD Graphics 2500 - GigE - AWindows 7 Pro 64-bit / 8 Pro downgrade - pre-installed: BWindows 7 - Monitor : none - Smart Buy", "url": "/shop/products/HP-Pro-3500-Core-i5-3470-3.2-GHz-4-GB-500-GB/2972386.aspx", "imageUrl": "http://webobjects2.cdw.com/is/image/CDBW/2972386?", "brand": "Hewlett Packard Smart Buy", "productClass": "DT", "stockStatus": "In Stock", "isBStock": false, "price": "$569.99", "priceOriginal": "$569.00", "rawPrice": 569.99, "rawPriceOrginal": 569, "priceName": "Advertised Price"}, {"productCode": "3173855", "name": "Lenovo ThinkPad T440P i5-4200M 500GB HD 4GB 14\" CWin 7 Pro\r\n", "description": "Core i5 4200M / 2.5 GHz - DWindows 7 Pro 64-bit / 8 Pro 64-bit downgrade - pre-installed: EWindows 7 - 4 GB RAM - 500 GB HDD - DVD-FWriter - 14\" 1366 x 768 ( HD ) - Intel HD Graphics 4600 - GWHWAN upgradable - TopSeller", "url": "/shop/products/Lenovo-ThinkPad-T440P-i5-4200M-500GB-HD-4GB-14-quot-IWin-7-Pro/3173855.aspx", "imageUrl": "http://webobjects2.cdw.com/is/image/CDJW/3173855?", "brand": "LENOVO TOPSELLER PRODUCTS", "productClass": "NB", "stockStatus": "In Stock", "isBStock": false, "price": "$848.99", "priceOriginal": "$949.00", "rawPrice": 848.99, "rawPriceOrginal": 949, "priceName": "Advertised Price"}, {"productCode": "3036378", "name": "HP power cable - 4.6 ft", "description": "Power cable - IEC 320 EN 60320 C14 - IEC 320 EN 60320 C13 - 4.6 ft - for High Performance Cluster LC Series LC2016, LC2032, LC2064, LC2128; ProLiant DL585; Rack", "url": "/shop/products/HP-power-cable-4.6-ft/3036378.aspx", "imageUrl": "http://webobjects2.cdw.com/is/image/CDKW/3036378?", "brand": "HP 3Par Products", "productClass": "CA", "stockStatus": "Call", "isBStock": false, "price": "Call", "priceOriginal": "Call", "rawPrice": 0, "rawPriceOrginal": 0, "priceName": "Advertised Price"}, {"productCode": "3339330", "name": "ASUS ROG G750JS-DS71 - 17.3\" - Core i7 4700HQ - LWindows 8.1 64-bit - 16 GB ", "description": "Core i7 4700HQ / 2.4 GHz - MWindows 8.1 64-bit - 16 GB RAM - 1 TB HDD + 256 GB SSD - DVD-NWriter - 17.3\" 1920 x 1080 ( Full HD ) - NVIDIA GeForce GTX 870M - 802.11ac - black - with 32 GB ASUS OWebStorage", "url": "/shop/products/ASUS-ROG-G750JS-DS71-17.3-quot-Core-i7-4700HQ-PWindows-8.1-64-bit-16-GB/3339330.aspx", "imageUrl": "http://webobjects2.cdw.com/is/image/CDQW/3339330?", "brand": "Asus", "productClass": "NB", "stockStatus": "3-5 days", "isBStock": false, "price": "$1,799.99", "priceOriginal": "$1,899.00", "rawPrice": 1799.99, "rawPriceOrginal": 1899, "priceName": "Advertised Price"}, {"productCode": "3394320", "name": "Lenovo ThinkPad X131e 3372 - 11.6\" - E2-1800 - RWindows 8 Pro 64-bit / SWindo", "description": "E2-1800 1.7 GHz - TWindows 8 Pro 64-bit / UWindows 7 Pro 64-bit downgrade - pre-installed: VWindows 7 - 4 GB RAM - 320 GB HDD - 11.6\" wide 1366 x 768 / HD - AMD Radeon HD 7340 - 3G upgradable - midnight black - TopSeller", "url": "/shop/products/Lenovo-ThinkPad-X131e-3372-11.6-quot-E2-1800-XWindows-8-Pro-64-bit-YWindo/3394320.aspx", "imageUrl": "http://webobjects2.cdw.com/is/image/CDZW/2854567?", "brand": "LENOVO TOPSELLER PRODUCTS", "productClass": "NB", "stockStatus": "In Stock", "isBStock": true, "price": "$314.99", "priceOriginal": "Call", "rawPrice": 314.99, "rawPriceOrginal": 0, "priceName": "Advertised Price"} ]';
-	//var obj = JSON.parse(products);
-
+	var overrideJSON = eval($('input[name=products]').val());
 	var products = 
 	[
 	 {
@@ -179,6 +187,6 @@
 	 }
 	];
 
-	//console.log(products);
+	console.log(products);
 
 </script>
