@@ -14,59 +14,49 @@
 
 
 <script type="text/javascript">
-    $(document).ready(function(){
-    $(".productService").each(function( index ) {
-// alert($( this ).attr("id")+index);
- var id=$(this).attr("id");
- url=$("#"+id).val();
- var productedc=id.replace("productService-", "");
- console.log($("#"+id).val());
-productdata(url,productedc);
 
-});
+    $(document).ready(function(){
+	    
 
     });
 
-function productdata(url ,productedc){
+	function productdata(url ,productedc){
 
-$.ajax({
-    type: "GET",
-    dataType: "json",
-    url: url,
-    success: function(response) {
-        //alert("success! dynamic"+eval(response))
-        //alert("success author"+$("#products-"+productedc).val())
-        console.log("success! dynamic"+eval(response));
-    },
-    error: function(hr, txtStatus, error) {
-        //alert("success! dynamic"+eval(response))
-        //alert("success author"+$("#products-"+productedc).val())
-        console.log("success! dynamic"+eval(response));
-        console.log(hr);
-        alert("error! " + txtStatus);
-    }
-});
-}
+		$.ajax({
+		    type: "GET",
+		    dataType: "json",
+		    url: url,
+		    success: function(response) {
+		        //alert("success! dynamic"+eval(response));
+		        //alert("success author"+$("#products-"+productedc).val());
+		        console.log("success! dynamic"+eval(response));
+		    },
+		    error: function(hr, txtStatus, error) {
+		        console.log("success! dynamic"+eval(error));
+		        console.log(hr);
+		        alert("error! " + txtStatus);
+		    }
+		});
 
+	}
 
-<!-- Goutham Code above -->
-	$.ajax({
-
-		type: "GET", 
-		dataType: "json", 
-		url: "https://webdev3vhb.corp.cdw.com/api/cms/products?f=2972386,3173855,3036378,3339330,3394320", 
-		success: function(response) {
-			console.log(eval(response));
-			alert('success!');
-		}, 
-		error: function(hr, txtStatus, error) {
-			console.log(hr);
-			//alert("error! " + txtStatus + " : " + error);
-		}
-
-	});
-
+	
 	$(document).ready(function() {
+
+		$(".productService").each(function( index ) {
+			//alert($( this ).attr("id")+index);
+			var id=$(this).attr("id");
+			url=$("#"+id).val();
+			var productedc=id.replace("productService-", "");
+			console.log($("#"+id).val());
+			productdata(url,productedc);
+
+		});
+
+
+
+
+		
 		var contentString;
 		for (var i=0; i < products.length; i++) {
 			contentString = '';
