@@ -1,0 +1,9 @@
+<!-- /*header.html */ -->
+<header role="banner">
+<div class="layout" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" >
+  <div class="layout-12">
+	<div data-sly-test="${utility.getSiteRootPagePath}" data-sly-resource="${ '/jcr:content/petiteHeader' @ prependPath=utility.getSiteRootPagePath, resourceType='/apps/cdw/components/content/cdwpetiteheader'}" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
+    <h6 data-sly-test="${utility.getSiteRootPagePath==''&&(wcmmode.edit || wcmmode.design)}">Please configure siteroot for logo , header links and phone number </h6>
+  </div>
+</div>
+</header>
