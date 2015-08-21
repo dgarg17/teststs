@@ -23,8 +23,11 @@
 		    url: url,
 		    success: function(response) {
 		        //alert("success! dynamic"+eval(response));
-		        //alert("success author"+$("#products-"+productedc).val());
+		        //alert("success author"+$('#products-'+productedc).val());
 		        console.log("success! dynamic"+eval(response));
+		        
+		        //Uncomment this call when API is working and temporary static call is removed
+		        //compareProductJSON(response, $("#products-"+productedc).val());
 		    },
 		    error: function(hr, txtStatus, error) {
 		        console.log("success! dynamic" + eval(error));
@@ -99,10 +102,12 @@
 
 		});
 
+		//Temporary static call
 		compareProductJSON(products, overrideJSON);
 		
 	});
 
+	//Dummy JSON
 	var overrideJSON = eval($('input[name=products]').val());
 	var products = 
 	[
