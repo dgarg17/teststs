@@ -16,9 +16,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
     $(".productService").each(function( index ) {
-/ alert($( this ).attr("id")+index);
+// alert($( this ).attr("id")+index);
  var id=$(this).attr("id");
- url=$("#"+productid).val();
+ url=$("#"+id).val();
  var productedc=id.replace("productService-", "");
  console.log($("#"+id).val());
 productdata(url,productedc);
@@ -34,13 +34,13 @@ $.ajax({
     dataType: "json",
     url: url,
     success: function(response) {
-        alert("success! dynamic"+eval(response))
-        alert("success author"+$("products-"+productedc).val())
+        //alert("success! dynamic"+eval(response))
+        //alert("success author"+$("#products-"+productedc).val())
         console.log("success! dynamic"+eval(response));
     },
     error: function(hr, txtStatus, error) {
-        alert("success! dynamic"+eval(response))
-        alert("success author"+$("products-"+productedc).val())
+        //alert("success! dynamic"+eval(response))
+        //alert("success author"+$("#products-"+productedc).val())
         console.log("success! dynamic"+eval(response));
         console.log(hr);
         alert("error! " + txtStatus);
