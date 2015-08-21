@@ -54,6 +54,7 @@
 	function popProducts(products) {
 
 		var contentString;
+		var $productContainer = $("#productContainer-" + products[0].productCode);
 		for (var i=0; i < products.length; i++) {
 			contentString = '';
 			contentString += "<div id='product-" + products[i].productCode + "'>";
@@ -80,7 +81,7 @@
 			contentString += "</a>";
 			contentString += "</div>";
 			contentString += "</div>";
-			$('.productContainer').append(contentString);
+			$productContainer.append(contentString);
 		}
 
 	}
