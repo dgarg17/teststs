@@ -14,7 +14,42 @@
 
 
 <script type="text/javascript">
+    $(document).ready(function(){
+    $(".productService").each(function( index ) {
+/ alert($( this ).attr("id")+index);
+ var id=$(this).attr("id");
+ url=$("#"+productid).val();
+ var productedc=id.replace("productService-", "");
+ console.log($("#"+id).val());
+productdata(url,productedc);
 
+});
+
+    });
+
+function productdata(url ,productedc){
+
+$.ajax({
+    type: "GET",
+    dataType: "json",
+    url: url,
+    success: function(response) {
+        alert("success! dynamic"+eval(response))
+        alert("success author"+$("products-"+productedc).val())
+        console.log("success! dynamic"+eval(response));
+    },
+    error: function(hr, txtStatus, error) {
+        alert("success! dynamic"+eval(response))
+        alert("success author"+$("products-"+productedc).val())
+        console.log("success! dynamic"+eval(response));
+        console.log(hr);
+        alert("error! " + txtStatus);
+    }
+});
+}
+
+
+<!-- Goutham Code above -->
 	$.ajax({
 
 		type: "GET", 
