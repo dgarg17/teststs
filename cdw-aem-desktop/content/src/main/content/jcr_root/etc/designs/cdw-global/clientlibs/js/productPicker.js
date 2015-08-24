@@ -79,7 +79,7 @@ function productdata(url ,uniqueId){
 			contentString += "<div class='button-lockup'>";
 			contentString += "<div class='pricing-block'>";
 			contentString += "<b>" + products[i].price + "</b>";
-			contentString += "<br/><b>" + products[i].priceName + "</b>";
+			contentString += "<br/><p>" + products[i].priceName + "</p>";
 			contentString += "</div>";
 			contentString += "<a href='" + products[i].pctaklink + "' class='button -"+products[i].ctaButtonStyle+"'>"; //Override with pctaklink if provided
 			contentString += products[i].ctaText; //Comes from page JSON
