@@ -1,0 +1,14 @@
+div .cssmultifieldpanel .x-form-field-wrap.x-form-field-trigger-wrap{
+width:80%!important
+}
+div .cssmultifieldpanel  input.csspathfield.x-form-text.x-form-field {
+width:97%!important
+}
+
+div.multifieldpanelbasecls-body.multifieldpanelbasecls-body-noheader,div.multifieldpanelbasecls.cssmultifieldpanel {
+width:100%!important
+}
+div.multifieldpanelcollapsedctcls{
+    border-bottom-style: solid!important;
+    border-width: 2px!important;
+}

@@ -1,91 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="cq:Dialog"
-    cls="tabpanelcss"
-    helpPath="en/cq/current/wcm/default_components.html#Text"
-    title="Text1"
-    xtype="tabpanel">
+          jcr:primaryType="cq:Dialog"
+          cls="tabpanelcss"
+          helpPath="en/cq/current/wcm/default_components.html#Text"
+          title="Text1"
+          xtype="tabpanel">
     <items jcr:primaryType="cq:WidgetCollection">
         <productPicker
-            jcr:primaryType="cq:Widget"
-            autoScroll="{Boolean}true"
-            cls="multifieldcls"
-            name="./products"
-            title="products"
-            xtype="multifield">
-            <fieldConfig
                 jcr:primaryType="cq:Widget"
-                baseCls="multifieldpanelbasecls"
-                cls="cssmultifieldpanel"
-                collapsedCls="multifieldpanelcollapsedCls"
-                ctCls="multifieldpanelcollapsedctcls"
-                xtype="multifieldpanel">
+                autoScroll="{Boolean}true"
+                cls="multifieldcls"
+                name="./products"
+                title="products"
+                xtype="multifield">
+            <fieldConfig
+                    jcr:primaryType="cq:Widget"
+                    baseCls="multifieldpanelbasecls"
+                    cls="cssmultifieldpanel"
+                    ctCls="multifieldpanelcollapsedctcls"
+                    xtype="multifieldpanel">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <productEDC
-                        jcr:primaryType="cq:Widget"
-                        allowBlank="{Boolean}false"
-                        fieldLabel="Product EDC"
-                        key="productCode"
-                        name="./productEDC"
-                        width="80%"
-                        xtype="textfield"/>
+                            jcr:primaryType="cq:Widget"
+                            allowBlank="{Boolean}false"
+                            fieldLabel="Product EDC"
+                            key="productCode"
+                            name="./productEDC"
+                            width="80%"
+                            xtype="textfield"/>
                     <productImage
-                        jcr:primaryType="cq:Widget"
-                        cls="csspathfield"
-                        fieldLabel="Product Image"
-                        fieldDescription="product image override"
-                        key="imageUrl"
-                        title="product Image"
-                        xtype="pathfield"/>
+                            jcr:primaryType="cq:Widget"
+                            cls="csspathfield"
+                            fieldLabel="Product Image"
+                            fieldDescription="product image override"
+                            key="imageUrl"
+                            title="product Image"
+                            xtype="pathfield"/>
                     <manufacturerImage
-                        jcr:primaryType="cq:Widget"
-                        cls="csspathfield"
-                        fieldLabel="Manufacturer image"
-                        fieldDescription="product manufacturer image"
-                        key="manufacturerImage"
-                        requestSuffix=".img.png"
-                        title="manufacturer image"
-                        xtype="pathfield"/>
+                            jcr:primaryType="cq:Widget"
+                            cls="csspathfield"
+                            fieldLabel="Manufacturer image"
+                            fieldDescription="product manufacturer image"
+                            key="manufacturerImage"
+                            requestSuffix=".img.png"
+                            title="manufacturer image"
+                            xtype="pathfield"/>
                     <productName
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Product Name"
-                        fieldDescription="Product Name with a maximum of 70 characters override"
-                        key="name"
-                        maxLength="{Long}70"
-                        width="80%"
-                        xtype="textfield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Product Name"
+                            fieldDescription="Product Name with a maximum of 70 characters override"
+                            key="name"
+                            maxLength="{Long}70"
+                            width="80%"
+                            xtype="textfield"/>
                     <productDesc
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Product Description"
-                        fieldDescription="Product Name with a maximum of 250 characters override"
-                        key="description"
-                        maxLength="{Long}250"
-                        width="80%"
-                        xtype="textarea"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Product Description"
+                            fieldDescription="Product Name with a maximum of 250 characters override"
+                            key="description"
+                            maxLength="{Long}250"
+                            width="80%"
+                            xtype="textarea"/>
                     <ctaLink
-                        jcr:primaryType="cq:Widget"
-                        cls="csspathfield"
-                        fieldLabel="CTA Link"
-                        key="pctaklink"
-                        width="80%"
-                        xtype="pathfield"/>
+                            jcr:primaryType="cq:Widget"
+                            cls="csspathfield"
+                            fieldLabel="CTA Link"
+                            key="pctaklink"
+                            width="80%"
+                            xtype="pathfield"/>
                     <ctaText
-                        jcr:primaryType="cq:Widget"
-                        emptyText="view"
-                        value="view"
-                        fieldLabel="CTA Text"
-                        fieldDescription="CTA text with a maximum of 24 characters"
-                        key="ctaText"
-                        maxLength="{Long}]24"
-                        name="./ctatext"
-                        width="80%"
-                        xtype="textfield"/>
+                            jcr:primaryType="cq:Widget"
+                            emptyText="view"
+                            value="view"
+                            fieldLabel="CTA Text"
+                            fieldDescription="CTA text with a maximum of 24 characters"
+                            key="ctaText"
+                            maxLength="{Long}]24"
+                            name="./ctatext"
+                            width="80%"
+                            xtype="textfield"/>
                     <campaignId
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Campaign ID"
-                        key="campaignid"
-                        width="80%"
-                        xtype="textfield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Campaign ID"
+                            key="campaignid"
+                            width="80%"
+                            xtype="textfield"/>
                 </items>
             </fieldConfig>
         </productPicker>
@@ -97,11 +96,22 @@
             <items jcr:primaryType="cq:WidgetCollection">
                 <ctaButtonStyle
                         jcr:primaryType="cq:Widget"
-                        colors="[CC0000,FFFFFF]"
-                        defaultValue="CC0000"
-                        fieldLabel="Text Color"
-                        name="./ctaStyle"
-                        xtype="colorfield"/>
+                        defaultValue="red"
+                        fieldLabel="CTA Button Style"
+                        name="./ctaButtonStyle"
+                        type="select"
+                        xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <Red
+                                jcr:primaryType="nt:unstructured"
+                                text="Red"
+                                value="red"/>
+                        <white
+                                jcr:primaryType="nt:unstructured"
+                                text="White"
+                                value="white"/>
+                    </options>
+                </ctaButtonStyle>
                 <imagePoition
                         jcr:primaryType="cq:Widget"
                         defaultValue="top"
