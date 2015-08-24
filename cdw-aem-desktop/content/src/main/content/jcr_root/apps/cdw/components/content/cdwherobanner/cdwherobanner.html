@@ -1,33 +1,31 @@
 <!--/* Hero Banner Image */ -->
 
-<div class="hero align-${properties.textalignment}"
+<div class="layout lead-gen-hero align-${properties.textalignment}"
 	style="background-image:url('${currentNode.path @ context='styleString'}.img.png');color:#${properties.textcolor @ context='styleString'};background-color:#${properties.backgroundcolor @ context='styleString'};">
-	<div class="row">
 		<div class="copy">
 			<h1>
 				${properties.headline1}
 				<i data-sly-test="${properties.headline2}" class="ico-and"></i>
 				${properties.headline2}</h1>
 
-				<h4 data-sly-test="${properties.subheadline}">
+				<h5 data-sly-test="${properties.subheadline}">
 					<i data-sly-test="${properties.prefixsubheadline=='true'}" class="ico-and"></i>
 					${properties.subheadline}
-				</h4>
-				<h6>
+				</h5>
+				<p data-sly-test="${properties.bodytext}">
 					${properties.bodytext}
-					<p></p>
-					<div data-sly-test="${properties.ctatarget == '0'}" data-sly-unwrap>
-						<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"  href="${link.urlUpdate}" data-sly-test="${properties.ctalink}" class="btn button -red">${properties.cdwctalabel}
-					</div>
-					<div data-sly-test="${properties.ctatarget == '1'}" data-sly-unwrap>
-						<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"  href="${link.urlUpdate}" target="_blank" data-sly-test="${properties.ctalink}" class="btn button -red">${properties.cdwctalabel}
-					</div>
-					</a>
-				</h6>
+				</p>
 
-		</div>
+                <div class="button-lockup" data-sly-test="${properties.ctatarget == '0'}" >
+						<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"  href="${link.urlUpdate}" data-sly-test="${properties.ctalink}" class="btn button -red">${properties.cdwctalabel}
+					</a>
+                </div>
+				<div class="button-lockup" data-sly-test="${properties.ctatarget == '1'}" >
+						<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"  href="${link.urlUpdate}" target="_blank" data-sly-test="${properties.ctalink}" class="btn button -red">${properties.cdwctalabel}
+						</a>
+                 </div>
+			</div>
 	</div>
-</div>
 
 
 
