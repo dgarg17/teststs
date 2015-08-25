@@ -1,45 +1,14 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
+    <clientlibs/>
     <jcr:content
-        cq:lastModified="{Date}2015-08-19T12:44:36.905-07:00"
+        cq:lastModified="{Date}2015-08-25T14:34:58.626-07:00"
         cq:lastModifiedBy="admin"
-        cq:template="/libs/wcm/core/templates/designpage"
-        jcr:primaryType="cq:PageContent"
-        jcr:title="CDW Global"
-        sling:resourceType="wcm/core/components/designer">
-        <leadgenpage jcr:primaryType="nt:unstructured">
-            <mainpar
-                jcr:lastModified="{Date}2015-08-05T09:38:55.159-07:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="foundation/components/parsys"
-                components="[group:CDW - Layout]">
-                <section jcr:primaryType="nt:unstructured"/>
-                <cdwcolumnlayout jcr:primaryType="nt:unstructured">
-                    <parsys
-                        jcr:lastModified="{Date}2015-08-05T09:59:43.604-07:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="foundation/components/parsys"
-                        components="group:CDW - General">
-                        <section jcr:primaryType="nt:unstructured"/>
-                    </parsys>
-                </cdwcolumnlayout>
-            </mainpar>
-            <leftpar
-                jcr:lastModified="{Date}2015-08-05T09:38:55.159-07:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="foundation/components/parsys"
-                components="[group:CDW - General]">
-                <section jcr:primaryType="nt:unstructured"/>
-            </leftpar>
-        </leadgenpage>
+        jcr:primaryType="nt:unstructured">
         <openlayoutpage jcr:primaryType="nt:unstructured">
             <mainpar
-                jcr:lastModified="{Date}2015-08-19T12:40:59.108-07:00"
+                jcr:lastModified="{Date}2015-08-25T14:19:06.642-07:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="foundation/components/parsys"
@@ -47,7 +16,7 @@
                 <section jcr:primaryType="nt:unstructured"/>
                 <cdwcolumnlayout jcr:primaryType="nt:unstructured">
                     <parsys
-                        jcr:lastModified="{Date}2015-08-19T12:44:36.902-07:00"
+                        jcr:lastModified="{Date}2015-08-25T14:20:10.842-07:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="foundation/components/parsys"
@@ -57,6 +26,33 @@
                 </cdwcolumnlayout>
             </mainpar>
         </openlayoutpage>
+        <leadgenpage jcr:primaryType="nt:unstructured">
+            <mainpar
+                jcr:lastModified="{Date}2015-08-25T14:33:34.204-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="group:CDW - Layout">
+                <section jcr:primaryType="nt:unstructured"/>
+                <cdwcolumnlayout jcr:primaryType="nt:unstructured">
+                    <parsys
+                        jcr:lastModified="{Date}2015-08-25T14:34:58.622-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys"
+                        components="group:CDW - General">
+                        <section jcr:primaryType="nt:unstructured"/>
+                    </parsys>
+                </cdwcolumnlayout>
+            </mainpar>
+            <leftpar
+                jcr:lastModified="{Date}2015-08-25T14:33:54.217-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="group:CDW - General">
+                <section jcr:primaryType="nt:unstructured"/>
+            </leftpar>
+        </leadgenpage>
     </jcr:content>
-
 </jcr:root>
