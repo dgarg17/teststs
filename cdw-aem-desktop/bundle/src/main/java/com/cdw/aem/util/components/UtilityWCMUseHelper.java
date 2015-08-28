@@ -20,6 +20,7 @@ public class UtilityWCMUseHelper extends BaseComponent {
 
 	private static String SITE_DOMAIN_PROPERTY = "siteDomain";
 	private static String S7_CDW_PARTNER_LOGO_TREATMENT_PROPERTY = "s7CDWPartnerLogoTreatment";
+	private static String S7_IMAGE_ROOT = "s7ImageRoot";
 	private static String SERVICE_DOMAIN = "serviceDomain";
 	private static String PRODUCT_SERVICE = "productService";
 
@@ -72,5 +73,8 @@ public class UtilityWCMUseHelper extends BaseComponent {
 	}
 	public String getProductService(){
 		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(), PRODUCT_SERVICE, "");
+	}
+	public String getS7ImageRoot(){
+		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(), S7_IMAGE_ROOT, "");
 	}
 }

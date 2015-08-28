@@ -8,7 +8,7 @@ width:80%!important
   div.multifieldpanelbasecls-body.multifieldpanelbasecls-body-noheader,div.multifieldpanelbasecls.cssmultifieldpanel {
   width:100%!important
   }
-  div.multifieldpanelcollapsedctcls{
+  div.multifieldpanelcollapsedctcls {
        border-bottom-style: solid!important;
        border-width: 2px!important;
-   }
+  }

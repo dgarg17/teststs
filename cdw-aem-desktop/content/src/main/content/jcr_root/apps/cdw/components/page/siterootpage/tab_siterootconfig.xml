@@ -32,6 +32,12 @@
                         fieldLabel="Product Service"
                         name="./productService"
                         xtype="textfield"/>
+                <S7ImageRoot
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This Url is used as a root for all product images  and manifacture logos"
+                        fieldLabel="Sean7 Image Root"
+                        name="./s7ImageRoot"
+                        xtype="textfield"/>
             </items>
         </siterootconfig>
     </items>

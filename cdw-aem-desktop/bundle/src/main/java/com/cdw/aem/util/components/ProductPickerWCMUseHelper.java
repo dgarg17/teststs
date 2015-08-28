@@ -31,7 +31,7 @@ public class ProductPickerWCMUseHelper extends WCMUse {
         }.getType());
         if (productPickers != null && (productPickers.size() > 0)) {
             for (ProductPicker productPicker : productPickers) {
-                productPicker.updatePctaklink();
+                productPicker.updateProductPicker(getCurrentPage());
             }
         }else{
             return null;
