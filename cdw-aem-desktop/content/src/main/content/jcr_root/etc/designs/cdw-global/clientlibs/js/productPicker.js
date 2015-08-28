@@ -43,10 +43,12 @@ function productdata(url ,uniqueId){
 							productsOverride[j].pctaklink=override[i].pctaklink;
 						}
 						productsOverride[j].ctaText=override[i].ctaText;
-						productsOverride[j].manufacturerImage=override[i].manufacturerImage;
+						productsOverride[j].manufactureImage=override[i].manufactureImage;
 						productsOverride[j].campaignid=override[i].campaignid;
 						productsOverride[j].imagePosition=$("#imagePosition-"+uniqueId).val();
 						productsOverride[j].ctaButtonStyle=$("#ctaButtonStyle-"+uniqueId).val();
+						productsOverride[j].enableManufactureLogo=$("#enableManufactureLogo-"+uniqueId).val();
+						productsOverride[j].showProductPrice=$("#showProductPrice-"+uniqueId).val();
 					}
 				}
 		}
@@ -62,13 +64,15 @@ function productdata(url ,uniqueId){
 			contentString = '';
 			contentString += "<div id='product-" + products[i].productCode + "' class='layout-"+(12/products.length)+"'>";
 			contentString += "<div class='featured-item -"+ products[i].imagePosition+"'>";
-			contentString += "<div class='small-logos'>";
-			contentString += "<img alt='' src='"+((products[i].manufacturerImage.endsWith('?')) ? (products[i].manufacturerImage+"$mfg-aem$'") : (products[i].manufacturerImage+"?$mfg-aem$'"))+"/>"; //Image src comes from page JSON
-			contentString += "</div>";
+			if(products[i].enableManufactureLogo){
+				contentString += "<div class='small-logos'>";
+				contentString += "<img alt='' src='"+((products[i].manufactureImage!=null&&products[i].manufactureImage.endsWith('?')) ? (products[i].manufactureImage+"$mfg-aem$'") : (products[i].manufactureImage+"?$mfg-aem$'"))+"/>"; //Image src comes from page JSON
+				contentString += "</div>";
+			}
 			contentString += "<div class='product-image'>";
-		//  contentString += "<a href='"+products[i].url +"'>";
+		    contentString += "<a href='"+products[i].url +"'>";
 			contentString += "<img alt='' src='" + ((products[i].imageUrl.endsWith('?')) ? (products[i].imageUrl+ "$product-200$'") : (products[i].imageUrl+ "?$product-200$'"))+" />";
-		//	contentString += "</a>";
+			contentString += "</a>";
 			contentString += "</div>";
 			contentString += "<h6>";
 			contentString += "<a href='" + products[i].url + "'>";
@@ -77,10 +81,12 @@ function productdata(url ,uniqueId){
 			contentString += "</h6>";
 			contentString += "<p>" + products[i].description + "</p>";
 			contentString += "<div class='button-lockup'>";
-			contentString += "<div class='pricing-block'>";
-			contentString += "<b>" + products[i].price + "</b>";
-			contentString += "<br/><p>" + products[i].priceName + "</p>";
-			contentString += "</div>";
+			if(products[i].showProductPrice){
+				contentString += "<div class='pricing-block'>";
+				contentString += "<b>" + products[i].price + "</b>";
+				contentString += "<br/><p>" + products[i].priceName + "</p>";
+				contentString += "</div>";
+			}
 			contentString += "<a href='" + products[i].pctaklink + "' class='button -"+products[i].ctaButtonStyle+"'>"; //Override with pctaklink if provided
 			contentString += products[i].ctaText; //Comes from page JSON
 			contentString += "</a>";

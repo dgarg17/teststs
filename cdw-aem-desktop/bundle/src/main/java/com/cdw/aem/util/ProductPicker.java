@@ -1,5 +1,6 @@
 package com.cdw.aem.util;
 
+import com.day.cq.wcm.api.Page;
 import com.cdw.aem.util.LinkUtil;
 
 /**
@@ -14,21 +15,24 @@ import com.cdw.aem.util.LinkUtil;
  campaignid	:	dgragvreagvrfgrf
  */
 public class ProductPicker {
+    private static String S7ImageRoot = "s7ImageRoot";
     private String productCode;
     private String imageUrl;
-    private String manufacturerImage;
+    private String manufactureImage;
     private String name;
+    private String url;
+
     private String description;
     private String pctaklink;
     private String ctaText;
     private String campaignid;
 
-    private  String getManufacturerImage() {
-        return manufacturerImage;
+    public String getManufactureImage() {
+        return manufactureImage;
     }
 
-    public void setManufacturerImage(String manufacturerImage) {
-        this.manufacturerImage = manufacturerImage;
+    public void setManufactureImage(String manufactureImage) {
+        this.manufactureImage = manufactureImage;
     }
 
     public String getProductCode() {
@@ -87,8 +91,21 @@ public class ProductPicker {
         this.campaignid = campaignid;
     }
 
+    public String getUrl() {
+        return url;
+    }
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
-    public void updatePctaklink () {
+    public void updateProductPicker (Page currentPage) {
         this.pctaklink = LinkUtil.updateUrl(pctaklink);
+        this.url= LinkUtil.updateUrl(url);
+        if(imageUrl!=null&&!imageUrl.isEmpty()&&!imageUrl.equalsIgnoreCase("null")) {
+            this.imageUrl = Utility.getSiteRootInheritedProperty(currentPage.getContentResource(), S7ImageRoot, "") + imageUrl;
+        }
+        if(manufactureImage!=null&&!manufactureImage.isEmpty()&&!manufactureImage.equalsIgnoreCase("null")) {
+            this.manufactureImage = Utility.getSiteRootInheritedProperty(currentPage.getContentResource(), S7ImageRoot, "") + manufactureImage;
+        }
     }
 }

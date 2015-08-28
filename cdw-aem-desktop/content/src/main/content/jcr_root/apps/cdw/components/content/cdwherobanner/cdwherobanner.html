@@ -3,10 +3,13 @@
 <div class="layout lead-gen-hero align-${properties.textalignment}"
 	style="background-image:url('${currentNode.path @ context='styleString'}.img.png');color:#${properties.textcolor @ context='styleString'};background-color:#${properties.backgroundcolor @ context='styleString'};">
 		<div class="copy">
-			<h1>
+			<h1 data-sly-test="${!properties.imageLogoReference}">
 				${properties.headline1}
 				<i data-sly-test="${properties.headline2}" class="ico-and"></i>
 				${properties.headline2}</h1>
+			<div class='small-logos' data-sly-test="${properties.imageLogoReference}">
+			<img  scr="${properties.imageLogoReference}?$mfg-250x75$"/>
+				</div>
 
 				<h5 data-sly-test="${properties.subheadline}">
 					<i data-sly-test="${properties.prefixsubheadline=='true'}" class="ico-and"></i>

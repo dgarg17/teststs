@@ -120,6 +120,15 @@
                 rotateParameter=""
                 title="Background Image"
                 xtype="html5smartimage"/>
+            <imageLogo
+                    jcr:primaryType="cq:Widget"
+                    ddGroups="[s7media]"
+                    fileNameParameter="./imageLogo"
+                    fileReferenceParameter="./imageLogoReference"
+                    name="./imageLogo"
+                    requestSuffix=".img.png"
+                    title="Partner Logo Image"
+                    xtype="s7html5smartimage"/>
         </items>
     </items>
 </jcr:root>

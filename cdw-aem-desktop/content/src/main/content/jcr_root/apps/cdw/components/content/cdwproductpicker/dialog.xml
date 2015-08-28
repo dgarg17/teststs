@@ -29,24 +29,26 @@
                             key="productCode"
                             name="./productEDC"
                             width="80%"
-                            xtype="textfield"/>
+                            minLength="5"
+                            maxLength="8"
+                            xtype="numberfield"/>
                     <productImage
                             jcr:primaryType="cq:Widget"
-                            cls="csspathfield"
-                            fieldLabel="Product Image"
-                            fieldDescription="Product images override to be added from S7"
+
+                            fieldLabel="Product Image EDC"
+                            fieldDescription="Product EDC to override product Image"
                             key="imageUrl"
-                            title="product Image"
-                            xtype="pathfield"/>
-                    <manufacturerImage
+                            width="80%"
+                            minLength="5"
+                            maxLength="8"
+                            xtype="numberfield"/>
+                    <manufactureImage
                             jcr:primaryType="cq:Widget"
-                            cls="csspathfield"
-                            fieldLabel="Manufacturer logo"
-                            fieldDescription="Manufacturer Logo to be added from S7"
-                            key="manufacturerImage"
-                            requestSuffix=".img.png"
-                            title="manufacturer image"
-                            xtype="pathfield"/>
+                            fieldLabel="Manufacture logo Code"
+                            fieldDescription="Manufacture Logo code to display manufacturer logo"
+                            key="manufactureImage"
+                            width="80%"
+                            xtype="textfield"/>
                     <productName
                             jcr:primaryType="cq:Widget"
                             fieldLabel="Product Name"
@@ -63,6 +65,14 @@
                             maxLength="{Long}250"
                             width="80%"
                             xtype="textarea"/>
+                    <productUrl
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Product Url"
+                            fieldDescription="Product Url is a override for product headline and image"
+                            key="url"
+                            cls="csspathfield"
+                            width="80%"
+                            xtype="pathfield"/>
                     <ctaLink
                             jcr:primaryType="cq:Widget"
                             cls="csspathfield"
@@ -95,9 +105,26 @@
                 jcr:primaryType="cq:Widget"
                 cls="panelcss"
                 title="Global Configurations"
-
                 xtype="panel">
             <items jcr:primaryType="cq:WidgetCollection">
+                <enableManufactureLogo
+                        jcr:primaryType="cq:Widget"
+
+                        editElementQuery="div[class=&quot;text&quot;]"
+                        fieldLabel="Enable Manufacture Logo"
+                        fieldDescription="Checkbox to enable manufacture logo "
+                        name="./enableManufactureLogo"
+                        type="checkbox"
+                        xtype="selection"/>
+                <showProductPrice
+                        jcr:primaryType="cq:Widget"
+                        editElementQuery="div[class=&quot;text&quot;]"
+                        fieldLabel="Show Product Price"
+
+                        fieldDescription="Checkbox to enable Product Price "
+                        name="./showProductPrice"
+                        type="checkbox"
+                        xtype="selection"/>
                 <ctaButtonStyle
                         jcr:primaryType="cq:Widget"
                         defaultValue="red"
