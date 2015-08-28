@@ -1457,12 +1457,12 @@ a:hover {
 img {
   max-width: 100%; }
 
-hr {
+/*hr {
   margin: 30px 0;
   border: none;
   height: 1px;
   line-height: 1px;
-  background-color: #ccc; }
+  background-color: #ccc; }*/
 
 /* Disclaimer */
 .disclaimer {
