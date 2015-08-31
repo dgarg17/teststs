@@ -22,11 +22,11 @@
                         type="select"
                         xtype="selection">
                     <options jcr:primaryType="cq:WidgetCollection">
-                        <onepix
+                        <onepx
                                 jcr:primaryType="nt:unstructured"
                                 text="1px(Default)"
                                 value="1px"/>
-                        <fourpix
+                        <fourpx
                                 jcr:primaryType="nt:unstructured"
                                 text="4px"
                                 value="4px"/>
@@ -35,6 +35,7 @@
                 <horizontalRuleColor
                         jcr:primaryType="cq:Widget"
                         defaultValue="4D4D4F"
+                        fieldDescription="Default Rule color is Grey(4D4D4F)"
                         fieldLabel="Rule Color"
                         name="./ruleColor"
                         colors="[CC0000,D02C30,FE4A5D,FF828A,FFB0C0,EEC7CE,C20430,D8292F,E74C39,E57E3E,F2BD7D,F28B00,F5B324,F8BF00,FFD200,FFE900,009D4F,3DAF2C,76BD22,A6CE39,C3D600,009483,00A19C,00AFAB,63CCCA,9ADADA,007299,007CBB,00A8E2,00B3E3,54C9E8,76236D,923A80,A45B96,B588B9,CEADD0,B42573,E01783,EA6CB0,F6A7D7,E8BCD8,898B8E,63656A,54565B,4D4D4F]"
