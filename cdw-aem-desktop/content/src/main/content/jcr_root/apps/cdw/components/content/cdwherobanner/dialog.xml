@@ -122,6 +122,9 @@
                 xtype="html5smartimage"/>
             <imageLogo
                     jcr:primaryType="cq:Widget"
+                    allowUpload="{Boolean}false"
+                    disableZoom="{Boolean}true"
+                    cropParameter=""
                     ddGroups="[s7media]"
                     fileNameParameter="./imageLogo"
                     fileReferenceParameter="./imageLogoReference"
