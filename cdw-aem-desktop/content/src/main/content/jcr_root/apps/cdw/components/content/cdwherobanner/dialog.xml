@@ -107,6 +107,19 @@
                     </ctatarget>
                 </items>
             </tab1>
+            <imageLogo
+                    jcr:primaryType="cq:Widget"
+                    allowUpload="{Boolean}false"
+                    disableZoom="{Boolean}true"
+                    cropParameter=""
+                    ddGroups="[s7media]"
+                    fileNameParameter="./image2/fileName"
+                    fileReferenceParameter="./fileReferenceLogo"
+                    name="./image2/file"
+                    mapParameter=""
+                    title="Partner Logo Image"
+                    xtype="html5smartimage">
+            </imageLogo>
             <image
                     jcr:primaryType="cq:Widget"
                     allowUpload="{Boolean}false"
@@ -121,19 +134,7 @@
                     title="Background Image"
                     xtype="html5smartimage">
             </image>
-            <imageLogo
-                    jcr:primaryType="cq:Widget"
-                    allowUpload="{Boolean}false"
-                    disableZoom="{Boolean}true"
-                    cropParameter=""
-                    ddGroups="[s7media]"
-                    fileNameParameter="./image2/fileName"
-                    fileReferenceParameter="./fileReferenceLogo"
-                    name="./image2/file"
-                    mapParameter=""
-                    title="Partner Logo Image"
-                    xtype="s7html5smartimage">
-            </imageLogo>
+
 
 
         </items>
