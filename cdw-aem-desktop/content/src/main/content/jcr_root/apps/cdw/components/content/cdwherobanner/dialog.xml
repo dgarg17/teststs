@@ -126,13 +126,13 @@
                     allowUpload="{Boolean}false"
                     disableZoom="{Boolean}true"
                     cropParameter=""
-                    ddGroups="[media]"
+                    ddGroups="[s7media]"
                     fileNameParameter="./image2/fileName"
                     fileReferenceParameter="./fileReferenceLogo"
                     name="./image2/file"
                     mapParameter=""
                     title="Partner Logo Image"
-                    xtype="html5smartimage">
+                    xtype="s7html5smartimage">
             </imageLogo>
 
 
