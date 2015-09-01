@@ -1,0 +1,24 @@
+<!--/* CDW Color CTA Text Block */ -->
+
+<div class="content-container-item  ${properties.textalignment}"
+	style="background-color:#${properties.backgroundcolor @ context='styleString'};">
+	<h5 data-sly-test="${properties.headline}">${properties.headline}</h5>
+	<p data-sly-test="${properties.bodytext}">${properties.bodytext}</p>
+	<div class="button-lockup">
+		<a
+			data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
+			href="${link.urlUpdate}" data-sly-test="${properties.ctalink}" target="${properties.ctatarget}" class="btn button -red">
+			${properties.cdwctalabel}
+		</a>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
