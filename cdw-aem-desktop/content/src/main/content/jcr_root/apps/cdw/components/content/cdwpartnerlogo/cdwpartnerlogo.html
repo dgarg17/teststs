@@ -3,12 +3,9 @@
 <div class="layout">
 	<div class="partner-lockup">
 		<div class="logo">
-        <div data-sly-test="${properties.partnerlogourl && properties.target == '0'}"data-sly-unwrap>
-			<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.partnerlogourl}"
-			href="${link.urlUpdate}"><img data-sly-test="${properties.fileReference}" src="${properties.fileReference}?$partnerLockup$" alt="${properties.alt}" /></a>
-		</div>
-        <div data-sly-test="${properties.partnerlogourl && properties.target == '1'}"data-sly-unwrap>
-			<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.partnerlogourl}" target="_blank"
+
+        <div data-sly-test="${properties.partnerlogourl}"data-sly-unwrap>
+			<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.partnerlogourl}" target="${properties.ctatarget}"
 			href="${link.urlUpdate}"><img data-sly-test="${properties.fileReference}" src="${properties.fileReference}?$partnerLockup$" alt="${properties.alt}" /></a>
 		</div>
          <div data-sly-test="${!properties.partnerlogourl}"data-sly-unwrap>
