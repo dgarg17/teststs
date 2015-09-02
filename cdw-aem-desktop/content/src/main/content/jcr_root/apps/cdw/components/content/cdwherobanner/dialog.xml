@@ -27,6 +27,12 @@
                             fieldLabel="Headline 2"
                             name="./headline2"
                             xtype="textfield"/>
+                    <brandLogo
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Brand Logo will override headline( HeadLine 1 and 2)"
+                            fieldLabel="Brand Logo"
+                            name="./brandLogo"
+                            xtype="textfield"/>
                     <subheadline
                             jcr:primaryType="cq:Widget"
                             fieldLabel="Sub Headline"
@@ -122,24 +128,6 @@
                     title="Background Image"
                     xtype="html5smartimage">
             </image>
-            <imageLogo
-                    jcr:primaryType="cq:Widget"
-                    allowUpload="{Boolean}false"
-                    disableZoom="{Boolean}true"
-                    cropParameter=""
-                    ddGroups="[s7media]"
-                    fileNameParameter="./image2/fileName"
-                    fileReferenceParameter="./fileReferenceLogo"
-                    name="./image2/file"
-                    mapParameter=""
-                    width="400"
-                    height="400"
-                    title="Partner Logo Image"
-                    xtype="s7html5smartimage">
-            </imageLogo>
-
-
-
         </items>
     </items>
 </jcr:root>

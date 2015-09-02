@@ -39,9 +39,7 @@
                             fieldDescription="Product EDC to override product Image"
                             key="imageUrl"
                             width="80%"
-                            minLength="5"
-                            maxLength="8"
-                            xtype="numberfield"/>
+                            xtype="textfield"/>
                     <manufactureImage
                             jcr:primaryType="cq:Widget"
                             fieldLabel="Manufacture logo Code"
@@ -142,6 +140,10 @@
                                 jcr:primaryType="nt:unstructured"
                                 text="White"
                                 value="white"/>
+                        <gray
+                                jcr:primaryType="nt:unstructured"
+                                text="Gray"
+                                value="gray"/>
                     </options>
                 </ctaButtonStyle>
                 <imagePoition
