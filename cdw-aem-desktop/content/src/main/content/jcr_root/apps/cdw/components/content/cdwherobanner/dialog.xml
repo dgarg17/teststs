@@ -123,6 +123,7 @@
                     mapParameter=""
                     name="./image1/file"
                     rotateParameter=""
+                    requestSuffix=".img.png"
                     title="Background Image"
                     xtype="html5smartimage">
             </image>
