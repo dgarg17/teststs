@@ -11,27 +11,20 @@
         <img class="brand-logo" data-sly-test="${properties.brandLogo}" style="margin:4px" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" src="${utility.getS7ImageRoot}${properties.brandLogo}?$mfg-250x75$" alt="brand-logo"/>
 
 
-        <h5 data-sly-test="${properties.subheadline}">
-            <i data-sly-test="${properties.prefixsubheadline=='true'}" class="ico-and"></i>
-            ${properties.subheadline}
-        </h5>
+				<h5 data-sly-test="${properties.subheadline}">
+					<i data-sly-test="${properties.prefixsubheadline=='true'}" class="ico-and"></i>
+					${properties.subheadline}
+				</h5>
+				<p data-sly-test="${properties.bodytext}">
+					${properties.bodytext}
+				</p>
 
-        <p data-sly-test="${properties.bodytext}">
-            ${properties.bodytext}
-        </p>
-
-        <div class="button-lockup" data-sly-test="${properties.ctatarget == '0'}">
-            <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
-               href="${link.urlUpdate}" data-sly-test="${properties.ctalink}" class="btn button -red">${properties.cdwctalabel}
-            </a>
-        </div>
-        <div class="button-lockup" data-sly-test="${properties.ctatarget == '1'}">
-            <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
-               href="${link.urlUpdate}" target="_blank" data-sly-test="${properties.ctalink}" class="btn button -red">${properties.cdwctalabel}
-            </a>
-        </div>
-    </div>
-</div>
+				<div class="button-lockup" >
+                    <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"  href="${link.urlUpdate}" target="${properties.ctatarget}" data-sly-test="${properties.ctalink}" class="btn button -red">${properties.cdwctalabel}
+						</a>
+                 </div>
+			</div>
+	</div>
 
 
 

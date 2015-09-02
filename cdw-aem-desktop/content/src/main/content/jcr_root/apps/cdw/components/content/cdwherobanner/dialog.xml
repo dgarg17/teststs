@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-          jcr:primaryType="cq:Dialog"
-          height="{Long}500"
-          title="dialog"
-          xtype="dialog">
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}500"
+    title="dialog"
+    xtype="dialog">
     <items
-            jcr:primaryType="cq:Widget"
-            xtype="tabpanel">
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
             <tab1
-                    jcr:primaryType="cq:Widget"
-                    anchor="100%"
-                    title="Text"
-                    xtype="panel">
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Text"
+                xtype="panel">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <headline1
-                            jcr:primaryType="cq:Widget"
-                            fieldDescription="First segment of Main Headline"
-                            fieldLabel="Headline 1"
-                            name="./headline1"
-                            xtype="textfield"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="First segment of Main Headline"
+                        fieldLabel="Headline 1"
+                        name="./headline1"
+                        xtype="textfield"/>
                     <headline2
                             jcr:primaryType="cq:Widget"
                             fieldDescription="Second segment of Main Headline; an 'and' separator will automatically be added between the two segments if this is present."
@@ -34,86 +33,85 @@
                             name="./brandLogo"
                             xtype="textfield"/>
                     <subheadline
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="Sub Headline"
-                            name="./subheadline"
-                            xtype="textfield"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Sub Headline"
+                        name="./subheadline"
+                        xtype="textfield"/>
                     <prefixsubheadline
-                            jcr:primaryType="cq:Widget"
-                            editElementQuery="div[class=&quot;text&quot;]"
-                            fieldLabel="Prefix sub headline?"
-                            name="./prefixsubheadline"
-                            type="checkbox"
-                            xtype="selection"/>
+                        jcr:primaryType="cq:Widget"
+                        editElementQuery="div[class=&quot;text&quot;]"
+                        fieldLabel="Prefix sub headline?"
+                        name="./prefixsubheadline"
+                        type="checkbox"
+                        xtype="selection"/>
                     <text
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="Body Copy"
-                            name="./bodytext"
-                            xtype="textarea"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Body Copy"
+                        name="./bodytext"
+                        xtype="textarea"/>
                     <textcolor
-                            jcr:primaryType="cq:Widget"
-                            colors="[4D4D4F,FFFFFF,CC0000,0072BC]"
-                            fieldLabel="Text Color"
-                            name="./textcolor"
-                            xtype="colorfield"/>
+                        jcr:primaryType="cq:Widget"
+                        colors="[4D4D4F,FFFFFF,CC0000,0072BC]"
+                        fieldLabel="Text Color"
+                        name="./textcolor"
+                        xtype="colorfield"/>
                     <textalignment
-                            jcr:primaryType="cq:Widget"
-                            defaultValue="left"
-                            fieldLabel="Text Alignment"
-                            name="./textalignment"
-                            type="select"
-                            xtype="selection">
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="left"
+                        fieldLabel="Text Alignment"
+                        name="./textalignment"
+                        type="select"
+                        xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <left
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Left"
-                                    value="left"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="left"/>
                             <right
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Right"
-                                    value="right"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="right"/>
                         </options>
                     </textalignment>
                     <backgroundcolor
-                            jcr:primaryType="cq:Widget"
-                            colors="[CC0000,D02C30,FE4A5D,FF828A,FFB0C0,EEC7CE,C20430,D8292F,E74C39,E57E3E,F2BD7D,F28B00,F5B324,F8BF00,FFD200,FFE900,009D4F,3DAF2C,76BD22,A6CE39,C3D600,009483,00A19C,00AFAB,63CCCA,9ADADA,007299,007CBB,00A8E2,00B3E3,54C9E8,76236D,923A80,A45B96,B588B9,CEADD0,B42573,E01783,EA6CB0,F6A7D7,E8BCD8,898B8E,63656A,54565B,4D4D4F]"
-                            fieldLabel="Background Color"
-                            name="./backgroundcolor"
-                            xtype="colorfield"/>
+                        jcr:primaryType="cq:Widget"
+                        colors="[CC0000,D02C30,FE4A5D,FF828A,FFB0C0,EEC7CE,C20430,D8292F,E74C39,E57E3E,F2BD7D,F28B00,F5B324,F8BF00,FFD200,FFE900,009D4F,3DAF2C,76BD22,A6CE39,C3D600,009483,00A19C,00AFAB,63CCCA,9ADADA,007299,007CBB,00A8E2,00B3E3,54C9E8,76236D,923A80,A45B96,B588B9,CEADD0,B42573,E01783,EA6CB0,F6A7D7,E8BCD8,898B8E,63656A,54565B,4D4D4F]"
+                        fieldLabel="Background Color"
+                        name="./backgroundcolor"
+                        xtype="colorfield"/>
                     <ctalabel
-                            jcr:primaryType="cq:Widget"
-                            fieldDescription="Max character limit is 24"
-                            fieldLabel="CTA Label"
-                            maxLength="{Long}24"
-                            name="./cdwctalabel"
-                            xtype="textfield"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Max character limit is 24"
+                        fieldLabel="CTA Label"
+                        maxLength="{Long}24"
+                        name="./cdwctalabel"
+                        xtype="textfield"/>
                     <ctalink
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="CTA Link"
-                            name="./ctalink"
-                            xtype="pathfield"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="CTA Link"
+                        name="./ctalink"
+                        xtype="pathfield"/>
                     <ctatarget
-                            jcr:primaryType="cq:Widget"
-                            defaultValue="0"
-                            fieldDescription="CTA link opens in same window by default."
-                            fieldLabel="CTA Target"
-                            name="./ctatarget"
-                            type="select"
-                            xtype="selection">
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="_self"
+                        fieldDescription="CTA link opens in same window by default."
+                        fieldLabel="CTA Target"
+                        name="./ctatarget"
+                        type="select"
+                        xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <new
-                                    jcr:primaryType="nt:unstructured"
-                                    text="New Window"
-                                    value="1"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="New Window"
+                                value="_blank"/>
                             <same
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Same Window"
-                                    value="0"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Window (Default)"
+                                value="_self"/>
                         </options>
                     </ctatarget>
                 </items>
             </tab1>
-
             <image
                     jcr:primaryType="cq:Widget"
                     allowUpload="{Boolean}false"
