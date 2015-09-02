@@ -21,11 +21,17 @@
                         name="./headline1"
                         xtype="textfield"/>
                     <headline2
-                        jcr:primaryType="cq:Widget"
-                        fieldDescription="Second segment of Main Headline; an 'and' separator will automatically be added between the two segments if this is present."
-                        fieldLabel="Headline 2"
-                        name="./headline2"
-                        xtype="textfield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Second segment of Main Headline; an 'and' separator will automatically be added between the two segments if this is present."
+                            fieldLabel="Headline 2"
+                            name="./headline2"
+                            xtype="textfield"/>
+                    <brandLogo
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Brand Logo will override headline( HeadLine 1 and 2)"
+                            fieldLabel="Brand Logo"
+                            name="./brandLogo"
+                            xtype="textfield"/>
                     <subheadline
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Sub Headline"
@@ -107,32 +113,20 @@
                 </items>
             </tab1>
             <image
-                jcr:primaryType="cq:Widget"
-                allowUpload="{Boolean}false"
-                cropParameter=""
-                ddGroups="[media]"
-                disableZoom="{Boolean}true"
-                fileNameParameter="./image1/fileName"
-                fileReferenceParameter="./fileReference"
-                mapParameter=""
-                name="./image1/file"
-                rotateParameter=""
-                title="Background Image"
-                xtype="html5smartimage"/>
-            <imageLogo
-                jcr:primaryType="cq:Widget"
-                allowUpload="{Boolean}false"
-                cropParameter=""
-                ddGroups="[s7media]"
-                disableZoom="{Boolean}true"
-                fileNameParameter="./image2/fileName"
-                fileReferenceParameter="./fileReferenceLogo"
-                height="400"
-                mapParameter=""
-                name="./image2/file"
-                title="Partner Logo Image"
-                width="400"
-                xtype="s7html5smartimage"/>
+                    jcr:primaryType="cq:Widget"
+                    allowUpload="{Boolean}false"
+                    disableZoom="{Boolean}true"
+                    cropParameter=""
+                    ddGroups="[media]"
+                    fileNameParameter="./image1/fileName"
+                    fileReferenceParameter="./fileReference"
+                    mapParameter=""
+                    name="./image1/file"
+                    rotateParameter=""
+                    requestSuffix=".img.png"
+                    title="Background Image"
+                    xtype="html5smartimage">
+            </image>
         </items>
     </items>
 </jcr:root>

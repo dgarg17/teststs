@@ -1,30 +1,37 @@
 <!--/* Hero Banner Image */ -->
 
-<div class="layout lead-gen-hero align-${properties.textalignment}"
-	style="background-image:url('${currentNode.path @ context='styleString'}.img.png');color:#${properties.textcolor @ context='styleString'};background-color:#${properties.backgroundcolor @ context='styleString'};">
-		<div class="copy">
-			<h1 data-sly-test="${!properties.imageLogoReference}">
-				${properties.headline1}
-				<i data-sly-test="${properties.headline2}" class="ico-and"></i>
-				${properties.headline2}</h1>
+<div class="hero align-${properties.textalignment}"
+     style="background-image:url('${currentNode.path @ context='styleString'}.img.png');color:#${properties.textcolor @ context='styleString'};background-color:#${properties.backgroundcolor @ context='styleString'};">
+    <div class="row">
+        <div class="copy">
+            <h1 data-sly-test="${!properties.brandLogo}">
+                ${properties.headline1}
+                <i data-sly-test="${properties.headline2}" class="ico-and"></i>
+                ${properties.headline2}</h1>
 
-			<img   data-sly-test="${properties.imageLogoReference}" src="${properties.imageLogoReference}?$mfg-250x75$"/>
+            <img class="hero-brand-logo" data-sly-test="${properties.brandLogo}"
+                 data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"
+                 src="${utility.getS7ImageRoot}${properties.brandLogo}?$mfg-250x75$" alt="brand-logo"/>
 
 
-				<h5 data-sly-test="${properties.subheadline}">
-					<i data-sly-test="${properties.prefixsubheadline=='true'}" class="ico-and"></i>
-					${properties.subheadline}
-				</h5>
-				<p data-sly-test="${properties.bodytext}">
-					${properties.bodytext}
-				</p>
+            <h5 data-sly-test="${properties.subheadline}">
+                <i data-sly-test="${properties.prefixsubheadline=='true'}" class="ico-and"></i>
+                ${properties.subheadline}
+            </h5>
 
-				<div class="button-lockup" >
-                    <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"  href="${link.urlUpdate}" target="${properties.ctatarget}" data-sly-test="${properties.ctalink}" class="btn button -red">${properties.cdwctalabel}
-						</a>
-                 </div>
-			</div>
-	</div>
+            <p data-sly-test="${properties.bodytext}">
+                ${properties.bodytext}
+            </p>
+
+            <div class="button-lockup">
+                <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
+                   href="${link.urlUpdate}" target="${properties.ctatarget}" data-sly-test="${properties.ctalink}"
+                   class="btn button -red">${properties.cdwctalabel}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

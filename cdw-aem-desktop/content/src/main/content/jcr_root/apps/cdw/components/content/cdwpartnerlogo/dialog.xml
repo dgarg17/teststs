@@ -30,25 +30,25 @@
                     fieldLabel="Partner Logo URL"
                     name="./partnerlogourl"
                     xtype="pathfield"/>
-                <ctatarget
+                <target
                     jcr:primaryType="cq:Widget"
-                    defaultValue="_self"
-                    fieldDescription="Partner Logo Url opens in same window by default."
-                    fieldLabel="Link Target"
-                    name="./ctatarget"
+                    defaultValue="0"
+                    fieldDescription=" Partner logo url opens in same window by default."
+                    fieldLabel="Link  Target"
+                    name="./target"
                     type="select"
                     xtype="selection">
                     <options jcr:primaryType="cq:WidgetCollection">
                         <new
                             jcr:primaryType="nt:unstructured"
                             text="New Window"
-                            value="_blank"/>
+                            value="1"/>
                         <same
                             jcr:primaryType="nt:unstructured"
-                            text="Same Window (Default)"
-                            value="_self"/>
+                            text="Same Window"
+                            value="0"/>
                     </options>
-                </ctatarget>
+                </target>
             </items>
         </advanced>
     </items>
