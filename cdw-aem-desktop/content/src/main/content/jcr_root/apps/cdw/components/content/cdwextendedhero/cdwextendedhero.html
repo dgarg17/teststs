@@ -1,0 +1,26 @@
+<!--/* Extended Hero Banner Image */ -->
+
+    <div class="layout-extended">
+			<div class="hero-full" style="background-image:url('${currentNode.path @ context='styleString'}.img.png')">
+				<div data-sly-test="${properties.iconimage}" data-sly-unwrap>
+                	<img src="${properties.iconimage}">
+                </div>
+			</div>
+			<div class="container">
+				<div class="layout">
+					<div class="layout-8">
+						<div class="copy">							
+							<h1 data-sly-test="${properties.headline1}">${properties.headline1}
+							<i data-sly-test="${properties.headline2}" class="ico-and-thinner"></i>
+								${properties.headline2}
+							</h1>
+								<div class="layout-6">
+									<h3 data-sly-test="${properties.subheadline1}"><span class="-highlight"><i data-sly-test="${properties.prefixsubheadline=='true'}" class="ico-and-thinner"></i> ${properties.subheadline1}</span></h3>
+                                    <h3 data-sly-test="${properties.subheadline2}"><span class="-highlight">${properties.subheadline2}</span></h3>
+								</div>							
+				    	</div>
+					</div>									
+				</div>								
+			</div>
+	</div>
+
