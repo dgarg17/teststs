@@ -28,7 +28,7 @@
                             xtype="textfield"/>
                     <brandLogo
                             jcr:primaryType="cq:Widget"
-                            fieldDescription="Brand Logo will override headline( HeadLine 1 and 2)"
+                            fieldDescription=" Use image name only(e.g. - ‘H-P’) in the text field in order to generate the proper S7 URL"
                             fieldLabel="Brand Logo"
                             name="./brandLogo"
                             xtype="textfield"/>

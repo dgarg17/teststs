@@ -48,7 +48,7 @@ function productdata(url ,uniqueId){
 						productsOverride[j].imagePosition=$("#imagePosition-"+uniqueId).val();
 						productsOverride[j].ctaButtonStyle=$("#ctaButtonStyle-"+uniqueId).val();
 						productsOverride[j].enableManufactureLogo=$("#enableManufactureLogo-"+uniqueId).val();
-						productsOverride[j].showProductPrice=$("#showProductPrice-"+uniqueId).val();
+						productsOverride[j].showProductPrice=override[i].showProductPrice[0];
 					}
 				}
 		}
@@ -66,12 +66,12 @@ function productdata(url ,uniqueId){
 			contentString += "<div class='featured-item -"+ products[i].imagePosition+"'>";
 			if(products[i].enableManufactureLogo){
 				contentString += "<div class='small-logos'>";
-				contentString += "<img alt='' src='"+((products[i].manufactureImage!=null&&products[i].manufactureImage.endsWith('?')) ? (products[i].manufactureImage+"$mfg-aem$'") : (products[i].manufactureImage+"?$mfg-aem$'"))+"/>"; //Image src comes from page JSON
+				contentString += "<img alt='' src='"+ products[i].manufactureImage+"$mfg-aem$'"+"/>";
 				contentString += "</div>";
 			}
 			contentString += "<div class='product-image'>";
 		    contentString += "<a href='"+products[i].url +"'>";
-			contentString += "<img alt='' src='" + ((products[i].imageUrl.endsWith('?')) ? (products[i].imageUrl+ "$product-200$'") : (products[i].imageUrl+ "?$product-200$'"))+" />";
+			contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" />";
 			contentString += "</a>";
 			contentString += "</div>";
 			contentString += "<h6>";
@@ -81,7 +81,7 @@ function productdata(url ,uniqueId){
 			contentString += "</h6>";
 			contentString += "<p>" + products[i].description + "</p>";
 			contentString += "<div class='button-lockup'>";
-			if(products[i].showProductPrice){
+			if(products[i].showProductPrice=='true'){
 				contentString += "<div class='pricing-block'>";
 				contentString += "<b>" + products[i].price + "</b>";
 				contentString += "<br/><p>" + products[i].priceName + "</p>";
