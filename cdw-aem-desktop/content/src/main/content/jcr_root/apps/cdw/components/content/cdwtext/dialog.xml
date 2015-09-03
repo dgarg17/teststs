@@ -13,7 +13,7 @@
             <items jcr:primaryType="cq:WidgetCollection">
                 <text
                     jcr:primaryType="cq:Widget"
-                    hideLabel="{Boolean}true"
+                    fieldLabel="Text"
                     name="./text"
                     xtype="richtext">
                     <rtePlugins jcr:primaryType="nt:unstructured">
@@ -93,6 +93,11 @@
                         <format
                             jcr:primaryType="nt:unstructured"
                             features="[bold,italic]"/>
+                        <colorpicker
+                            jcr:primaryType="nt:unstructured"
+                            colors="[4D4E53,CC0000,FFFFFF]"
+                            defaultColor="4D4E53"
+                            features="*"/>
                     </rtePlugins>
                     <externalStyleSheets
                         jcr:primaryType="nt:unstructured"
