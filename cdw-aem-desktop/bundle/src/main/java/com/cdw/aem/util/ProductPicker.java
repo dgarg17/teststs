@@ -3,6 +3,8 @@ package com.cdw.aem.util;
 import com.day.cq.wcm.api.Page;
 import com.cdw.aem.util.LinkUtil;
 
+import java.util.List;
+
 /**
  * Created by goutved on 08/18/2015.
  productCode	:	12345
@@ -25,6 +27,7 @@ public class ProductPicker {
     private String description;
     private String pctaklink;
     private String ctaText;
+    private String[] showProductPrice;
     private String campaignid;
 
     public String getManufactureImage() {
@@ -91,6 +94,14 @@ public class ProductPicker {
         this.campaignid = campaignid;
     }
 
+    public String[] getShowProductPrice() {
+        return showProductPrice;
+    }
+
+    public void setShowProductPrice(String[] showProductPrice) {
+        this.showProductPrice = showProductPrice;
+    }
+
     public String getUrl() {
         return url;
     }
@@ -102,10 +113,10 @@ public class ProductPicker {
         this.pctaklink = LinkUtil.updateUrl(pctaklink);
         this.url= LinkUtil.updateUrl(url);
         if(imageUrl!=null&&!imageUrl.isEmpty()&&!imageUrl.equalsIgnoreCase("null")) {
-            this.imageUrl = Utility.getSiteRootInheritedProperty(currentPage.getContentResource(), S7ImageRoot, "") + imageUrl;
+            this.imageUrl = Utility.getSiteRootInheritedProperty(currentPage.getContentResource(), S7ImageRoot, "") + imageUrl+"?";
         }
         if(manufactureImage!=null&&!manufactureImage.isEmpty()&&!manufactureImage.equalsIgnoreCase("null")) {
-            this.manufactureImage = Utility.getSiteRootInheritedProperty(currentPage.getContentResource(), S7ImageRoot, "") + manufactureImage;
+            this.manufactureImage = Utility.getSiteRootInheritedProperty(currentPage.getContentResource(), S7ImageRoot, "") + manufactureImage+"?";
         }
     }
 }

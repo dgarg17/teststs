@@ -8,12 +8,11 @@
                 ${properties.headline1}
                 <i data-sly-test="${properties.headline2}" class="ico-and"></i>
                 ${properties.headline2}</h1>
-
-            <img class="hero-brand-logo" data-sly-test="${properties.brandLogo}"
-                 data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"
-                 src="${utility.getS7ImageRoot}${properties.brandLogo}?$mfg-250x75$" alt="brand-logo"/>
-
-
+            <div class="brand-img-lockup" data-sly-test="${properties.brandLogo}" >
+                <img class="hero-brand-logo"
+                     data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"
+                     src="${utility.getS7ImageRoot}${properties.brandLogo}?$mfg-250x75$" alt="brand-logo"/>
+            </div>
             <h5 data-sly-test="${properties.subheadline}">
                 <i data-sly-test="${properties.prefixsubheadline=='true'}" class="ico-and"></i>
                 ${properties.subheadline}

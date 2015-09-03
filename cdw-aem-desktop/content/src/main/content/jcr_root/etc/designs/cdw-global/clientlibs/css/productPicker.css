@@ -1,6 +1,9 @@
 div .cssmultifieldpanel .x-form-field-wrap.x-form-field-trigger-wrap{
-width:80%!important
-  }
+   width:80%!important
+     }
+div .cssmultifieldpanel .x-panel-body.x-panel-body-noheader ,div .cssmultifieldpanel .x-panel.cq-selection {
+     width:80%!important
+     }
   div .cssmultifieldpanel  input.csspathfield.x-form-text.x-form-field {
   width:97%!important
   }

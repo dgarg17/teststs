@@ -81,8 +81,8 @@
                             xtype="pathfield"/>
                     <ctaText
                             jcr:primaryType="cq:Widget"
-                            emptyText="view"
-                            value="view"
+                            emptyText="View"
+                            value="View"
                             fieldLabel="CTA Text"
                             fieldDescription="CTA Text for the button with a maximum of 24 characters"
                             key="ctaText"
@@ -96,6 +96,15 @@
                             key="campaignid"
                             width="80%"
                             xtype="textfield"/>
+                    <showProductPrice
+                            jcr:primaryType="cq:Widget"
+                            editElementQuery="div[class=&quot;text&quot;]"
+                            fieldLabel="Show Product Price"
+                            fieldDescription="Checkbox to enable Product Price "
+                            key="showProductPrice"
+                            width="50%"
+                            type="checkbox"
+                            xtype="selection"/>
                 </items>
             </fieldConfig>
         </productPicker>
@@ -114,15 +123,7 @@
                         name="./enableManufactureLogo"
                         type="checkbox"
                         xtype="selection"/>
-                <showProductPrice
-                        jcr:primaryType="cq:Widget"
-                        editElementQuery="div[class=&quot;text&quot;]"
-                        fieldLabel="Show Product Price"
 
-                        fieldDescription="Checkbox to enable Product Price "
-                        name="./showProductPrice"
-                        type="checkbox"
-                        xtype="selection"/>
                 <ctaButtonStyle
                         jcr:primaryType="cq:Widget"
                         defaultValue="red"
