@@ -48,7 +48,9 @@ function productdata(url ,uniqueId){
 						productsOverride[j].imagePosition=$("#imagePosition-"+uniqueId).val();
 						productsOverride[j].ctaButtonStyle=$("#ctaButtonStyle-"+uniqueId).val();
 						productsOverride[j].enableManufactureLogo=$("#enableManufactureLogo-"+uniqueId).val();
-						productsOverride[j].showProductPrice=override[i].showProductPrice[0];
+						if(hidePrice=override[i].hidePrice.length>0){
+							productsOverride[j].hidePrice=override[i].hidePrice[0];
+						}
 					}
 				}
 		}
@@ -81,7 +83,7 @@ function productdata(url ,uniqueId){
 			contentString += "</h6>";
 			contentString += "<p>" + products[i].description + "</p>";
 			contentString += "<div class='button-lockup'>";
-			if(products[i].showProductPrice=='true'){
+			if(products[i].hidePrice!='true'){
 				contentString += "<div class='pricing-block'>";
 				contentString += "<b>" + products[i].price + "</b>";
 				contentString += "<br/><p>" + products[i].priceName + "</p>";

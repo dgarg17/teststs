@@ -99,9 +99,9 @@
                     <showProductPrice
                             jcr:primaryType="cq:Widget"
                             editElementQuery="div[class=&quot;text&quot;]"
-                            fieldLabel="Show Product Price"
-                            fieldDescription="Checkbox to enable Product Price "
-                            key="showProductPrice"
+                            fieldLabel="Hide Price"
+                            fieldDescription="Default behaviour is to show price"
+                            key="hidePrice"
                             width="50%"
                             type="checkbox"
                             xtype="selection"/>
