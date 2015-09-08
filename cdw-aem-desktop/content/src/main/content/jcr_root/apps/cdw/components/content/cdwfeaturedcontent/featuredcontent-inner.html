@@ -1,0 +1,36 @@
+<img data-sly-test="${(properties.imagealignment=='-left'|| properties.imagealignment=='-right')&&(properties.imagesrc == 'scene7')&&(properties.fileReferenceS7)}"
+	src="${properties.fileReferenceS7}?$product_150$" class="feature-image" />
+<img data-sly-test="${(properties.imagealignment=='-left'|| properties.imagealignment=='-right')&&(properties.imagesrc == 'dam')&&(properties.fileReference)}"
+	src="${properties.fileReference}" class="feature-image" />
+<div class="copy">
+	<div data-sly-test="${properties.imagealignment=='-top'}" data-sly-unwrap>
+		<div class="image-lockup">
+			<img data-sly-test="${properties.imagesrc == 'scene7'&& properties.fileReferenceS7}" src="${properties.fileReferenceS7}?$product_150$" />
+			<img data-sly-test="${properties.imagesrc == 'dam' && properties.fileReference}" src="${properties.fileReference}" />
+		</div>
+	</div>
+	<h5 data-sly-test="${properties.headline && !properties.redbarhighlight}"
+		style="color:#${properties.textcolor @ context='styleString'}">${properties.headline}
+	</h5>
+	<h5 data-sly-test="${properties.headline && properties.redbarhighlight=='true'}">
+		<span class="-highlight">${properties.headline}</span>
+	</h5>
+	<p data-sly-test="${properties.bodytext}" data-sly-unwrap>
+		${properties.bodytext@context="html"}
+	</p>
+	<div  class="button-lockup">
+		<a data-sly-test="${!properties.linkmodule && properties.ctalink}" data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
+			href="${link.urlUpdate}" 
+			target="${properties.ctatarget}" class="btn button ${properties.ctabuttonstyle}">
+			${properties.cdwctalabel}
+		</a>
+		<div data-sly-test="${properties.linkmodule=='true'}" class="button ${properties.ctabuttonstyle}">	${properties.cdwctalabel}</div>
+	</div>
+	<div data-sly-test="${properties.imagealignment=='-bottom'}"	data-sly-unwrap>
+		<div class="image-lockup">
+			<img data-sly-test="${properties.imagesrc == 'scene7'&& properties.fileReferenceS7}" src="${properties.fileReferenceS7}?$product_150$" />
+			<img data-sly-test="${properties.imagesrc == 'dam' && properties.fileReference}" src="${properties.fileReference}" />
+		</div>
+	</div>
+
+</div>
