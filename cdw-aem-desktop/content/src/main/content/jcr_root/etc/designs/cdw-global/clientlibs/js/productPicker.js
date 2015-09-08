@@ -52,7 +52,7 @@ function productdata(url ,uniqueId){
 							productsOverride[j].hidePrice=override[i].hidePrice[0];
 
 						}
-				}
+				}	}
 		}
 		console.log(productsOverride);
 		popProducts(productsOverride,uniqueId);
