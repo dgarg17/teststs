@@ -48,10 +48,10 @@ function productdata(url ,uniqueId){
 						productsOverride[j].imagePosition=$("#imagePosition-"+uniqueId).val();
 						productsOverride[j].ctaButtonStyle=$("#ctaButtonStyle-"+uniqueId).val();
 						productsOverride[j].enableManufactureLogo=$("#enableManufactureLogo-"+uniqueId).val();
-						if(hidePrice=override[i].hidePrice.length>0){
+						if(override[i].hidePrice!=null&&override[i].hidePrice.length>0){
 							productsOverride[j].hidePrice=override[i].hidePrice[0];
+
 						}
-					}
 				}
 		}
 		console.log(productsOverride);
