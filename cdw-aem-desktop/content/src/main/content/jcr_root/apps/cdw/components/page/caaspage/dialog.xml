@@ -32,9 +32,9 @@
                     jcr:primaryType="cq:Widget"
                     path="/libs/wcm/foundation/components/page/tab_livecopy.infinity.json"
                     xtype="cqinclude"/>
-                <contentwidth
+                <layout
                     jcr:primaryType="cq:Widget"
-                    path="/apps/cdw/components/page/caaspage/layout.infinity.json"
+                    path="/apps/cdw/components/page/caaspage/tab_layout.infinity.json"
                     xtype="cqinclude"/>
             </items>
         </tabs>
