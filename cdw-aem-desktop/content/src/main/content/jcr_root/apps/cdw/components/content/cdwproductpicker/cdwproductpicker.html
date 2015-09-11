@@ -2,12 +2,15 @@
 <div data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"  data-sly-test="${properties.productEDC&&properties.products}">
 
     <div  data-sly-use.productpicker="${'com.cdw.aem.util.components.ProductPickerWCMUseHelper' @json=properties.products}"></div>
-    <input type="hidden" class="productService" id="productService-${properties.productEDC[0]}" name="productService" value="${utility.serviceDomain}/${utility.productService}?f=${properties.productEDC}">
-    <input type="hidden" class="productEDC" id="productEDC-${properties.productEDC[0]}" name="productEDC" value="${properties.productEDC}">
-    <input type="hidden" class id="ctaButtonStyle-${properties.productEDC[0]}" name="ctaButtonStyle" value="${properties.ctaButtonStyle}">
-    <input type="hidden" id="products-${properties.productEDC[0]}" class="products" name="products" value="${productpicker.updateProductPickerJson @context='scriptComment'}">
-    <input type="hidden" id="imagePosition-${properties.productEDC[0]}" class="imagePosition" name="imagePosition" value="${properties.imagePosition}">
-    <input type="hidden" id="enableManufactureLogo-${properties.productEDC[0]}" class="enableManufactureLogo" name="enableManufactureLogo" value="${properties.enableManufactureLogo}">
+    <input type="hidden" class="productService" id="productService-${properties.productEDC[0]}" name="productService" value="${utility.serviceDomain}/${utility.productService}?f=${properties.productEDC}"/>
+    <input type="hidden" class="productEDC" id="productEDC-${properties.productEDC[0]}" name="productEDC" value="${properties.productEDC}"/>
+    <input type="hidden" class id="ctaButtonStyle-${properties.productEDC[0]}" name="ctaButtonStyle" value="${properties.ctaButtonStyle}"/>
+    <input type="hidden" id="products-${properties.productEDC[0]}" class="products" name="products" value="${productpicker.updateProductPickerJson @context='scriptComment'}"/>
+    <input type="hidden" id="imagePosition-${properties.productEDC[0]}" class="imagePosition" name="imagePosition" value="${properties.imagePosition}" data-sly-test="${properties.productLayout=='2up'}"/>
+    <input type="hidden" id="enableManufactureLogo-${properties.productEDC[0]}" class="enableManufactureLogo" name="enableManufactureLogo" value="${properties.enableManufactureLogo}"/>
+    <input type="hidden" id="productLayout-${properties.productEDC[0]}" class="productLayout" name="productLayout" value="${properties.productLayout}"/>
+    <input type="hidden" id="productOverflow-${properties.productEDC[0]}" class="productOverflow" name="productOverflow" value="${properties.productOverflow}" data-sly-test="${properties.productLayout=='4up'}"/>
+
     <div id="productContainer-${properties.productEDC[0]}" class="productContainer" ></div>
     <div id="productError-${properties.productEDC[0]}" class="productError"  data-sly-test="${!wcmmode.disabled}" ></div>
 </div>

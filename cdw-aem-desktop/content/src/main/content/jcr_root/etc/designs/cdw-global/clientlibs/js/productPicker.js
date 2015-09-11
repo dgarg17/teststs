@@ -25,6 +25,8 @@ function productdata(url ,uniqueId){
 
 		console.log(override);
 		var productsOverride = response;
+		var productLayout=$("#productLayout-"+uniqueId).val();
+		var productOverflow=$("#productOverflow-"+uniqueId).val();
 		for(var j=0;j<productsOverride.length;j++){
 				for (var i=0; i <override.length; i++) {
 					if(productsOverride[j].productCode==override[i].productCode){
@@ -46,60 +48,168 @@ function productdata(url ,uniqueId){
 						productsOverride[j].manufactureImage=override[i].manufactureImage;
 						productsOverride[j].campaignid=override[i].campaignid;
 						productsOverride[j].imagePosition=$("#imagePosition-"+uniqueId).val();
+						productsOverride[j].productLayout=$("#productLayout-"+uniqueId).val();
+						productsOverride[j].productOverflow=$("#productOverflow-"+uniqueId).val();
 						productsOverride[j].ctaButtonStyle=$("#ctaButtonStyle-"+uniqueId).val();
 						productsOverride[j].enableManufactureLogo=$("#enableManufactureLogo-"+uniqueId).val();
 						if(override[i].hidePrice!=null&&override[i].hidePrice.length>0){
 							productsOverride[j].hidePrice=override[i].hidePrice[0];
-
 						}
 				}	}
 		}
 		console.log(productsOverride);
-		popProducts(productsOverride,uniqueId);
+		if(productLayout=='4up'&&productOverflow!="wrap"){
+               popCarousel(productsOverride,uniqueId);
+               console.log("slick-carousel");
+		}else{
+			popProducts(productsOverride,uniqueId,productLayout);
+			  console.log("wrap");
+		  }
 	}
 
-	function popProducts(products,uniqueId) {
 
-		var contentString;
+	function popCarousel(products,uniqueId) {
+
 		var $productContainer = $("#productContainer-" + uniqueId);
-		for (var i=0; i < products.length; i++) {
-			contentString = '';
-			contentString += "<div id='product-" + products[i].productCode + "' class='layout-"+(12/products.length)+"'>";
-			contentString += "<div class='featured-item -"+ products[i].imagePosition+"'>";
-			if(products[i].enableManufactureLogo){
-				contentString += "<div class='small-logos'>";
-				contentString += "<img alt='' src='"+ products[i].manufactureImage+"$mfg-aem$'"+"/>";
-				contentString += "</div>";
-			}
-			contentString += "<div class='product-image'>";
-		    contentString += "<a href='"+products[i].url +"'>";
-			contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" />";
-			contentString += "</a>";
-			contentString += "</div>";
+		var contentString="";
+	   contentString+="<div class='layout slick-carousel'>"
+		for(var i=0;i<products.length;i++){
+		 contentString+="<div class='product-picker'> ";
+		if(products[i].enableManufactureLogo){
+			contentString+="<div class='small-logos'> ";
+			contentString+="<img alt='logo' src='"+products[i].manufactureImage+"$mfg-aem$'>";
+			contentString+="</div> "
+		}
+
+		contentString += "<div class='product-image'>";
+		contentString += "<a href='"+products[i].url +"'>";
+		contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" />";
+		contentString += "</a>";
+		contentString += "</div>";
+
+			contentString += "<div class='pp-header-hold'>";
 			contentString += "<h6>";
 			contentString += "<a href='" + products[i].url + "'>";
 			contentString += products[i].name;
 			contentString += "</a>";
 			contentString += "</h6>";
+			contentString += "</div>";
+
+			contentString += "<div class='pp-copy-hold'>";
 			contentString += "<p>" + products[i].description + "</p>";
+			contentString += "</div>";
+
 			contentString += "<div class='button-lockup'>";
 			if(products[i].hidePrice!='true'){
-				contentString += "<div class='pricing-block'>";
-				contentString += "<b>" + products[i].price + "</b>";
-				contentString += "<br/><p>" + products[i].priceName + "</p>";
-				contentString += "</div>";
+					contentString += "<div class='pricing-block'>";
+					contentString += "<b>" + products[i].price + "</b>";
+					contentString += "<br/><p>" + products[i].priceName + "</p>";
+					contentString += "</div>";
 			}
 			contentString += "<a href='" + products[i].pctaklink + "' class='button -"+products[i].ctaButtonStyle+"'>"; //Override with pctaklink if provided
 			contentString += products[i].ctaText; //Comes from page JSON
 			contentString += "</a>";
 			contentString += "</div>";
 			contentString += "</div>";
-			$productContainer.append(contentString);
+			contentString += "</div>";
 		}
+
+		$productContainer.append(contentString);
+       $('.slick-carousel').slick({
+	        infinite: true,
+		    slidesToShow: 4,
+		    slidesToScroll: 1,
+		    swipeToSlide: true,
+		    prevArrow: '<span class="ico prev ico-chevron-left"></span>',
+		    nextArrow: '<span class="ico next ico-chevron-right"></span>',
+		    responsive: [
+			    {
+			      breakpoint: 970,
+			      settings: {
+			        slidesToShow: 3
+			      }
+			    },
+			    {
+			      breakpoint: 750,
+			      settings: {
+			        slidesToShow: 2
+			      }
+			    },
+			    {
+			      breakpoint: 580,
+			      settings: {
+			        slidesToShow: 1,
+			        adaptiveHeight: true
+			      }
+			    }
+			]
+	      });
 	}
 
-	$(document).ready(function() {
+	function popProducts(products,uniqueId,productLayout) {
 
+		var $productContainer = $("#productContainer-" + uniqueId);
+		var contentString="";
+		var numberOfColumn=parseInt(productLayout.replace('up',''));
+		var fullLayout='layout-'+12/numberOfColumn;
+		for(var i=0;i<products.length;i++){
+		if(i==0||((i)%numberOfColumn==0)){
+		contentString+="<div class='layout'>"
+		}
+		contentString+="<div class='"+fullLayout+"'> ";
+		contentString+="<div class='product-picker'> ";
+		if(products[i].enableManufactureLogo){
+			contentString+="<div class='small-logos'> ";
+			contentString+="<img alt='logo' src='"+products[i].manufactureImage+"$mfg-aem$'>";
+			contentString+="</div> "
+		}
+
+		contentString += "<div class='product-image'>";
+		contentString += "<a href='"+products[i].url +"'>";
+		contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" />";
+		contentString += "</a>";
+		contentString += "</div>";
+
+			contentString += "<div class='pp-header-hold'>";
+			contentString += "<h6>";
+			contentString += "<a href='" + products[i].url + "'>";
+			contentString += products[i].name;
+			contentString += "</a>";
+			contentString += "</h6>";
+			contentString += "</div>";
+
+			contentString += "<div class='pp-copy-hold'>";
+			contentString += "<p>" + products[i].description + "</p>";
+			contentString += "</div>";
+
+			contentString += "<div class='button-lockup'>";
+			if(products[i].hidePrice!='true'){
+					contentString += "<div class='pricing-block'>";
+					contentString += "<b>" + products[i].price + "</b>";
+					contentString += "<br/><p>" + products[i].priceName + "</p>";
+					contentString += "</div>";
+			}
+			contentString += "<a href='" + products[i].pctaklink + "' class='button -"+products[i].ctaButtonStyle+"'>";
+			contentString += products[i].ctaText; //Comes from page JSON
+			contentString += "</a>";
+			contentString += "</div>";
+			contentString += "</div>";
+			contentString += "</div>";
+			if((i+1)%numberOfColumn==0){
+			console.log("inside closing "+i);
+					contentString+="</div>"
+					}
+		}
+		if(products.length%numberOfColumn!=0 ){
+			contentString += "</div>";
+		}
+		$productContainer.append(contentString);
+
+	}
+
+
+
+	$(document).ready(function() {
 		$(".productService").each(function( index ) {
 			//alert($( this ).attr("id")+index);
 			var id=$(this).attr("id");

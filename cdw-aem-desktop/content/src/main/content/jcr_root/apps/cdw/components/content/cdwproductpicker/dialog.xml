@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           jcr:primaryType="cq:Dialog"
           cls="tabpanelcss"
           helpPath="en/cq/current/wcm/default_components.html#Text"
@@ -147,11 +148,84 @@
                                 value="gray"/>
                     </options>
                 </ctaButtonStyle>
+                <productLayout
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="4up"
+                        fieldLabel="Product Layout"
+                        name="./productLayout"
+                        fieldDescription="Default product picker Layout is 2UP"
+                        type="select"
+                        xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <twoUp
+                                jcr:primaryType="nt:unstructured"
+                                text="2up"
+                                value="2up"/>
+                        <threeUp
+                                jcr:primaryType="nt:unstructured"
+                                text="3up"
+                                value="3up"/>
+                        <fourUp
+                                jcr:primaryType="nt:unstructured"
+                                text="4up"
+                                value="4up"/>
+                    </options>
+                    <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(box,value){
+                                if(value=='2up') {
+                                        console.log('2up change');
+                                        box.findParentByType('panel').getComponent('4up').disable(this);
+                                        console.log('4up hide');
+                                        box.findParentByType('panel').getComponent('2up').enable(this);
+                                        console.log('2up show');
+                                }else if(value=='4up') {
+                                        console.log('4up change');
+                                        box.findParentByType('panel').getComponent('4up').enable(this);
+                                        console.log('4up show');
+                                        box.findParentByType('panel').getComponent('2up').disable(this);
+                                        console.log('2up hide');
+                                }else if(value=='3up'){
+                                        console.log('3up change');
+                                        box.findParentByType('panel').getComponent('4up').disable(this);
+                                        console.log('4up hide');
+                                        box.findParentByType('panel').getComponent('2up').disable(this);
+                                        console.log('2up hide');
+                                }
+                            }"
+                            loadcontent="function(){
+                                console.log('in load load contet '+ this.getValue());
+                                console.log(this.findParentByType('panel').getComponent('4up'));
+                                console.log(this.findParentByType('panel').getComponent('2up'));
+
+                                if(this.getValue()=='2up'){
+                                        console.log('2up load');
+                                        this.findParentByType('panel').getComponent('4up').disable(this);
+                                        console.log('4up hide');
+                                        this.findParentByType('panel').getComponent('2up').enable(this);
+                                        console.log('2up show');
+                                }else if(this.getValue()=='4up'){
+                                        console.log('4up load');
+                                        this.findParentByType('panel').getComponent('4up').enable(this);
+                                        console.log('4up show');
+                                        this.findParentByType('panel').getComponent('2up').disable(this);
+                                        console.log('2up hide');
+                                }else if(this.getValue()=='3up'){
+                                        console.log('3up change');
+                                        this.findParentByType('panel').getComponent('4up').disable(this);
+                                        console.log('4up hide');
+                                        this.findParentByType('panel').getComponent('2up').disable(this);
+                                        console.log('2up hide');
+                                }
+                        }"
+                            />
+                </productLayout>
                 <imagePoition
                         jcr:primaryType="cq:Widget"
                         defaultValue="top"
                         fieldLabel="Image Position"
                         name="./imagePosition"
+                        id="2up"
                         fieldDescription="Default Image Position is Top"
                         type="select"
                         xtype="selection">
@@ -170,6 +244,28 @@
                                 value="right"/>
                     </options>
                 </imagePoition>
+                <productOverflow
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="wrap"
+                        fieldLabel="Product Overflow"
+                        name="./productOverflow"
+                        id="4up"
+                        fieldDescription="The overflow will wrap by default  for 4+ products"
+                        type="select"
+                        xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <wrap
+                                jcr:primaryType="nt:unstructured"
+                                text="Wrap(vertical/stacked format)"
+                                value="wrap"/>
+                        <carousel
+                                jcr:primaryType="nt:unstructured"
+                                text="Carousel(horizontal scroll)"
+                                value="carousel"/>
+
+                    </options>
+                </productOverflow>
+
             </items>
         </global>
     </items>
