@@ -72,20 +72,20 @@ function productdata(url ,uniqueId){
 
 		var $productContainer = $("#productContainer-" + uniqueId);
 		var contentString="";
-	   contentString+="<div class='layout slick-carousel'>"
+	   	contentString+="<div class='layout slick-carousel'>"
 		for(var i=0;i<products.length;i++){
-		 contentString+="<div class='product-picker'> ";
-		if(products[i].enableManufactureLogo){
-			contentString+="<div class='small-logos'> ";
-			contentString+="<img alt='logo' src='"+products[i].manufactureImage+"$mfg-aem$'>";
-			contentString+="</div> "
-		}
+		 	contentString+="<div><div class='product-picker'>";
+			if(products[i].enableManufactureLogo){
+				contentString+="<div class='small-logos'>";
+				contentString+="<img alt='logo' src='"+products[i].manufactureImage+"$mfg-aem$' />";
+				contentString+="</div>"
+			}
 
-		contentString += "<div class='product-image'>";
-		contentString += "<a href='"+products[i].url +"'>";
-		contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" />";
-		contentString += "</a>";
-		contentString += "</div>";
+			contentString += "<div class='product-image'>";
+			contentString += "<a href='"+products[i].url +"'>";
+			contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" />";
+			contentString += "</a>";
+			contentString += "</div>";
 
 			contentString += "<div class='pp-header-hold'>";
 			contentString += "<h6>";
@@ -101,10 +101,10 @@ function productdata(url ,uniqueId){
 
 			contentString += "<div class='button-lockup'>";
 			if(products[i].hidePrice!='true'){
-					contentString += "<div class='pricing-block'>";
-					contentString += "<b>" + products[i].price + "</b>";
-					contentString += "<br/><p>" + products[i].priceName + "</p>";
-					contentString += "</div>";
+				contentString += "<div class='pricing-block'>";
+				contentString += "<b>" + products[i].price + "</b>";
+				contentString += "<p>" + products[i].priceName + "</p>";
+				contentString += "</div>";
 			}
 			contentString += "<a href='" + products[i].pctaklink + "' class='button -"+products[i].ctaButtonStyle+"'>"; //Override with pctaklink if provided
 			contentString += products[i].ctaText; //Comes from page JSON
@@ -115,7 +115,7 @@ function productdata(url ,uniqueId){
 		}
 
 		$productContainer.append(contentString);
-       $('.slick-carousel').slick({
+       	$('#productContainer-' + uniqueId + ' .slick-carousel').slick({
 	        infinite: true,
 		    slidesToShow: 4,
 		    slidesToScroll: 1,
@@ -143,7 +143,7 @@ function productdata(url ,uniqueId){
 			      }
 			    }
 			]
-	      });
+	    });
 	}
 
 	function popProducts(products,uniqueId,productLayout) {
