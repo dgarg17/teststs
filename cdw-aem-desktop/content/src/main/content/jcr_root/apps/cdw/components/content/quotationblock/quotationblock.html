@@ -1,0 +1,19 @@
+<!--/* CDW  Quotation block component */ -->
+
+<div style="color:#${properties.textcolor @ context='styleString'};" class="quote ${properties.textalignment} ${properties.backgroundcolor} ${properties.opacity}">
+	<a  data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.quotelink}" href="${link.urlUpdate}"  target="${properties.quotetarget}" data-sly-unwrap="${!properties.quotelink}">
+        <p data-sly-test="${properties.quotetext}" class="quote-text">
+			<span class="ico ico-quote-left"></span>${properties.quotetext}<span class="ico ico-quote-right"></span>
+		</p>
+ 	</a>
+	<div class="credit">
+		<img data-sly-test="${properties.fileReference}" src="${properties.fileReference}?&fmt=jpeg&qlt=100,0&op_sharpen=1&resMode=trilin" alt=""/>
+		<div class="inner-copy">
+			<p><a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.sourcelink}" href="${link.urlUpdate}"  target="${properties.sourcetarget}" data-sly-unwrap="${!properties.sourcelink}" >${properties.sourceName}</a>
+            <div data-sly-test="${properties.sourcedcontenttitle}" data-sly-unwrap>, ${properties.sourcedcontenttitle}</div></p>
+			<p class="rm" data-sly-test="${properties.ctalabel && properties.ctalink}"><a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}" href="${link.urlUpdate}"  target="${properties.ctatarget}"  data-sly-unwrap="${!properties.ctalink}" >${properties.ctalabel}</a></p>
+		</div>
+	</div>
+</div>
+
+
