@@ -89,5 +89,9 @@ public class SecondarySolutionsNavigationWCMUseHelper extends WCMUse {
 		log.info("Inside 'hasSecondaryItems'");
 		return (secondaryItems != null && secondaryItems.size() > 0);
 	}
+	
+	public int getSecondaryItemsCount() {
+		return (int) secondaryItems.size();
+	}
 
 }

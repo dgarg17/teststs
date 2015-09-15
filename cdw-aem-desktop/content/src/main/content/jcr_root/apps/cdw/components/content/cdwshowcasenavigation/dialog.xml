@@ -32,8 +32,8 @@
                         jcr:primaryType="cq:Widget"
                         allowBlank="{Boolean}false"
                         cls="csspathfield"
-                        fieldLabel="CTA URL"
-                        key="ctaURL"
+                        fieldLabel="CTA Link"
+                        key="ctaLink"
                         width="80%"
                         xtype="pathfield"/>
                     <ctaTarget

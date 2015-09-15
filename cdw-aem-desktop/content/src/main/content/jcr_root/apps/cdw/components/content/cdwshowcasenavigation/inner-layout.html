@@ -6,7 +6,7 @@
 		</div>
 		<div data-sly-use.linksHelper="${'com.cdw.aem.components.SecondarySolutionsNavigationWCMUseHelper' @json=properties.links}" class="layout-11">
 			<div>
-				<h3>${properties.headline}</h3>
+				<h3 class="sol-nav-title">${properties.headline}</h3>
 			</div>
 			<ul class="partner-menu">
 				<div data-sly-list="${linksHelper.primaryItems}" data-sly-unwrap>
@@ -14,13 +14,18 @@
 					<a href="${item.ctaLink}" target="${item.ctaTarget}">${item.ctaText}</a>
 				</li>
 				</div><!--/* /data-sly-unwrap */-->
-				<li data-sly-test="${linksHelper.hasSecondaryItems}" class="other-categories">
+				<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount > 1}" class="other-categories">
 					<select class="partner-links">
 						<option value="">${properties.secondaryLinksLabel}</option>
 						<div data-sly-list="${linksHelper.secondaryItems}" data-sly-unwrap>
-							<option value="${item.ctaText}" data-target="${item.ctaTarget}" data-link="${item.ctaLink}">${item.ctaText}</option>
+						<option value="${item.ctaText}" data-target="${item.ctaTarget}" data-link="${item.ctaLink}">${item.ctaText}</option>
 						</div><!--/* /data-sly-unwrap */-->
 					</select>
+				</li>
+				<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount == 1}" class="other-categories">
+					<div class="button-lockup">
+						<a href="${linksHelper.secondaryItems[0].ctaLink}" target="${linksHelper.secondaryItems[0].ctaTarget}">${linksHelper.secondaryItems[0].ctaText}</a>
+					</div>
 				</li>
 			</ul>
 		</div>
