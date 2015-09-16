@@ -55,8 +55,12 @@ function productdata(url ,uniqueId){
 						if(override[i].hidePrice!=null&&override[i].hidePrice.length>0){
 							productsOverride[j].hidePrice=override[i].hidePrice[0];
 						}
+						if(productsOverride[j].description.length>250){
+						productsOverride[j].description=productsOverride[j].description.str.substr(0, productsOverride[j].description.length)+"..."
+						}
 				}	}
 		}
+
 		console.log(productsOverride);
 		if(productLayout=='4up'&&productOverflow!="wrap"){
                popCarousel(productsOverride,uniqueId);
