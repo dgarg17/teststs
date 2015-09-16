@@ -56,7 +56,7 @@ function productdata(url ,uniqueId){
 							productsOverride[j].hidePrice=override[i].hidePrice[0];
 						}
 						if(productsOverride[j].description.length>250){
-						productsOverride[j].description=productsOverride[j].description.str.substr(0, productsOverride[j].description.length)+"..."
+						productsOverride[j].description=productsOverride[j].description.substr(0, 250)+"  ..."
 						}
 				}	}
 		}
