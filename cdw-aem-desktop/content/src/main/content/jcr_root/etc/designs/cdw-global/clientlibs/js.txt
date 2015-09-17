@@ -2,3 +2,7 @@
 jquery-1.11.3.min.js
 main.js
 productPicker.js
+partnerLinks.js
+slick.js
+slick.min.js
+boxheight.js
