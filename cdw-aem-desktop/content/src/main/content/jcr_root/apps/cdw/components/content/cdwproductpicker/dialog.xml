@@ -226,7 +226,7 @@
                         fieldLabel="Image Position"
                         name="./imagePosition"
                         id="2up"
-                        fieldDescription="Default Image Position is Top"
+                        fieldDescription=" This option is available for 2up layout only, Default image position is top"
                         type="select"
                         xtype="selection">
                     <options jcr:primaryType="cq:WidgetCollection">
@@ -250,7 +250,7 @@
                         fieldLabel="Product Overflow"
                         name="./productOverflow"
                         id="4up"
-                        fieldDescription="The overflow will wrap by default  for 4+ products"
+                        fieldDescription="This option is available for 4up layout only, Default behaviour is vertical wrap"
                         type="select"
                         xtype="selection">
                     <options jcr:primaryType="cq:WidgetCollection">
@@ -265,7 +265,6 @@
 
                     </options>
                 </productOverflow>
-
             </items>
         </global>
     </items>
