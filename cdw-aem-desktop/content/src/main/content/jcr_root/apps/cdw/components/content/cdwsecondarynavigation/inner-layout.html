@@ -12,9 +12,9 @@
 			<img src="${properties.fileReference}?hei=55" />
 			</sly>
 		</div>
-		<div data-sly-use.linksHelper="${'com.cdw.aem.components.SecondarySolutionsNavigationWCMUseHelper' @json=properties.links}" class="layout-11">
+		<div data-sly-use.linksHelper="${'com.cdw.aem.components.SecondaryNavigationWCMUseHelper' @json=properties.links}" class="layout-11">
 			<div data-sly-test="${properties.headline}">
-				<h3 class="sol-nav-title">${properties.headline}</h3>
+				<h1 class="sol-nav-title">${properties.headline}</h1>
 			</div>
 			<ul class="partner-menu">
 				<sly data-sly-list="${linksHelper.primaryItems}">

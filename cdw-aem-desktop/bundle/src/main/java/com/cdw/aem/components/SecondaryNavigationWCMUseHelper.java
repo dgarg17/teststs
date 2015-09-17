@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 
 import java.util.List;
 
-public class SecondarySolutionsNavigationWCMUseHelper extends WCMUse {
+public class SecondaryNavigationWCMUseHelper extends WCMUse {
 
     protected Logger log = LoggerFactory.getLogger(this.getClass());
 
