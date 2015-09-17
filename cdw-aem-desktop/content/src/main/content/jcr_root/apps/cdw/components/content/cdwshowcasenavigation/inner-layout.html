@@ -19,11 +19,11 @@
 			<ul class="partner-menu">
 				<sly data-sly-list="${linksHelper.primaryItems}">
 				<li>
-					<a href="${item.ctaLink}" target="${item.ctaTarget}">${item.ctaText}</a>
+					<a href="${item.ctaLink}" target="${item.ctaTarget}" style="color:#${properties.textColor @ context='styleString'};">${item.ctaText}</a>
 				</li>
 				</sly>
 				<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount > 1}" class="other-categories">
-					<select class="partner-links">
+					<select class="partner-links" style="color:#${properties.textColor @ context='styleString'};">
 						<option value="">${properties.secondaryLinksLabel}</option>
 						<sly data-sly-list="${linksHelper.secondaryItems}">
 						<option value="${item.ctaText}" data-target="${item.ctaTarget}" data-link="${item.ctaLink}">${item.ctaText}</option>
@@ -32,7 +32,7 @@
 				</li>
 				<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount == 1}" class="other-categories">
 					<div class="button-lockup">
-						<a class="button -clear" href="${linksHelper.secondaryItems[0].ctaLink}" target="${linksHelper.secondaryItems[0].ctaTarget}">${linksHelper.secondaryItems[0].ctaText}</a>
+						<a class="button -clear" style="color:#${properties.textColor @ context='styleString'};" href="${linksHelper.secondaryItems[0].ctaLink}" target="${linksHelper.secondaryItems[0].ctaTarget}">${linksHelper.secondaryItems[0].ctaText}</a>
 					</div>
 				</li>
 			</ul>
