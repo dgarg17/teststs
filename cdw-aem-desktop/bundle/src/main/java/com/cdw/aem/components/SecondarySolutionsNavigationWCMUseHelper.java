@@ -19,13 +19,12 @@ public class SecondarySolutionsNavigationWCMUseHelper extends WCMUse {
 	
 	@Override
     public void activate() throws Exception {
-		log.info("ACTIVATE");
-        linksJson = get("json", String[].class);
-        if (linksJson != null) {
-            log.info("Setup Lists");
-			setupLists();
+		linksJson = get("json", String[].class);
+        if (linksJson == null) {
+			linksJson = new String[1];
+            linksJson[0] = get("json", String.class);
         }
-		log.info("DONE");
+		setupLists();
     }
 	
 	private void setupLists () {
@@ -34,11 +33,9 @@ public class SecondarySolutionsNavigationWCMUseHelper extends WCMUse {
         }.getType());
 		// sort primary items to remove secondaries from the list
 		if (primaryItems != null && (primaryItems.size() > 0)) {
-			log.info("Setting Up Primary");
-            for (int i = primaryItems.size(); i > 0; i--) {
+			for (int i = primaryItems.size(); i > 0; i--) {
 				SecondaryNavigationItem item = primaryItems.get((i - 1));
                 if (item.getIsSecondary()) {
-					log.info("Item is secondary...removing item.");
 					primaryItems.remove(item);
 				}
             }
@@ -48,12 +45,9 @@ public class SecondarySolutionsNavigationWCMUseHelper extends WCMUse {
          }.getType());
 		// sort secondary items to remove primaries from the list
 		if (secondaryItems != null && (secondaryItems.size() > 0)) {
-			log.info("Setting Up Secondary");
-            for (int i = secondaryItems.size(); i > 0; i--) {
+			for (int i = secondaryItems.size(); i > 0; i--) {
 				SecondaryNavigationItem item = secondaryItems.get((i - 1));
-				log.info("item.getIsSecondary() : " + item.getIsSecondary());
-                if (!item.getIsSecondary()) {
-					log.info("Item is primary...removing item.");
+				if (!item.getIsSecondary()) {
 					secondaryItems.remove(item);
 				}
             }
@@ -86,7 +80,6 @@ public class SecondarySolutionsNavigationWCMUseHelper extends WCMUse {
 	}
 	
 	public Boolean getHasSecondaryItems() {
-		log.info("Inside 'hasSecondaryItems'");
 		return (secondaryItems != null && secondaryItems.size() > 0);
 	}
 	

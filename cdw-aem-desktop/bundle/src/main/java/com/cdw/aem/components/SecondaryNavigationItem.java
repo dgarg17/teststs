@@ -7,14 +7,14 @@ public class SecondaryNavigationItem {
 	private String ctaLink;
 	private String ctaText;
 	private String ctaTarget = "_self";
-	private String isSecondary = "false";
+	private String isSecondary[];
 	
 	public String getCtaLink() {
-		return ctaLink;
+		return LinkUtil.updateUrl(ctaLink);
 	}
 	
 	public void setCtaLink(String ctaLink) {
-		this.ctaLink = LinkUtil.updateUrl(ctaLink);
+		this.ctaLink = ctaLink;
 	}
 	
 	public String getCtaText() {
@@ -34,10 +34,14 @@ public class SecondaryNavigationItem {
 	}
 	
 	public Boolean getIsSecondary() {
-		return ("true".equals(isSecondary));
+		if (isSecondary.length > 0) {
+			return true;
+		} else {
+			return false;
+		} 
 	}
 	
-	public void setIsSecondary(String isSecondary) {
+	public void setIsSecondary(String[] isSecondary) {
 		this.isSecondary = isSecondary;
 	}
 }

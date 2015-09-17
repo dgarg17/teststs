@@ -2,24 +2,32 @@
 	<div class="layout">
 		<div class="mobileNav ico ico-uni71"></div>
 		<div data-sly-test="${properties.fileReference}" class="partner-logo" class="layout-1">
+			<sly data-sly-test="${properties.logoLink}">
+			<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.logoLink}"
+						href="${link.urlUpdate}">
+				<img src="${properties.fileReference}?hei=55" />
+			</a>
+			</sly>
+			<sly data-sly-test="${!properties.logoLink}">
 			<img src="${properties.fileReference}?hei=55" />
+			</sly>
 		</div>
 		<div data-sly-use.linksHelper="${'com.cdw.aem.components.SecondarySolutionsNavigationWCMUseHelper' @json=properties.links}" class="layout-11">
-			<div>
+			<div data-sly-test="${properties.headline}">
 				<h3 class="sol-nav-title">${properties.headline}</h3>
 			</div>
 			<ul class="partner-menu">
-				<div data-sly-list="${linksHelper.primaryItems}" data-sly-unwrap>
+				<sly data-sly-list="${linksHelper.primaryItems}">
 				<li>
 					<a href="${item.ctaLink}" target="${item.ctaTarget}">${item.ctaText}</a>
 				</li>
-				</div><!--/* /data-sly-unwrap */-->
+				</sly>
 				<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount > 1}" class="other-categories">
 					<select class="partner-links">
 						<option value="">${properties.secondaryLinksLabel}</option>
-						<div data-sly-list="${linksHelper.secondaryItems}" data-sly-unwrap>
+						<sly data-sly-list="${linksHelper.secondaryItems}">
 						<option value="${item.ctaText}" data-target="${item.ctaTarget}" data-link="${item.ctaLink}">${item.ctaText}</option>
-						</div><!--/* /data-sly-unwrap */-->
+						</sly>
 					</select>
 				</li>
 				<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount == 1}" class="other-categories">
