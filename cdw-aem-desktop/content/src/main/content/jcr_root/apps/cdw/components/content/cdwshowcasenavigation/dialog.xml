@@ -59,7 +59,7 @@
                     <isSecondary
                         jcr:primaryType="cq:Widget"
                         fieldDescription="Secondary navigation items will display in the secondary link grouping."
-                        fieldLabel="Item Type"
+                        fieldLabel="Secondary?"
 						defaultValue="false"
 						inputValue="true"
                         key="isSecondary"
