@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <clientlibs/>
     <jcr:content
-        cq:lastModified="{Date}2015-08-25T14:34:58.626-07:00"
+        cq:lastModified="{Date}2015-09-10T12:27:22.345-07:00"
         cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured">
         <openlayoutpage jcr:primaryType="nt:unstructured">
@@ -54,5 +54,15 @@
                 <section jcr:primaryType="nt:unstructured"/>
             </leftpar>
         </leadgenpage>
+        <caaspage jcr:primaryType="nt:unstructured">
+            <mainpar
+                jcr:lastModified="{Date}2015-09-10T12:27:22.342-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:CDW - General,group:CDW - Layout]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </mainpar>
+        </caaspage>
     </jcr:content>
 </jcr:root>

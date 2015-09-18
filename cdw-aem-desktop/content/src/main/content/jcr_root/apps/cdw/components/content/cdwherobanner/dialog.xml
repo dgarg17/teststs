@@ -21,17 +21,17 @@
                         name="./headline1"
                         xtype="textfield"/>
                     <headline2
-                            jcr:primaryType="cq:Widget"
-                            fieldDescription="Second segment of Main Headline; an 'and' separator will automatically be added between the two segments if this is present."
-                            fieldLabel="Headline 2"
-                            name="./headline2"
-                            xtype="textfield"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Second segment of Main Headline; an 'and' separator will automatically be added between the two segments if this is present."
+                        fieldLabel="Headline 2"
+                        name="./headline2"
+                        xtype="textfield"/>
                     <brandLogo
-                            jcr:primaryType="cq:Widget"
-                            fieldDescription=" Use image name only(e.g. - ‘H-P’) in the text field in order to generate the proper S7 URL"
-                            fieldLabel="Brand Logo"
-                            name="./brandLogo"
-                            xtype="textfield"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription=" Use image name only(e.g. - ‘H-P’) in the text field in order to generate the proper S7 URL"
+                        fieldLabel="Brand Logo"
+                        name="./brandLogo"
+                        xtype="textfield"/>
                     <subheadline
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Sub Headline"
@@ -57,7 +57,7 @@
                         xtype="colorfield"/>
                     <textalignment
                         jcr:primaryType="cq:Widget"
-                        defaultValue="left"
+                        defaultValue="align-left"
                         fieldLabel="Text Alignment"
                         name="./textalignment"
                         type="select"
@@ -66,11 +66,15 @@
                             <left
                                 jcr:primaryType="nt:unstructured"
                                 text="Left"
-                                value="left"/>
+                                value="align-left"/>
                             <right
                                 jcr:primaryType="nt:unstructured"
                                 text="Right"
-                                value="right"/>
+                                value="align-right"/>
+                            <center
+                                jcr:primaryType="nt:unstructured"
+                                text="Center"
+                                value="align-center"/>
                         </options>
                     </textalignment>
                     <backgroundcolor
@@ -113,20 +117,19 @@
                 </items>
             </tab1>
             <image
-                    jcr:primaryType="cq:Widget"
-                    allowUpload="{Boolean}false"
-                    disableZoom="{Boolean}true"
-                    cropParameter=""
-                    ddGroups="[media]"
-                    fileNameParameter="./image1/fileName"
-                    fileReferenceParameter="./fileReference"
-                    mapParameter=""
-                    name="./image1/file"
-                    rotateParameter=""
-                    requestSuffix=".img.png"
-                    title="Background Image"
-                    xtype="html5smartimage">
-            </image>
+                jcr:primaryType="cq:Widget"
+                allowUpload="{Boolean}false"
+                cropParameter=""
+                ddGroups="[media]"
+                disableZoom="{Boolean}true"
+                fileNameParameter="./image1/fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter=""
+                name="./image1/file"
+                requestSuffix=".img.png"
+                rotateParameter=""
+                title="Background Image"
+                xtype="html5smartimage"/>
         </items>
     </items>
 </jcr:root>
