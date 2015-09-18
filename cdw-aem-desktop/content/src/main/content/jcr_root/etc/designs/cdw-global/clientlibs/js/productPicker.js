@@ -161,7 +161,7 @@ function productdata(url ,uniqueId){
 		contentString+="<div class='layout'>"
 		}
 		contentString+="<div class='"+fullLayout+"'> ";
-		contentString+="<div class='product-picker'> ";
+		contentString+="<div class='product-picker "+(productLayout=="2up"?"-"+ products[i].imagePosition:"")+ "'> ";
 		if(products[i].enableManufactureLogo){
 			contentString+="<div class='small-logos'> ";
 			contentString+="<img alt='logo' src='"+products[i].manufactureImage+"$mfg-aem$'>";
