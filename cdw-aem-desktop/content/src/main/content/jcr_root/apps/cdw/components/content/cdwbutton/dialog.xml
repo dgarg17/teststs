@@ -13,7 +13,7 @@
             <items jcr:primaryType="cq:WidgetCollection">
                 <buttonStype
                         jcr:primaryType="cq:Widget"
-                        defaultValue="signatureRed"
+                        defaultValue="red"
                         fieldLabel="Button Style"
                         fieldDescription="Default Button Style is set to Signature Red"
                         name="./buttonStyle"
@@ -23,15 +23,19 @@
                         <signatureRed
                                 jcr:primaryType="nt:unstructured"
                                 text="Signature Red"
-                                value="signatureRed"/>
+                                value="red"/>
                         <darkGrey
                                 jcr:primaryType="nt:unstructured"
                                 text="Dark Grey"
-                                value="darkGrey"/>
+                                value="gray"/>
                         <ghostButton
                                 jcr:primaryType="nt:unstructured"
                                 text="Ghost Button"
-                                value="ghostButton"/>
+                                value="clear"/>
+                        <greyClear
+                                jcr:primaryType="nt:unstructured"
+                                text="Grey Clear"
+                                value="white"/>
                     </options>
                 </buttonStype>
                 <ctalabel
