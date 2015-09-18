@@ -1,4 +1,4 @@
-function productdata(url ,uniqueId){
+	function productdata(url ,uniqueId){
 
 		$.ajax({
 		    type: "GET",
@@ -70,7 +70,6 @@ function productdata(url ,uniqueId){
 			  console.log("wrap");
 		  }
 	}
-
 
 	function popCarousel(products,uniqueId) {
 
@@ -210,8 +209,6 @@ function productdata(url ,uniqueId){
 		$productContainer.append(contentString);
 
 	}
-
-
 
 	$(document).ready(function() {
 		$(".productService").each(function( index ) {
