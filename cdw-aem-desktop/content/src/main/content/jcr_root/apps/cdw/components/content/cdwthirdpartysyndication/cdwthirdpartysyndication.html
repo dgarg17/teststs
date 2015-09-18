@@ -1,0 +1,6 @@
+<div data-sly-test="${properties.includeType && properties.alignment}" class="syndication-3rd-party ${properties.alignment}">
+	<sly data-sly-include="${properties.includeType}.html" />
+</div>
+<div data-sly-test="${(!properties.includeType || !properties.alignment) && (wcmmode.edit || wcmmode.design)}" class="syndication">
+	<h6>Please configure this component.</h6>
+</div>
