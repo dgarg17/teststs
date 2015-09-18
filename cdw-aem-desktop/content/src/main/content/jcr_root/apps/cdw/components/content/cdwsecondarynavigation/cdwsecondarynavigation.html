@@ -1,0 +1,6 @@
+<div data-sly-test="${wcmmode.edit || wcmmode.design}" class="partner-header-wrapper -aem-absolute-override">
+	<sly data-sly-include="inner-layout.html" />
+</div>
+<div data-sly-test="${!wcmmode.edit && !wcmmode.design}" class="partner-header-wrapper">
+	<sly data-sly-include="inner-layout.html" />
+</div>
