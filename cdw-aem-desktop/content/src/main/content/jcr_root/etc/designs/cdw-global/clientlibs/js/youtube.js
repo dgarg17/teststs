@@ -20,11 +20,11 @@ console.log("youtube ready");
 				'onStateChange': function(event){
 					if (event.data == 1) {
 						console.log("youtube  event change play "+ youtubePlayerID+": "+trackingId);
-						CdwTagMan.createPageViewTag('Video', 'Video Played | ' + trackingId);
+					//	CdwTagMan.createPageViewTag('Video', 'Video Played | ' + trackingId);
 					}
 					if (event.data == 0) {
 						console.log("youtube  event change play "+ youtubePlayerID+ ": "+trackingId) ;
-						CdwTagMan.createPageViewTag('Video', 'Video Ended | ' + trackingId);
+					//	CdwTagMan.createPageViewTag('Video', 'Video Ended | ' + trackingId);
 					}
 				}
 			}
