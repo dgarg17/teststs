@@ -14,7 +14,7 @@
 		    },
 		    error: function(hr, txtStatus, error) {
 		      $("#productError-"+uniqueId).append("<h5>\"Service Timeout\", \"No Data Returned From Service\"</h5>");
-		        console.log(hr);
+		      //  console.log(hr);
 		        //alert("error! " + txtStatus);
 		    }
 		});
@@ -23,7 +23,7 @@
 
 	function compareProductJSON(response, override,uniqueId) {
 
-		console.log(override);
+		//console.log(override);
 		var productsOverride = response;
 		var productLayout=$("#productLayout-"+uniqueId).val();
 		var productOverflow=$("#productOverflow-"+uniqueId).val();
@@ -61,13 +61,13 @@
 				}	}
 		}
 
-		console.log(productsOverride);
+		// console.log(productsOverride);
 		if(productLayout=='4up'&&productOverflow!="wrap"){
                popCarousel(productsOverride,uniqueId);
-               console.log("slick-carousel");
+             //  console.log("slick-carousel");
 		}else{
 			popProducts(productsOverride,uniqueId,productLayout);
-			  console.log("wrap");
+			  // console.log("wrap");
 		  }
 	}
 
@@ -199,7 +199,7 @@
 			contentString += "</div>";
 			contentString += "</div>";
 			if((i+1)%numberOfColumn==0){
-			console.log("inside closing "+i);
+			//console.log("inside closing "+i);
 					contentString+="</div>"
 					}
 		}
