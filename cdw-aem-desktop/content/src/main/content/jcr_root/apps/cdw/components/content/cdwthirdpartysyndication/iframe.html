@@ -1,0 +1,6 @@
+<sly data-sly-test="${properties.iFrameSourceURL}">
+	<iframe src="${properties.iFrameSourceURL}" width="${properties.iFrameWidth}${properties.iFrameSizeUnitsWidth}" height="${properties.iFrameHeight}${properties.iFrameSizeUnitsHeight}" scrolling="${properties.iFrameScrolling}" border="0" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+</sly>
+<sly data-sly-test="${!properties.iFrameSourceURL && (wcmmode.edit || wcmmode.design)}">
+	<h6>Please configure a iFrame Source URL.</h6>
+</sly>
