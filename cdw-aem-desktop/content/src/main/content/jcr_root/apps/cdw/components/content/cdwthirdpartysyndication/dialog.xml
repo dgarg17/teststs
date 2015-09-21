@@ -103,12 +103,6 @@
                             fieldLabel="Source URL"
                             name="./iFrameSourceURL"
                             xtype="textfield"/>
-                        <!--iFrameId
-                            jcr:primaryType="cq:Widget"
-                            fieldDescription="This field is optional."
-                            fieldLabel="iFrame Id"
-                            name="./iFrameId"
-                            xtype="textfield"/-->
                         <width
                             jcr:primaryType="cq:Widget"
                             fieldLabel="Width"
