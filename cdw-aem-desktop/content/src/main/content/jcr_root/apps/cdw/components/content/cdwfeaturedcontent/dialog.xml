@@ -151,34 +151,41 @@
                         name="./linkmodule"
                         type="checkbox"
                         xtype="selection"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="foundation/components/image"
+                        ignoreData="{Boolean}true"
+                        name="./image/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
                 </items>
             </tab1>
+            <layout
+                jcr:primaryType="cq:Widget"
+                ddGroups="[s7media]"
+                disabled="{Boolean}true"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                id="scene7"
+                name="./file"
+                requestSuffix=".img.png"
+                title="Scene7 Background Image"
+                xtype="s7html5smartimage"/>
             <image
                 jcr:primaryType="cq:Widget"
                 allowUpload="{Boolean}false"
                 cropParameter=""
                 ddGroups="[media]"
                 disableZoom="{Boolean}true"
-                fileNameParameter="./image1/fileName"
-                fileReferenceParameter="./fileReference"
+                fileNameParameter="./image/fileName"
+                fileReferenceParameter="./image/fileReference"
                 id="dam"
                 mapParameter=""
                 name="./image/file"
-                requestSuffix=".img.png"
+                requestSuffix="/image.img.png"
                 rotateParameter=""
-                title="DAM Background Image"
+                title="Background Image"
                 xtype="html5smartimage"/>
-            <layout
-                jcr:primaryType="cq:Widget"
-                ddGroups="[s7media]"
-                disabled="{Boolean}true"
-                fileNameParameter="./image2/fileName"
-                fileReferenceParameter="./fileReferenceS7"
-                id="scene7"
-                name="./image2/file"
-                requestSuffix=".img.png"
-                title="Scene7 Background Image"
-                xtype="s7html5smartimage"/>
         </items>
     </items>
 </jcr:root>
