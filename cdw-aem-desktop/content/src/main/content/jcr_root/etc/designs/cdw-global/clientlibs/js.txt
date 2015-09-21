@@ -1,5 +1,6 @@
 #base=js
 jquery-1.11.3.min.js
+slick.min.js
 main.js
 productPicker.js
 partnerLinks.js

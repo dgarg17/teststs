@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}700"
+    title="dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Partner Product Feature"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <headline
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Maximum length is 70 characters."
+                        fieldLabel="Headline"
+                        maxLength="70"
+                        name="./headline"
+                        xtype="textfield"/>
+                    <headlinecolor
+                        jcr:primaryType="cq:Widget"
+                        colors="[4D4E53,CC0000]"
+                        defaultValue="4D4E53"
+                        fieldDescription="Default Value is Dark Grey(#4D4E53)."
+                        fieldLabel="Headline Font Color"
+                        name="./textcolor"
+                        xtype="colorfield"/>
+                    <text
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Maximum length is 250 characters."
+                        fieldLabel="Description"
+                        maxLength="250"
+                        name="./bodytext"
+                        xtype="textarea"/>
+                    <ctalabel
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Learn More"
+                        fieldDescription="Max character limit is 24"
+                        fieldLabel="CTA Label"
+                        maxLength="{Long}24"
+                        name="./cdwctalabel"
+                        xtype="textfield"/>
+                    <ctalink
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="CTA Link"
+                        name="./ctalink"
+                        xtype="pathfield"/>
+                    <ctabutton
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="-red"
+                        fieldLabel="CTA Button Style"
+                        name="./ctabuttonstyle"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <red
+                                jcr:primaryType="nt:unstructured"
+                                text="Signature Red Button (Default)"
+                                value="-red"/>
+                            <white
+                                jcr:primaryType="nt:unstructured"
+                                text="White Ghost Button"
+                                value="-white"/>
+                            <gray
+                                jcr:primaryType="nt:unstructured"
+                                text="Dark Grey Button"
+                                value="-gray"/>
+                        </options>
+                    </ctabutton>
+                    <ctatarget
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="_self"
+                        fieldDescription="Link opens in same window by default."
+                        fieldLabel="CTA Link Target"
+                        name="./ctatarget"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <new
+                                jcr:primaryType="nt:unstructured"
+                                text="New Window"
+                                value="_blank"/>
+                            <same
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Window (Default)"
+                                value="_self"/>
+                        </options>
+                    </ctatarget>
+                    <imagealignment
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="-right"
+                        fieldDescription="Image placement is Top by default."
+                        fieldLabel="Image Position"
+                        name="./imagealignment"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="-left"/>
+                            <right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="-right"/>
+                        </options>
+                    </imagealignment>
+                    <image1
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}true"
+                        title="Image 1 attributes"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <s7filename
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Scene7 Filename"
+                                name="./scene7filename1"
+                                xtype="textfield"/>
+                            <imglabel
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Maximum character length is 70."
+                                fieldLabel="Image Label"
+                                maxLength="70"
+                                name="./imglabel"
+                                xtype="textfield"/>
+                            <ctalink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Image Link"
+                                name="./imglink"
+                                xtype="pathfield"/>
+                            <ctatarget
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="_self"
+                                fieldDescription="Link opens in same window by default."
+                                fieldLabel="Image Link Target"
+                                name="./imgctatarget"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <new
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New Window"
+                                        value="_blank"/>
+                                    <same
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Same Window (Default)"
+                                        value="_self"/>
+                                </options>
+                            </ctatarget>
+                        </items>
+                    </image1>
+                    <image2
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}true"
+                        collapsible="{Boolean}true"
+                        title="Image 2 attributes"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <s7filename
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Scene7 Filename"
+                                name="./scene7filename2"
+                                xtype="textfield"/>
+                            <imglabel
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Maximum character length is 70."
+                                fieldLabel="Image Label"
+                                maxLength="70"
+                                name="./imglabel2"
+                                xtype="textfield"/>
+                            <ctalink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Image Link"
+                                name="./imglink2"
+                                xtype="pathfield"/>
+                            <ctatarget
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="_self"
+                                fieldDescription="Link opens in same window by default."
+                                fieldLabel="Image Link Target"
+                                name="./imgctatarget2"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <new
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New Window"
+                                        value="_blank"/>
+                                    <same
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Same Window (Default)"
+                                        value="_self"/>
+                                </options>
+                            </ctatarget>
+                        </items>
+                    </image2>
+                    <image3
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}true"
+                        collapsible="{Boolean}true"
+                        title="Image 3 attributes"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <s7filename
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Scene7 Filename"
+                                name="./scene7filename3"
+                                xtype="textfield"/>
+                            <imglabel
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Maximum character length is 70."
+                                fieldLabel="Image Label"
+                                maxLength="70"
+                                name="./imglabel3"
+                                xtype="textfield"/>
+                            <ctalink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Image Link"
+                                name="./imglink3"
+                                xtype="pathfield"/>
+                            <ctatarget
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="_self"
+                                fieldDescription="Link opens in same window by default."
+                                fieldLabel="Image Link Target"
+                                name="./imgctatarget3"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <new
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New Window"
+                                        value="_blank"/>
+                                    <same
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Same Window (Default)"
+                                        value="_self"/>
+                                </options>
+                            </ctatarget>
+                        </items>
+                    </image3>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>
