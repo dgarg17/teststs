@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    cls="tabpanelcss"
+    helpPath="en/cq/current/wcm/default_components.html#Text"
+    title="Secondary Navigation"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <linkItems
+            jcr:primaryType="cq:Widget"
+            addItemLabel="Add A Link"
+            autoScroll="{Boolean}true"
+            cls="multifieldcls"
+            name="./links"
+            title="Links"
+            xtype="multifield">
+            <fieldConfig
+                jcr:primaryType="cq:Widget"
+                baseCls="multifieldpanelbasecls"
+                cls="cssmultifieldpanel"
+                ctCls="multifieldpanelcollapsedctcls"
+                xtype="multifieldpanel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <ctaText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="CTA Text"
+                        key="ctaText"
+                        width="80%"
+                        xtype="textfield"/>
+                    <ctaURL
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        cls="csspathfield"
+                        fieldLabel="CTA Link"
+                        key="ctaLink"
+                        width="80%"
+                        xtype="pathfield"/>
+                    <ctaTarget
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="_self"
+                        fieldDescription="CTA link opens in same window by default."
+                        fieldLabel="CTA Target"
+                        key="ctaTarget"
+                        type="select"
+                        width="80%"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <same
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Window (Default)"
+                                value="_self"/>
+                            <new
+                                jcr:primaryType="nt:unstructured"
+                                text="New Window"
+                                value="_blank"/>
+                        </options>
+                    </ctaTarget>
+                    <isSecondary
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Secondary navigation items will display in the secondary link grouping."
+                        fieldLabel="Secondary?"
+						defaultValue="false"
+						inputValue="true"
+                        key="isSecondary"
+                        type="checkbox"
+                        width="50%"
+                        xtype="selection">
+					</isSecondary>
+                </items>
+            </fieldConfig>
+        </linkItems>
+		<global
+            jcr:primaryType="cq:Widget"
+            cls="panelcss"
+            title="Global Configurations"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <backgroundColor
+                    jcr:primaryType="cq:Widget"
+                    colors="[d02c30,c20430,f28b00,009d4f,009483,007299,76236d,b42573,fe4a5d,d8292f,f5b324,3daf2c,00a19c,007cbb,923a80,e01783,ff828a,e74c39,f8bf00,76bd22,00afab,00a8e2,a45b96,ea6cb0,ffb0c0,e57e3e,ffd200,a6ce39,63ccca,00b3e3,b588b9,f6a7d7,eec7ce,f2bd7d,ffe900,c3d600,9adada,54c9e8,ceadd0,e8bcd8,f7dbe0,f2d1a0,ffea77,e2e768,b0e3e4,96d5ea,e8bfdc,edd3e2,d1d0ce,bcbcbc,a8a8aa,898b8e,63656a,54565b,4d4d4f,cc0000,ffffff]"
+                    fieldLabel="Background Color"
+					defaultValue="4D4E53"
+                    name="./backgroundColor"
+                    xtype="colorfield"/>
+                <textColor
+                    jcr:primaryType="cq:Widget"
+                    colors="[FFFFFF,4D4E53]"
+                    fieldLabel="Text Color"
+                    name="./textColor"
+                    xtype="colorfield"/>
+                <logoLink
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Logo Link"
+                    name="./logoLink"
+                    xtype="pathfield"/>
+                <headline
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Showcase Headline"
+                    name="./headline"
+                    xtype="textfield"/>
+                <secondaryLinksLabel
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Secondary Links Dropdown Label"
+					value="More Links"
+                    name="./secondaryLinksLabel"
+					defaultValue="More Links"
+                    xtype="textfield"/>
+            </items>
+        </global>
+        <image
+            jcr:primaryType="cq:Widget"
+            allowUpload="{Boolean}false"
+            cropParameter=""
+            ddGroups="[s7media]"
+            disableZoom="{Boolean}true"
+            fileNameParameter="./fileName"
+            fileReferenceParameter="./fileReference"
+            mapParameter=""
+            name="./file"
+            requestSuffix=".img.png"
+            rotateParameter=""
+            title="Partner Logo Image (Optional)"
+            xtype="s7html5smartimage"/>
+    </items>
+</jcr:root>
