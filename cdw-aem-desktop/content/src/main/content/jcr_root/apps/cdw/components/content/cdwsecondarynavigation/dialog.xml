@@ -78,7 +78,7 @@
             <items jcr:primaryType="cq:WidgetCollection">
                 <backgroundColor
                     jcr:primaryType="cq:Widget"
-                    colors="[d02c30,c20430,f28b00,009d4f,009483,007299,76236d,b42573,fe4a5d,d8292f,f5b324,3daf2c,00a19c,007cbb,923a80,e01783,ff828a,e74c39,f8bf00,76bd22,00afab,00a8e2,a45b96,ea6cb0,ffb0c0,e57e3e,ffd200,a6ce39,63ccca,00b3e3,b588b9,f6a7d7,eec7ce,f2bd7d,ffe900,c3d600,9adada,54c9e8,ceadd0,e8bcd8,f7dbe0,f2d1a0,ffea77,e2e768,b0e3e4,96d5ea,e8bfdc,edd3e2,d1d0ce,bcbcbc,a8a8aa,898b8e,63656a,54565b,4d4d4f,cc0000,ffffff]"
+                    colors="[D02C30,C20430,F28B00,009D4F,009483,007299,76236D,B42573,FE4A5d,D8292F,F5B324,3DAF2C,00A19C,007CBB,923A80,E01783,FF828A,E74C39,F8BF00,76BD22,00AFAB,00A8E2,A45B96,EA6CB0,FFB0C0,E57E3E,FFD200,A6CE39,63CCCA,00B3E3,B588B9,F6A7D7,EEC7CE,F2BD7D,FFE900,C3D600,9ADADA,54C9E8,CEADD0,E8BCD8,F7DBE0,F2D1A0,FFEA77,E2E768,B0E3E4,96D5EA,E8BFDC,EDD3E2,D1D0CE,BCBCBC,A8A8AA,898B8E,63656A,54565B,4D4D4F,CC0000,FFFFFF]"
                     fieldLabel="Background Color"
 					defaultValue="4D4E53"
                     name="./backgroundColor"

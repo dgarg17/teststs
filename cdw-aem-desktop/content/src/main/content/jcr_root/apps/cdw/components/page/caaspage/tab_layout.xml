@@ -21,8 +21,8 @@
                     value="layout-CaaS-960"/>
                 <_x0038_00px
                     jcr:primaryType="nt:unstructured"
-                    text="800px"
-                    value="layout-CaaS-800"/>
+                    text="765px"
+                    value="layout-CaaS-765"/>
             </options>
         </contentwidth>
     </items>
