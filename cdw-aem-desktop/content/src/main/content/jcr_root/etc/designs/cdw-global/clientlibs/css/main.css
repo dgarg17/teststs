@@ -21,7 +21,7 @@
  */
 .jspContainer {
   overflow: hidden;
-  position: relative; }
+  position: relative ; }
 
 .jspPane {
   position: absolute; }
