@@ -27,13 +27,42 @@
                         name="./videoWidth"
                         xtype="numberfield">
                 </videoWidth>
-                <videoHeight
+                <sizeUnit
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="%"
+                        fieldLabel="Size Units"
+                        name="./sizeUnit"
+                        type="select"
+                        xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <pixel
+                                jcr:primaryType="nt:unstructured"
+                                text="Pixels"
+                                value="px"/>
+                        <percentage
+                                jcr:primaryType="nt:unstructured"
+                                text="Percentage(Default)"
+                                value="%"/>
+                    </options>
+            </sizeUnit>
+            <aspectRatio
                     jcr:primaryType="cq:Widget"
-                    fieldLabel="Video Height"
-                    fieldDescription="Video Height"
-                    name="./videoHeight"
-                    xtype="numberfield">
-            </videoHeight>
+                    defaultValue=".56"
+                    fieldLabel="Aspect Ratio"
+                    name="./videoAspectRatio"
+                    type="select"
+                    xtype="selection">
+                <options jcr:primaryType="cq:WidgetCollection">
+                    <sixteenByNine
+                            jcr:primaryType="nt:unstructured"
+                            text="16:9(Default)"
+                            value=".56"/>
+                    <fourByThree
+                            jcr:primaryType="nt:unstructured"
+                            text="4:3"
+                            value=".75"/>
+                </options>
+            </aspectRatio>
                 <trackingId
                     jcr:primaryType="cq:Widget"
                     fieldLabel="Tracking Id"

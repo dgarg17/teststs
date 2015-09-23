@@ -11,10 +11,15 @@ console.log("youtube ready");
 
 		var youtubePlayerID = $(this).data("video-id");
 		var trackingId = $(this).data("video-tracking-id");
+
 		console.log("youtube  video "+ youtubePlayerID+":"+trackingId);
+		console.log("youtube  video  width "+ $(this).data("video-width")+$(this).data("video-size-unit"));
+		console.log("youtube  video  height "+ parseInt(parseInt($(this).data("video-width"))*parseFloat($(this).data("video-aspect-ratio")))+$(this).data("video-size-unit"));
 		new YT.Player(this.id, {
-			width: $(this).data("video-width"),
-			height: $(this).data("video-height"),
+			//width: $(this).data("video-width")+$(this).data("video-size-unit"),
+			//width: $(this).data("video-width")+$(this).data("video-size-unit"),
+			//height: parseInt(parseInt($(this).data("video-width"))*parseFloat($(this).data("video-aspect-ratio")))+$(this).data("video-size-unit"),
+			height: "600px",
 			videoId: $(this).data("video-id"),
 			events: {
 				'onStateChange': function(event){
