@@ -47,6 +47,7 @@ public class UtilityWCMUseHelper extends BaseComponent {
 											propertyName, defaultValue);
 		}
 
+
 	}
 
 	public String getSiteRootPagePath(){
@@ -75,6 +76,10 @@ public class UtilityWCMUseHelper extends BaseComponent {
 		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(), PRODUCT_SERVICE, "");
 	}
 	public String getS7ImageRoot(){
-		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(), S7_IMAGE_ROOT, "");
+		String s7ImageRoot =   Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(), S7_IMAGE_ROOT, "");
+		if(s7ImageRoot.EndsWith("/")) {
+			return s7ImageRoot;
+		else
+			return s7ImageRoot+"/";
 	}
 }
