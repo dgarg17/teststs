@@ -77,7 +77,7 @@ public class UtilityWCMUseHelper extends BaseComponent {
 	}
 	public String getS7ImageRoot(){
 		String s7ImageRoot =   Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(), S7_IMAGE_ROOT, "");
-		if(s7ImageRoot.EndsWith("/")) {
+		if(s7ImageRoot.EndsWith("/")) 
 			return s7ImageRoot;
 		else
 			return s7ImageRoot+"/";
