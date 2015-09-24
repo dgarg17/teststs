@@ -17,12 +17,14 @@
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Youtube Video Id"
                         fieldDescription="Youtube Video Id"
+                        allowBlank="{Boolean}false"
                         name="./youtubeId"
                         xtype="textfield">
                 </youtubeVideoId>
                 <videoWidth
                         jcr:primaryType="cq:Widget"
                         fieldLabel="video Width"
+                        defaultValue="100"
                         fieldDescription="Video Width"
                         name="./videoWidth"
                         xtype="numberfield">
