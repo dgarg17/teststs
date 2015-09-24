@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          cls="tabpanelcss"
+          helpPath="en/cq/current/wcm/default_components.html#Text"
+          title="Text1"
+          xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <productPicker
+                jcr:primaryType="cq:Widget"
+                autoScroll="{Boolean}true"
+                cls="multifieldcls"
+                name="./secondaryLinks"
+                title="Secondary Links "
+                addItemLabel="Add New Link"
+                xtype="multifield">
+            <fieldConfig
+                    jcr:primaryType="cq:Widget"
+                    baseCls="multifieldpanelbasecls"
+                    cls="cssmultifieldpanel"
+                    ctCls="multifieldpanelcollapsedctcls"
+                    xtype="multifieldpanel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <ctalabel
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="There is no character limit"
+                            fieldLabel="CTA Label"
+                            width="80%"
+                            key="ctalabel"
+                            xtype="textfield"/>
+                    <ctalink
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="CTA Link"
+                            cls="csspathfield"
+                            key="ctalink"
+                            xtype="pathfield"/>
+                    <ctatarget
+                            jcr:primaryType="cq:Widget"
+                            imputValue="_self"
+                            defaultValue="_self"
+                            fieldDescription="CTA link opens in same window by default."
+                            fieldLabel="CTA Target"
+                            key="ctatarget"
+                            cls="csspathfield"
+                            type="select"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <new
+                                    jcr:primaryType="nt:unstructured"
+                                    text="New Window"
+                                    value="_blank"/>
+                            <same
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Same Window (Default)"
+                                    value="_self"/>
+                        </options>
+                    </ctatarget>
+
+                </items>
+            </fieldConfig>
+        </productPicker>
+        <global
+                jcr:primaryType="cq:Widget"
+                cls="panelcss"
+                title="Global Configurations"
+                xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <productCategoryName
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Category Name"
+                        fieldDescription="Product Category Name"
+                        allowBlank="{Boolean}false"
+                        name="./productCategoryName"
+                        xtype="textfield"/>
+                <productCategoryNameUrl
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Product Category Name URL"
+                    fieldDescription="Product Category Name Url"
+                    name="./productCategoryNameUrl"
+                    xtype="pathfield"/>
+                <productCategoryNameTarget
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="_self"
+                        fieldDescription="CTA link opens in same window by default."
+                        fieldLabel="Product Category Name Target"
+                        name="./productCategoryNameTarget"
+                        type="select"
+                        xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <new
+                                jcr:primaryType="nt:unstructured"
+                                text="New Window"
+                                value="_blank"/>
+                        <same
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Window (Default)"
+                                value="_self"/>
+                    </options>
+                </productCategoryNameTarget>
+                <productCategoryDescription
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Category Description"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Product Category Name Description"
+                        name="./productCategoryDescription"
+                        xtype="textarea"/>
+                <productCategoryImage
+                        jcr:primaryType="cq:Widget"
+                        required="{Boolean}true"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Product Category Image Name"
+                        fieldDescription="Product Category sean7 image name "
+                        name="./productCategoryImage"
+                        xtype="textfield"/>
+                <productManufacturerLogo
+                        jcr:primaryType="cq:Widget"
+                        required="{Boolean}true"
+                        fieldLabel="Product Manufacturer Logo Image Name"
+                        fieldDescription="Product Manufacturer Logo sean7 image name "
+                        name="./productManufacturer"
+                        xtype="textfield"/>
+                <promotionalLeadInPrice
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Promotional Lead-in image"
+                        fieldDescription="Promotional Lead-in image "
+                        name="./promotionalLeadInPrice"
+                        xtype="textfield"/>
+                <price
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Price"
+                        fieldDescription="Price "
+                        name="./price"
+                        xtype="textfield"/>
+                <campaignId
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Campaign Id "
+                        fieldDescription="Campaign Id  "
+                        name="./campaignId"
+                        xtype="textfield"/>
+                <CtaButtonLabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Cta Button Label "
+                        fieldDescription="Cta Button Id"
+                        name="./ctaButtonLabel"
+                        xtype="textfield"/>
+                <CtaButtonUrl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Cta Button 1 Url "
+                        fieldDescription="Cta Button 1 Url"
+                        name="./CtaButtonUrl"
+                        xtype="pathfield"/>
+                <ctaTarget
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="_self"
+                        fieldDescription="CTA link opens in same window by default."
+                        fieldLabel="CTA Target"
+                        name="./ctaButtonTarget"
+                        type="select"
+                        xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <new
+                                jcr:primaryType="nt:unstructured"
+                                text="New Window"
+                                value="_blank"/>
+                        <same
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Window (Default)"
+                                value="_self"/>
+                    </options>
+                </ctaTarget>
+            </items>
+        </global>
+    </items>
+</jcr:root>

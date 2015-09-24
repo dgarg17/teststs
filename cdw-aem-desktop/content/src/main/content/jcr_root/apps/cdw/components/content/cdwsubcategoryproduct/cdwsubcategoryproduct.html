@@ -1,0 +1,65 @@
+<!--/* The client side rendering for the product picker is available in productpicker.js(/etc/designs/cdw-global/clientlibs/js/productpicker.js)*/-->
+
+<div class="product-picker" data-sly-test="${properties.productCategoryName}">
+    <div class="pp-header-hold">
+        <h5>${properties.productCategoryName}</h5>
+    </div>
+    <div class="pp-copy-hold" >
+        <p>${properties.productCategoryDescription}</p>
+    </div>
+    <div class="pp-product-lockup" >
+        <div class="product-image" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" >
+            <img alt=" " src="${utility.S7ImageRoot}${properties.productCategoryImage}?$product-200$">
+        </div>
+        <div class="product-info" >
+            <div class="pricing-block">
+                <p data-sly-test="${properties.promotionalLeadInPrice}" class="-gray">${properties.promotionalLeadInPrice}</p>
+                <h6 data-sly-test="${properties.price}" >${properties.price}</h6>
+               <!-- <p>Advertised Price</p>-->
+            </div>
+        </div>
+    </div>
+    <div class="options">
+        <div class="button-lockup" data-sly-test="${properties.CtaButtonUrl}" data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.CtaButtonUrl}">
+            <a href="${link.urlUpdate}" class="button -red" target="${properties.ctaButtonTarget}">${properties.ctaButtonLabel}</a>
+        </div>
+
+        <!--waiting on more updates from James on the mark-up-->
+        <div class="select2-container sub-cat-select" id="s2id_autogen1">
+            <a href="javascript:void(0)" class="select2-choice" tabindex="-1">
+                <span class="select2-chosen" id="select2-chosen-2">Basic PDU</span>
+                <abbr class="select2-search-choice-close"></abbr>
+                <span class="select2-arrow" role="presentation">
+                    <b role="presentation"></b>
+                    <i class="ico ico-uni71"></i>
+                </span>
+            </a>
+            <label for="s2id_autogen2" class="select2-offscreen"></label>
+            <input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2">
+        </div>
+        <select class="sub-cat-select" tabindex="-1" title="" style="display: none;">
+        <option></option>
+        <option>Basic PDU</option>
+        <option>Metered PDU</option>
+        <option>Switched PDU</option>
+    </select>
+        <select class="sub-cat-select-mobile">
+            <option>View Models and Pricing</option>
+            <option>Basic PDU</option>
+            <option>Metered PDU</option>
+            <option>Switched PDU</option>
+        </select>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div  data-sly-test="${!properties.productCategoryName&&!wcmmode.disabled}">
+<h5>Please configure  Sub Category product Display </h5>
+</div>
