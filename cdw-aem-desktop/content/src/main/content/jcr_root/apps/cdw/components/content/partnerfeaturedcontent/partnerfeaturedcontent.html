@@ -3,7 +3,7 @@
 <!--/* CDW Partner Product Featured Component */ -->
 
 <div  class="layout partner-product-cat ${properties.imagealignment}">
-	<div data-sly-use.info="com.cdw.aem.components.CssClassHelper"  class="${info.txtcssClass} text">
+	<div data-sly-use.info="com.cdw.aem.components.FeaturedContentWCMUseHelper"  class="${info.txtcssClass} text">
 		<h4 data-sly-test="${properties.headline}"
 			style="color:#${properties.textcolor @ context='styleString'};">${properties.headline}</h4>
 		<p data-sly-test="${properties.bodytext}">${properties.bodytext}</p>
@@ -13,7 +13,7 @@
 				href="${link.urlUpdate}" target="${properties.ctatarget}">${properties.cdwctalabel}</a>
 		</div>
 	</div> 
-    <div data-sly-use.info="com.cdw.aem.components.CssClassHelper"  class=" ${info.imgcssClass} image ">
+    <div data-sly-use.info="com.cdw.aem.components.FeaturedContentWCMUseHelper"  class=" ${info.imgcssClass} image ">
 		<div data-sly-test="${properties.scene7filename1}" class="img">
 			<a data-sly-unwrap="${!properties.imglink}"
 				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink}"
