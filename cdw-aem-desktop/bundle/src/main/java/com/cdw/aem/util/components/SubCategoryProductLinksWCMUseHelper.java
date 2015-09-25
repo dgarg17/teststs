@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class SubCategoryProductLinksWCMUseHelper extends WCMUse {
 
-    protected org.slf4j.Logger log = LoggerFactory.getLogger(this.getClass());
+    protected org.slf4j.Logger log = LoggerFactory.getLogger(SubCategoryProductLinksWCMUseHelper.class);
     private String[] secondaryLinksJson;
 
     @Override
@@ -23,10 +23,14 @@ public class SubCategoryProductLinksWCMUseHelper extends WCMUse {
         if (secondaryLinksJson == null) {
             secondaryLinksJson = new String[1];
             secondaryLinksJson[0] = get("json", String.class);
+
         }
+        log.debug(this.getClass().getName()+ "secondaryLinksJson "+secondaryLinksJson.length);
     }
 
     public   List<SubCategoryProductLink>  getSubCategoryProductLinks() {
+        log.debug("List Output"+((List)(new Gson().fromJson(concatJson(secondaryLinksJson), new TypeToken<List<SubCategoryProductLink>>() {
+        }.getType()))).size());
       return new Gson().fromJson(concatJson(secondaryLinksJson), new TypeToken<List<SubCategoryProductLink>>() {
         }.getType());
 

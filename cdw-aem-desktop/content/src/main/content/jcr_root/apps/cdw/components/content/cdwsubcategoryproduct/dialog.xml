@@ -7,59 +7,6 @@
           title="Text1"
           xtype="tabpanel">
     <items jcr:primaryType="cq:WidgetCollection">
-        <productPicker
-                jcr:primaryType="cq:Widget"
-                autoScroll="{Boolean}true"
-                cls="multifieldcls"
-                name="./secondaryLinks"
-                title="Secondary Links "
-                addItemLabel="Add New Link"
-                xtype="multifield">
-            <fieldConfig
-                    jcr:primaryType="cq:Widget"
-                    baseCls="multifieldpanelbasecls"
-                    cls="cssmultifieldpanel"
-                    ctCls="multifieldpanelcollapsedctcls"
-                    xtype="multifieldpanel">
-                <items jcr:primaryType="cq:WidgetCollection">
-                    <ctalabel
-                            jcr:primaryType="cq:Widget"
-                            fieldDescription="There is no character limit"
-                            fieldLabel="CTA Label"
-                            width="80%"
-                            key="ctalabel"
-                            xtype="textfield"/>
-                    <ctalink
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="CTA Link"
-                            cls="csspathfield"
-                            key="ctalink"
-                            xtype="pathfield"/>
-                    <ctatarget
-                            jcr:primaryType="cq:Widget"
-                            imputValue="_self"
-                            defaultValue="_self"
-                            fieldDescription="CTA link opens in same window by default."
-                            fieldLabel="CTA Target"
-                            key="ctatarget"
-                            cls="csspathfield"
-                            type="select"
-                            xtype="selection">
-                        <options jcr:primaryType="cq:WidgetCollection">
-                            <new
-                                    jcr:primaryType="nt:unstructured"
-                                    text="New Window"
-                                    value="_blank"/>
-                            <same
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Same Window (Default)"
-                                    value="_self"/>
-                        </options>
-                    </ctatarget>
-
-                </items>
-            </fieldConfig>
-        </productPicker>
         <global
                 jcr:primaryType="cq:Widget"
                 cls="panelcss"
@@ -74,11 +21,11 @@
                         name="./productCategoryName"
                         xtype="textfield"/>
                 <productCategoryNameUrl
-                    jcr:primaryType="cq:Widget"
-                    fieldLabel="Product Category Name URL"
-                    fieldDescription="Product Category Name Url"
-                    name="./productCategoryNameUrl"
-                    xtype="pathfield"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Category Name URL"
+                        fieldDescription="Product Category Name Url"
+                        name="./productCategoryNameUrl"
+                        xtype="pathfield"/>
                 <productCategoryNameTarget
                         jcr:primaryType="cq:Widget"
                         defaultValue="_self"
@@ -171,5 +118,58 @@
                 </ctaTarget>
             </items>
         </global>
+        <secondaryLinks
+                jcr:primaryType="cq:Widget"
+                autoScroll="{Boolean}true"
+                cls="multifieldcls"
+                name="./secondaryLinks"
+                title="Secondary Links "
+                addItemLabel="Add New Link"
+                xtype="multifield">
+            <fieldConfig
+                    jcr:primaryType="cq:Widget"
+                    baseCls="multifieldpanelbasecls"
+                    cls="cssmultifieldpanel"
+                    ctCls="multifieldpanelcollapsedctcls"
+                    xtype="multifieldpanel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <ctalabel
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="There is no character limit"
+                            fieldLabel="CTA Label"
+                            width="80%"
+                            key="ctalabel"
+                            xtype="textfield"/>
+                    <ctalink
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="CTA Link"
+                            cls="csspathfield"
+                            key="ctalink"
+                            xtype="pathfield"/>
+                    <ctatarget
+                            jcr:primaryType="cq:Widget"
+                            inputValue="_self"
+                            defaultValue="_self"
+                            fieldDescription="CTA link opens in same window by default."
+                            fieldLabel="CTA Target"
+                            key="ctatarget"
+                            cls="csspathfield"
+                            type="select"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <new
+                                    jcr:primaryType="nt:unstructured"
+                                    text="New Window"
+                                    value="_blank"/>
+                            <same
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Same Window (Default)"
+                                    value="_self"/>
+                        </options>
+                    </ctatarget>
+
+                </items>
+            </fieldConfig>
+        </secondaryLinks>
     </items>
 </jcr:root>
