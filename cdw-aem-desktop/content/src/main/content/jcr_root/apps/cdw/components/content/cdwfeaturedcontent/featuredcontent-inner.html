@@ -1,12 +1,12 @@
-<img data-sly-test="${(properties.imagealignment=='-left'|| properties.imagealignment=='-right')&&(properties.imagesrc == 'scene7')&&(properties.fileReferenceS7)}"
-	src="${properties.fileReferenceS7}?$product_150$" class="feature-image" />
-<img data-sly-test="${(properties.imagealignment=='-left'|| properties.imagealignment=='-right')&&(properties.imagesrc == 'dam')&&(properties.fileReference)}"
-	src="${properties.fileReference}" class="feature-image" />
+<img data-sly-test="${(properties.imagealignment=='-left'|| properties.imagealignment=='-right')&&(properties.imagesrc == 'scene7')}"
+	src="${properties.fileReference}?$product_150$" class="feature-image" />
+<img data-sly-test="${(properties.imagealignment=='-left'|| properties.imagealignment=='-right')&&(properties.imagesrc == 'dam')}"
+	src="${currentNode.path }/image.img.png" class="feature-image" />
 <div class="copy">
 	<div data-sly-test="${properties.imagealignment=='-top'}" data-sly-unwrap>
 		<div class="image-lockup">
-			<img data-sly-test="${properties.imagesrc == 'scene7'&& properties.fileReferenceS7}" src="${properties.fileReferenceS7}?$product_150$" />
-			<img data-sly-test="${properties.imagesrc == 'dam' && properties.fileReference}" src="${properties.fileReference}" />
+			<img data-sly-test="${properties.imagesrc == 'scene7'}" src="${properties.fileReference}?$product_150$" />
+			<img data-sly-test="${properties.imagesrc == 'dam' }" src="${currentNode.path}/image.img.png" />
 		</div>
 	</div>
 	<h5 data-sly-test="${properties.headline && !properties.redbarhighlight}"
@@ -28,8 +28,8 @@
 	</div>
 	<div data-sly-test="${properties.imagealignment=='-bottom'}"	data-sly-unwrap>
 		<div class="image-lockup">
-			<img data-sly-test="${properties.imagesrc == 'scene7'&& properties.fileReferenceS7}" src="${properties.fileReferenceS7}?$product_150$" />
-			<img data-sly-test="${properties.imagesrc == 'dam' && properties.fileReference}" src="${properties.fileReference}" />
+			<img data-sly-test="${properties.imagesrc == 'scene7'&& properties.fileReferenceS7}" src="${properties.fileReference}?$product_150$" />
+			<img data-sly-test="${properties.imagesrc == 'dam' && properties.fileReference}" src="${currentNode.path}/image.img.png" />
 		</div>
 	</div>
 
