@@ -8,3 +8,4 @@ slick.js
 slick.min.js
 boxheight.js
 youtube.js
+select2.min.js
