@@ -20,7 +20,7 @@
  * may not operate correctly without them.
  */
 .jspContainer {
-  overflow: hidden;
+  overflow: hidden ;
   position: relative; }
 
 .jspPane {
