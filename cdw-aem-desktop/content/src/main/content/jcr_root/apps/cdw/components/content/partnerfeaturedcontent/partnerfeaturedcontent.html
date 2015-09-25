@@ -14,32 +14,32 @@
 		</div>
 	</div> 
     <div data-sly-use.info="com.cdw.aem.components.FeaturedContentWCMUseHelper"  class=" ${info.imgcssClass} image ">
-		<div data-sly-test="${properties.scene7filename1}" class="img">
+		<div data-sly-test="${properties.scene7filename1}" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" class="img">
 			<a data-sly-unwrap="${!properties.imglink}"
 				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink}"
 				href="${link.urlUpdate}" target="${properties.imgctatarget}">
 				<img
-					src="https://webobjects2.cdw.com/is/image/CDW/${properties.scene7filename1}?$product_150$"
+					src="${utility.s7ImageRoot}${properties.scene7filename1}?$product_150$"
 					alt="" />
 				<h6 data-sly-test="${properties.imglabel}">${properties.imglabel}</h6> 
 			</a>      
 		</div> 
-		<div data-sly-test="${properties.scene7filename2}" class="img">
+		<div data-sly-test="${properties.scene7filename2}" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" class="img">
 			<a data-sly-unwrap="${!properties.imglink2}"
 				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink2}"
 				href="${link.urlUpdate}" target="${properties.imgctatarget2}">
 				<img
-					src="https://webobjects2.cdw.com/is/image/CDW/${properties.scene7filename2}?$product_150$"
+					src="${utility.s7ImageRoot}${properties.scene7filename2}?$product_150$"
 					alt="" />
 				<h6 data-sly-test="${properties.imglabel2}">${properties.imglabel2}</h6>
 			</a> 
 		</div>
-		<div data-sly-test="${properties.scene7filename3}" class="img">
+		<div data-sly-test="${properties.scene7filename3}" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"  class="img">
 			<a data-sly-unwrap="${!properties.imglink3}"
 				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink3}"
 				href="${link.urlUpdate}" target="${properties.imgctatarget3}">
 				<img
-					src="https://webobjects2.cdw.com/is/image/CDW/${properties.scene7filename3}?$product_150$"
+					src="${utility.s7ImageRoot}${properties.scene7filename3}?$product_150$"
 					alt="" />    
 				<h6 data-sly-test="${properties.imglabel3}">${properties.imglabel3}</h6>  
 			</a>
