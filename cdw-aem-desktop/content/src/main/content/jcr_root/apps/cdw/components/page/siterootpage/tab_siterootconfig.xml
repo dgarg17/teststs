@@ -14,30 +14,30 @@
                     fieldLabel="Site Domain"
                     name="./siteDomain"
                     xtype="textfield"/>
-                <s7PartnerLogoCDWTreatment 
-                    jcr:primaryType="cq:Widget" 
-                    fieldDescription="This field defines the Scene7 image that will be used for the CDW image treatment on partner logo lockups. Drag a S7 image into the pathfield to define the logo." 
-                    fieldLabel="Scene7 CDW Partner Logo Treatment" 
-                    name="./s7CDWPartnerLogoTreatment" 
+                <s7PartnerLogoCDWTreatment
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="This field defines the Scene7 image that will be used for the CDW image treatment on partner logo lockups. Drag a S7 image into the pathfield to define the logo."
+                    fieldLabel="Scene7 CDW Partner Logo Treatment"
+                    name="./s7CDWPartnerLogoTreatment"
                     xtype="pathfield"/>
                 <serviceDonaim
-                        jcr:primaryType="cq:Widget"
-                        fieldDescription="This field defines the Service Domain for product picker."
-                        fieldLabel="Service Domain"
-                        name="./serviceDomain"
-                        xtype="textfield"/>
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="This field defines the Service Domain for product picker."
+                    fieldLabel="Service Domain"
+                    name="./serviceDomain"
+                    xtype="textfield"/>
                 <productService
-                        jcr:primaryType="cq:Widget"
-                        fieldDescription="This field defines Product Service relative URL."
-                        fieldLabel="Product Service"
-                        name="./productService"
-                        xtype="textfield"/>
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="This field defines Product Service relative URL."
+                    fieldLabel="Product Service"
+                    name="./productService"
+                    xtype="textfield"/>
                 <S7ImageRoot
-                        jcr:primaryType="cq:Widget"
-                        fieldDescription="This Url is used as a root for all product images  and manifacture logos"
-                        fieldLabel="Sean7 Image Root"
-                        name="./s7ImageRoot"
-                        xtype="textfield"/>
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="This Url is used as a root for all product images  and manifacture logos"
+                    fieldLabel="Sean7 Image Root"
+                    name="./s7ImageRoot"
+                    xtype="textfield"/>
             </items>
         </siterootconfig>
     </items>

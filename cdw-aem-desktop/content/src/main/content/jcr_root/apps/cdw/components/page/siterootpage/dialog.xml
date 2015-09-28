@@ -35,6 +35,10 @@
                     jcr:primaryType="cq:Widget"
                     path="/apps/cdw/components/page/siterootpage/tab_siterootconfig.infinity.json"
                     xtype="cqinclude"/>
+                <analyticsconfig
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/cdw/components/page/siterootpage/tab_analyticsconfig.infinity.json"
+                    xtype="cqinclude"/>
             </items>
         </tabs>
     </items>

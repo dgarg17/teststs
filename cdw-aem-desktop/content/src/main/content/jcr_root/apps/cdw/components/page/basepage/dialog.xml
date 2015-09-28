@@ -3,6 +3,7 @@
     jcr:primaryType="cq:Dialog"
     height="400"
     stateful="false"
+    width="600"
     xtype="dialog">
     <items jcr:primaryType="cq:WidgetCollection">
         <tabs jcr:primaryType="cq:TabPanel">
@@ -30,6 +31,10 @@
                 <livecopy
                     jcr:primaryType="cq:Widget"
                     path="/libs/wcm/foundation/components/page/tab_livecopy.infinity.json"
+                    xtype="cqinclude"/>
+                <cdw_configuration
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/cdw/components/page/basepage/tab_cdw_configuration.infinity.json"
                     xtype="cqinclude"/>
             </items>
         </tabs>
