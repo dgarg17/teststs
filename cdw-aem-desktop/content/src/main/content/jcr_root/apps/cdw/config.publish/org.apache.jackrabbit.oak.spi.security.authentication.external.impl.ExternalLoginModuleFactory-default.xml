@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+          jaas.controlFlag="SUFFICIENT"
+          jaas.ranking="97"
+        sync.handlerName="com.cdw.SyncHandler.AD"
+        jaas.realmName=""
+        idp.name="com.cdw.IdentityProvider.AD"
+        />
