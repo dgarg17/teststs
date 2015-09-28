@@ -1,6 +1,5 @@
 #base=css
 main.css
-select2.css
 lead-gen.css
 productPicker.css
 vendor.css
