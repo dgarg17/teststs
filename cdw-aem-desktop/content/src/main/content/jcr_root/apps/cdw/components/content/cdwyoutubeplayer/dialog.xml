@@ -1,77 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-          jcr:primaryType="cq:Dialog"
-          cls="tabpanelcss"
-          helpPath="en/cq/current/wcm/default_components.html#Text"
-          title="Text1"
-          xtype="tabpanel">
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    cls="tabpanelcss"
+    helpPath="en/cq/current/wcm/default_components.html#Text"
+    title="Text1"
+    xtype="tabpanel">
     <items jcr:primaryType="cq:WidgetCollection">
         <configurations
-                jcr:primaryType="cq:Widget"
-                title="Configurations"
-                xtype="panel">
-
+            jcr:primaryType="cq:Widget"
+            title="Configurations"
+            xtype="panel">
             <items jcr:primaryType="cq:WidgetCollection">
                 <youtubeVideoId
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Youtube Video Id"
-                        fieldDescription="Youtube Video Id"
-                        allowBlank="{Boolean}false"
-                        name="./youtubeId"
-                        xtype="textfield">
-                </youtubeVideoId>
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    fieldLabel="Youtube Video Id"
+                    name="./youtubeId"
+                    xtype="textfield"/>
                 <videoWidth
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="video Width"
-                        defaultValue="100"
-                        fieldDescription="Video Width"
-                        name="./videoWidth"
-                        xtype="numberfield">
-                </videoWidth>
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="100"
+                    fieldLabel="Video Width"
+                    name="./videoWidth"
+                    xtype="numberfield"/>
                 <sizeUnit
-                        jcr:primaryType="cq:Widget"
-                        defaultValue="%"
-                        fieldLabel="Size Units"
-                        name="./sizeUnit"
-                        type="select"
-                        xtype="selection">
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="%"
+                    fieldLabel="Size Units"
+                    name="./sizeUnit"
+                    type="select"
+                    xtype="selection">
                     <options jcr:primaryType="cq:WidgetCollection">
                         <pixel
-                                jcr:primaryType="nt:unstructured"
-                                text="Pixels"
-                                value="px"/>
+                            jcr:primaryType="nt:unstructured"
+                            text="Pixels"
+                            value="px"/>
                         <percentage
-                                jcr:primaryType="nt:unstructured"
-                                text="Percentage(Default)"
-                                value="%"/>
+                            jcr:primaryType="nt:unstructured"
+                            text="Percentage(Default)"
+                            value="%"/>
                     </options>
-            </sizeUnit>
-            <aspectRatio
+                </sizeUnit>
+                <aspectRatio
                     jcr:primaryType="cq:Widget"
                     defaultValue=".56"
                     fieldLabel="Aspect Ratio"
                     name="./videoAspectRatio"
                     type="select"
                     xtype="selection">
-                <options jcr:primaryType="cq:WidgetCollection">
-                    <sixteenByNine
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <sixteenByNine
                             jcr:primaryType="nt:unstructured"
                             text="16:9(Default)"
                             value=".56"/>
-                    <fourByThree
+                        <fourByThree
                             jcr:primaryType="nt:unstructured"
                             text="4:3"
                             value=".75"/>
-                </options>
-            </aspectRatio>
+                    </options>
+                </aspectRatio>
                 <trackingId
                     jcr:primaryType="cq:Widget"
                     fieldLabel="Tracking Id"
-                    fieldDescription="Tracking Id"
                     name="./trackingId"
-                    xtype="textfield">
-            </trackingId>
+                    xtype="textfield"/>
             </items>
         </configurations>
     </items>
