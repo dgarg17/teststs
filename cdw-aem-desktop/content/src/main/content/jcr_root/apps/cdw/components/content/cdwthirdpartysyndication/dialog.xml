@@ -62,7 +62,7 @@
                     jcr:primaryType="cq:Widget"
                     collapsed="{Boolean}false"
                     collapsible="{Boolean}true"
-                    id="javascript"
+                    itemId="javascript"
                     title="Javascript Configuration"
                     xtype="dialogfieldset">
                     <items jcr:primaryType="cq:WidgetCollection">
@@ -93,7 +93,7 @@
                     jcr:primaryType="cq:Widget"
                     collapsed="{Boolean}true"
                     collapsible="{Boolean}true"
-                    id="iframe"
+                    itemId="iframe"
                     title="iFrame Configuration"
                     xtype="dialogfieldset">
                     <items jcr:primaryType="cq:WidgetCollection">
