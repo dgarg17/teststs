@@ -10,22 +10,22 @@
             title="Ensighten"
             xtype="dialogfieldset">
             <items jcr:primaryType="cq:WidgetCollection">
-                <pageType
+                <ensightenPageType
                     jcr:primaryType="cq:Widget"
                     allowBlank="false"
                     fieldLabel="Ensighten Page Type"
-                    name="./pageType"
+                    name="./ensightenPageType"
                     xtype="textfield"/>
                 <pageName
                     jcr:primaryType="cq:Widget"
                     allowBlank="false"
                     fieldLabel="Ensighten Page Name"
-                    name="./pageName"
+                    name="./ensightenPageName"
                     xtype="textfield"/>
                 <voucherCode
                     jcr:primaryType="cq:Widget"
-                    fieldLabel="Ensighten Voucher Code"
-                    name="./voucherCode"
+                    fieldLabel="Ensighten Voucher Code (Override)"
+                    name="./ensightenVoucherCode"
                     xtype="textfield"/>
             </items>
         </ensighten>

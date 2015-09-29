@@ -23,9 +23,9 @@ public class UtilityWCMUseHelper extends BaseComponent {
 	private static String S7_IMAGE_ROOT = "s7ImageRoot";
 	private static String SERVICE_DOMAIN = "serviceDomain";
 	private static String PRODUCT_SERVICE = "productService";
-	private static String ANALYTICS_PATH = "analyticsJsPath";
-	private static String VOUCHER_CODE = "voucherCode";
-	private static String DISABLE_TAGGING = "disableTagging";
+	private static String ENSIGHTEN_BOOTSTRAP_PATH = "ensightenBootstrapPath";
+	private static String ENSIGHTEN_VOUCHER_CODE = "ensightenVoucherCode";
+	private static String DISABLE_ENSIGHTEN_TAGGING = "disableEnsightenTagging";
 
 	private boolean isPublish =false;
 
@@ -85,13 +85,13 @@ public class UtilityWCMUseHelper extends BaseComponent {
 		else
 			return s7ImageRoot+"/";
 	}
-	public String getAnalyticsJsPath(){
-		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(),ANALYTICS_PATH, "");
+	public String getEnsightenBootstrapPath(){
+		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(),ENSIGHTEN_BOOTSTRAP_PATH, "");
 	}
-	public String getVoucherCode(){
-		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(),VOUCHER_CODE, "");
+	public String getEnsightenVoucherCode(){
+		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(),ENSIGHTEN_VOUCHER_CODE, "");
 	}
-	public String getDisableTagging(){
-		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(),DISABLE_TAGGING, "");
+	public String getDisableEnsightenTagging(){
+		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(),DISABLE_ENSIGHTEN_TAGGING, "");
 	}
 }

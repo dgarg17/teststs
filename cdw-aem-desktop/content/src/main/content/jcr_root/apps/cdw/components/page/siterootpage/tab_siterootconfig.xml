@@ -20,7 +20,7 @@
                     fieldLabel="Scene7 CDW Partner Logo Treatment"
                     name="./s7CDWPartnerLogoTreatment"
                     xtype="pathfield"/>
-                <serviceDonaim
+                <serviceDomain
                     jcr:primaryType="cq:Widget"
                     fieldDescription="This field defines the Service Domain for product picker."
                     fieldLabel="Service Domain"
@@ -38,6 +38,24 @@
                     fieldLabel="Sean7 Image Root"
                     name="./s7ImageRoot"
                     xtype="textfield"/>
+				<ensightenBootstrapPath
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    fieldLabel="Ensighten Bootstrap JS Path"
+                    name="./ensightenBootstrapPath"
+                    xtype="textfield"/>
+                <ensightenVoucherCode
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    fieldLabel="Ensighten Voucher Code"
+                    name="./ensightenVoucherCode"
+                    xtype="textfield"/>
+                <disableEnsightenTagging
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Disable Ensighten Tagging?"
+                    name="./disableEnsightenTagging"
+                    type="checkbox"
+                    xtype="selection"/>
             </items>
         </siterootconfig>
     </items>
