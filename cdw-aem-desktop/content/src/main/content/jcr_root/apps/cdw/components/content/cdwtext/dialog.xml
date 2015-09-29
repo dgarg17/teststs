@@ -14,6 +14,7 @@
                 <text
                     jcr:primaryType="cq:Widget"
                     fieldLabel="Text"
+                    hideLabel="true"
                     name="./text"
                     xtype="richtext">
                     <rtePlugins jcr:primaryType="nt:unstructured">
@@ -139,9 +140,6 @@
                                     <rightanglequote
                                         jcr:primaryType="nt:unstructured"
                                         entity="&amp;raquo;"/>
-                                    <bullet
-                                        jcr:primaryType="nt:unstructured"
-                                        entity="&amp;#8226;"/>
                                 </chars>
                             </specialCharsConfig>
                         </misctools>
