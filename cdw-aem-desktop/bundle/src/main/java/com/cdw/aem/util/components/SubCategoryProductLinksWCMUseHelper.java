@@ -16,6 +16,7 @@ public class SubCategoryProductLinksWCMUseHelper extends WCMUse {
     protected org.slf4j.Logger log = LoggerFactory.getLogger(SubCategoryProductLinksWCMUseHelper.class);
     private String[] secondaryLinksJson;
 
+
     @Override
     public void activate() throws Exception {
 
@@ -25,15 +26,13 @@ public class SubCategoryProductLinksWCMUseHelper extends WCMUse {
             secondaryLinksJson[0] = get("json", String.class);
 
         }
-        log.debug(this.getClass().getName()+ "secondaryLinksJson "+secondaryLinksJson.length);
+        log.debug(this.getClass().getName() + "secondaryLinksJson " + secondaryLinksJson.length);
     }
 
-    public   List<SubCategoryProductLink>  getSubCategoryProductLinks() {
-        log.debug("List Output"+((List)(new Gson().fromJson(concatJson(secondaryLinksJson), new TypeToken<List<SubCategoryProductLink>>() {
-        }.getType()))).size());
-      return new Gson().fromJson(concatJson(secondaryLinksJson), new TypeToken<List<SubCategoryProductLink>>() {
-        }.getType());
-
+    public List<SubCategoryProductLink> getSubCategoryProductLinks() {
+        List<SubCategoryProductLink> subCategoryProductLinks = (new Gson().fromJson(concatJson(secondaryLinksJson), new TypeToken<List<SubCategoryProductLink>>() {
+        }.getType()));
+        return subCategoryProductLinks;
     }
 
     private String concatJson(String[] jsonArray) {
@@ -42,15 +41,18 @@ public class SubCategoryProductLinksWCMUseHelper extends WCMUse {
         if (jsonArray == null || jsonArray.length < 1) {
             return json;
         } else if (jsonArray.length == 1) {
-            return "["+jsonArray[0]+"]";
+            return "[" + jsonArray[0] + "]";
         }
         for (String i : jsonArray) {
             json += i + ",";
         }
         json = json.substring(0, json.lastIndexOf(','));
 
-
-    return"["+json+"]";
-
+        return "[" + json + "]";
     }
+
+    public int getCount() {
+        return secondaryLinksJson.length;
+    }
+
 }
