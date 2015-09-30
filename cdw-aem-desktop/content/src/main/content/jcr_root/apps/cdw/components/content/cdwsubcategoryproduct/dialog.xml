@@ -3,8 +3,6 @@
           xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           jcr:primaryType="cq:Dialog"
           cls="tabpanelcss"
-          helpPath="en/cq/current/wcm/default_components.html#Text"
-          title="Text1"
           xtype="tabpanel">
     <items jcr:primaryType="cq:WidgetCollection">
         <secondaryLinks
@@ -82,7 +80,7 @@
                 <productCategoryNameUrl
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Product Category Link"
-                        fieldDescription="Cta url for product category name"
+                        fieldDescription="CTA url for product category name"
                         name="./productCategoryNameUrl"
                         xtype="pathfield"/>
                 <productCategoryNameTarget
@@ -117,13 +115,13 @@
                         required="{Boolean}true"
                         allowBlank="{Boolean}false"
                         fieldLabel="Product Category Image"
-                        fieldDescription="Sean7 image name/code for the product category "
+                        fieldDescription="Scene7 image name/code for the product category "
                         name="./productCategoryImage"
                         xtype="textfield"/>
                 <promotionalLeadInPrice
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Promotional Description"
-                        fieldDescription="Promotional description for this product category"
+                        fieldDescription="Promotional description for this product category (e.g. - ‘As Low As’)"
                         name="./promotionalLeadInPrice"
                         xtype="textfield"/>
                 <price
@@ -140,20 +138,20 @@
                         xtype="textfield"/>
                 <CtaButtonLabel
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Cta Button Label"
+                        fieldLabel="CTA Button Label"
                         fieldDescription="Label for the primary cta button in red"
                         name="./ctaButtonLabel"
                         xtype="textfield"/>
                 <CtaButtonUrl
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Cta Button Link"
+                        fieldLabel="CTA Button Link"
                         fieldDescription="Url for the primary cta button in red"
                         name="./CtaButtonUrl"
                         xtype="pathfield"/>
                 <ctaTarget
                         jcr:primaryType="cq:Widget"
                         defaultValue="_self"
-                        fieldDescription="Cta link opens in same window by default."
+                        fieldDescription="CTA link opens in same window by default."
                         fieldLabel="Cta Target"
                         name="./ctaButtonTarget"
                         type="select"
@@ -172,7 +170,7 @@
                 <secondaryLabel
                         jcr:primaryType="cq:Widget"
                         defaultValue="View Models and Pricing"
-                        fieldDescription="Label for the secondary dropdown, Available only with more then two secondary links and defaults to 'View Models and Pricing' "
+                        fieldDescription="Label for the secondary dropdown, Available only with more than two secondary links and defaults to 'View Models and Pricing' "
                         fieldLabel="Secondary Label"
                         name="./secondaryLabel"
                         xtype="textfield"/>

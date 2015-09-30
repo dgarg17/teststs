@@ -56,6 +56,6 @@
         </select>
     </div>
 </div>
-<div data-sly-test="${!properties.productCategoryName&&!wcmmode.disabled}">
+<div data-sly-test="${!properties.productCategoryName&&(wcmmode.edit || wcmmode.design)}">
     <h3>Please configure Sub Category product Display </h3>
 </div>
