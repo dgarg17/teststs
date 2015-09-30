@@ -29,13 +29,11 @@
              data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.CtaButtonUrl}">
             <a href="${link.urlUpdate}" class="button -red" target="${properties.ctaButtonTarget}">${properties.ctaButtonLabel}</a>
         </div>
-
         <div class="button-lockup -btn2"   data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.SubCategoryProductLinksWCMUseHelper' @json=properties.secondaryLinks}"
              data-sly-test="${properties.secondaryLinks&&secondaryLinks.count==1}">
             <a href="${secondaryLinks.subCategoryProductLinks[0].ctalink}"
                target="${secondaryLinks.subCategoryProductLinks[0].ctatarget}" class="button -gray">${secondaryLinks.subCategoryProductLinks[0].ctalabel}</a>
         </div>
-
         <select class="sub-cat-select partner-links" data-secondary-label="${properties.secondaryLabel}"
                 data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.SubCategoryProductLinksWCMUseHelper' @json=properties.secondaryLinks}"
                 data-sly-test="${secondaryLinks.count>1}" >
