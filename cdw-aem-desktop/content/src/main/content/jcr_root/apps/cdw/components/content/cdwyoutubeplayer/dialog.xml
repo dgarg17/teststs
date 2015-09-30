@@ -64,6 +64,28 @@
                     fieldLabel="Tracking Id"
                     name="./trackingId"
                     xtype="textfield"/>
+                <alignment
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="align-left"
+                    fieldLabel="Alignment"
+                    name="./alignment"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <left
+                            jcr:primaryType="nt:unstructured"
+                            text="Left"
+                            value="-left"/>
+                        <right
+                            jcr:primaryType="nt:unstructured"
+                            text="Right"
+                            value="-right"/>
+                        <center
+                            jcr:primaryType="nt:unstructured"
+                            text="Center"
+                            value="-center"/>
+                    </options>
+                </alignment>
             </items>
         </configurations>
     </items>

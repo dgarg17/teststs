@@ -160,5 +160,38 @@
                     xtype="hidden"/>
             </items>
         </tab1>
+        <tab2
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            title="Configuration"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <lineheight
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Line height"
+                    name="./lineheight"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <_x0031_.5lines
+                            jcr:primaryType="nt:unstructured"
+                            text="1.5 Lines"
+                            value="line-1_5"/>
+                        <_x0032_lines
+                            jcr:primaryType="nt:unstructured"
+                            text="2 Lines"
+                            value="line-2"/>
+                        <_x0032_.5lines
+                            jcr:primaryType="nt:unstructured"
+                            text="2.5 Lines"
+                            value="line-2_5"/>
+                        <_x0033_lines
+                            jcr:primaryType="nt:unstructured"
+                            text="3 Lines"
+                            value="line-3"/>
+                    </options>
+                </lineheight>
+            </items>
+        </tab2>
     </items>
 </jcr:root>
