@@ -23,6 +23,8 @@ public class UtilityWCMUseHelper extends BaseComponent {
 	private static String S7_IMAGE_ROOT = "s7ImageRoot";
 	private static String SERVICE_DOMAIN = "serviceDomain";
 	private static String PRODUCT_SERVICE = "productService";
+	private static String JS_API_CMS_SETTINGS_TOKEN = "jsApiCmsSettingsToken";
+	private static String JS_API_CMS_SETTINGS_TOKEN_DEFAULT = "cdw";
 	private static String ENSIGHTEN_BOOTSTRAP_PATH = "ensightenBootstrapPath";
 	private static String ENSIGHTEN_VOUCHER_CODE = "ensightenVoucherCode";
 	private static String DISABLE_ENSIGHTEN_TAGGING = "disableEnsightenTagging";
@@ -84,6 +86,9 @@ public class UtilityWCMUseHelper extends BaseComponent {
 			return s7ImageRoot;
 		else
 			return s7ImageRoot+"/";
+	}
+	public String getJsApiCmsSettingsToken(){
+		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(),JS_API_CMS_SETTINGS_TOKEN, JS_API_CMS_SETTINGS_TOKEN_DEFAULT);
 	}
 	public String getEnsightenBootstrapPath(){
 		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(),ENSIGHTEN_BOOTSTRAP_PATH, "");

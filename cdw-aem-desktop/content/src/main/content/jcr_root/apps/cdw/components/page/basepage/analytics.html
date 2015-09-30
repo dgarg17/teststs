@@ -1,7 +1,6 @@
 <!-- ANALYTICS -->
 <sly data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
-<!--script type="text/javascript" src="${utility.serviceDomain}/api/cms/settings?token=cdw"/>
-<script type="text/javascript" src="${utility.serviceDomain}/assets/tagmanagement/cdwtagmanagement.js"/-->
+<script type="text/javascript" src="${utility.serviceDomain}/assets/tagmanagement/cdwtagmanagement.js"></script>
 <script type="text/javascript">
 	var cdwTagManagementData = {};window.cdwTagManagementData = {'page_name':'${properties.ensightenPageName @ context="scriptString"}','page_type':'${properties.ensightenPageType @ context="scriptString"}','page_url':'${currentPage.path @ context="scriptString"}','voucher_code':'${utility.ensightenVoucherCode @ context="scriptString"}'};
 	if(CdwCms) {
@@ -23,5 +22,6 @@
 		}
 	}
 </script>
+<script type="text/javascript" src="${utility.ensightenBootstrapPath @ context='uri'}"></script>
 </sly>
 <sly data-sly-include="analytics-extra.html" />  

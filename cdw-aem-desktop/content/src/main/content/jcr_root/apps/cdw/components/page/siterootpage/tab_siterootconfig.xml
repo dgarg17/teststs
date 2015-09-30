@@ -3,10 +3,11 @@
     jcr:primaryType="cq:Panel"
     title="Site Root Config">
     <items jcr:primaryType="cq:WidgetCollection">
-        <siterootconfig
+        <domainConfigs
             jcr:primaryType="cq:Widget"
             collapsed="{Boolean}false"
-            collapsible="{Boolean}false"
+            collapsible="{Boolean}true"
+			title="Domains &amp; Services"
             xtype="dialogfieldset">
             <items jcr:primaryType="cq:WidgetCollection">
                 <sitedomain
@@ -14,12 +15,6 @@
                     fieldLabel="Site Domain"
                     name="./siteDomain"
                     xtype="textfield"/>
-                <s7PartnerLogoCDWTreatment
-                    jcr:primaryType="cq:Widget"
-                    fieldDescription="This field defines the Scene7 image that will be used for the CDW image treatment on partner logo lockups. Drag a S7 image into the pathfield to define the logo."
-                    fieldLabel="Scene7 CDW Partner Logo Treatment"
-                    name="./s7CDWPartnerLogoTreatment"
-                    xtype="pathfield"/>
                 <serviceDomain
                     jcr:primaryType="cq:Widget"
                     fieldDescription="This field defines the Service Domain for product picker."
@@ -32,11 +27,20 @@
                     fieldLabel="Product Service"
                     name="./productService"
                     xtype="textfield"/>
-                <S7ImageRoot
+            </items>
+        </domainConfigs>
+		<ensighten
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}true"
+			title="Ensighten Configurations"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+				<jsApiCmsSettingsToken
                     jcr:primaryType="cq:Widget"
-                    fieldDescription="This Url is used as a root for all product images  and manifacture logos"
-                    fieldLabel="Sean7 Image Root"
-                    name="./s7ImageRoot"
+                    defaultValue="cdw"
+                    fieldLabel="JS API CMS Settings Token"
+                    name="./jsApiCmsSettingsToken"
                     xtype="textfield"/>
 				<ensightenBootstrapPath
                     jcr:primaryType="cq:Widget"
@@ -57,6 +61,27 @@
                     type="checkbox"
                     xtype="selection"/>
             </items>
-        </siterootconfig>
+        </ensighten>
+		<scene7
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+			title="Scene7 Configurations"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <s7PartnerLogoCDWTreatment
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="This field defines the Scene7 image that will be used for the CDW image treatment on partner logo lockups. Drag a S7 image into the pathfield to define the logo."
+                    fieldLabel="Scene7 CDW Partner Logo Treatment"
+                    name="./s7CDWPartnerLogoTreatment"
+                    xtype="pathfield"/>
+                <S7ImageRoot
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="This Url is used as a root for all product images  and manifacture logos"
+                    fieldLabel="Scene7 Image Root"
+                    name="./s7ImageRoot"
+                    xtype="textfield"/>
+            </items>
+        </scene7>
     </items>
 </jcr:root>
