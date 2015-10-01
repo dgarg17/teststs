@@ -1,8 +1,8 @@
 <!--/* The javascript for this containers is available in etc\designs\cdw-global\clientlibs\js\subCategoryProductDisplay.js file */-->
 <div class="product-picker product-display" data-sly-test="${properties.productCategoryName}">
     <div class="pp-header-hold">
-        <h5 data-sly-test="${properties.CtaButtonUrl}">
-            <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.CtaButtonUrl}"
+        <h5 data-sly-test="${properties.productCategoryNameUrl}">
+            <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.productCategoryNameUrl}"
                href="${link.urlUpdate}"> ${properties.productCategoryName}</a>
         </h5>
         <h5 data-sly-test="${!properties.CtaButtonUrl}">
