@@ -150,7 +150,11 @@
                     <cssStyles
                         jcr:primaryType="nt:unstructured"
                         _x002d_highlight="Red Highlight(Only use for heading)"
-                        disclaimer="Disclaimer"/>
+                        disclaimer="Disclaimer"
+                        line-1_5="1.5 Lines"
+                        line-2="2 Lines"
+                        line-2_5="2.5 Lines"
+                        line-3="3 Lines"/>
                 </text>
                 <isRichTextFlag
                     jcr:primaryType="cq:Widget"
