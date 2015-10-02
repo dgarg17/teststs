@@ -8,6 +8,10 @@
         jcr:primaryType="cq:Widget"
         xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
+            <secondarryLinks
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/cdw/components/content/cdwsubcategoryproduct/dialog/items/secondaryLinks.infinity.json"
+                    xtype="cqinclude"/>
             <tab1
                 jcr:primaryType="cq:Widget"
                 anchor="100%"
