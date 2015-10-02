@@ -37,7 +37,7 @@
                             value="px"/>
                         <percentage
                             jcr:primaryType="nt:unstructured"
-                            text="Percentage(Default)"
+                            text="Percentage (Default)"
                             value="%"/>
                     </options>
                 </sizeUnit>
@@ -51,7 +51,7 @@
                     <options jcr:primaryType="cq:WidgetCollection">
                         <sixteenByNine
                             jcr:primaryType="nt:unstructured"
-                            text="16:9(Default)"
+                            text="16:9 (Default)"
                             value=".56"/>
                         <fourByThree
                             jcr:primaryType="nt:unstructured"
@@ -66,7 +66,7 @@
                     xtype="textfield"/>
                 <alignment
                     jcr:primaryType="cq:Widget"
-                    defaultValue="align-left"
+                    defaultValue="-center"
                     fieldLabel="Alignment"
                     name="./alignment"
                     type="select"
@@ -82,7 +82,7 @@
                             value="-right"/>
                         <center
                             jcr:primaryType="nt:unstructured"
-                            text="Center"
+                            text="Center (Default)"
                             value="-center"/>
                     </options>
                 </alignment>
