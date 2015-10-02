@@ -22,9 +22,10 @@
                 <items jcr:primaryType="cq:WidgetCollection">
                     <ctalabel
                             jcr:primaryType="cq:Widget"
-                            fieldDescription="There is no character limit"
+                            fieldDescription="Maximum of 30 characters"
                             fieldLabel="CTA Label"
                             width="80%"
+                            maxLength="{Long}30"
                             name="secondaryCtaLabel"
                             allowBlank="{Boolean}false"
                             key="ctalabel"
@@ -170,7 +171,8 @@
                 <secondaryLabel
                         jcr:primaryType="cq:Widget"
                         defaultValue="View Models and Pricing"
-                        fieldDescription="Label for the secondary dropdown, Available only with more than two secondary links and defaults to 'View Models and Pricing' "
+                        fieldDescription="Label for the secondary dropdown, Available only with more than two secondary links and defaults to 'View Models and Pricing' and a Maximum character limit 30 characters "
+                        maxLength="{Long}30"
                         fieldLabel="Secondary Label"
                         name="./secondaryLabel"
                         xtype="textfield"/>

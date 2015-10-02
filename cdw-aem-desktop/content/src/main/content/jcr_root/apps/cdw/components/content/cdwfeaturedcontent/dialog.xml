@@ -97,16 +97,11 @@
                     <ctalabel
                         jcr:primaryType="cq:Widget"
                         defaultValue="Learn More"
-                        fieldDescription="Max character limit is 24"
+                        fieldDescription="Max character limit is 30"
                         fieldLabel="CTA Label"
-                        maxLength="{Long}24"
-                        name="./cdwctalabel"
+                        maxLength="{Long}30"
+                        name="./secondaryLabel"
                         xtype="textfield"/>
-                    <ctalink
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="CTA Link"
-                        name="./ctalink"
-                        xtype="pathfield"/>
                     <ctabutton
                         jcr:primaryType="cq:Widget"
                         defaultValue="-red"
@@ -129,6 +124,12 @@
                                 value="-gray"/>
                         </options>
                     </ctabutton>
+                    <ctalink
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="CTA Link "
+                            fieldDescription="CTA link for the entire module"
+                            name="./ctalink"
+                            xtype="pathfield"/>
                     <ctatarget
                         jcr:primaryType="cq:Widget"
                         defaultValue="_self"
