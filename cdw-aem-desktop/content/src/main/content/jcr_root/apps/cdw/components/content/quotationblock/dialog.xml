@@ -34,6 +34,10 @@
                                 jcr:primaryType="nt:unstructured"
                                 text="White"
                                 value="-white"/>
+							<black
+                                jcr:primaryType="nt:unstructured"
+                                text="Black"
+                                value="-black"/>
                         </options>
                     </backgroundcolor>
                     <Opacity
