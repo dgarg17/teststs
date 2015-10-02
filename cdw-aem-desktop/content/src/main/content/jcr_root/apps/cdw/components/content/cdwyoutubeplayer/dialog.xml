@@ -17,6 +17,12 @@
                     fieldLabel="Youtube Video Id"
                     name="./youtubeId"
                     xtype="textfield"/>
+                <videoWidth
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="100"
+                    fieldLabel="Video Width"
+                    name="./videoWidth"
+                    xtype="numberfield"/>
                 <sizeUnit
                     jcr:primaryType="cq:Widget"
                     defaultValue="%"
@@ -35,12 +41,6 @@
                             value="%"/>
                     </options>
                 </sizeUnit>
-                <videoWidth
-                    jcr:primaryType="cq:Widget"
-                    defaultValue="100"
-                    fieldLabel="Video Width"
-                    name="./videoWidth"
-                    xtype="numberfield"/>
                 <aspectRatio
                     jcr:primaryType="cq:Widget"
                     defaultValue=".56"
