@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta charset="UTF-8">
 	<title>Product Picker</title>
 	<link rel="stylesheet" href="/styles/main.css">
@@ -9,9 +10,34 @@
 	</style>
 	<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="/js/boxheight.js"></script>
+	<script type="text/javascript" src="/js/partnerLinks.js"></script>
+	<script type="text/javascript" src="/js/select2.min.js"></script>
+	<script type="text/javascript">
 
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
+	$(document).ready(function() {
+		//Initialize custom select drop downs
+
+		$('.product-display .sub-cat-select').each(function() {
+			$(this).select2({
+				placeholder: "View Models and Pricing", 
+				minimumResultsForSearch: Infinity
+			});
+		});
+
+		$('.select2-arrow').each(function() {
+			$(this).append('<i class="ico ico-down-arrow"></i>');
+		});
+
+		$(".partner-links").change(function() {
+      		$(".select2-chosen").text("View Models and Pricing");
+    	});
+
+
+	});
+
+	</script>
+	
+	<script type="text/javascript" src="/js/slick.min.js"></script>
 	<script type="text/javascript">
 
 		$(document).ready(function(){
@@ -58,460 +84,843 @@
 		<div class="container">
 		
 
-		<!-- START productpicker 2-up -->
+			<!-- START productpicker 2-up -->
 
-		<div class="layout">
-			<div class="layout-6">
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
-					</div>
-					<div class="pp-copy-hold">
-						<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
-					</div>	
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
+			<div class="layout">
+				<div class="layout-6">
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
 						</div>
-						<a href="#" class="button -red">Buy Now</a>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
+						</div>
+						<div class="pp-copy-hold">
+							<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
+						</div>	
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="layout-6">
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
+						</div>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
+						</div>
+						<div class="pp-copy-hold">
+							<p>Wafer chupa chups bear claw.</p>
+						</div>	
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="layout-6">
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
-					</div>
-					<div class="pp-copy-hold">
-						<p>Wafer chupa chups bear claw.</p>
-					</div>	
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
+
+			<!-- END productpicker 2-up -->
+
+			<hr />
+
+			<!-- START productpicker 2-up L/R -->
+
+			<div class="layout">
+				<div class="layout-6">
+					<div class="product-picker -right">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
 						</div>
-						<a href="#" class="button -red">Buy Now</a>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
+						</div>
+						<div class="pp-copy-hold">
+							<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
+						</div>	
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="layout-6">
+					<div class="product-picker -left">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
+						</div>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
+						</div>
+						<div class="pp-copy-hold">
+							<p>Wafer chupa chups bear claw.</p>
+						</div>	
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<!-- END productpicker 2-up -->
+			<!-- END productpicker 2-up L/R -->
 
-		<hr />
+			<hr />
 
-		<!-- START productpicker 3-up -->
+			<!-- START productpicker 3-up -->
 
-		<div class="layout">
-			<div class="layout-4">
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
-					</div>
-					<div class="pp-copy-hold">
-						<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
-					</div>					
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
+			<div class="layout">
+				<div class="layout-4">
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
 						</div>
-						<a href="#" class="button -red">Buy Now</a>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
+						</div>
+						<div class="pp-copy-hold">
+							<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
+						</div>					
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="layout-4">
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
+						</div>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
+						</div>
+						<div class="pp-copy-hold">
+							<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop.</p>
+						</div>	
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="layout-4">
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
+						</div>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
+						</div>
+						<div class="pp-copy-hold">
+							<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin.</p>
+						</div>	
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="layout-4">
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
-					</div>
-					<div class="pp-copy-hold">
-						<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop.</p>
-					</div>	
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
+
+			<!-- END productpicker 3-up -->
+
+			<hr />
+
+			<!-- START productpicker 4-up -->
+
+			<div class="layout">
+				<div class="layout-3">
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
 						</div>
-						<a href="#" class="button -red">Buy Now</a>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackety</a></h6>
+						</div>
+						<div class="pp-copy-hold">
+							<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
+						</div>
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="layout-3">
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
+						</div>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackety</a></h6>
+						</div>
+						<div class="pp-copy-hold">
+							<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
+						</div>
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="layout-3">
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
+						</div>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC NetShelter mount cabinet - 9U rackety rack rackety</a></h6>
+						</div>
+						<div class="pp-copy-hold">
+							<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes ups bear claw. Powder as.</p>
+						</div>
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="layout-3">
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
+						</div>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC rack rackety</a></h6>
+						</div>
+						<div class="pp-copy-hold">
+							<p>Waferbear claw. Powder as.</p>
+						</div>
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="layout-4">
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
-					</div>
-					<div class="pp-copy-hold">
-						<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin.</p>
-					</div>	
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
+
+			<!-- END productpicker 4-up -->
+
+			<hr />
+
+			<!-- START productpicker overflow carousel -->
+
+			<div class="layout slick-carousel">
+				<div>
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
 						</div>
-						<a href="#" class="button -red">Buy Now</a>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackety</a></h6>
+						</div>
+						<div class="pp-copy-hold">
+							<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
+						</div>
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
+						</div>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackety</a></h6>
+						</div>
+						<div class="pp-copy-hold">
+							<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
+						</div>
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
+						</div>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC NetShelter mount cabinet - 9U rackety rack rackety</a></h6>
+						</div>
+						<div class="pp-copy-hold">
+							<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes ups bear claw. Powder as.</p>
+						</div>
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
+						</div>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC rack rackety</a></h6>
+						</div>
+						<div class="pp-copy-hold">
+							<p>Waferbear claw. Powder as.</p>
+						</div>
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
+						</div>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC rack rackety</a></h6>
+						</div>
+						<div class="pp-copy-hold">
+							<p>Waferbear claw. Powder as.</p>
+						</div>
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="product-picker">
+						<div class="small-logos">
+							<img alt="" src="/images/intel-logo-product.jpg" />
+						</div>
+						<div class="product-image">
+							<img alt="" src="/images/product-cabinet.jpg" />
+						</div>
+						<div class="pp-header-hold">
+							<h6><a href="#">APC rack rackety</a></h6>
+						</div>
+						<div class="pp-copy-hold">
+							<p>Waferbear claw. Powder as.</p>
+						</div>
+						<div class="button-lockup">
+							<div class="pricing-block">
+								<b>$209.99</b>
+								<p>Advertised Price</p>	
+							</div>
+							<a href="#" class="button -red">Buy Now</a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<!-- END productpicker 3-up -->
+			<!-- END productpicker overflow carousel -->
 
-		<hr />
+			<hr />
 
-		<!-- START productpicker 4-up -->
+			<!-- START product display 2-up -->
 
-		<div class="layout">
-			<div class="layout-3">
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackety</a></h6>
-					</div>
-					<div class="pp-copy-hold">
-						<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
-					</div>
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
-						</div>
-						<a href="#" class="button -red">Buy Now</a>
-					</div>
-				</div>
-			</div>
-			<div class="layout-3">
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackety</a></h6>
-					</div>
-					<div class="pp-copy-hold">
-						<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
-					</div>
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
-						</div>
-						<a href="#" class="button -red">Buy Now</a>
-					</div>
-				</div>
-			</div>
-			<div class="layout-3">
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC NetShelter mount cabinet - 9U rackety rack rackety</a></h6>
-					</div>
-					<div class="pp-copy-hold">
-						<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes ups bear claw. Powder as.</p>
-					</div>
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
-						</div>
-						<a href="#" class="button -red">Buy Now</a>
-					</div>
-				</div>
-			</div>
-			<div class="layout-3">
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC rack rackety</a></h6>
-					</div>
-					<div class="pp-copy-hold">
-						<p>Waferbear claw. Powder as.</p>
-					</div>
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
-						</div>
-						<a href="#" class="button -red">Buy Now</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- END productpicker 4-up -->
-
-		<hr />
-
-		<!-- START productpicker overflow carousel -->
-
-		<div class="layout slick-carousel">
 			<div>
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackety</a></h6>
-					</div>
-					<div class="pp-copy-hold">
-						<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
-					</div>
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
+				<h3>Desktops</h3>
+				<div class="layout">
+					<div class="layout-6">
+						<div class="product-picker product-display">
+							<div class="pp-header-hold">
+								<h5><a href="">Desktops Desktops Desktops Desktops Desktops Desktops Desktops Desktop</a></h5>
+							</div>
+							<div class="pp-copy-hold">
+								<p>Topping gingerbread chupa chups chocolate cake lemon drops apple pie chocolate dessert lemon drops. Pastry lollipop marshmallow lemon drops.</p>
+							</div>
+							<div class="pp-product-lockup">
+								<div class="product-image">
+									<a href="#"><img alt="" src="/images/product-desktop.jpg" /></a>
+								</div>
+								<div class="product-info">
+									<div class="pricing-block">
+										<p class="-gray">Starting At</p>
+										<h6>$949.99</h6>
+										
+									</div>
+								</div>
+							</div>
+							<div class="options">
+								<div class="button-lockup">
+									<a href="#" class="button -red">See More Specs</a>
+								</div>
+								<select class="sub-cat-select partner-links">
+									<option></option>
+									<option value="Basic PDU" data-target="_blank" data-link="http://www.cdw.com">Basic PDU</option>
+									<option value="Metered PDU" data-target="_blank" data-link="http://www.cdw.com">Metered PDU</option>
+									<option value="Switched PDU" data-target="_blank" data-link="http://www.cdw.com">Switched PDU</option>
+								</select>
+								<select class="sub-cat-select-mobile partner-links">
+									<option>View Models and Pricing</option>
+									<option value="Basic PDU" data-target="_blank" data-link="http://www.cdw.com">Basic PDU</option>
+									<option value="Metered PDU" data-target="_blank" data-link="http://www.cdw.com">Metered PDU</option>
+									<option value="Switched PDU" data-target="_blank" data-link="http://www.cdw.com">Switched PDU</option>
+								</select>
+							</div>
 						</div>
-						<a href="#" class="button -red">Buy Now</a>
+					</div>
+					<div class="layout-6">
+						<div class="product-picker product-display">
+							<div class="pp-header-hold">
+								<h5><a href="#">Workstations</a></h5>
+							</div>
+							<div class="pp-copy-hold">
+								<p>Topping gingerbread chupa chups chocolate cake lemon drops apple pie chocolate dessert lemon drops. Pastry lollipop marshmallow lemon drops.</p>
+							</div>
+							<div class="pp-product-lockup">
+								<div class="product-image">
+									<a href="#"><img alt="" src="/images/product-workstation.jpg" /></a>
+								</div>
+								<div class="product-info">
+									<div class="pricing-block">
+										<p class="-gray">Starting At</p>
+										<h6>$747.99</h6>
+										
+									</div>
+								</div>
+							</div>
+							<div class="options">
+								<div class="button-lockup">
+									<a href="#" class="button -red">See More Specs</a>
+								</div>
+								<div class="button-lockup -btn2">
+									<a href="#" class="button -gray">View Models and Pricing</a>
+								</div>
+								<!--<select class="sub-cat-select partner-links">
+									<option></option>
+									<option value="Basic PDU" data-target="_blank" data-link="http://www.cdw.com">Basic PDU</option>
+									<option value="Metered PDU" data-target="_blank" data-link="http://www.cdw.com">Metered PDU</option>
+									<option value="Switched PDU" data-target="_blank" data-link="http://www.cdw.com">Switched PDU</option>
+								</select>
+								<select class="sub-cat-select-mobile partner-links">
+									<option>View Models and Pricing</option>
+									<option value="Basic PDU" data-target="_blank" data-link="http://www.cdw.com">Basic PDU</option>
+									<option value="Metered PDU" data-target="_blank" data-link="http://www.cdw.com">Metered PDU</option>
+									<option value="Switched PDU" data-target="_blank" data-link="http://www.cdw.com">Switched PDU</option>
+								</select>-->
+							</div>
+						</div>
 					</div>
 				</div>
+				<div class="button-lockup -center">
+					<a href="#" class="button -white">See All Lenovo Desktops</a>
+				</div>
 			</div>
+
+			<!-- END product display 2-up -->
+
+			<hr />
+
+			<!-- START product display 3-up -->
+
 			<div>
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackety</a></h6>
-					</div>
-					<div class="pp-copy-hold">
-						<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
-					</div>
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
+				<h3>Desktops</h3>
+				<div class="layout">
+					<div class="layout-4">
+						<div class="product-picker product-display">
+							<div class="pp-header-hold">
+								<h5>Desktops Desktops Desktops Desktops Desktops Desktops Desktops Desktop</h5>
+							</div>
+							<div class="pp-copy-hold">
+								<p>Topping gingerbread chupa chups chocolate cake lemon drops apple pie chocolate dessert lemon drops. Pastry lollipop marshmallow lemon drops.</p>
+							</div>
+							<div class="pp-product-lockup">
+								<div class="product-image">
+									<img alt="" src="/images/product-desktop.jpg" />
+								</div>
+								<div class="product-info">
+									<div class="pricing-block">
+										<p class="-gray">Starting At</p>
+										<h6>$949.99</h6>
+										<p>Advertised Price</p>
+									</div>
+								</div>
+							</div>
+							<div class="options">
+								<div class="button-lockup">
+									<a href="#" class="button -red">See More Specs</a>
+								</div>
+								<!--Plugin select2-->
+								<select class="sub-cat-select">
+									<option></option>
+									<option value="www.google.com">Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+								<!--Browser Default - Mobile-->
+								<select class="sub-cat-select-mobile">
+									<option>View Models and Pricing</option>
+									<option>Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+							</div>
 						</div>
-						<a href="#" class="button -red">Buy Now</a>
+					</div>
+					<div class="layout-4">
+						<div class="product-picker product-display">
+							<div class="pp-header-hold">
+								<h5>Workstations</h5>
+							</div>
+							<div class="pp-copy-hold">
+								<p>Topping gingerbread chupa chups chocolate cake lemon drops apple pie chocolate dessert lemon drops. Pastry lollipop marshmallow lemon drops.</p>
+							</div>
+							<div class="pp-product-lockup">
+								<div class="product-image">
+									<img alt="" src="/images/product-workstation.jpg" />
+								</div>
+								<div class="product-info">
+									<div class="pricing-block">
+										<p class="-gray">Starting At</p>
+										<h6>$747.99</h6>
+										<p>Advertised Price</p>
+									</div>
+								</div>
+							</div>
+							<div class="options">
+								<div class="button-lockup">
+									<a href="#" class="button -red">See More Specs</a>
+								</div>
+								<select class="sub-cat-select">
+									<option></option>
+									<option>Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+								<select class="sub-cat-select-mobile">
+									<option>View Models and Pricing</option>
+									<option>Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="layout-4">
+						<div class="product-picker product-display">
+							<div class="pp-header-hold">
+								<h5>Thin Clients</h5>
+							</div>
+							<div class="pp-copy-hold">
+								<p>Topping gingerbread chupa chups chocolate cake lemon drops apple pie chocolate dessert lemon drops. Pastry lollipop marshmallow lemon drops.</p>
+							</div>
+							<div class="pp-product-lockup">
+								<div class="product-image">
+									<img alt="" src="/images/product-thinclient.jpg" />
+								</div>
+								<div class="product-info">
+									<div class="pricing-block">
+										<p class="-gray">Starting At</p>
+										<h6>$392.99</h6>
+										<p>Advertised Price</p>
+									</div>
+								</div>
+							</div>
+							<div class="options">
+								<div class="button-lockup">
+									<a href="#" class="button -red">See More Specs</a>
+								</div>
+								<select class="sub-cat-select">
+									<option></option>
+									<option  value="www.ign.com">Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+								<select class="sub-cat-select-mobile">
+									<option>View Models and Pricing</option>
+									<option>Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+							</div>
+						</div>
 					</div>
 				</div>
+				<div class="button-lockup">
+					<a href="#" class="button -white">See All Lenovo Desktops</a>
+				</div>
 			</div>
+
+			<!-- END product display 3-up -->
+
+			<hr />
+
+			<!-- START product display 4-up -->
+
 			<div>
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC NetShelter mount cabinet - 9U rackety rack rackety</a></h6>
-					</div>
-					<div class="pp-copy-hold">
-						<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes ups bear claw. Powder as.</p>
-					</div>
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
+				<h3>Desktops</h3>
+				<div class="layout">
+					<div class="layout-3">
+						<div class="product-picker product-display">
+							<div class="pp-header-hold">
+								<h5>Desktops Desktops Desktops Desktops Desktops Desktops Desktops Desktop</h5>
+							</div>
+							<div class="pp-copy-hold">
+								<p>Topping gingerbread chupa chups chocolate cake lemon drops apple pie chocolate dessert lemon drops. Pastry lollipop marshmallow lemon drops.</p>
+							</div>
+							<div class="pp-product-lockup">
+								<div class="product-image">
+									<img alt="" src="/images/product-desktop.jpg" />
+								</div>
+								<div class="product-info">
+									<div class="pricing-block">
+										<p class="-gray">Starting At</p>
+										<h6>$949.99</h6>
+										<p>Advertised Price</p>
+									</div>
+								</div>
+							</div>
+							<div class="options">
+								<div class="button-lockup">
+									<a href="#" class="button -red">See More Specs</a>
+								</div>
+								<select class="sub-cat-select">
+									<option></option>
+									<option>Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+								<select class="sub-cat-select-mobile">
+									<option>View Models and Pricing</option>
+									<option>Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+							</div>
 						</div>
-						<a href="#" class="button -red">Buy Now</a>
 					</div>
-				</div>
-			</div>
-			<div>
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC rack rackety</a></h6>
-					</div>
-					<div class="pp-copy-hold">
-						<p>Waferbear claw. Powder as.</p>
-					</div>
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
+					<div class="layout-3">
+						<div class="product-picker product-display">
+							<div class="pp-header-hold">
+								<h5>Workstations</h5>
+							</div>
+							<div class="pp-copy-hold">
+								<p>Topping gingerbread chupa chups chocolate cake lemon drops apple pie chocolate dessert lemon drops. Pastry lollipop marshmallow lemon drops.</p>
+							</div>
+							<div class="pp-product-lockup">
+								<div class="product-image">
+									<img alt="" src="/images/product-workstation.jpg" />
+								</div>
+								<div class="product-info">
+									<div class="pricing-block">
+										<p class="-gray">Starting At</p>
+										<h6>$747.99</h6>
+										<p>Advertised Price</p>
+									</div>
+								</div>
+							</div>
+							<div class="options">
+								<div class="button-lockup">
+									<a href="#" class="button -red">See More Specs</a>
+								</div>
+								<select class="sub-cat-select">
+									<option></option>
+									<option>Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+								<select class="sub-cat-select-mobile">
+									<option>View Models and Pricing</option>
+									<option>Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+							</div>
 						</div>
-						<a href="#" class="button -red">Buy Now</a>
 					</div>
-				</div>
-			</div>
-			<div>
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC rack rackety</a></h6>
-					</div>
-					<div class="pp-copy-hold">
-						<p>Waferbear claw. Powder as.</p>
-					</div>
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
+					<div class="layout-3">
+						<div class="product-picker product-display">
+							<div class="pp-header-hold">
+								<h5>Thin Clients</h5>
+							</div>
+							<div class="pp-copy-hold">
+								<p>Topping gingerbread chupa chups chocolate cake lemon drops apple pie chocolate dessert lemon drops. Pastry lollipop marshmallow lemon drops.</p>
+							</div>
+							<div class="pp-product-lockup">
+								<div class="product-image">
+									<img alt="" src="/images/product-thinclient.jpg" />
+								</div>
+								<div class="product-info">
+									<div class="pricing-block">
+										<p class="-gray">Starting At</p>
+										<h6>$392.99</h6>
+										<p>Advertised Price</p>
+									</div>
+								</div>
+							</div>
+							<div class="options">
+								<div class="button-lockup">
+									<a href="#" class="button -red">See More Specs</a>
+								</div>
+								<select class="sub-cat-select">
+									<option></option>
+									<option>Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+								<select class="sub-cat-select-mobile">
+									<option>View Models and Pricing</option>
+									<option>Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+							</div>
 						</div>
-						<a href="#" class="button -red">Buy Now</a>
 					</div>
-				</div>
-			</div>
-			<div>
-				<div class="product-picker">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC rack rackety</a></h6>
-					</div>
-					<div class="pp-copy-hold">
-						<p>Waferbear claw. Powder as.</p>
-					</div>
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
+					<div class="layout-3">
+						<div class="product-picker product-display">
+							<div class="pp-header-hold">
+								<h5>Workstations</h5>
+							</div>
+							<div class="pp-copy-hold">
+								<p>Topping gingerbread chupa chups chocolate cake lemon drops apple pie chocolate dessert lemon drops. Pastry lollipop marshmallow lemon drops.</p>
+							</div>
+							<div class="pp-product-lockup">
+								<div class="product-image">
+									<img alt="" src="/images/product-workstation.jpg" />
+								</div>
+								<div class="product-info">
+									<div class="pricing-block">
+										<p class="-gray">Starting At</p>
+										<h6>$747.99</h6>
+										<p>Advertised Price</p>
+									</div>
+								</div>
+							</div>
+							<div class="options">
+								<div class="button-lockup">
+									<a href="#" class="button -red">See More Specs</a>
+								</div>
+								<select class="sub-cat-select">
+									<option></option>
+									<option>Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+								<select class="sub-cat-select-mobile">
+									<option>View Models and Pricing</option>
+									<option>Basic PDU</option>
+									<option>Metered PDU</option>
+									<option>Switched PDU</option>
+								</select>
+							</div>
 						</div>
-						<a href="#" class="button -red">Buy Now</a>
 					</div>
 				</div>
-			</div>
-		</div>
-
-		<!-- END productpicker overflow carousel -->
-
-		<hr />
-
-		<!--div class="layout">
-			<div class="layout-6">
-				<div class="product-picker -right">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
-					</div>
-					<div class="pp-copy-hold">
-						<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
-					</div>	
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
-						</div>
-						<a href="#" class="button -red">Buy Now</a>
-					</div>
+				<div class="button-lockup">
+					<a href="#" class="button -white">See All Lenovo Desktops</a>
 				</div>
 			</div>
-			<div class="layout-6">
-				<div class="product-picker -left">
-					<div class="small-logos">
-						<img alt="" src="/images/intel-logo-product.jpg" />
-					</div>
-					<div class="product-image">
-						<img alt="" src="/images/product-cabinet.jpg" />
-					</div>
-					<div class="pp-header-hold">
-						<h6><a href="#">APC NetShelter WX AR109 - wall mount cabinet - 9U rackety rack rackeey</a></h6>	
-					</div>
-					<div class="pp-copy-hold">
-						<p>Wafer chupa chups bear claw. Powder dragée biscuit candy canes lollipop. Sweet roll cake biscuit biscuit cupcake jujubes fruitcake muffin. Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder Wafer chupa chups bear claw. Powder as.</p>
-					</div>	
-					<div class="button-lockup">
-						<div class="pricing-block">
-							<b>$209.99</b>
-							<p>Advertised Price</p>	
-						</div>
-						<a href="#" class="button -red">Buy Now</a>
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<hr /-->
+			<!-- END sub-cat productpicker 4-up -->
 
-		<div class="layout">
-			<div class="layout-6">
-				<div class="content-container-item -aqua">
-					<h5>One line Headline</h5>
-					<p>Lorem ipsum dolor sit amet, duo facilis percipitur complectitur te, et unum meis sensibus vix. Ut mel dico oportere.</p>
-					<div class="button-lockup">
-						<a href="/" class="button -clear">Learn more about printers</a>
-					</div>
-				</div>
-			</div>
-			<div class="layout-6">
-				<div class="content-container-item -green">
-					<h5>Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines</h5>
-					<p>Lorem ipsum dolor sit amet, duo facilis percipitr complectitur te, et unum meis sensibus vix.</p>
-					<div class="button-lockup">
-						<a href="/" class="button -clear">Learn more about printers</a>
-					</div>
-				</div>
-			</div>
-		</div>
+			<hr />
 
-		<hr />
 		</div>
 	</main>
 	<footer>

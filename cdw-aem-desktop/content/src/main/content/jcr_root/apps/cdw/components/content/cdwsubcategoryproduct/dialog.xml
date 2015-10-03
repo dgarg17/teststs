@@ -3,10 +3,67 @@
           xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           jcr:primaryType="cq:Dialog"
           cls="tabpanelcss"
-          helpPath="en/cq/current/wcm/default_components.html#Text"
-          title="Text1"
           xtype="tabpanel">
     <items jcr:primaryType="cq:WidgetCollection">
+        <secondaryLinks
+                jcr:primaryType="cq:Widget"
+                autoScroll="{Boolean}true"
+                cls="multifieldcls"
+                name="./secondaryLinks"
+                title="Secondary Links "
+                addItemLabel="Add New Link"
+                xtype="multifield">
+            <fieldConfig
+                    jcr:primaryType="cq:Widget"
+                    baseCls="multifieldpanelbasecls"
+                    cls="cssmultifieldpanel"
+                    ctCls="multifieldpanelcollapsedctcls"
+                    xtype="multifieldpanel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <ctalabel
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Maximum of 30 characters"
+                            fieldLabel="CTA Label"
+                            maxLength="{Long}30"
+                            width="80%"
+                            name="secondaryCtaLabel"
+                            allowBlank="{Boolean}false"
+                            key="ctalabel"
+                            xtype="textfield"/>
+                    <ctalink
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="CTA Link"
+                            cls="csspathfield"
+                            name="secondaryCtalink"
+                            key="ctalink"
+                            allowBlank="{Boolean}false"
+                            xtype="pathfield"/>
+                    <ctatarget
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="_self"
+                            fieldDescription="CTA link opens in same window by default."
+                            fieldLabel="CTA Target"
+                            name="secondaryCtaTarget"
+                            cls="cssselectfield"
+                            key="ctatarget"
+                            type="select"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <same
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Same Window (Default)"
+                                    value="_self"/>
+                            <new
+                                    jcr:primaryType="nt:unstructured"
+                                    text="New Window"
+                                    value="_blank"/>
+
+                        </options>
+                    </ctatarget>
+
+                </items>
+            </fieldConfig>
+        </secondaryLinks>
         <global
                 jcr:primaryType="cq:Widget"
                 cls="panelcss"
@@ -16,21 +73,22 @@
                 <productCategoryName
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Product Category Name"
-                        fieldDescription="Product Category Name"
+                        fieldDescription="Maximum of 70 characters"
                         allowBlank="{Boolean}false"
+                        maxLength="{Long}70"
                         name="./productCategoryName"
                         xtype="textfield"/>
                 <productCategoryNameUrl
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Product Category Name URL"
-                        fieldDescription="Product Category Name Url"
+                        fieldLabel="Product Category Link"
+                        fieldDescription="CTA url for product category name"
                         name="./productCategoryNameUrl"
                         xtype="pathfield"/>
                 <productCategoryNameTarget
                         jcr:primaryType="cq:Widget"
                         defaultValue="_self"
-                        fieldDescription="CTA link opens in same window by default."
-                        fieldLabel="Product Category Name Target"
+                        fieldDescription="Product category link opens in same window by default."
+                        fieldLabel="Product Category Target"
                         name="./productCategoryNameTarget"
                         type="select"
                         xtype="selection">
@@ -49,59 +107,53 @@
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Product Category Description"
                         allowBlank="{Boolean}false"
-                        fieldDescription="Product Category Name Description"
+                        maxLength="{Long}250"
+                        fieldDescription="Maximum of 250 characters"
                         name="./productCategoryDescription"
                         xtype="textarea"/>
                 <productCategoryImage
                         jcr:primaryType="cq:Widget"
                         required="{Boolean}true"
                         allowBlank="{Boolean}false"
-                        fieldLabel="Product Category Image Name"
-                        fieldDescription="Product Category sean7 image name "
+                        fieldLabel="Product Category Image"
+                        fieldDescription="Scene7 image name/code for the product category "
                         name="./productCategoryImage"
-                        xtype="textfield"/>
-                <productManufacturerLogo
-                        jcr:primaryType="cq:Widget"
-                        required="{Boolean}true"
-                        fieldLabel="Product Manufacturer Logo Image Name"
-                        fieldDescription="Product Manufacturer Logo sean7 image name "
-                        name="./productManufacturer"
                         xtype="textfield"/>
                 <promotionalLeadInPrice
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Promotional Lead-in image"
-                        fieldDescription="Promotional Lead-in image "
+                        fieldLabel="Promotional Description"
+                        fieldDescription="Promotional description for this product category (e.g. - ‘As Low As’)"
                         name="./promotionalLeadInPrice"
                         xtype="textfield"/>
                 <price
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Price"
-                        fieldDescription="Price "
+                        fieldLabel=" Product Category Price"
+                        fieldDescription="Include the currency symbol with the price"
                         name="./price"
                         xtype="textfield"/>
                 <campaignId
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Campaign Id "
-                        fieldDescription="Campaign Id  "
+                        fieldLabel="Campaign Id"
+                        fieldDescription="Campaign Id for the product category"
                         name="./campaignId"
                         xtype="textfield"/>
                 <CtaButtonLabel
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Cta Button Label "
-                        fieldDescription="Cta Button Id"
+                        fieldLabel="CTA Button Label"
+                        fieldDescription="Label for the primary cta button in red"
                         name="./ctaButtonLabel"
                         xtype="textfield"/>
                 <CtaButtonUrl
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Cta Button 1 Url "
-                        fieldDescription="Cta Button 1 Url"
+                        fieldLabel="CTA Button Link"
+                        fieldDescription="Url for the primary cta button in red"
                         name="./CtaButtonUrl"
                         xtype="pathfield"/>
                 <ctaTarget
                         jcr:primaryType="cq:Widget"
                         defaultValue="_self"
                         fieldDescription="CTA link opens in same window by default."
-                        fieldLabel="CTA Target"
+                        fieldLabel="Cta Target"
                         name="./ctaButtonTarget"
                         type="select"
                         xtype="selection">
@@ -116,60 +168,15 @@
                                 value="_self"/>
                     </options>
                 </ctaTarget>
+                <secondaryLabel
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="View Models and Pricing"
+                        fieldDescription="Label for the secondary dropdown, Available only with more than two secondary links and defaults to 'View Models and Pricing' and maximum characters of 30 characters "
+                        fieldLabel="Secondary Label"
+                        name="./secondaryLabel"
+                        maxLength="{Long}30"
+                        xtype="textfield"/>
             </items>
         </global>
-        <secondaryLinks
-                jcr:primaryType="cq:Widget"
-                autoScroll="{Boolean}true"
-                cls="multifieldcls"
-                name="./secondaryLinks"
-                title="Secondary Links "
-                addItemLabel="Add New Link"
-                xtype="multifield">
-            <fieldConfig
-                    jcr:primaryType="cq:Widget"
-                    baseCls="multifieldpanelbasecls"
-                    cls="cssmultifieldpanel"
-                    ctCls="multifieldpanelcollapsedctcls"
-                    xtype="multifieldpanel">
-                <items jcr:primaryType="cq:WidgetCollection">
-                    <ctalabel
-                            jcr:primaryType="cq:Widget"
-                            fieldDescription="There is no character limit"
-                            fieldLabel="CTA Label"
-                            width="80%"
-                            key="ctalabel"
-                            xtype="textfield"/>
-                    <ctalink
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="CTA Link"
-                            cls="csspathfield"
-                            key="ctalink"
-                            xtype="pathfield"/>
-                    <ctatarget
-                            jcr:primaryType="cq:Widget"
-                            inputValue="_self"
-                            defaultValue="_self"
-                            fieldDescription="CTA link opens in same window by default."
-                            fieldLabel="CTA Target"
-                            key="ctatarget"
-                            cls="csspathfield"
-                            type="select"
-                            xtype="selection">
-                        <options jcr:primaryType="cq:WidgetCollection">
-                            <new
-                                    jcr:primaryType="nt:unstructured"
-                                    text="New Window"
-                                    value="_blank"/>
-                            <same
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Same Window (Default)"
-                                    value="_self"/>
-                        </options>
-                    </ctatarget>
-
-                </items>
-            </fieldConfig>
-        </secondaryLinks>
     </items>
 </jcr:root>
