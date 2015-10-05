@@ -27,12 +27,37 @@
                         xtype="textfield"/>
                     <headlinecolor
                         jcr:primaryType="cq:Widget"
-                        colors="[4D4E53,CC0000,0070BC]"
+                        colors="[4D4E53,CC0000]"
                         defaultValue="4D4E53"
                         fieldDescription="Default Value is Dark Grey(#4D4E53)."
                         fieldLabel="Headline Font Color"
                         name="./textcolor"
                         xtype="colorfield"/>
+                    <headLineTextLink
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="HeadLine Text Link"
+                            fieldDescription="CTA link for the HeadLine"
+                            name="./headLineTextlink"
+                            xtype="pathfield"/>
+                    <headLineTextTarget
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="_self"
+                            fieldDescription="Link opens in same window by default."
+                            fieldLabel="HeadLine Target"
+                            name="./headLineTextTarget"
+                            type="select"
+                            xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <new
+                                jcr:primaryType="nt:unstructured"
+                                text="New Window"
+                                value="_blank"/>
+                        <same
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Window (Default)"
+                                value="_self"/>
+                    </options>
+                    </headLineTextTarget>
                     <redbarhighlight
                         jcr:primaryType="cq:Widget"
                         fieldDescription="If selected, it would override headline color."
@@ -47,7 +72,7 @@
                         xtype="richtext"/>
                     <imagealignment
                         jcr:primaryType="cq:Widget"
-                        defaultValue="-top"
+                        defaultValue="-left"
                         fieldDescription="Image placement is Top by default."
                         fieldLabel="Image Position"
                         name="./imagealignment"
@@ -56,11 +81,11 @@
                         <options jcr:primaryType="cq:WidgetCollection">
                             <top
                                 jcr:primaryType="nt:unstructured"
-                                text="Top(Default)"
+                                text="Top"
                                 value="-top"/>
                             <left
                                 jcr:primaryType="nt:unstructured"
-                                text="Left"
+                                text="Left(Default)"
                                 value="-left"/>
                             <right
                                 jcr:primaryType="nt:unstructured"
@@ -94,11 +119,11 @@
                             loadcontent="function(){var value= this.getValue();var newvalue=&quot;&quot;; if(value==&quot;dam&quot;){ newvalue=&quot;scene7&quot;;}else{newvalue=&quot;dam&quot;;}this.findParentByType('tabpanel').getComponent(newvalue).disable(this); this.findParentByType('tabpanel').getComponent(value).enable(this);}"
                             selectionchanged="function(box,value){if(value==&quot;dam&quot;){newvalue=&quot;scene7&quot;;box.findParentByType('tabpanel').getComponent(newvalue).disable(this);box.findParentByType('tabpanel').getComponent(value).enable(this);}else{newvalue=&quot;dam&quot;;box.findParentByType('tabpanel').getComponent(newvalue).disable(this);box.findParentByType('tabpanel').getComponent(value).enable(this);}}"/>
                     </imagesource>
-                    <ctalabel
+                    <secondaryLabel
                         jcr:primaryType="cq:Widget"
                         defaultValue="Learn More"
                         fieldDescription="Max character limit is 30"
-                        fieldLabel="CTA Label"
+                        fieldLabel="Dropdown Button Label"
                         maxLength="{Long}30"
                         name="./secondaryLabel"
                         xtype="textfield"/>
@@ -151,7 +176,7 @@
                     </ctatarget>
                     <linkentiremodule
                         jcr:primaryType="cq:Widget"
-                        fieldDescription="If selected, it would link entire module with CTA Link."
+                        fieldDescription="If selected,it would link entire module with CTA Link.if entire module is linked, then the individual links set will be disabled"
                         fieldLabel="Link Entire Module?"
                         name="./linkmodule"
                         type="checkbox"
@@ -189,7 +214,7 @@
                 name="./image/file"
                 requestSuffix="/image.img.png"
                 rotateParameter=""
-                title="Background Image"
+                title="Image"
                 xtype="html5smartimage"/>
         </items>
     </items>
