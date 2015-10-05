@@ -18,7 +18,7 @@ public class SubCategoryProductLink {
     }
 
     public String getCtalink() {
-        return ctalink;
+        return  LinkUtil.updateUrl(ctalink);
     }
 
     public void setCtalink(String ctalink) {
@@ -26,7 +26,7 @@ public class SubCategoryProductLink {
     }
 
     public String getCtatarget() {
-        return LinkUtil.updateUrl(ctalink);
+        return ctatarget;
     }
 
     public void setCtatarget(String ctatarget) {
