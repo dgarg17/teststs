@@ -8,5 +8,5 @@ slick.min.js
 boxheight.js
 select2.min.js
 youtube.js
-subCategoryProductDisplay.js
+secondaryLinks.js
 partnerLinks.js
