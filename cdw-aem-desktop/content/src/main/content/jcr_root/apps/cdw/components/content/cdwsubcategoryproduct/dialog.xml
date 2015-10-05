@@ -103,6 +103,14 @@
                                 value="_self"/>
                     </options>
                 </productCategoryNameTarget>
+                <productCategoryImage
+                        jcr:primaryType="cq:Widget"
+                        required="{Boolean}true"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Product Category Image"
+                        fieldDescription="Scene7 image name/code for the product category "
+                        name="./productCategoryImage"
+                        xtype="textfield"/>
                 <productCategoryImageUrl
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Product Category Image Link"
@@ -136,14 +144,7 @@
                         fieldDescription="Maximum of 250 characters"
                         name="./productCategoryDescription"
                         xtype="textarea"/>
-                <productCategoryImage
-                        jcr:primaryType="cq:Widget"
-                        required="{Boolean}true"
-                        allowBlank="{Boolean}false"
-                        fieldLabel="Product Category Image"
-                        fieldDescription="Scene7 image name/code for the product category "
-                        name="./productCategoryImage"
-                        xtype="textfield"/>
+
                 <promotionalLeadInPrice
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Promotional Description"
