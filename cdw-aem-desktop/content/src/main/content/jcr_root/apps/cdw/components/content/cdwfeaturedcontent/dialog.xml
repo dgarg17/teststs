@@ -30,14 +30,14 @@
                             jcr:primaryType="cq:Widget"
                             colors="[4D4E53,CC0000]"
                             defaultValue="4D4E53"
-                            fieldDescription="Default Value is Dark Grey(#4D4E53, Available only if the headline is not linked or when entire module is linked"
+                            fieldDescription="Default Value is Dark Grey(#4D4E53, Application only if the headline is not linked (OR) when entire module is linked"
                             fieldLabel="Headline Font Color"
                             name="./textcolor"
                             xtype="colorfield"/>
                     <headLineTextLink
                             jcr:primaryType="cq:Widget"
                             fieldLabel="HeadLine Link"
-                            fieldDescription="CTA link for the HeadLine,Available only if the entire module is not linked"
+                            fieldDescription="CTA link for the HeadLine,Application only if the entire module is not linked"
                             name="./headLineTextLink"
                             xtype="pathfield"/>
                     <headLineTextTarget
@@ -154,7 +154,7 @@
                     <ctalink
                             jcr:primaryType="cq:Widget"
                             fieldLabel="Module Link "
-                            fieldDescription="Link for the entire module.Avaliable when the  'Link Entire Module' is checked"
+                            fieldDescription="Link for the entire module.Available when the 'Link Entire Module' is checked"
                             name="./ctalink"
                             xtype="pathfield"/>
                     <ctatarget
