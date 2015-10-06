@@ -5,23 +5,18 @@
     title="Scene7 Dynamic Image"
     xtype="tabpanel">
     <items jcr:primaryType="cq:WidgetCollection">
-        <layout
-            jcr:primaryType="cq:Widget"
-            ddGroups="[s7media]"
-            fileNameParameter="./fileName"
-            fileReferenceParameter="./fileReference"
-            name="./file"
-            requestSuffix=".img.png"
-            title="Partner Logo Image"
-            xtype="s7html5smartimage"/>
         <advanced
             jcr:primaryType="cq:Widget"
             title="Image Attributes"
             xtype="panel">
             <items jcr:primaryType="cq:WidgetCollection">
-                <alt
+                <scene7filename
                     jcr:primaryType="cq:Widget"
-                    fieldDescription="Alt text for Partner Logo"
+                    fieldLabel="Scene7 Image Name"
+                    name="./scene7filename"
+                    xtype="textfield"/>
+                <alttext
+                    jcr:primaryType="cq:Widget"
                     fieldLabel="Alt Text"
                     name="./alt"
                     xtype="textfield"/>
@@ -32,7 +27,7 @@
                     xtype="pathfield"/>
                 <target
                     jcr:primaryType="cq:Widget"
-                    defaultValue="0"
+                    defaultValue="_self"
                     fieldDescription=" Partner logo url opens in same window by default."
                     fieldLabel="Link  Target"
                     name="./target"
@@ -42,11 +37,11 @@
                         <new
                             jcr:primaryType="nt:unstructured"
                             text="New Window"
-                            value="1"/>
+                            value="_blank"/>
                         <same
                             jcr:primaryType="nt:unstructured"
                             text="Same Window"
-                            value="0"/>
+                            value="_self"/>
                     </options>
                 </target>
             </items>

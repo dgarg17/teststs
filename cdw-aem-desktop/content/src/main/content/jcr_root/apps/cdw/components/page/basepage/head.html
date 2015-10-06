@@ -68,4 +68,6 @@
     }
 </script>
  <!--/* Support for page view statistics and MVT end */-->
+<script data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" type="text/javascript" src="${utility.serviceDomain}/api/cms/settings?token=${utility.jsApiCmsSettingsToken @ context='uri'}"></script>
+<sly data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" data-sly-test="${utility.disableEnsightenTagging != 'true'}" data-sly-include="analytics.html"/>
 </head>

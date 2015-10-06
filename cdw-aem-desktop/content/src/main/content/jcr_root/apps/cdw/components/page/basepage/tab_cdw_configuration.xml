@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    title="CDW Configuration">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <ensighten
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Ensighten"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <ensightenPageType
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    fieldLabel="Ensighten Page Type"
+                    name="./ensightenPageType"
+                    xtype="textfield"/>
+                <pageName
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    fieldLabel="Ensighten Page Name"
+                    name="./ensightenPageName"
+                    xtype="textfield"/>
+                <voucherCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Ensighten Voucher Code (Override)"
+                    name="./ensightenVoucherCode"
+                    xtype="textfield"/>
+            </items>
+        </ensighten>
+    </items>
+</jcr:root>
