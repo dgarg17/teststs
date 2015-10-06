@@ -37,7 +37,7 @@
                             jcr:primaryType="cq:Widget"
                             fieldLabel="HeadLine Text Link"
                             fieldDescription="CTA link for the HeadLine"
-                            name="./headLineTextlink"
+                            name="./headLineTextLink"
                             xtype="pathfield"/>
                     <headLineTextTarget
                             jcr:primaryType="cq:Widget"
@@ -70,12 +70,12 @@
                         fieldLabel="Description"
                         name="./bodytext"
                         xtype="richtext"/>
-                    <imagealignment
+                    <alignment
                         jcr:primaryType="cq:Widget"
                         defaultValue="-left"
-                        fieldDescription="Image placement is Top by default."
-                        fieldLabel="Image Position"
-                        name="./imagealignment"
+                        fieldDescription="Module placement is Top by default."
+                        fieldLabel="Module Position"
+                        name="./alignment"
                         type="select"
                         xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
@@ -96,7 +96,7 @@
                                 text="Bottom"
                                 value="-bottom"/>
                         </options>
-                    </imagealignment>
+                    </alignment>
                     <imagesource
                         jcr:primaryType="cq:Widget"
                         defaultValue="dam"
@@ -121,7 +121,7 @@
                     </imagesource>
                     <secondaryLabel
                         jcr:primaryType="cq:Widget"
-                        defaultValue="Learn More"
+                        defaultValue="See More Categories"
                         fieldDescription="Max character limit is 30"
                         fieldLabel="Dropdown Button Label"
                         maxLength="{Long}30"

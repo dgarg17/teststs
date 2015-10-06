@@ -1,5 +1,6 @@
 <!--/* CDW Featured Content Component */ -->
-<div class="featured-item ${properties.imagealignment} ${(properties.imagealignment=='-top'||properties.imagealignment=='-bottom')?'-center':''}">
+<div class="featured-item ${properties.alignment} ${(properties.alignment=='-top'||properties.alignment=='-bottom')?'-center':''}">
+
 	<a data-sly-test="${properties.linkmodule=='true' &&properties.ctalink}" data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
 			href="${link.urlUpdate}"  target="${properties.ctatarget}"
 			class="hotzone">
