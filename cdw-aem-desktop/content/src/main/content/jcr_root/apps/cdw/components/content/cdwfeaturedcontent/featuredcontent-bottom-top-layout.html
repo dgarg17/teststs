@@ -1,0 +1,17 @@
+<div class="layout-12" data-sly-test="${properties.imagealignment=='-top'}">
+    <div class="image-lockup">
+        <div data-sly-include="featuredcontent-img.html" data-sly-unwrap></div>
+        <!--/* /data-sly-unwrap */-->
+    </div>
+</div>
+
+<div class="layout-12">
+    <div data-sly-include="featuredcontent-copy.html" data-sly-unwrap></div>
+    <!--/* /data-sly-unwrap */-->
+</div>
+
+
+<div class="layout-12" data-sly-test="${properties.imagealignment=='-bottom'}">
+    <div data-sly-include="featuredcontent-img.html" data-sly-unwrap></div>
+    <!--/* /data-sly-unwrap */-->
+</div>
