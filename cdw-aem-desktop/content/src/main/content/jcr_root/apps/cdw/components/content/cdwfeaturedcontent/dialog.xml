@@ -156,12 +156,14 @@
                             fieldLabel="Module Link "
                             fieldDescription="Link for the entire module.Available when the 'Link Entire Module' is checked"
                             name="./ctalink"
+                            disabled="{Boolean}true"
                             xtype="pathfield"/>
                     <ctatarget
                             jcr:primaryType="cq:Widget"
                             defaultValue="_self"
                             fieldDescription="Link opens in same window by default."
                             fieldLabel="Module Target"
+                            disabled="{Boolean}true"
                             name="./ctatarget"
                             type="select"
                             xtype="selection">
@@ -180,6 +182,7 @@
                             jcr:primaryType="cq:Widget"
                             fieldDescription="If selected,it would link entire module with CTA Link.if entire module is linked, then the individual links set will be disabled."
                             fieldLabel="Link Entire Module?"
+                            disabled="{Boolean}true"
                             name="./linkmodule"
                             type="checkbox"
                             xtype="selection"/>
