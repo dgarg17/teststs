@@ -198,15 +198,6 @@
                     <version>2.9</version>
                 </plugin>
                 <plugin>
-                    <groupId>org.apache.sling</groupId>
-                    <artifactId>maven-sling-plugin</artifactId>
-                    <version>2.1.0</version>
-                    <configuration>
-                        <username>${crx.username}</username>
-                        <password>${crx.password}</password>
-                    </configuration>
-                </plugin>
-                <plugin>
                     <groupId>com.day.jcr.vault</groupId>
                     <artifactId>content-package-maven-plugin</artifactId>
                     <version>0.0.22</version>
@@ -258,18 +249,7 @@
             <id>autoInstallPackage</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <groupId>org.apache.sling</groupId>
-                        <artifactId>maven-sling-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>install-bundle</id>
-                                <goals>
-                                    <goal>install</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
+                    <!-- PLACEHOLDER FOR PROFILE ONLY - ACTUAL EXECUTION IS IN ./content/pom.xml -->
                 </plugins>
             </build>
         </profile>

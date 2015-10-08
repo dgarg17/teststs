@@ -27,7 +27,7 @@ public class ProductPicker {
     private String description;
     private String pctaklink;
     private String ctaText;
-    private String[] showProductPrice;
+    private String[] hidePrice;
     private String campaignid;
 
     public String getManufactureImage() {
@@ -94,12 +94,12 @@ public class ProductPicker {
         this.campaignid = campaignid;
     }
 
-    public String[] getShowProductPrice() {
-        return showProductPrice;
+    public String[] getHidePrice() {
+        return hidePrice;
     }
 
-    public void setShowProductPrice(String[] showProductPrice) {
-        this.showProductPrice = showProductPrice;
+    public void setHidePrice(String[] hidePrice) {
+        this.hidePrice = hidePrice;
     }
 
     public String getUrl() {

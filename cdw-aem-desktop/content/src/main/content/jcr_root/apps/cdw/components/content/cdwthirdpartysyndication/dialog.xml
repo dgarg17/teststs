@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    cls="tabpanelcss"
+    height="550"
+    title="3rd Party Syndication"
+    width="650"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <global
+            jcr:primaryType="cq:Widget"
+            cls="panelcss"
+            title="Configuration"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <includeType
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="javascript"
+                    fieldDescription="Choose the type of include."
+                    fieldLabel="Include Type"
+                    name="./includeType"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <javascript
+                            jcr:primaryType="nt:unstructured"
+                            text="Javascript (Default)"
+                            value="javascript"/>
+                        <iframe
+                            jcr:primaryType="nt:unstructured"
+                            text="iFrame"
+                            value="iframe"/>
+                    </options>
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        loadcontent="function(){var value= this.getValue();var newvalue=&quot;&quot;; if(value==&quot;javascript&quot;){ newvalue=&quot;iframe&quot;;}else{newvalue=&quot;javascript&quot;;}this.findParentByType('panel').getComponent(newvalue).disable(this); this.findParentByType('panel').getComponent(newvalue).collapse(false); this.findParentByType('panel').getComponent(value).enable(this); this.findParentByType('panel').getComponent(value).expand(false);}"
+                        selectionchanged="function(box,value){if(value==&quot;javascript&quot;){newvalue=&quot;iframe&quot;;box.findParentByType('panel').getComponent(newvalue).disable(this);box.findParentByType('panel').getComponent(newvalue).collapse(true);box.findParentByType('panel').getComponent(value).enable(this);box.findParentByType('panel').getComponent(value).expand(true);}else{newvalue=&quot;javascript&quot;;box.findParentByType('panel').getComponent(newvalue).disable(this);box.findParentByType('panel').getComponent(newvalue).collapse(true);box.findParentByType('panel').getComponent(value).enable(this);box.findParentByType('panel').getComponent(value).expand(true);}}"/>
+                </includeType>
+                <alignment
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="-center"
+                    fieldLabel="Alignment"
+                    name="./alignment"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <center
+                            jcr:primaryType="nt:unstructured"
+                            text="Center (Default)"
+                            value="-center"/>
+                        <left
+                            jcr:primaryType="nt:unstructured"
+                            text="Left"
+                            value="left"/>
+                        <right
+                            jcr:primaryType="nt:unstructured"
+                            text="Right"
+                            value="right"/>
+                    </options>
+                </alignment>
+                <javascript
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}true"
+                    itemId="javascript"
+                    title="Javascript Configuration"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <jsSourceURL
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Please enter the fully qualified URL to the source for this script."
+                            fieldLabel="Source URL"
+                            name="./jsSourceURL"
+                            xtype="textfield"/>
+                        <cssClass
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="This field is optional."
+                            fieldLabel="CSS Class"
+                            name="./jsCssClass"
+                            xtype="textfield"/>
+						<utf8
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Sets charset attribute on the script include."
+                            fieldLabel="UTF-8?"
+                            name="./utf8"
+							defaultValue="false"
+							inputValue="true"
+							type="checkbox"
+                            xtype="selection"/>
+                    </items>
+                </javascript>
+                <iframe
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}true"
+                    collapsible="{Boolean}true"
+                    itemId="iframe"
+                    title="iFrame Configuration"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <iFrameSourceURL
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Please enter the fully qualified URL to the source for this iFrame."
+                            fieldLabel="Source URL"
+                            name="./iFrameSourceURL"
+                            xtype="textfield"/>
+                        <width
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Width"
+                            name="./iFrameWidth"
+                            xtype="numberfield"/>
+						<sizeUnitsWidth
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="px"
+                            fieldDescription="Units of measure for width; defaults to pixels."
+                            fieldLabel="Size Units Width"
+                            name="./iFrameSizeUnitsWidth"
+                            type="select"
+                            xtype="selection">
+                            <options jcr:primaryType="cq:WidgetCollection">
+                                <pixels
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Pixels (Default)"
+                                    value="px"/>
+                                <percent
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Percent"
+                                    value="%"/>
+                            </options>
+                        </sizeUnitsWidth>
+                        <height
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Height"
+                            name="./iFrameHeight"
+                            xtype="numberfield"/>
+                        <sizeUnitsHeight
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="px"
+                            fieldDescription="Units of measure for height; defaults to pixels."
+                            fieldLabel="Size Units Height"
+                            name="./iFrameSizeUnitsHeight"
+                            type="select"
+                            xtype="selection">
+                            <options jcr:primaryType="cq:WidgetCollection">
+                                <pixels
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Pixels (Default)"
+                                    value="px"/>
+                                <percent
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Percent"
+                                    value="%"/>
+                            </options>
+                        </sizeUnitsHeight>
+                        <scrolling
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="no"
+                            fieldDescription="Allow iFrame to scroll?"
+                            fieldLabel="Scrolling"
+                            name="./iFrameScrolling"
+                            type="select"
+                            xtype="selection">
+                            <options jcr:primaryType="cq:WidgetCollection">
+                                <no
+                                    jcr:primaryType="nt:unstructured"
+                                    text="No (Default)"
+                                    value="no"/>
+                                <yes
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Yes"
+                                    value="yes"/>
+                            </options>
+                        </scrolling>
+                    </items>
+                </iframe>
+            </items>
+        </global>
+    </items>
+</jcr:root>

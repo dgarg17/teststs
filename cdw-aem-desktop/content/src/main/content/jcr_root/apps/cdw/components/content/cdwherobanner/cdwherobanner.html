@@ -1,34 +1,33 @@
 <!--/* Hero Banner Image */ -->
-
-<div class="hero align-${properties.textalignment}"
-     style="background-image:url('${currentNode.path @ context='styleString'}.img.png');color:#${properties.textcolor @ context='styleString'};background-color:#${properties.backgroundcolor @ context='styleString'};">
-    <div class="row">
-        <div class="copy">
-            <h1 data-sly-test="${!properties.brandLogo}">
-                ${properties.headline1}
-                <i data-sly-test="${properties.headline2}" class="ico-and"></i>
-                ${properties.headline2}</h1>
-            <div class="brand-img-lockup" data-sly-test="${properties.brandLogo}" >
-                <img class="hero-brand-logo"
-                     data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"
-                     src="${utility.getS7ImageRoot}${properties.brandLogo}?$mfg-250x75$" alt="brand-logo"/>
+<div class="layout">
+    <div class="hero ${properties.textalignment}"
+        style="background-image:url('${currentNode.path @ context='styleString'}.img.png');color:#${properties.textcolor @ context='styleString'};background-color:#${properties.backgroundcolor @ context='styleString'};">
+            <div class="copy">
+                <h1 data-sly-test="${!properties.brandLogo}">
+                    ${properties.headline1}
+                    <i data-sly-test="${properties.headline2}" class="ico-and"></i>
+                    ${properties.headline2}</h1>
+                <div class="brand-img-lockup" data-sly-test="${properties.brandLogo}" >
+                    <img class="hero-brand-logo"
+                        data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"
+                        src="${utility.getS7ImageRoot}${properties.brandLogo}?$mfg-250x75$" alt="brand-logo"/>
+                </div>
+                <h5 data-sly-test="${properties.subheadline}">
+                    <i data-sly-test="${properties.prefixsubheadline=='true'}" class="ico-and"></i>
+                    ${properties.subheadline}
+                </h5>
+    
+                <p data-sly-test="${properties.bodytext}">
+                    ${properties.bodytext}
+                </p>
+    
+                <div class="button-lockup">
+                    <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
+                    href="${link.urlUpdate}" target="${properties.ctatarget}" data-sly-test="${properties.ctalink}"
+                    class="btn button -red">${properties.cdwctalabel}
+                    </a>
+                </div>
             </div>
-            <h5 data-sly-test="${properties.subheadline}">
-                <i data-sly-test="${properties.prefixsubheadline=='true'}" class="ico-and"></i>
-                ${properties.subheadline}
-            </h5>
-
-            <p data-sly-test="${properties.bodytext}">
-                ${properties.bodytext}
-            </p>
-
-            <div class="button-lockup">
-                <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
-                   href="${link.urlUpdate}" target="${properties.ctatarget}" data-sly-test="${properties.ctalink}"
-                   class="btn button -red">${properties.cdwctalabel}
-                </a>
-            </div>
-        </div>
     </div>
 </div>
 

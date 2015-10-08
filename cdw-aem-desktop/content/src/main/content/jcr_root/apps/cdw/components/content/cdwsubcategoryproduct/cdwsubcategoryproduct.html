@@ -1,0 +1,69 @@
+<!--/* The client side rendering for the product picker is available in productpicker.js(/etc/designs/cdw-global/clientlibs/js/productpicker.js)*/-->
+
+<div class="product-picker product-display" data-sly-test="${properties.productCategoryName}">
+    <div class="pp-header-hold">
+        <h5>${properties.productCategoryName}</h5>
+    </div>
+    <div class="pp-copy-hold" >
+        <p>${properties.productCategoryDescription}</p>
+    </div>
+    <div class="pp-product-lockup" >
+        <div class="product-image" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" >
+            <img alt=" " src="${utility.S7ImageRoot}${properties.productCategoryImage}?$product-200$" />
+        </div>
+        <div class="product-info" >
+            <div class="pricing-block">
+                <p data-sly-test="${properties.promotionalLeadInPrice}" class="-gray">${properties.promotionalLeadInPrice}</p>
+                <h6 data-sly-test="${properties.price}" >${properties.price}</h6>
+               <!-- <p>Advertised Price</p>-->
+            </div>
+        </div>
+    </div>
+    <div class="options">
+        <div class="button-lockup" data-sly-test="${properties.CtaButtonUrl}" data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.CtaButtonUrl}">
+            <a href="${link.urlUpdate}" class="button -red" target="${properties.ctaButtonTarget}">${properties.ctaButtonLabel}</a>
+        </div>
+
+        <!--waiting on more updates from James on the mark-up-->
+
+        <select class="sub-cat-select"  data-sly-use.links="${'com.cdw.aem.util.components.SubCategoryProductLinksWCMUseHelper' @json=properties.secondaryLinks}">
+            <option></option>
+            <sly data-sly-list="${links.subCategoryProductLinks}">
+                <option>${item.ctalabel}</option>
+            </sly>
+
+
+    </select>
+        <select class="sub-cat-select-mobile" data-sly-use.links="${'com.cdw.aem.util.components.SubCategoryProductLinksWCMUseHelper' @json=properties.secondaryLinks}" >
+            <option>View Models and Pricing</option>
+            <sly data-sly-list="${links.subCategoryProductLinks}">
+                <option>${item.ctalabel}</option>
+            </sly>
+          <!--  <option>Metered PDU</option>
+            <option>Switched PDU</option>-->
+        </select>
+    </div>
+</div>
+<script>
+
+$(document).ready(function() {
+//Initialize custom select drop downs
+
+$('.product-display .sub-cat-select').each(function() {
+$(this).select2({
+placeholder: "View Models and Pricing",
+minimumResultsForSearch: Infinity
+});
+});
+
+$('.select2-arrow').each(function() {
+$(this).append('<i class="ico ico-down-arrow"></i>');
+});
+
+
+});
+</script>
+
+<div  data-sly-test="${!properties.productCategoryName&&!wcmmode.disabled}">
+<h5>Please configure  Sub Category product Display </h5>
+</div>

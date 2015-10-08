@@ -1,0 +1,7 @@
+<sly data-sly-test="${properties.jsSourceURL}">
+	<script data-sly-test="${properties.utf8}" src="${properties.jsSourceURL}" language="JavaScript" type="text/javascript" class="${properties.cssClass}" charset="utf-8"></script>
+	<script data-sly-test="${!properties.utf8}" src="${properties.jsSourceURL}" language="JavaScript" type="text/javascript" class="${properties.cssClass}"></script>
+</sly>
+<sly data-sly-test="${!properties.jsSourceURL && (wcmmode.edit || wcmmode.design)}">
+	<h6>Please configure a Javascript Source URL.</h6>
+</sly>

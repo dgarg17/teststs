@@ -1,4 +1,4 @@
-<main id="content" role="main">
+<main id="content" role="main" class="lead-gen">
 <div class="layout">
   <div class="layout-12">
   <div data-sly-resource="${ @path='herobanner', resourceType='cdw/components/content/cdwherobanner'}" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
@@ -9,8 +9,13 @@
   <div data-sly-resource="${ @path='leftpar', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div><!--/* /data-sly-unwrap */-->
   </div>
   <div class="layout-5">
+	<style data-sly-test="${wcmmode.edit}">
+		#CQ .x-panel.cq-editbar.cq-element-static-thirdpartysyndication {
+			top: 244px !important;
+		}
+	</style>
     <div class="form">
-      <h4>FORM PLACEHOLDER</h4>
+      <div data-sly-resource="${ @path='static-thirdpartysyndication', resourceType='cdw/components/content/cdwthirdpartysyndication'}" data-sly-unwrap> </div><!--/* /data-sly-unwrap */-->
     </div>
   </div>
 </div>

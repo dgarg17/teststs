@@ -1,1 +1,27 @@
-<div data-sly-include="analytics-extra.html" data-sly-unwrap></div>  
+<!-- ANALYTICS -->
+<sly data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
+<script type="text/javascript" src="${utility.serviceDomain}/assets/tagmanagement/cdwtagmanagement.js"></script>
+<script type="text/javascript">
+	var cdwTagManagementData = {};window.cdwTagManagementData = {'page_name':'${properties.ensightenPageName @ context="scriptString"}','page_type':'${properties.ensightenPageType @ context="scriptString"}','page_url':'${currentPage.path @ context="scriptString"}','voucher_code':'${utility.ensightenVoucherCode @ context="scriptString"}'};
+	if(CdwCms) {
+		if(CdwCms.settings.persistent_id) {
+			Object.defineProperty(cdwTagManagementData,'persistent_id', { value : '', writable : true});
+			cdwTagManagementData.persistent_id = CdwCms.settings.persistent_id;
+		}
+		if(CdwCms.settings.session_id) {
+			Object.defineProperty(cdwTagManagementData,'session_id', { value : '', writable : true});
+			cdwTagManagementData.session_id = CdwCms.settings.session_id;
+		}
+		if(CdwCms.settings.login_status) {
+			Object.defineProperty(cdwTagManagementData,'login_status', { value : '', writable : true});
+			cdwTagManagementData.login_status = CdwCms.settings.login_status;
+		}
+		if(CdwCms.settings.organization_name) {
+			Object.defineProperty(cdwTagManagementData,'organization_name', { value : '', writable : true});
+			cdwTagManagementData.organization_name = CdwCms.settings.organization_name;
+		}
+	}
+</script>
+<script type="text/javascript" src="${utility.ensightenBootstrapPath @ context='uri'}"></script>
+</sly>
+<sly data-sly-include="analytics-extra.html" />  

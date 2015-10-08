@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Layout Configuration">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <contentwidth
+            jcr:primaryType="cq:Widget"
+            defaultValue="full"
+            fieldLabel="Content Width"
+            name="./contentwidth"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <full
+                    jcr:primaryType="nt:unstructured"
+                    text="Full Width(Default)"
+                    value="full"/>
+                <_x0039_60px
+                    jcr:primaryType="nt:unstructured"
+                    text="960px"
+                    value="layout-CaaS-960"/>
+                <_x0038_00px
+                    jcr:primaryType="nt:unstructured"
+                    text="765px"
+                    value="layout-CaaS-765"/>
+            </options>
+        </contentwidth>
+    </items>
+</jcr:root>

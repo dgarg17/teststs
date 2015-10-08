@@ -13,7 +13,7 @@
             <items jcr:primaryType="cq:WidgetCollection">
                 <text
                     jcr:primaryType="cq:Widget"
-                    hideLabel="{Boolean}true"
+                    fieldLabel="Text"
                     name="./text"
                     xtype="richtext">
                     <rtePlugins jcr:primaryType="nt:unstructured">
@@ -93,6 +93,58 @@
                         <format
                             jcr:primaryType="nt:unstructured"
                             features="[bold,italic]"/>
+                        <colorpicker
+                            jcr:primaryType="nt:unstructured"
+                            colors="[4D4E53,CC0000,FFFFFF]"
+                            defaultColor="4D4E53"
+                            features="*"/>
+                        <misctools
+                            jcr:primaryType="nt:unstructured"
+                            features="[specialchars]">
+                            <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                <chars jcr:primaryType="nt:unstructured">
+                                    <registered
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;reg;"/>
+                                    <leftsinglequote
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;lsquo;"/>
+                                    <rightsinglequote
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;rsquo;"/>
+                                    <leftdoublequote
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;ldquo;"/>
+                                    <rightdoublequote
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;rdquo;"/>
+                                    <trademark
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;trade;"/>
+                                    <endash
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;ndash; "/>
+                                    <emdash
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;mdash; "/>
+                                    <pound
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;pound; "/>
+                                    <copyright
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;copy; "/>
+                                    <middledot
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;middot; "/>
+                                    <rightanglequote
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;raquo;"/>
+                                    <bullet
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="&amp;#8226;"/>
+                                </chars>
+                            </specialCharsConfig>
+                        </misctools>
                     </rtePlugins>
                     <externalStyleSheets
                         jcr:primaryType="nt:unstructured"

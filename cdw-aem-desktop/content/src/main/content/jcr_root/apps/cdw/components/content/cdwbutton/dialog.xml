@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="Button"
+          xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <configurations
+                jcr:primaryType="cq:Widget"
+                title="Button Options"
+                xtype="panel">
+
+            <items jcr:primaryType="cq:WidgetCollection">
+                <buttonStype
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="red"
+                        fieldLabel="Button Style"
+                        fieldDescription="Default Button Style is set to Signature Red"
+                        name="./buttonStyle"
+                        type="select"
+                        xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <signatureRed
+                                jcr:primaryType="nt:unstructured"
+                                text="Signature Red"
+                                value="red"/>
+                        <darkGrey
+                                jcr:primaryType="nt:unstructured"
+                                text="Dark Grey"
+                                value="gray"/>
+                        <ghostButton
+                                jcr:primaryType="nt:unstructured"
+                                text="Ghost Button"
+                                value="clear"/>
+                        <greyClear
+                                jcr:primaryType="nt:unstructured"
+                                text="Grey Clear"
+                                value="white"/>
+                    </options>
+                </buttonStype>
+                <ctalabel
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="There is no character limit"
+                        fieldLabel="CTA Label"
+                        name="./cdwctalabel"
+                        xtype="textfield"/>
+                <ctalink
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="CTA Link"
+                        name="./ctalink"
+                        xtype="pathfield"/>
+                <ctatarget
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="_self"
+                        fieldDescription="CTA link opens in same window by default."
+                        fieldLabel="CTA Target"
+                        name="./ctatarget"
+                        type="select"
+                        xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <new
+                                jcr:primaryType="nt:unstructured"
+                                text="New Window"
+                                value="_blank"/>
+                        <same
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Window (Default)"
+                                value="_self"/>
+                    </options>
+                </ctatarget>
+                <alignment
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="center"
+                        fieldDescription="By default the cta button is center aligned"
+                        fieldLabel="CTA Alignment"
+                        name="./alignment"
+                        type="select"
+                        xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="left"/>
+                        <Center
+                                jcr:primaryType="nt:unstructured"
+                                text="Center"
+                                value="center"/>
+                        <Right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="right"/>
+                    </options>
+                </alignment>
+
+            </items>
+        </configurations>
+    </items>
+</jcr:root>

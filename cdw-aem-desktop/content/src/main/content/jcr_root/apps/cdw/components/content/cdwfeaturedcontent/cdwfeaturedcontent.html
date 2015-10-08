@@ -1,0 +1,9 @@
+<!--/* CDW Featured Content Component */ -->
+<div class="featured-item ${properties.imagealignment}">
+	<a data-sly-test="${properties.linkmodule=='true' &&properties.ctalink}" data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
+			href="${link.urlUpdate}"  target="${properties.ctatarget}"
+			class="hotzone">
+		<div data-sly-include="featuredcontent-inner.html" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
+	</a>
+	<div data-sly-test="${!properties.linkmodule}" data-sly-include="featuredcontent-inner.html" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
+</div>
