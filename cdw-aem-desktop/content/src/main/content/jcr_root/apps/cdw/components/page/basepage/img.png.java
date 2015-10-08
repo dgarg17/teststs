@@ -10,7 +10,7 @@
  * with Day.
  */
 
-package apps.mda.components.pages.basepage;
+package apps.cdw.components.page.basepage;
 
 import java.io.IOException;
 import java.io.InputStream;
