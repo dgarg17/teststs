@@ -5,7 +5,7 @@
             <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.productCategoryNameUrl}"
                href="${link.urlUpdate}"> ${properties.productCategoryName}</a>
         </h5>
-        <h5 data-sly-test="${!properties.CtaButtonUrl}">
+        <h5 data-sly-test="${!properties.productCategoryNameUrl}">
             ${properties.productCategoryName}
         </h5>
     </div>
@@ -14,7 +14,12 @@
     </div>
     <div class="pp-product-lockup">
         <div class="product-image" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
-            <img alt=" " src="${utility.S7ImageRoot}${properties.productCategoryImage}?$product-200$"/>
+            <a href="${link.urlUpdate}"  target="${properties.productCategoryImageTarget}"
+               data-sly-test="${properties.productCategoryImageUrl}"
+               data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.productCategoryImageUrl}">
+            <img alt="product Category" src="${utility.S7ImageRoot}${properties.productCategoryImage}?$product-200$" />
+            </a>
+            <img alt="product Category" src="${utility.S7ImageRoot}${properties.productCategoryImage}?$product-200$" data-sly-test="${!properties.productCategoryImageUrl}"/>
         </div>
         <div class="product-info">
             <div class="pricing-block">

@@ -1,0 +1,24 @@
+<!-- Level 2 Item -->
+<div id="{{id}}" class="flyout2 template-links-promos">
+    <div class="flyout2-columns">
+        <!-- Column 1 -->
+        <div class="flyout2-col">
+            {{#menu}}
+                {{#equal template 'Links' }}
+                    {{> additionalLinks parent=../title}}
+                {{/equal}}
+            {{/menu}}
+        </div>
+        <!-- /Column 1 -->
+        <!-- Column 2 -->
+        <div class="flyout2-col">
+            {{#menu }}
+                {{#equal template 'Promos' }}
+                    {{> promos parent=../title}}
+                {{/equal}}
+            {{/menu}}
+        </div>
+        <!-- /Column 2 -->
+    </div>
+</div>
+<!-- /Level 2 Item -->

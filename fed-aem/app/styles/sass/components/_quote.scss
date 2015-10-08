@@ -1,0 +1,149 @@
+.quote {
+	margin: $component-spacing;
+	
+	a{
+		color: inherit;
+		:hover{
+			text-decoration: underline;
+		}
+	}
+	line-height:24px;
+	padding:45px;
+	
+	.ico-quote-left, .ico-quote-right{
+		font-size:30px;
+	}
+
+	.ico-quote-right{
+		vertical-align:text-top;
+		position:relative;
+		top:-5px;
+	}
+
+	&.-center {
+		text-align:center;
+		.rm{text-align: left;}
+	}
+	&.-left{
+		text-align:left;
+	}
+	&.-right{
+		text-align:right;
+	}
+
+	&.-grey {
+		&.-opacity{
+			background-color: $color-quote-grey-opacity-65;
+		}
+		background:$base-color;
+
+		.ico:before {
+			color:inherit;
+		}
+
+		// .credit {
+		// 	color:#fff;
+		// }
+	}
+
+	&.-red {
+		&.-opacity{
+			// background-color: $color-quote-white-opacity-65;
+			background-color: rgba($color-red, .65)
+		}
+		background:$color-red;
+
+		.ico:before {
+			color:inherit;
+		}
+
+		// .credit {
+		// 	color:#fff;
+		// }
+	}
+	&.-black {
+		&.-opacity{
+			// background-color: $color-quote-white-opacity-65;
+			background-color: rgba(black, .65)
+		}
+		background:black;
+
+		.ico:before {
+			color:inherit;
+		}
+
+		// .credit {
+		// 	color:#fff;
+		// }
+	}
+	&.-white{
+		background-color: white;
+		&.-opacity{
+			background-color: $color-quote-white-opacity-65;
+		}
+		.ico:before {
+			color:inherit;
+		}
+		
+	}
+
+	.quote-text {
+		a{font-weight:500;}
+		font-family: 'PreloSlab';
+		font-weight: 500;
+		font-size:20px;
+		line-height:24px;
+// 		&.-red {
+// 			color:$color-red;
+// 		}
+// 
+// 		&.-white {
+// 			color:#fff;
+// 		}
+
+	}
+
+	.credit {
+		margin-top:15px;
+		.inner-copy{display: inline-block; vertical-align:top;}
+		p {
+			a{font-weight: bold;}
+			line-height: 18px;
+			margin:0;
+			&.rm{display: block;
+			a{font-weight:normal;}}
+			display: inline;
+			}
+		img {
+			border:2px solid #fff;
+			border-radius:30px;
+			width:45px;
+			height:45px;
+			margin-right:10px;
+			display: inline-block;
+		}
+		&:after {
+			content:'';
+			display:block;
+			clear:both;
+		}
+
+	}
+
+	.layout-extened{
+		background-image: url(../image/hero2.jpg);
+	}
+
+
+	@media screen and (max-width: $screen-sm-min) {
+
+		padding:15px;
+
+		.quote-text {
+			margin-top:0;
+		}
+
+	}
+
+
+}

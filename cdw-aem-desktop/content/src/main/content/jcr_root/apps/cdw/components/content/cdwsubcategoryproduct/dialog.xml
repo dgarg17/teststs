@@ -103,14 +103,6 @@
                                 value="_self"/>
                     </options>
                 </productCategoryNameTarget>
-                <productCategoryDescription
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Product Category Description"
-                        allowBlank="{Boolean}false"
-                        maxLength="{Long}250"
-                        fieldDescription="Maximum of 250 characters"
-                        name="./productCategoryDescription"
-                        xtype="textarea"/>
                 <productCategoryImage
                         jcr:primaryType="cq:Widget"
                         required="{Boolean}true"
@@ -119,6 +111,40 @@
                         fieldDescription="Scene7 image name/code for the product category "
                         name="./productCategoryImage"
                         xtype="textfield"/>
+                <productCategoryImageUrl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Category Image Link"
+                        fieldDescription="CTA url for product category image"
+                        name="./productCategoryImageUrl"
+                        xtype="pathfield"/>
+                <productCategoryImageTarget
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="_self"
+                        fieldDescription="Product category image link opens in same window by default."
+                        fieldLabel="Product Category Image Target"
+                        name="./productCategoryImageTarget"
+                        type="select"
+                        xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <new
+                                jcr:primaryType="nt:unstructured"
+                                text="New Window"
+                                value="_blank"/>
+                        <same
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Window (Default)"
+                                value="_self"/>
+                    </options>
+                </productCategoryImageTarget>
+                <productCategoryDescription
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Category Description"
+                        allowBlank="{Boolean}false"
+                        maxLength="{Long}250"
+                        fieldDescription="Maximum of 250 characters"
+                        name="./productCategoryDescription"
+                        xtype="textarea"/>
+
                 <promotionalLeadInPrice
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Promotional Description"

@@ -1,0 +1,151 @@
+// Variables ===================================================================================== /
+
+// Typography variables
+$base-color:                  #616265;
+$font-family:                 "Prelo", Verdana, sans-serif;
+$line-height:                 18px;
+$vertical-measure:            18px;
+
+/* Component Variables */
+$component-spacing: 0 0 20px 0;
+
+/*Column Control Spacing Variables*/
+$column-control-space50: 50px 0;
+$column-control-space-none: 0;
+
+/* Color Scheme */
+$color-red: #cc0000;
+$color-green: #6fb600;
+$color-blue: #3a678d;
+$color-black: #000;
+$color-white: #fff;
+$color-link: #0070bc;
+
+/* 7 Shades of Grey */
+$color-gray10: #efefef;
+$color-gray20: #d6d6d4;
+$color-gray40: #bdbdbd;
+$color-gray50: #afafaf;
+$color-gray60: #8c8d8e;
+$color-gray80: #616265;
+$color-gray90: #4d4e53;
+
+/* Error Colors */
+$color-error-border: $color-red;
+$color-error-bg: #f7dbe0;
+$color-error: #d15454;
+$color-warning-border:  #f5b324;
+$color-warning-bg: #f6e6c2;
+$color-warning: #f5c355;
+$color-info-border: $color-link;
+$color-info-bg: #c9e5ef;
+$color-info: #3294b6;
+$color-success-border: #76bd22;
+$color-success-bg: #dfeecc;
+$color-success: #92c556;
+
+//Social Colors
+$color-twitter: #5eb5e3;
+$color-linkedIn: #3158a9;
+$color-facebook: #0975a3; 
+$color-spiceworks: #fc5900;
+
+//Legacy Colors
+$primary-color: $color-red;
+$link-color: $color-link;
+$black: $color-black;
+$white: $color-white;
+
+/* Bourbo.io and Neat.io */
+$max-width: 1170px;
+//$visual-grid: true;
+$border-box-sizing: false;
+
+//Media Queries
+$site-width: 1138px;
+$screen-lg-min: 1170px;
+$screen-md-min: 970px;
+$screen-sm-min: 750px;
+$screen-xs-min: 580px;
+$screen-xxs-min: 400px;
+
+//340
+//500
+//620
+//820
+//1044
+//1170
+
+
+$screen-md-max: $screen-lg-min - 1;
+$screen-sm-max: $screen-md-min - 1;
+$screen-xs-max: $screen-sm-min - 1;
+
+// Link Color
+$color-link: #0072bc;
+
+// Battle Ship Color Grid - 2015 Global
+// Primary CDW Red 
+$color-A1: #cc0000;
+// Secondary Color Palette
+$color-B1: #d02c30;
+$color-B2: #fe4a5d;
+$color-B3: #ff828a;
+$color-B4: #ffb0c0;
+$color-B5: #eec7ce;
+$color-B6: #f7dbe0;
+$color-C1: #c20430;
+$color-C2: #d8292f;
+$color-C3: #e74c39;
+$color-C4: #e57e3e;
+$color-C5: #f2bd7d;
+$color-C6: #f2d1a0;
+$color-D1: #f28b00;
+$color-D2: #f5b324;
+$color-D3: #f8bf00;
+$color-D4: #ffd200;
+$color-D5: #ffe900;
+$color-D6: #ffea77;
+$color-E1: #009d4f;
+$color-E2: #3daf2c;
+$color-E3: #76bd22;
+$color-E4: #a6ce39;
+$color-E5: #c3d600;
+$color-E6: #e2e768;
+$color-F1: #009483;
+$color-F2: #00a19c;
+$color-F3: #00afab;
+$color-F4: #63ccca;
+$color-F5: #9adada;
+$color-F6: #b0e3e4;
+$color-G1: #007299;
+$color-G2: #007cbb;
+$color-G3: #00a8e2;
+$color-G4: #00b3e3;
+$color-G5: #54c9e8;
+$color-G6: #96d5ea;
+$color-H1: #76236d;
+$color-H2: #923a80;
+$color-H3: #a45b96;
+$color-H4: #b588b9;
+$color-H5: #ceadd0;
+$color-H6: #e8bfdc;
+$color-I1: #b42573;
+$color-I2: #e01783;
+$color-I3: #ea6cb0;
+$color-I4: #f6a7d7;
+$color-I5: #e8bcd8;
+$color-I6: #edd3e2;
+$color-J1: #d1d0ce;
+$color-J2: #bcbcbc;
+$color-J3: #a8a8aa;
+$color-J4: #898b8e;
+$color-J5: #63656a;
+$color-J6: #54565b;
+// Primary Text Color
+$color-J7: #4d4d4f;
+
+//Block Quote colors
+$color-quote-red-opacity-65: rgba(204, 0, 0, .65);
+$color-quote-grey-opacity-65: rgba(137, 139, 142, .65);
+$color-quote-white-opacity-65: rgba(255, 255, 255, .65);

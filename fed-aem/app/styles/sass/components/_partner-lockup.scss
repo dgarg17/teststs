@@ -1,0 +1,4 @@
+.partner-lockup { float: right; margin: $component-spacing; 
+	.logo { margin-right: 20px; padding-right: 20px; border-right: 1px solid $color-gray40; display: inline-block; }
+	.logo:last-child { margin-left: 0; padding-left: 0; border: none; }
+}

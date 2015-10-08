@@ -1,11 +1,12 @@
-
-<div data-sly-test="${properties.youtubeId}" id="${properties.youtubeId}" class="cdw-youtube-video"
-     data-video-id="${properties.youtubeId}"
-     data-video-width="${properties.videoWidth}"
-     data-video-size-unit="${properties.sizeUnit}"
-     data-video-aspect-ratio="${properties.videoAspectRatio}"
-     data-video-tracking-id="${properties.trackingId}"></div>
-<div data-sly-test="${(!properties.youtubeId) && (wcmmode.edit || wcmmode.design)}" >
-	<h6>Please configure the YouTube component.</h6>
+<div class="youtube-wrapper">
+    <div data-sly-test="${properties.youtubeId}" id="${properties.youtubeId}" class="cdw-youtube-video"
+        data-video-id="${properties.youtubeId}"
+        data-video-width="${properties.videoWidth}"
+        data-video-size-unit="${properties.sizeUnit}"
+        data-video-aspect-ratio="${properties.videoAspectRatio}"
+        data-video-tracking-id="${properties.trackingId}"></div>
+    <div data-sly-test="${(!properties.youtubeId) && (wcmmode.edit || wcmmode.design)}" >
+        <h6>Please configure the YouTube component.</h6>
+    </div>
 </div>
 <!--/* Initialization logic for this youtube player can be found in the JS file located here: /etc/designs/cdw-global/clientlibs/js/youtube.js */-->
