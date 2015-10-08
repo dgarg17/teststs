@@ -3,6 +3,7 @@ var root = "./";
 var src = "./app";
 var testSrc = './test';
 var bowerDir = './bower_components';
+var jsDeploy = src + '/js/dist/';
 
 module.exports = {
   browserSync: {
@@ -14,13 +15,21 @@ module.exports = {
         }
     }
   },
+  css: {
+      src: src + "/styles/dist/**/*.css",
+      dest: clientLibs + "/css/"
+  },
+  js: {
+      src: src + "/js/dist/**/*.js",
+      dest: clientLibs + "/js/"
+  },
   markup: {
     src: src + '/*.html',
     dest: src
   },
   sass: {
     src: src + "/styles/sass/**/*.{sass,scss}",
-    dest: src + "/styles/",
+    dest: src + "/styles/dist/",
     settings: {
         includePaths: require('node-bourbon').includePaths,
         includePaths: require('node-neat').includePaths,
@@ -28,8 +37,27 @@ module.exports = {
         imagePath: 'images' // Used by the image-url helper
     }
   },
-  production: {
-    cssDest: clientLibs + "/css/",
-    jsDest: clientLibs + "/js/"
-  }
+  browserify: {
+
+        // A separate bundle will be generated for each
+        // bundle config in the list below
+        bundleConfigs: [
+            {
+                entries: src + '/js/src/teams/common/main.js',
+                dest: jsDeploy,
+                outputName: 'main.js',
+                // list of modules to make require-able externally
+                require: ["jquery", "jquery-ui/dialog", "handlebars/runtime", "lodash"],
+                // list of externally available modules to exclude from the bundle
+                external: []
+            },
+            {
+                entries: src + '/js/src/test.js',
+                dest: jsDeploy,
+                outputName: 'test.js',
+                // list of externally available modules to exclude from the bundle
+                external: ["jquery", "jquery-ui/dialog", "handlebars/runtime", "lodash"]
+            } 
+        ]
+    }
 };

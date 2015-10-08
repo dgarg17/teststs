@@ -1,0 +1,16 @@
+<!-- Promos Template -->
+{{#items}}
+<div class="promo">
+    <a href="{{url}}" onclick="CdwTagMan.createPromotionTag('Global Navigation', 'L2-{{removeSpecial ../parent}}-L3-{{removeSpecial title}}');">
+        {{#if image}}
+            <img src="{{image}}" alt="{{title}}" />
+        {{else}}
+            <img src="https://webobjects2.cdw.com/is/image/CDW/{{id}}?hei=100" alt="{{title}}" />
+        {{/if}}
+        <h4>{{title}}</h4>
+    </a>
+    <p>{{description}}<br />
+        <a href="{{url}}" onclick="CdwTagMan.createPromotionTag('Global Navigation', 'L2-{{removeSpecial ../parent}}-L3-{{removeSpecial title}}');">Learn More</a>
+    </p>
+</div>
+{{/items}}

@@ -3,3 +3,4 @@
 /cdw-aem-desktop/content/src/main/content/jcr_root/etc/designs/cdw-global/clientlibs/node_modules
 
 *.DS_Store
+/fed-aem/npm-debug.log

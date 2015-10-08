@@ -1,0 +1,25 @@
+<!-- Level 2 Item -->
+<div id="{{id}}" class="flyout2 flyout-ink-toner">
+    <div class="flyout2-columns">
+        <h3><span class="cmyk-c">I</span><span class="cmyk-m">N</span><span class="cmyk-y">K</span> <i>+</i> TONER FINDER</h3>
+
+        <div class="ink-toner-finder">
+            <i class="ico-printer-ink"></i>
+            <div class="ink-toner-typeahead">
+                <h4>Enter Printer Model</h4>
+                <input type="text" id="ink-finder-input" placeholder="e.g. HP p2015dn" />
+                <div id="ink-toner-results">
+                    <div class="results-content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{#menu}}
+            {{#equal template 'Links' }}
+                {{> additionalLinks parent=../title}}
+            {{/equal}}
+        {{/menu}}
+    </div>
+</div>
+<!-- /Level 2 Item -->

@@ -1,0 +1,30 @@
+<!-- Subscription Configurator -->
+<div class="subscription-configurator">
+    <h1>Configure Your Product</h1>
+
+    <div class="panel">
+        <h3>Plan Offer:</h3>
+        <div class="subscription-list">
+            {{#each Offers }}
+                <div class="radio">
+                    <input type="radio" value="{{OfferId}}" name="radioGroup" id="{{OfferId}}" />
+                    <label for={{OfferId}}>{{Title}}</label>
+                </div>
+            {{/each}}
+        </div>
+        <p class="commitment-text">{{CommitmentText}}</p>
+
+        <div class="offer-detail">
+
+        </div>
+        <div class="panel-arrow"></div>
+    </div>
+    <div class="arrow-down"></div>
+    <div class="offer-total">
+        <b><span class="total-price"></span> Total</b>
+    </div>
+    <span class="error-message"></span>
+    
+    <div class="buttons"></div>
+    <div class="lock-panel"></div>
+</div>

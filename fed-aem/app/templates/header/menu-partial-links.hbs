@@ -1,0 +1,11 @@
+<!-- Links Template -->
+<div class="nav-links">
+	{{#if title}}
+		<h4>{{{title}}}</h4>
+	{{/if}}
+	<ul>
+	    {{#each items}}
+	        <li><a href="{{url}}" onclick="CdwTagMan.createPromotionTag('Global Navigation', 'L2-{{removeSpecial ../parent}}-L3-{{removeSpecial title}}');">{{title}}</a></li>
+	    {{/each}}
+	</ul>
+</div>

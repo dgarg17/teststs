@@ -1,0 +1,15 @@
+<!-- Offer Detail -->
+{{#each Details.Items }}
+    {{#equal Type 'Number'}}
+    <div id="item-{{ItemId}}" data-id="{{ItemId}}" class="pricing-item clearfix">
+        <div class="pricing"><strong class="item-price">{{Price}}</strong> per {{Unit}}</div>
+        <input type="number" id="input-{{ItemId}}" data-type="{{Type}}" value="{{Min}}" min="{{Min}}" max="99999" required />
+        <label for="input-{{ItemId}}">{{Unit}}</label> <a href="{{@root.Url}}" class="btn-update">Update</a>
+    </div>
+    {{/equal}}
+    {{#equal Type 'Hidden'}}
+    <div id="item-{{ItemId}}" data-id="{{ItemId}}" class="pricing-item clearfix">
+        <input type="hidden" id="input-{{ItemId}}" data-type="{{Type}}" value="{{Default}}" />
+    </div>
+    {{/equal}}
+{{/each}}
