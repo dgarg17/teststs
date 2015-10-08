@@ -5,11 +5,13 @@ div .cssmultifieldpanel .x-panel-body.x-panel-body-noheader ,div .cssmultifieldp
      width:80%!important
      }
   div .cssmultifieldpanel  input.csspathfield.x-form-text.x-form-field {
-  width:97%!important
-  }
-
+     width:97%!important
+     }
+    div .cssmultifieldpanel  .cssselectfield input.x-form-text.x-form-field {
+      width:95%!important
+    }
   div.multifieldpanelbasecls-body.multifieldpanelbasecls-body-noheader,div.multifieldpanelbasecls.cssmultifieldpanel {
-  width:100%!important
+      width:100%!important
   }
   div.multifieldpanelcollapsedctcls {
        border-bottom-style: solid!important;
