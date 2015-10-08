@@ -1,6 +1,7 @@
+npm-debug.log
 /node_modules
-/app/styles/*.css
-/app/styles/pages
-/app/styles/pages/*.css
-/app/etc/designs/cdw-global/clientlibs/fonts/*.scc
+/app/styles/dist/*.css
+/app/styles/dist/*/*.css
+/app/js/dist/*.js
+/app/js/dist/*/*.js
 *.scc
