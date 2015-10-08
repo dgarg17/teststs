@@ -1,0 +1,100 @@
+/* Mixins */
+
+/* Border Radius */
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+/* Border-Box */
+@mixin border-box { // border-box mixin
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Font-Face Include */
+ @mixin include-font($font-name, $font-file, $font-path: "/assets/fonts/webfonts/") {
+    @font-face {
+        font-family: '#{$font-name}'; font-style: normal; font-weight: normal;
+        src: url('#{$font-path}#{$font-file}.eot');
+        src: url('#{$font-path}#{$font-file}.eot?') format('eot'),
+        //url('#{$font-path}#{$font-file}.woff') format('woff'),
+        url('#{$font-path}#{$font-file}.ttf') format('truetype');
+    }
+}
+
+/* Gradient */
+@mixin vertical-gradient($start-color, $end-color) {
+    background: $start-color; /* Old browsers */
+    background: -moz-linear-gradient(top,  $start-color 0%, $end-color 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start-color), color-stop(100%,$end-color)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $start-color 0%,$end-color 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $start-color 0%,$end-color 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $start-color 0%,$end-color 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $start-color 0%,$end-color 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start-color}', endColorstr='#{$end-color}',GradientType=0 ); /* IE6-9 */                                                                                                                  
+}
+
+/* Responsive Image */
+@mixin img-responsive {
+  max-width: 100%; height: auto;
+}
+
+/* Clearfix */
+@mixin clearfix {
+	*zoom: 1;
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+    &:after {
+		clear: both;
+	}
+}
+
+/* Visually Hidden */
+@mixin visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Ellipses - for single line of text only */
+@mixin ellipses {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+/* No Select */
+@mixin no-select { 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Social */
+@mixin social-color($bgColor, $color) {
+    .icon-twitter { background-color: $bgColor; color: $color; }
+    //.icon-twitter:hover { background-color: $bgHover; }
+    .icon-linkedIn { background-color: $bgColor; color: $color; }
+    //.icon-linkedIn:hover { background-color: $bgHover; }
+    .icon-facebook { background-color: $bgColor; color: $color; }
+    //.icon-facebook:hover { background-color: $bgHover; }
+    .icon-spiceWorks { background-color: $bgColor; color: $color; }
+    //.icon-spiceWorks:hover { background-color: $bgHover; }
+    .icon-uni62 { color: $bgColor; }
+    //.icon-uni62:hover { color: $bgHover; }
+}

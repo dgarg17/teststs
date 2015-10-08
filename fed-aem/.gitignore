@@ -1,0 +1,6 @@
+/node_modules
+/app/styles/*.css
+/app/styles/pages
+/app/styles/pages/*.css
+/app/etc/designs/cdw-global/clientlibs/fonts/*.scc
+*.scc
