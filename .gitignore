@@ -4,3 +4,5 @@
 
 *.DS_Store
 /fed-aem/npm-debug.log
+/fed-aem/app/styles/dist
+/fed-aem/app/js/dist

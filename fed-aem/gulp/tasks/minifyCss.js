@@ -5,6 +5,6 @@ var handleErrors = require('../util/handleErrors');
 
 gulp.task('minifyCss', ['sass'], function() {
   return gulp.src(config.src)
-    //.pipe(minifyCSS())
+    .pipe(minifyCSS())
     .pipe(gulp.dest(config.dest))
 })
