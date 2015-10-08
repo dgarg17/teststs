@@ -151,41 +151,6 @@
                                     value="-gray"/>
                         </options>
                     </ctabutton>
-                    <ctalink
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="Module Link "
-                            fieldDescription="Link for the entire module.Available when the 'Link Entire Module' is checked"
-                            name="./ctalink"
-                            disabled="{Boolean}true"
-                            xtype="pathfield"/>
-                    <ctatarget
-                            jcr:primaryType="cq:Widget"
-                            defaultValue="_self"
-                            fieldDescription="Link opens in same window by default."
-                            fieldLabel="Module Target"
-                            disabled="{Boolean}true"
-                            name="./ctatarget"
-                            type="select"
-                            xtype="selection">
-                        <options jcr:primaryType="cq:WidgetCollection">
-                            <new
-                                    jcr:primaryType="nt:unstructured"
-                                    text="New Window"
-                                    value="_blank"/>
-                            <same
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Same Window (Default)"
-                                    value="_self"/>
-                        </options>
-                    </ctatarget>
-                    <linkentiremodule
-                            jcr:primaryType="cq:Widget"
-                            fieldDescription="If selected,it would link entire module with CTA Link.if entire module is linked, then the individual links set will be disabled."
-                            fieldLabel="Link Entire Module?"
-                            disabled="{Boolean}true"
-                            name="./linkmodule"
-                            type="checkbox"
-                            xtype="selection"/>
                     <resType
                             jcr:primaryType="cq:Widget"
                             defaultValue="foundation/components/image"

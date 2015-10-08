@@ -2,11 +2,11 @@
     <h5 data-sly-test="${properties.headline && !properties.redbarhighlight}"
         style="color:#${properties.textcolor @ context='styleString'}">
 
-        <a data-sly-test="${properties.headLineTextLink&&!properties.linkmodule}"
+        <a data-sly-test="${properties.headLineTextLink}"
            data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.headLineTextLink}"
            href="${link.urlUpdate}" target="${properties.headLineTextTarget}">${properties.headline}</a>
 
-        <p data-sly-test="${!properties.headLineTextLink||properties.linkmodule}" data-sly-unwrap>
+        <p data-sly-test="${!properties.headLineTextLink}" data-sly-unwrap>
             ${properties.headline}</p>
     </h5>
     <h5 data-sly-test="${properties.headline && properties.redbarhighlight=='true'}">
@@ -19,16 +19,12 @@
 
     <div class="button-lockup"
          data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.SubCategoryProductLinksWCMUseHelper' @json=properties.secondaryLinks}"
-         data-sly-test="${properties.secondaryLinks&&secondaryLinks.count==1&&!properties.linkmodule}">
+         data-sly-test="${properties.secondaryLinks&&secondaryLinks.count==1}">
         <a href="${secondaryLinks.subCategoryProductLinks[0].ctalink}"
            target="${secondaryLinks.subCategoryProductLinks[0].ctatarget}"
            class="btn button ${properties.ctabuttonstyle}">${secondaryLinks.subCategoryProductLinks[0].ctalabel} </a>
     </div>
-    <div class="button-lockup"
-         data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.SubCategoryProductLinksWCMUseHelper' @json=properties.secondaryLinks}"
-         data-sly-test="${properties.secondaryLinks&&secondaryLinks.count==1&&properties.linkmodule}">
-        <div class=" button ${properties.ctabuttonstyle}">${secondaryLinks.subCategoryProductLinks[0].ctalabel}</div>
-    </div>
+
     <div class="button-lockup" data-sly-test="${secondaryLinks.count>1}">
         <select class="sub-cat-select partner-links" data-secondary-label="${properties.secondaryLabel}"
                 data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.SubCategoryProductLinksWCMUseHelper' @json=properties.secondaryLinks}"
