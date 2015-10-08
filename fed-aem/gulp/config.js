@@ -50,14 +50,14 @@ module.exports = {
                 require: ["jquery", "jquery-ui/dialog", "handlebars/runtime", "lodash"],
                 // list of externally available modules to exclude from the bundle
                 external: []
-            },
+            }/*,
             {
                 entries: src + '/js/src/test.js',
                 dest: jsDeploy,
                 outputName: 'test.js',
                 // list of externally available modules to exclude from the bundle
                 external: ["jquery", "jquery-ui/dialog", "handlebars/runtime", "lodash"]
-            } 
+            } */
         ]
     }
 };
