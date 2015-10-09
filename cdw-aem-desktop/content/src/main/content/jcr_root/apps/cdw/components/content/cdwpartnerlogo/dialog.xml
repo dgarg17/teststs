@@ -44,6 +44,10 @@
                             value="_self"/>
                     </options>
                 </target>
+                <eventDataDetails
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/cdw/components/content/cdwherobanner/dialog/items/items/tab1/items/eventdata.infinity.json"
+                        xtype="cqinclude"/>
             </items>
         </advanced>
     </items>
