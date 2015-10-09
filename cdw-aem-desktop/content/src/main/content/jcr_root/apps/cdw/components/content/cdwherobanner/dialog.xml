@@ -114,6 +114,45 @@
                                 value="_self"/>
                         </options>
                     </ctatarget>
+                    <eventdata
+                            jcr:primaryType="cq:Widget"
+                            collapsed="{Boolean}true"
+                            collapsible="{Boolean}true"
+                            title="Event data"
+                            xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <eventType
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    defaultValue="sEvent"
+                                    fieldDescription="Event Type between cmCreateElementTag/cmCreatePromotionTag"
+                                    fieldLabel="Event Type"
+                                    name="./eventType"
+                                    type="select"
+                                    xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <standard
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Standard Click(Default)"
+                                            value="sEvent"/>
+                                    <partner
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Partner Click"
+                                            value="pEvent"/>
+                                </options>
+                            </eventType>
+                            <eventTitle
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Event Title"
+                                    name="./eventTitle"
+                                    xtype="textfield"/>
+                            <eventData
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Event Data"
+                                    name="./eventData"
+                                    xtype="textfield"/>
+                        </items>
+                    </eventdata>
                 </items>
             </tab1>
             <image
