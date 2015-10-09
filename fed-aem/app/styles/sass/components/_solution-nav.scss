@@ -9,7 +9,7 @@
 	}
 
 	.partner-header { background:$color-gray90; padding: 0 20px; color:#fff; position:relative; @include clearfix;
-	.wrap-head{padding-top: 10px}
+	.wrap-sol-nav{padding-top: 10px}
 		&.stick {
 			position:fixed;
 			top: 0 ;
@@ -23,15 +23,27 @@
 		}
 		
 		.partner-logo {
+			&.layout-1{
+				//Vertical
+				.img-hold{
+					background-color: white; 
+					padding: 0px 10px 0px 0; 
+					display: inline-block;
+					max-width:100%; 
+					margin-top:10px;
+					}
+			}
+			&.layout-2{
+				//Horizontal
+				.img-hold{
+					background-color: white; 
+					padding: 0px 10px 0px 0; 
+					display: inline-block;
+					max-width:100%; 
+					margin-top:25px;
+					}
+			}
 			img{margin: 5px;}
-			//Vertical
-			// .img-hold{background-color: white; padding: 0px 10px 0px 0; display: inline-block;
-			// max-width:100%; margin-top:10px;}
-			
-			//Horizontal
-			.img-hold{background-color: white; padding: 0px 10px 0px 0; display: inline-block;
-			max-width:100%; margin-top:25px;}
-			
 		}
 
 		.partner-menu {

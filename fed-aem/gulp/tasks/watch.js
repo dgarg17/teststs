@@ -11,6 +11,6 @@ gulp.task('watch', ['browserSync'], function(callback) {
 
 
   gulp.watch(config.sass.src,   ['sass']);
-  gulp.watch(config.markup.src + '/*.html', ['markup']);
+  gulp.watch(config.markup.src, ['markup']);
   // Watchify will watch and recompile our JS, so no need to gulp.watch it
 });
