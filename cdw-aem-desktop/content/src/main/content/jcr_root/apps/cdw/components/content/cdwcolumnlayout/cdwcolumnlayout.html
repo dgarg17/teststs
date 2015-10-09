@@ -1,7 +1,7 @@
 <!--/* CDW Enhanced Column Layout component. */ -->
 <div data-sly-test="${properties.layoutType && properties.layoutType != 'normal'}" 
      class="layout${properties.layoutType} ${properties.padding}">
-    <div style="background-image:url('${currentNode.path @ context='styleString'}.img.png');background-color:#${properties.backgroundColor @ context='styleString'};">
+    <div class="cc-child-bg" style="background-image:url('${currentNode.path @ context='styleString'}.img.png');background-color:#${properties.backgroundColor @ context='styleString'};">
   <div data-sly-include="inner-layout.html" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
 </div>
 </div>
