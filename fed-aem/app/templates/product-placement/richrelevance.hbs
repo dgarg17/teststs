@@ -1,0 +1,44 @@
+
+<div class="rrProductsWrapper json">
+    <div class="rrProductPlacementWrapper">
+        <h3>{{message}}</h3>
+        <div id="scrollable" class="scrollable">
+            <div class="items">
+                {{#items}}
+                <div class="productWrapper">
+                    <div id="horiz" class="rr-product-frame">
+                        <a href={{linkURL}}>
+                            <img src="{{imageURL}}" alt="{{name}}" class="productImage">
+                        </a>
+                        <a class="productDescription" href="{{linkURL}}">
+                            {{name}}
+                        </a>
+                        <div class="reviewRatingsContainer">
+                            {{#if Reviews}}
+                            <div id="rr_rating_{{id}}_link">
+                                <a href="{{linkURL}}expand%3DURV%23URV">
+                                    <img src="" data-rating="{{rating}}" class="starImage" id="rr_rating_{{id}}">
+                                    <span class="reviews">({{Reviews}})</span>
+                                </a>
+                            </div>
+                            {{/if}}
+                        </div>
+                        <div id="price_{{id}}" class="price"></div>
+                        <span class="compareOption">
+                            <input type="checkbox" id="{{id}}" class="compareCheckBox">
+                            <span class="compareCheckBoxlbl">Compare</span>
+                        </span>
+                    </div>
+                </div>
+                {{/items}}
+            </div>
+        </div>
+        <a href="#" class="nextProducts next browse right">Next</a>
+        <a href="#" class="previousProducts prev browse left disabled">Previous</a>
+        <br clear="all" />
+        <div class="compareTrayWrapper">
+            Compare up to <strong>9 Similar Items</strong> with main product
+            <a href="#" class="blueButton disabledButton">Compare</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<!-- Flyout 1 - Links Promos -->
+<div id="{{id}}" class="dropdown flyout-1">
+    <div class="flyout1">
+        <ul class="nav-links">
+            {{#each menu}}
+            <li data-flyout="{{id}}">
+                <a href="{{url}}" onclick="CdwTagMan.createPromotionTag('Global Navigation', 'L2-{{removeSpecial title}}');">{{title}}</a>
+            </li>
+            {{/each}}
+        </ul>
+        <a class="button -gray -border" href="/shop/search/browse.aspx" onclick="CdwTagMan.createPromotionTag('Global Navigation', 'View All {{id}}');">View All Categories</a>
+    </div>
+    <div class="flyout2-wrapper">
+        {{#each menu}}
+            {{#equal template 'LinksPromos' }}
+                {{> linksPromos this}}
+            {{/equal}}
+            {{#equal template 'Links2Col' }}
+                {{> links2Col this}}
+            {{/equal}}
+            {{#equal template 'PrinterFinder' }}
+                {{> printerFinder this}}
+            {{/equal}}
+        {{/each}}
+    </div>
+</div>

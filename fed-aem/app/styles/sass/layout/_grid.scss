@@ -1,0 +1,104 @@
+/* Layouts */
+.layout-full {  
+	background-size:cover; 
+	background-repeat:no-repeat; 
+	background-position:center;
+	&.-padding-50{padding: $column-control-space50;}
+	&.-padding-none{padding: $column-control-space-none;}
+}
+
+.layout-extended { 
+	max-width: 1400px; 
+	position: relative; 
+	margin: 0 auto; 
+	background-size:cover; 
+	background-repeat:no-repeat; 
+	background-position:center;
+	&.-padding-50{padding: $column-control-space50;}
+	&.-padding-none{padding: $column-control-space-none;}
+}
+.layout-normal{
+	background-size:cover; 
+	background-repeat:no-repeat; 
+	background-position:center;
+	&.-padding-50{padding: $column-control-space50;}
+	&.-padding-none{padding: $column-control-space-none;}
+}
+
+.layout-CaaS-765{
+	position: relative; 
+	margin: 0 auto; 
+	max-width:765px;
+	&.-padding-50{padding: $column-control-space50;}
+	&.-padding-none{padding: $column-control-space-none;}
+	}
+
+.layout-CaaS-960{
+	position: relative; 
+	margin: 0 auto; 
+	max-width: 960px;
+	&.-padding-50{padding: $column-control-space50;}
+	&.-padding-none{padding: $column-control-space-none;}
+	}
+
+//Rows
+.layout { @include outer-container;
+	.layout-12 { @include span-columns(12); }
+	.layout-11 { @include span-columns(11); } 
+	.layout-10 { @include span-columns(10); }
+	.layout-9 { @include span-columns(9); }
+	.layout-8 { @include span-columns(8); }
+	.layout-7 { @include span-columns(7); }
+	.layout-6 { @include span-columns(6); }
+	.layout-5 { @include span-columns(5); }
+	.layout-4 { @include span-columns(4); }
+	.layout-3 { @include span-columns(3); }
+	.layout-2 { @include span-columns(2); }
+	.layout-1 { @include span-columns(1); }
+}
+
+@media screen and (max-width: $max-width + 15) {
+	.layout { padding: 0 10px; max-width: ($max-width - 20); }
+}
+
+@media screen and (max-width: $screen-md-min) and (min-width: $screen-sm-min + 1) {
+	//Rows
+	.layout { @include outer-container;
+		.layout-3 { @include span-columns(4);
+			&:nth-child(3n) {
+				margin-right:0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $screen-sm-min) and (min-width: $screen-xs-min + 1) {
+	//Rows
+	.layout { @include outer-container;
+		.layout-6 { @include span-columns(12); }
+		.layout-4 { @include span-columns(6); 
+			&:nth-child(even) {
+				margin-right:0;
+			}
+		}
+		.layout-3 { @include span-columns(6); 
+			&:nth-child(even) {
+				margin-right:0;
+			}
+		}
+	}
+}
+
+	
+@media screen and (max-width: $screen-xs-min) {
+	.layout { @include outer-container;
+		.layout-11 { @include span-columns(10) }
+		.layout-7 { @include span-columns(12); }
+		.layout-5 { @include span-columns(12); }
+		.layout-6 { @include span-columns(12); }
+		.layout-4 { @include span-columns(12); }
+		.layout-3 { @include span-columns(12); }
+		.layout-1 { @include span-columns(2); }
+	}
+}
+
