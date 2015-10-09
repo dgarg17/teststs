@@ -3,7 +3,7 @@ package com.cdw.aem.util;
 import com.day.cq.wcm.api.Page;
 
 
-public class SubCategoryProductLink {
+public class LinkList {
 
     private String ctalabel;
     private String ctalink;
