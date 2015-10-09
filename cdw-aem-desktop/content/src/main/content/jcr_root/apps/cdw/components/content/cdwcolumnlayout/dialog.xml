@@ -103,6 +103,24 @@
                         fieldLabel="Background Color"
                         name="./backgroundColor"
                         xtype="colorfield"/>
+                    <padding
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="-padding-none"
+                        fieldLabel="Include Top and bottom Padding?"
+                        name="./padding"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <disabled
+                                jcr:primaryType="nt:unstructured"
+                                text="Disable (Default)"
+                                value="-padding-none"/>
+                            <enabled
+                                jcr:primaryType="nt:unstructured"
+                                text="Enable"
+                                value="-padding-50"/>
+                        </options>
+                    </padding>
                 </items>
             </tab1>
             <image
