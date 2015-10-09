@@ -8,8 +8,8 @@
 		
 	}
 
-	.partner-header { background:$color-gray90; padding: 10px 20px; color:#fff; position:relative; @include clearfix;
-
+	.partner-header { background:$color-gray90; padding: 0 20px; color:#fff; position:relative; @include clearfix;
+	.wrap-head{padding-top: 10px}
 		&.stick {
 			position:fixed;
 			top: 0 ;
@@ -24,8 +24,13 @@
 		
 		.partner-logo {
 			img{margin: 5px;}
-			.img-hold{background-color: white; padding: 18px 10px 18px 0; display: inline-block;
-			max-width:100%;}
+			//Vertical
+			// .img-hold{background-color: white; padding: 0px 10px 0px 0; display: inline-block;
+			// max-width:100%; margin-top:10px;}
+			
+			//Horizontal
+			.img-hold{background-color: white; padding: 0px 10px 0px 0; display: inline-block;
+			max-width:100%; margin-top:25px;}
 			
 		}
 
@@ -63,7 +68,7 @@
 						font-size:14px;
 						line-height:14px;
 						position:absolute;
-						bottom:-28px;
+						bottom:-22px;
 						width:180px;
 					}
 
