@@ -1,0 +1,32 @@
+/* Color Scheme */
+/* 7 Shades of Grey */
+/* Error Colors */
+/* Bourbo.io and Neat.io */
+/* Mixins */
+/* Border Radius */
+/* Border-Box */
+/* Font-Face Include */
+/* Gradient */
+/* Responsive Image */
+/* Clearfix */
+/* Visually Hidden */
+/* Ellipses - for single line of text only */
+/* No Select */
+/* Social */
+/* Lead Gen Form */
+.form {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #efefef; }
+  .form .required {
+    text-align: right; }
+
+@media screen and (min-width: 970px) {
+  .form {
+    margin-top: -250px;
+    margin-right: 40px;
+    position: relative;
+    z-index: 2; } }
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2JyYW5kL2xlYWQtZ2VuLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7OztBQWNBO0VBQVEsQUFBZTtFQUFNLEFBQVM7RUFBTSxBQUFrQjtFQUM5RCxBQUFNO0lBQU8sQUFBWTs7QUFHekI7RUFDQTtJQUNFLEFBQVk7SUFDWixBQUFjO0lBQ2QsQUFBVTtJQUNWLEFBQVMiLCJmaWxlIjoicGFnZXMvYnJhbmQvbGVhZC1nZW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLy9IZWxwZXJzXG5AaW1wb3J0ICcuLi8uLi9oZWxwZXJzL3ZhcmlhYmxlcyc7XG5AaW1wb3J0ICcuLi8uLi9oZWxwZXJzL21peGlucyc7XG5AaW1wb3J0ICcuL2JvdXJib24nO1xuQGltcG9ydCAnLi9uZWF0JztcblxuLy8gYm9keXtcbi8vIFx0cHtcbi8vIFx0XHRmb250LXNpemU6MThweDtcbi8vIFx0XHRsaW5lLWhlaWdodDogMjBweDtcbi8vIFx0fVxuLy8gfVxuXG4vKiBMZWFkIEdlbiBGb3JtICovXG4uZm9ybSB7IG1hcmdpbi1ib3R0b206IDMwcHg7IHBhZGRpbmc6IDE1cHg7IGJhY2tncm91bmQtY29sb3I6ICNlZmVmZWY7ICBcblx0LnJlcXVpcmVkIHsgdGV4dC1hbGlnbjogcmlnaHQ7IH1cbn1cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1pbi13aWR0aDogJHNjcmVlbi1tZC1taW4pIHtcblx0LmZvcm0geyBcblx0XHRtYXJnaW4tdG9wOiAtMjUwcHg7XG5cdFx0bWFyZ2luLXJpZ2h0OiA0MHB4O1xuXHRcdHBvc2l0aW9uOiByZWxhdGl2ZTsgXG5cdFx0ei1pbmRleDogMjsgXG5cdH0gXG59XG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */
