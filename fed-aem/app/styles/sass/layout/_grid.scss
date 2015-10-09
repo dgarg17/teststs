@@ -5,6 +5,10 @@
 	background-position:center;
 	&.-padding-50{padding: $column-control-space50;}
 	&.-padding-none{padding: $column-control-space-none;}
+	.cc-child-bg{
+		background-size:cover; 
+		background-repeat:no-repeat; 
+		background-position:center;}
 }
 
 .layout-extended { 
@@ -16,6 +20,10 @@
 	background-position:center;
 	&.-padding-50{padding: $column-control-space50;}
 	&.-padding-none{padding: $column-control-space-none;}
+	.cc-child-bg{
+		background-size:cover; 
+		background-repeat:no-repeat; 
+		background-position:center;}
 }
 .layout-normal{
 	background-size:cover; 
@@ -23,6 +31,10 @@
 	background-position:center;
 	&.-padding-50{padding: $column-control-space50;}
 	&.-padding-none{padding: $column-control-space-none;}
+	.cc-child-bg{
+		background-size:cover; 
+		background-repeat:no-repeat; 
+		background-position:center;}
 }
 
 .layout-CaaS-765{
@@ -31,6 +43,10 @@
 	max-width:765px;
 	&.-padding-50{padding: $column-control-space50;}
 	&.-padding-none{padding: $column-control-space-none;}
+	.cc-child-bg{
+		background-size:cover; 
+		background-repeat:no-repeat; 
+		background-position:center;}
 	}
 
 .layout-CaaS-960{
@@ -39,6 +55,10 @@
 	max-width: 960px;
 	&.-padding-50{padding: $column-control-space50;}
 	&.-padding-none{padding: $column-control-space-none;}
+	.cc-child-bg{
+		background-size:cover; 
+		background-repeat:no-repeat; 
+		background-position:center;}
 	}
 
 //Rows
