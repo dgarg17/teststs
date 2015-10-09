@@ -1,0 +1,24 @@
+<!-- Level 2 Item -->
+<div id="{{id}}" class="flyout2 template-links-2col">
+    <div class="flyout2-columns">
+        {{# menu}}
+            {{#group_column 2 items }}  
+            <div class="flyout2-col">
+                <!-- Additional Links Template -->
+                <div class="nav-links">
+                    <ul>
+                        {{#each this }}    
+                        <li>
+                            <a href="{{url}}" onclick="CdwTagMan.createPromotionTag('Global Navigation', 'L2-{{removeSpecial ../../../title}}-L3-{{removeSpecial title}}');">
+                                {{{title}}}
+                            </a>
+                        </li>           
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            {{/group_column}}
+        {{/menu}}
+    </div>
+</div>
+<!-- /Level 2 Item -->

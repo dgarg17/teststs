@@ -1,0 +1,8 @@
+.youtube-wrapper{@include clearfix; margin: $component-spacing; width:100%;
+		&.-center{width: 100%; text-align: center;}
+		&.-right{
+			iframe{float: right;}}
+		&.-left{
+			iframe{float: left;}}
+
+	}

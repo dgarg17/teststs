@@ -1,0 +1,92 @@
+/* Base Elements */
+body { margin: 0; padding: 0; font-family: "Prelo", verdana, sans-serif; font-size: 16px; line-height: 20px; color: $base-color; }
+
+input { color: $base-color; }
+
+a { color: $link-color; text-decoration: none; font-weight: inherit;}
+a:hover { text-decoration: underline; }
+
+img { max-width:100%; }
+
+hr {
+    margin: $component-spacing;
+}
+
+/* Disclaimer */
+.disclaimer{font-size: 12px; line-height: 16px;}
+.pp-override{font-size: 14px; line-height: 18px; }
+
+/* Header Tags */
+h1, h2, h3, h4, h5 {
+    &.-red {
+        color: $color-red;
+    }
+    span {
+         /* Red Bar Highlight */
+         &.-highlight {
+            padding:  0 5px; 
+            background-color: $color-red; 
+            color: white;
+            font-weight: 900;          
+         }
+     }
+}
+h1 { margin: 0 0 15px; font-size: 54px; line-height: 56px; font-weight: 900; }
+h2 { margin: 0 0 15px; font-size: 50px; line-height: 52px; font-weight: 800; }
+h3 { margin: 0 0 12px; font-size: 40px; line-height: 42px; font-weight: bold; }
+h4 { margin: 0 0 10px; font-size: 32px; line-height: 34px; font-weight: bold; }
+h5 { margin: 0 0 8px; font-size: 24px; line-height: 26px; font-weight: bold; }
+h6 { margin: 0 0 2px; font-size: 20px; line-height: 22px; font-weight: bold; }
+
+// Paragraph Tag
+p {  font-size: 16px; line-height: 20px; font-weight: normal; margin: $component-spacing; }
+
+//Line Height Overrides
+.lineheight_1_5{line-height: 150%}
+.lineheight_2{line-height: 200%}
+.lineheight_2_5{line-height: 250%;}
+.lineheight_3{line-height: 300%;}
+
+.mobileNav {
+    display:none;
+    width:24px;
+    height:24px;
+    font-size:24px;
+    line-height:24px;
+    cursor:pointer;
+    position:absolute;
+    top:10px;
+    right:20px;
+}
+
+/* Tables */
+// table {
+//     tr {
+//         &:nth-child(even) { background-color: $color-gray10; }
+//         td { padding: 5px 30px; }
+//     }
+// }
+
+
+/* Colors */
+// .red-text { color: $color-red; }
+// .white-text { color: White; }
+// .link-text {color: $color-link;}
+// .default-text-color {color: $color-J7;}
+
+// Hero Banner Floats
+// .float-right{float: right;}
+// .float-left{float: left;}
+
+// // Hero Banner Left/Right align
+// .align-right{text-align: right; padding-right: 4.27%}
+// .align-left{text-align:left; padding-right: 4.27%}
+
+/* Helpers */
+.visually-hidden { @include visually-hidden; }
+
+.hide { display: none; }
+
+
+
+

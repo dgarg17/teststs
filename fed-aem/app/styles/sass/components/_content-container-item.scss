@@ -1,0 +1,80 @@
+.content-container-item {  padding: 20px; margin: $component-spacing; color:#fff; position:relative; @include clearfix;
+	&:last-child { border: none; }
+
+	&.-purple {
+		background:$color-H3;
+	}
+
+	&.-aqua {
+		background:$color-F4;
+	}
+
+	&.-green {
+		background:$color-E5;
+	}
+
+	&:after {
+		content:'';
+		display:block;
+		position:absolute;
+		bottom:0;
+		right:0;
+		height:146px;
+		width:146px;
+		background: linear-gradient(to left top, $color-gray90 50%, transparent 50%);
+		opacity:.1;
+	}
+	&.-text-center{
+		text-align: center;
+	}
+	&.-text-left{
+		text-align: left;
+	}
+
+	.cont {
+		overflow:hidden;
+	}
+	
+	/*img { margin: 0 auto; display: block; }*/
+	img { margin: 0 15px 0 0; float: left; }
+	
+	a { text-decoration: none; white-space:nowrap; }
+	
+	h4, p, .button-lockup { overflow: hidden; }
+	
+	.copy{ overflow: hidden;
+		h6 { font-weight: bold; }	
+		p { margin: 0 0 15px; font-size:14px;line-height: 16px; }	
+	}
+
+	.button-lockup { @include clearfix; text-align:center;
+		.pricing-block { margin-right: 10px; float: left; 
+			b, strong { font-size: 20px; line-height: 22px; }
+			p { margin: 0; }	
+		}
+		.button { max-width:210px; margin:auto; }
+	}
+
+	.image-lockup { 
+		img {
+			display:block;
+			margin:auto;
+			float:none;
+			max-width:100%;
+		}
+	}
+	
+	&.-right { @include clearfix;
+		img { margin: 0 0 0 15px; float: right; }
+	}
+}
+
+@media screen and (max-width: $screen-xs-min) {
+	.featured-item {
+		img { margin: 0 auto; display: block; float: none; max-width: 100%;}
+
+		&.-right { @include clearfix;
+			img { margin: 0 auto; float: none; }
+		}
+	}
+}

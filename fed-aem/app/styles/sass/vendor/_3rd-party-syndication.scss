@@ -1,0 +1,8 @@
+.syndication-3rd-party{@include clearfix; margin: $component-spacing;
+	&.-right{float:right;}
+	&.-left{float: left;}
+	&.-center{width: 100%; margin: 0 auto;}
+	#_spShowcase {
+		float: none !important;
+	}
+}

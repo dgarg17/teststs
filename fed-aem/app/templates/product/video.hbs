@@ -1,0 +1,6 @@
+<video id="video-{{id}}" poster="https://webobjects2.cdw.com/is/image/CDW/{{id}}" controls width="100%"> 
+    {{#each videos}}
+        <source src='https://webobjects2.cdw.com/is/content/{{url}}' type='video/{{type}}'/>
+    {{/each}}
+    <p>Video not supported on your device</p> 
+</video>

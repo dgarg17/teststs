@@ -1,0 +1,45 @@
+/* Presistent Bar */
+.persistent-bar { padding: 4px 0; width: 100%; font-size: 11px; line-height: 22px; background: url("https://img.cdw.com/assets/header/bar-background.gif") repeat-x 0 0 #595959; color: $white; position: fixed; top: 0; left: 0; z-index: 4; 
+    a { color: $white; text-decoration: none; }
+    .persistent-menu { margin: 0; padding: 0; list-style: none; @include clearfix;
+        li { margin-right: 10px; padding-right: 10px; float: left; border-right: 1px solid #848484; position: relative; }
+        li a { display: inline-block; }
+
+        /* Log On */
+        .logon {
+
+            .logon-panel { background: #fff; font-size: 11px; position: absolute; top: 27px; left: 0; border: 2px solid #0165a3; display: none; 
+                .logon-close { line-height: 25px; position: absolute; top: 0; right: 5px; color: #fff; }
+                .title { margin: 0; padding: 0 5px; font-weight: bold; color: #fff; line-height: 25px; background: #0165a3; }
+                .logon-form { color: $base-color; padding: 10px 5px; }
+                a { color: $link-color; }
+                label { display: block; }
+            }
+
+
+        }
+        /* Need Help */
+        .need-help { border-right: none;
+            & > a { padding-right: 60px; background: url("https://img.cdw.com/assets/header/icon-help.png") right center no-repeat;  }
+
+            .help-panel {  padding: 0 10px 8px 10px; min-width: 150px; background: $white; color: $base-color; position: absolute; top: 27px; left: 0; border: 1px solid #3a678e; display: none; 
+                a { color: $link-color; }
+                h4 { margin: 8px 0; }
+                p { margin: 0 0 5px; color: #666; font-size: 11px; }
+
+                .phone { padding: 0 10px 0 40px; background: url("https://img.cdw.com/assets/icons/help-phone.gif") 0 0 no-repeat; }
+                .email-link { padding: 0 10px 0 40px; background: url("https://img.cdw.com/assets/icons/help-email.gif") 0 center no-repeat; display: block; }
+            }
+        }
+        /* Phone Number */
+        .phone-number {
+
+        }
+
+        /* Cart */
+        .cart-module { border-right: none; float: right; }
+        .cart-module > a { padding: 0 0 0 45px; background: url("https://img.cdw.com/assets/header/icon-cart.png") no-repeat left center rgba(0, 0, 0, 0); }
+
+        }
+
+}

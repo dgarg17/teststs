@@ -1,0 +1,44 @@
+@import 'bourbon';
+/* Prelo */
+@include font-face("Prelo", "/etc/designs/cdw-global/clientlibs/fonts/prelo-light-webfont", 300);
+@include font-face("Prelo", "/etc/designs/cdw-global/clientlibs/fonts/prelo-book-webfont", normal);
+@include font-face("Prelo", "/etc/designs/cdw-global/clientlibs/fonts/prelo-medium-webfont", 500);
+@include font-face("Prelo", "/etc/designs/cdw-global/clientlibs/fonts/prelo-semibold-webfont", bold);
+@include font-face("Prelo", "/etc/designs/cdw-global/clientlibs/fonts/prelo-bold-webfont", 800);
+@include font-face("Prelo", "/etc/designs/cdw-global/clientlibs/fonts/prelo-black-webfont", 900);
+
+/* Prelo Slab */
+//@import url("//hello.myfonts.net/count/2effc9");
+@include font-face("PreloSlab", "/etc/designs/cdw-global/clientlibs/fonts/prelo-slab-light-webfont", 300);
+@include font-face("PreloSlab", "/etc/designs/cdw-global/clientlibs/fonts/prelo-slab-book-webfont", normal);
+@include font-face("PreloSlab", "/etc/designs/cdw-global/clientlibs/fonts/prelo-slab-medium-webfont", 500);
+@include font-face("PreloSlab", "/etc/designs/cdw-global/clientlibs/fonts/prelo-slab-semibold-webfont", bold);
+@include font-face("PreloSlab", "/etc/designs/cdw-global/clientlibs/fonts/prelo-slab-bold-webfont", 800);
+@include font-face("PreloSlab", "/etc/designs/cdw-global/clientlibs/fonts/prelo-slab-black-webfont", 900);
+
+/* Icomoon */
+@include font-face("cdw-icons-global", "/etc/designs/cdw-global/clientlibs/fonts/cdw-icons-global");
+@include font-face("FontAwesome", "/etc/designs/cdw-global/clientlibs/fonts/fontawesome-webfont" );
+
+/* Legacy 
+@include include-font('Prelo-Black', 'prelo-black-webfont');
+@include include-font('Prelo-Bold', 'prelo-bold-webfont');
+@include include-font('Prelo-SemiBold', 'prelo-semibold-webfont');
+@include include-font('Prelo-Book', 'prelo-book-webfont');
+@include font-face("Prelo-Medium", "/assets/fonts/webfonts/prelo-medium-webfont", normal);
+@include include-font('Prelo-Light', 'prelo-light-webfont');*/
+
+/* Prelo Slab ?Legacy? */
+@include include-font('PreloSlab-Medium', '2A559B_0_0');
+@include include-font('PreloSlab-ExtraLight', '2A559B_1_0');
+@include include-font('PreloSlab-Bold', '2A559B_3_0');
+@include include-font('PreloSlab-SemiBold', '2A559B_4_0');
+@include include-font('PreloSlab-Light', '2A559B_5_0');
+@include include-font('PreloSlab-ExtraBold', '2A559B_6_0');
+@include include-font('PreloSlab-Black', '2A559B_7_0');
+@include include-font('PreloSlab-Book', '2A559B_8_0');
+@include include-font('PreloSlab-Hairline', '2A559B_9_0');
+
+.icon { font-family: 'cdw-icons-global'; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    &.icon-cdw:before { content:"a";  }
+}

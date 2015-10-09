@@ -1,0 +1,189 @@
+
+	a {  
+		&.hotzone{
+			text-decoration: none;
+			color: $color-gray80;
+			.featured-inner-cta{
+				color: $color-link ;
+			}
+		}
+	}
+	
+.featured-item {  padding: 0; margin: $component-spacing; @include clearfix;
+	&:last-child { border: none; }
+	
+	/*img { margin: 0 auto; display: block; }*/
+	img.feature-image { margin: 0 15px 50px 0; float: left; }
+
+	.product-image {
+		img {
+			margin:15px;
+			float:left;
+		}
+		&:after {
+			content:'';
+			display:block;
+			clear:both;
+		}
+	}
+	
+
+	
+	
+	
+	h4, p, .button-lockup { overflow: hidden; }
+	
+	.copy{ 	
+		p { margin: 0 0 15px; }	
+		
+	}
+
+	.small-logos {
+		margin-bottom:20px;
+		margin-left:0;
+
+		img {
+			float:none;
+			margin-right:15px;
+		}
+	}
+
+	.image-lockup { 
+		max-height:175px;
+		margin: 15px 0;
+		img {
+			display:block;
+			margin:auto;
+			float:none;
+			max-width:100%;
+		}
+	}
+	
+	&.-right { @include clearfix;
+		.copy{text-align: right;}
+		.select2-container{float: right;}
+		.layout-4 {  float: right; margin:0 0 0 2.35765%; }
+		img.feature-image { float: right; margin:0 0 50px 0; }
+		.button-lockup{
+				a{float: right;}
+		}		
+	}
+	&.-left { @include clearfix;
+		.copy{text-align: left;}
+		.select2-container{float: left;}
+		img.feature-image { float: left; }
+		.button-lockup{
+				a{float: left;}
+		}	
+	}
+	&.-top, &.-bottom { @include clearfix;
+		&.-center{
+			.copy{text-align: center;}
+			.button-lockup{
+				text-align: center;
+				.select2-container{float:none;}
+				}
+		}
+	}
+
+	.select2-container {
+		margin-left:0;
+	}
+
+}
+// ?????
+// .layout-12 {
+// 	
+// 	.select2-container {
+// 		float:left;
+// 		display:inline-block;
+// 		width:auto;
+// 	}
+// 
+// }
+
+@media screen and (max-width: $screen-md-min) and (min-width: $screen-sm-min + 1) {
+	//Rows
+	.layout { @include outer-container;
+		.layout-3 { @include span-columns(4);
+			&:nth-child(3n) {
+				margin-right:0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $screen-sm-min) and (min-width: $screen-xs-min + 1) {
+	//Rows
+	.layout { @include outer-container;
+		.layout-4 { @include span-columns(6); 
+			&:nth-child(even) {
+				margin-right:0;
+			}
+		}
+		.layout-3 { @include span-columns(6); 
+			&:nth-child(even) {
+				margin-right:0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $screen-sm-min) {
+	
+	.featured-item { 
+		img.feature-image {
+			margin-bottom:0;
+		}
+	}
+
+	.layout {
+		.featured-item {
+			.layout-4, 
+			.layout-8 {
+				width:100%;
+				margin:0;
+				float:none;
+
+				.feature-image {
+					width:100%;
+					margin:0 0 15px 0;
+				}
+			}
+		}
+	}
+
+	.layout-12 {
+	
+		.select2-container {
+			float:none;
+			display:block;
+			width:100%;
+		}
+
+	}
+
+}
+
+@media screen and (max-width: $screen-xs-min) {
+	.featured-item {
+		img.feature-image { margin: 0 auto; display: block; float: none; max-width: 100%;}
+
+		.small-logos {
+
+			img {
+				display:inline-block;
+				margin-right:15px;
+			}
+		}
+
+		&.-right { @include clearfix;
+			img { margin: 0 auto; float: none; }
+
+		}
+		&.-left { @include clearfix;
+			img { margin: 0 auto; float: none; }
+
+		}
+	}
+}

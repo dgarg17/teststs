@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta charset="UTF-8">
+	<title>Partner Page</title>
+	<link rel="stylesheet" href="/styles/dist/main.css">
+	<style>
+		.box { margin-bottom: 20px; padding: 15px; min-height: 200px; background-color: #bbb; }
+	</style>
+	<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/boxheight.js"></script>
+	<script type="text/javascript" src="/js/partnerLinks.js"></script>
+	<script type="text/javascript" src="/js/select2.min.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+		//Initialize custom select drop downs
+
+		$('.partner-menu .sub-cat-select').each(function() {
+			$(this).select2({
+				placeholder: "View Other Categories", 
+				minimumResultsForSearch: Infinity
+			});
+		});
+
+		$('.select2-arrow').each(function() {
+			$(this).append('<i class="ico ico-down-arrow"></i>');
+		});
+
+
+	});
+
+	</script>
+</head>
+<body>
+	<header role="banner">
+		<div class="container">
+			<h1>Partner Page</h1>
+		</div>
+	</header>
+	<main id="content" role="main">
+		
+		<div class="partner-page cisco">
+
+			<div class="layout">
+				<div class="hero-full">
+					<div class="hero-text">
+						<img alt="" src="/images/cisco-logo-hero.png" />
+						<h4>Tomorrow Starts Here.</h4>
+						<p>We're building the Internet of Everything for connected cities.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Horizontal logo - layout2-->
+		<div class="partner-header-wrapper ">
+			<div class="partner-header layout-extended">
+				<div class="layout">
+					<div class="mobileNav ico ico-uni71"></div>
+					<div class="partner-logo layout-2">
+						<div class="img-hold">
+							<img alt="Brand Logo" class="logo" src="https://webobjects2.cdw.com/is/image/CDW/LVO?">
+						</div>
+					</div>
+					<div class="layout-10">
+						<div class="wrap-sol-nav">
+							<div>
+								<h1 class="sol-nav-title">Shop Cisco Products and Solutions</h3>
+							</div>
+							<ul class="partner-menu">
+								<li>
+									<a href="#">Conferencing</a>
+								</li>
+								<li>
+									<a href="#">Routers</a>
+								</li>
+								<li>
+									<a href="#">Security</a>
+								</li>
+								<li>
+									<a href="#">Servers</a>
+								</li>
+								<li>
+									<a href="#">Video</a>
+								</li>
+								<li>
+									<a href="#">Wireless</a>
+								</li>
+								<li class="other-categories">
+									<select class="partner-links sub-cat-select">
+										<option value=""></option>
+										<option value="conferencing" data-target="_blank" data-link="http://www.cdw.com">Conferencing</option>
+										<option value="routers" data-link="http://www.cdwg.com">Routers</option>
+										<option value="security" data-link="http://www.cdw.ca">Security</option>
+										<option value="servers" data-link="#">Servers</option>
+										<option value="video" data-link="#">Video</option>
+										<option value="wireless" data-link="#">Wireless</option>
+										<option value="collaboration" data-link="#">Collaboration</option>
+										<option value="collaboration" data-link="#">Collaboration</option>
+									</select>
+									<select class="partner-links mobile-sub-cat-select">
+										<option value="">View Other Categories</option>
+										<option value="conferencing" data-target="_blank" data-link="http://www.cdw.com">Conferencing</option>
+										<option value="routers" data-link="http://www.cdwg.com">Routers</option>
+										<option value="security" data-link="http://www.cdw.ca">Security</option>
+										<option value="servers" data-link="#">Servers</option>
+										<option value="video" data-link="#">Video</option>
+										<option value="wireless" data-link="#">Wireless</option>
+										<option value="collaboration" data-link="#">Collaboration</option>
+										<option value="collaboration" data-link="#">Collaboration</option>
+									</select>
+									<!-- <div class="button-lockup">
+										<a href="#" class="button -clear">Single Subnav Item</a>
+									</div> -->
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Vertical logo - layout-1-->
+		<div class="partner-header-wrapper ">
+			<div class="partner-header layout-extended">
+				<div class="layout">
+					<div class="mobileNav ico ico-uni71"></div>
+					<div class="partner-logo layout-1">
+						<div class="img-hold">
+							<img alt="Brand Logo" class="logo" src="https://webobjects2.cdw.com/is/image/CDW/AT5?">
+						</div>
+					</div>
+					<div class="layout-10">
+						<div class="wrap-sol-nav">
+							<div>
+								<h1 class="sol-nav-title">Shop Cisco Products and Solutions</h3>
+							</div>
+							<ul class="partner-menu">
+								<li>
+									<a href="#">Conferencing</a>
+								</li>
+								<li>
+									<a href="#">Routers</a>
+								</li>
+								<li>
+									<a href="#">Security</a>
+								</li>
+								<li>
+									<a href="#">Servers</a>
+								</li>
+								<li>
+									<a href="#">Video</a>
+								</li>
+								<li>
+									<a href="#">Wireless</a>
+								</li>
+								<li class="other-categories">
+									<select class="partner-links sub-cat-select">
+										<option value=""></option>
+										<option value="conferencing" data-target="_blank" data-link="http://www.cdw.com">Conferencing</option>
+										<option value="routers" data-link="http://www.cdwg.com">Routers</option>
+										<option value="security" data-link="http://www.cdw.ca">Security</option>
+										<option value="servers" data-link="#">Servers</option>
+										<option value="video" data-link="#">Video</option>
+										<option value="wireless" data-link="#">Wireless</option>
+										<option value="collaboration" data-link="#">Collaboration</option>
+										<option value="collaboration" data-link="#">Collaboration</option>
+									</select>
+									<select class="partner-links mobile-sub-cat-select">
+										<option value="">View Other Categories</option>
+										<option value="conferencing" data-target="_blank" data-link="http://www.cdw.com">Conferencing</option>
+										<option value="routers" data-link="http://www.cdwg.com">Routers</option>
+										<option value="security" data-link="http://www.cdw.ca">Security</option>
+										<option value="servers" data-link="#">Servers</option>
+										<option value="video" data-link="#">Video</option>
+										<option value="wireless" data-link="#">Wireless</option>
+										<option value="collaboration" data-link="#">Collaboration</option>
+										<option value="collaboration" data-link="#">Collaboration</option>
+									</select>
+									<!-- <div class="button-lockup">
+										<a href="#" class="button -clear">Single Subnav Item</a>
+									</div> -->
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<hr />
+
+		<div class="layout">
+			<div class="layout-6">
+				<div class="content-container-item -aqua">
+					<h5>One line Headline</h5>
+					<p>Lorem ipsum dolor sit amet, duo facilis percipitur complectitur te, et unum meis sensibus vix. Ut mel dico oportere.</p>
+					<div class="button-lockup">
+						<a href="/" class="button -clear">Learn more about printers</a>
+					</div>
+				</div>
+			</div>
+			<div class="layout-6">
+				<div class="content-container-item -green">
+					<h5>Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines</h5>
+					<p>Lorem ipsum dolor sit amet, duo facilis percipitr complectitur te, et unum meis sensibus vix.</p>
+					<div class="button-lockup">
+						<a href="/" class="button -clear">Learn more about printers</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="layout">
+			<div class="layout-6">
+				<div class="content-container-item -aqua">
+					<h5>One line Headline</h5>
+					<p>Lorem ipsum dolor sit amet, duo facilis percipitur complectitur te, et unum meis sensibus vix. Ut mel dico oportere.</p>
+					<div class="button-lockup">
+						<a href="/" class="button -clear">Learn more about printers</a>
+					</div>
+				</div>
+			</div>
+			<div class="layout-6">
+				<div class="content-container-item -green">
+					<h5>Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines</h5>
+					<p>Lorem ipsum dolor sit amet, duo facilis percipitr complectitur te, et unum meis sensibus vix.</p>
+					<div class="button-lockup">
+						<a href="/" class="button -clear">Learn more about printers</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="layout">
+			<div class="layout-6">
+				<div class="content-container-item -aqua">
+					<h5>One line Headline</h5>
+					<p>Lorem ipsum dolor sit amet, duo facilis percipitur complectitur te, et unum meis sensibus vix. Ut mel dico oportere.</p>
+					<div class="button-lockup">
+						<a href="/" class="button -clear">Learn more about printers</a>
+					</div>
+				</div>
+			</div>
+			<div class="layout-6">
+				<div class="content-container-item -green">
+					<h5>Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines</h5>
+					<p>Lorem ipsum dolor sit amet, duo facilis percipitr complectitur te, et unum meis sensibus vix.</p>
+					<div class="button-lockup">
+						<a href="/" class="button -clear">Learn more about printers</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="layout">
+			<div class="layout-6">
+				<div class="content-container-item -aqua">
+					<h5>One line Headline</h5>
+					<p>Lorem ipsum dolor sit amet, duo facilis percipitur complectitur te, et unum meis sensibus vix. Ut mel dico oportere.</p>
+					<div class="button-lockup">
+						<a href="/" class="button -clear">Learn more about printers</a>
+					</div>
+				</div>
+			</div>
+			<div class="layout-6">
+				<div class="content-container-item -green">
+					<h5>Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines</h5>
+					<p>Lorem ipsum dolor sit amet, duo facilis percipitr complectitur te, et unum meis sensibus vix.</p>
+					<div class="button-lockup">
+						<a href="/" class="button -clear">Learn more about printers</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="layout">
+			<div class="layout-6">
+				<div class="content-container-item -aqua">
+					<h5>One line Headline</h5>
+					<p>Lorem ipsum dolor sit amet, duo facilis percipitur complectitur te, et unum meis sensibus vix. Ut mel dico oportere.</p>
+					<div class="button-lockup">
+						<a href="/" class="button -clear">Learn more about printers</a>
+					</div>
+				</div>
+			</div>
+			<div class="layout-6">
+				<div class="content-container-item -green">
+					<h5>Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines</h5>
+					<p>Lorem ipsum dolor sit amet, duo facilis percipitr complectitur te, et unum meis sensibus vix.</p>
+					<div class="button-lockup">
+						<a href="/" class="button -clear">Learn more about printers</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="layout">
+			<div class="layout-6">
+				<div class="content-container-item -aqua">
+					<h5>One line Headline</h5>
+					<p>Lorem ipsum dolor sit amet, duo facilis percipitur complectitur te, et unum meis sensibus vix. Ut mel dico oportere.</p>
+					<div class="button-lockup">
+						<a href="/" class="button -clear">Learn more about printers</a>
+					</div>
+				</div>
+			</div>
+			<div class="layout-6">
+				<div class="content-container-item -green">
+					<h5>Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines Long headline will wrap to two lines</h5>
+					<p>Lorem ipsum dolor sit amet, duo facilis percipitr complectitur te, et unum meis sensibus vix.</p>
+					<div class="button-lockup">
+						<a href="/" class="button -clear">Learn more about printers</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr />
+
+	</main>
+	<footer>
+		<div class="container">
+			<h6>Footer</h6>
+		</div>
+	</footer>
+</body>
+</html>
