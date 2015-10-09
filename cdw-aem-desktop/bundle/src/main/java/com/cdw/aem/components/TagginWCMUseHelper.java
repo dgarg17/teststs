@@ -11,7 +11,7 @@ public class TagginWCMUseHelper extends WCMUse {
 
     private String eventType;
     private String eventTitle;
-    private String eventdata;
+    private String eventData;
     private String elementType;
 
     @Override
@@ -20,15 +20,25 @@ public class TagginWCMUseHelper extends WCMUse {
         if (eventType == null) {
             eventType = getProperties().get("eventType", String.class);
         }
+        if (eventType == null) {
+            eventType="sEvent";
+        }
         eventTitle = get("eventTitle", String.class);
         if (eventTitle == null) {
             eventTitle = getProperties().get("eventTitle", String.class);
         }
-        eventdata = get("eventdata", String.class);
-        if (eventdata == null) {
-            eventdata = getProperties().get("eventdata", String.class);
+        if (eventTitle == null) {
+            eventTitle="";
+        }
+        eventData = get("eventData", String.class);
+        if (eventData == null) {
+            eventData = getProperties().get("eventData", String.class);
+        }
+        if (eventData == null) {
+            eventData="";
         }
         elementType = get("elementType", String.class);
+
     }
 
     public String getMethodname() {
@@ -46,11 +56,14 @@ public class TagginWCMUseHelper extends WCMUse {
         if (eventType.equalsIgnoreCase("pEvent")) {
             return "Site Promotion";
         }
+        if(getCurrentPage().getProperties().get("ensightenPageName", String.class)==null){
+            return "";
+        }
         return getCurrentPage().getProperties().get("ensightenPageName", String.class);
     }
 
     public String getSecondParam() {
-        return getComponent().getName() + "|" + eventTitle + "-"+elementType+"|" + eventdata;
+        return getComponent().getName() + "|" + eventTitle + "-"+ElementType.find(elementType).getName()+"+" + eventData;
     }
 
     public String getEventData() {
