@@ -41,11 +41,11 @@ public class TagginWCMUseHelper extends WCMUse {
 
     }
 
-    public String getMethodname() {
+    public String getMethodName() {
         if (eventType.equalsIgnoreCase("pEvent")) {
-            return "cmCreatePromotionTag";
+            return "CdwTagMan.createPromotionTag";
         }
-        return "cmCreateElementTag";
+        return "CdwTagMan.createElementPageTag";
     }
 
     public String getEventType() {
@@ -67,7 +67,7 @@ public class TagginWCMUseHelper extends WCMUse {
     }
 
     public String getEventData() {
-        return getMethodname() + "(\'" + getFirstParam() + "\',\'" + getSecondParam() + "\')";
+        return getMethodName() + "(\'" + getFirstParam() + "\',\'" + getSecondParam() + "\')";
     }
 
 }
