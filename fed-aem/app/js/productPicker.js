@@ -122,7 +122,7 @@
 	        infinite: false,
 		    slidesToShow: 4,
 		    slidesToScroll: 4,
-		    swipeToSlide: true,
+		    swipeToSlide: false,
 		    prevArrow: '<span class="ico prev ico-chevron-left"></span>',
 		    nextArrow: '<span class="ico next ico-chevron-right"></span>',
 		    responsive: [
