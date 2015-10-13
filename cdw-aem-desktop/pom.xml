@@ -197,17 +197,7 @@
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>2.9</version>
                 </plugin>
-                <plugin>
-                    <groupId>com.day.jcr.vault</groupId>
-                    <artifactId>content-package-maven-plugin</artifactId>
-                    <version>0.0.22</version>
-                    <extensions>true</extensions>
-                    <configuration>
-                        <failOnError>true</failOnError>
-                        <username>${crx.username}</username>
-                        <password>${crx.password}</password>
-                    </configuration>
-                </plugin>
+     
                 <!--This plugin's configuration is used to store Eclipse
                     m2e settings only. It has no influence on the Maven build itself. -->
                 <plugin>

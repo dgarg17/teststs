@@ -6,6 +6,12 @@ $(document).ready(function() {
 				minimumResultsForSearch: Infinity
 			});
 		});
+		$('.featured-item .partner-links').each(function() {
+			$(this).select2({
+				placeholder: $(this).data("secondary-label"),
+				minimumResultsForSearch: Infinity
+			});
+        });
 		$('.select2-arrow').each(function() {
 			$(this).append('<i class="ico ico-down-arrow"></i>');
 		});

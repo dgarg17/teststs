@@ -1,191 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="cq:Dialog"
-    height="{Long}700"
-    title="dialog"
-    xtype="dialog">
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          height="{Long}700"
+          title="dialog"
+          xtype="dialog">
     <items
-        jcr:primaryType="cq:Widget"
-        xtype="tabpanel">
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
+            <secondarryLinks
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/cdw/components/content/cdwsubcategoryproduct/dialog/items/secondaryLinks.infinity.json"
+                    xtype="cqinclude"/>
             <tab1
-                jcr:primaryType="cq:Widget"
-                anchor="100%"
-                title="Text"
-                xtype="panel">
+                    jcr:primaryType="cq:Widget"
+                    anchor="100%"
+                    title="Text"
+                    xtype="panel">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <headline
-                        jcr:primaryType="cq:Widget"
-                        fieldDescription="Maximum length is 70 characters."
-                        fieldLabel="Headline"
-                        maxLength="70"
-                        name="./headline"
-                        xtype="textfield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Maximum length is 70 characters."
+                            fieldLabel="Headline"
+                            maxLength="70"
+                            name="./headline"
+                            xtype="textfield"/>
                     <headlinecolor
-                        jcr:primaryType="cq:Widget"
-                        colors="[4D4E53,CC0000,0070BC]"
-                        defaultValue="4D4E53"
-                        fieldDescription="Default Value is Dark Grey(#4D4E53)."
-                        fieldLabel="Headline Font Color"
-                        name="./textcolor"
-                        xtype="colorfield"/>
-                    <redbarhighlight
-                        jcr:primaryType="cq:Widget"
-                        fieldDescription="If selected, it would override headline color."
-                        fieldLabel="Red Bar Headline Treatment?"
-                        name="./redbarhighlight"
-                        type="checkbox"
-                        xtype="selection"/>
-                    <text
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Description"
-                        name="./bodytext"
-                        xtype="richtext"/>
-                    <imagealignment
-                        jcr:primaryType="cq:Widget"
-                        defaultValue="-top"
-                        fieldDescription="Image placement is Top by default."
-                        fieldLabel="Image Position"
-                        name="./imagealignment"
-                        type="select"
-                        xtype="selection">
-                        <options jcr:primaryType="cq:WidgetCollection">
-                            <top
-                                jcr:primaryType="nt:unstructured"
-                                text="Top(Default)"
-                                value="-top"/>
-                            <left
-                                jcr:primaryType="nt:unstructured"
-                                text="Left"
-                                value="-left"/>
-                            <right
-                                jcr:primaryType="nt:unstructured"
-                                text="Right"
-                                value="-right"/>
-                            <bottom
-                                jcr:primaryType="nt:unstructured"
-                                text="Bottom"
-                                value="-bottom"/>
-                        </options>
-                    </imagealignment>
-                    <imagesource
-                        jcr:primaryType="cq:Widget"
-                        defaultValue="dam"
-                        fieldLabel="Image Source"
-                        name="./imagesrc"
-                        type="select"
-                        xtype="selection">
-                        <options jcr:primaryType="cq:WidgetCollection">
-                            <dam
-                                jcr:primaryType="nt:unstructured"
-                                text="AEM DAM (Default)"
-                                value="dam"/>
-                            <scene7
-                                jcr:primaryType="nt:unstructured"
-                                text="Scene 7"
-                                value="scene7"/>
-                        </options>
-                        <listeners
-                            jcr:primaryType="nt:unstructured"
-                            loadcontent="function(){var value= this.getValue();var newvalue=&quot;&quot;; if(value==&quot;dam&quot;){ newvalue=&quot;scene7&quot;;}else{newvalue=&quot;dam&quot;;}this.findParentByType('tabpanel').getComponent(newvalue).disable(this); this.findParentByType('tabpanel').getComponent(value).enable(this);}"
-                            selectionchanged="function(box,value){if(value==&quot;dam&quot;){newvalue=&quot;scene7&quot;;box.findParentByType('tabpanel').getComponent(newvalue).disable(this);box.findParentByType('tabpanel').getComponent(value).enable(this);}else{newvalue=&quot;dam&quot;;box.findParentByType('tabpanel').getComponent(newvalue).disable(this);box.findParentByType('tabpanel').getComponent(value).enable(this);}}"/>
-                    </imagesource>
-                    <ctalabel
-                        jcr:primaryType="cq:Widget"
-                        defaultValue="Learn More"
-                        fieldDescription="Max character limit is 24"
-                        fieldLabel="CTA Label"
-                        maxLength="{Long}24"
-                        name="./cdwctalabel"
-                        xtype="textfield"/>
-                    <ctalink
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="CTA Link"
-                        name="./ctalink"
-                        xtype="pathfield"/>
-                    <ctabutton
-                        jcr:primaryType="cq:Widget"
-                        defaultValue="-red"
-                        fieldLabel="CTA Button Style"
-                        name="./ctabuttonstyle"
-                        type="select"
-                        xtype="selection">
-                        <options jcr:primaryType="cq:WidgetCollection">
-                            <red
-                                jcr:primaryType="nt:unstructured"
-                                text="Signature Red Button (Default)"
-                                value="-red"/>
-                            <white
-                                jcr:primaryType="nt:unstructured"
-                                text="White Ghost Button"
-                                value="-white"/>
-                            <gray
-                                jcr:primaryType="nt:unstructured"
-                                text="Dark Grey Button"
-                                value="-gray"/>
-                        </options>
-                    </ctabutton>
-                    <ctatarget
-                        jcr:primaryType="cq:Widget"
-                        defaultValue="_self"
-                        fieldDescription="Link opens in same window by default."
-                        fieldLabel="CTA Link Target"
-                        name="./ctatarget"
-                        type="select"
-                        xtype="selection">
+                            jcr:primaryType="cq:Widget"
+                            colors="[4D4E53,CC0000]"
+                            defaultValue="4D4E53"
+                            fieldDescription="Default Value is Dark Grey(#4D4E53"
+                            fieldLabel="Headline Font Color"
+                            name="./textcolor"
+                            xtype="colorfield"/>
+                    <headLineTextLink
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="HeadLine Link"
+                            fieldDescription="CTA link for the HeadLine"
+                            name="./headLineTextLink"
+                            xtype="pathfield"/>
+                    <headLineTextTarget
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="_self"
+                            fieldDescription="Link opens in same window by default."
+                            fieldLabel="HeadLine Target"
+                            name="./headLineTextTarget"
+                            type="select"
+                            xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <new
-                                jcr:primaryType="nt:unstructured"
-                                text="New Window"
-                                value="_blank"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="New Window"
+                                    value="_blank"/>
                             <same
-                                jcr:primaryType="nt:unstructured"
-                                text="Same Window (Default)"
-                                value="_self"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Same Window (Default)"
+                                    value="_self"/>
                         </options>
-                    </ctatarget>
-                    <linkentiremodule
-                        jcr:primaryType="cq:Widget"
-                        fieldDescription="If selected, it would link entire module with CTA Link."
-                        fieldLabel="Link Entire Module?"
-                        name="./linkmodule"
-                        type="checkbox"
-                        xtype="selection"/>
+                    </headLineTextTarget>
+                    <redbarhighlight
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="If selected, it would override headline color."
+                            fieldLabel="Red Bar Headline Treatment?"
+                            name="./redbarhighlight"
+                            type="checkbox"
+                            xtype="selection"/>
+                    <text
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Description"
+                            name="./bodytext"
+                            xtype="richtext"/>
+                    <alignment
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="-left"
+                            fieldDescription="Module is Left aligned by default."
+                            fieldLabel="Module Alignment"
+                            name="./alignment"
+                            type="select"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <top
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Top"
+                                    value="-top"/>
+                            <left
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Left(Default)"
+                                    value="-left"/>
+                            <right
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Right"
+                                    value="-right"/>
+                            <bottom
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Bottom"
+                                    value="-bottom"/>
+                        </options>
+                    </alignment>
+                    <imagesource
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="dam"
+                            fieldLabel="Image Source"
+                            name="./imagesrc"
+                            type="select"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <dam
+                                    jcr:primaryType="nt:unstructured"
+                                    text="AEM DAM (Default)"
+                                    value="dam"/>
+                            <scene7
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Scene 7"
+                                    value="scene7"/>
+                        </options>
+                        <listeners
+                                jcr:primaryType="nt:unstructured"
+                                loadcontent="function(){var value= this.getValue();var newvalue=&quot;&quot;; if(value==&quot;dam&quot;){ newvalue=&quot;scene7&quot;;}else{newvalue=&quot;dam&quot;;}this.findParentByType('tabpanel').getComponent(newvalue).disable(this); this.findParentByType('tabpanel').getComponent(value).enable(this);}"
+                                selectionchanged="function(box,value){if(value==&quot;dam&quot;){newvalue=&quot;scene7&quot;;box.findParentByType('tabpanel').getComponent(newvalue).disable(this);box.findParentByType('tabpanel').getComponent(value).enable(this);}else{newvalue=&quot;dam&quot;;box.findParentByType('tabpanel').getComponent(newvalue).disable(this);box.findParentByType('tabpanel').getComponent(value).enable(this);}}"/>
+                    </imagesource>
+                    <secondaryLabel
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="See More Categories"
+                            fieldDescription="Max character limit is 30,Application only for two or more links,Defaults to 'See More Categories'."
+                            fieldLabel="Dropdown Button Label"
+                            maxLength="{Long}30"
+                            name="./secondaryLabel"
+                            xtype="textfield"/>
+                    <ctabutton
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="-red"
+                            fieldLabel="CTA Button Style"
+                            fieldDescription="Applicable only for single bottom."
+                            name="./ctabuttonstyle"
+                            type="select"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <red
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Signature Red Button (Default)"
+                                    value="-red"/>
+                            <white
+                                    jcr:primaryType="nt:unstructured"
+                                    text="White Ghost Button"
+                                    value="-white"/>
+                            <gray
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Dark Grey Button"
+                                    value="-gray"/>
+                        </options>
+                    </ctabutton>
                     <resType
-                        jcr:primaryType="cq:Widget"
-                        defaultValue="foundation/components/image"
-                        ignoreData="{Boolean}true"
-                        name="./image/sling:resourceType"
-                        value="foundation/components/image"
-                        xtype="hidden"/>
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="foundation/components/image"
+                            ignoreData="{Boolean}true"
+                            name="./image/sling:resourceType"
+                            value="foundation/components/image"
+                            xtype="hidden"/>
                 </items>
             </tab1>
             <layout
-                jcr:primaryType="cq:Widget"
-                ddGroups="[s7media]"
-                disabled="{Boolean}true"
-                fileNameParameter="./fileName"
-                fileReferenceParameter="./fileReference"
-                id="scene7"
-                name="./file"
-                requestSuffix=".img.png"
-                title="Scene7 Background Image"
-                xtype="s7html5smartimage"/>
+                    jcr:primaryType="cq:Widget"
+                    ddGroups="[s7media]"
+                    disabled="{Boolean}true"
+                    fileNameParameter="./fileName"
+                    fileReferenceParameter="./fileReference"
+                    id="scene7"
+                    name="./file"
+                    requestSuffix=".img.png"
+                    title="Scene7 Background Image"
+                    xtype="s7html5smartimage"/>
             <image
-                jcr:primaryType="cq:Widget"
-                allowUpload="{Boolean}false"
-                cropParameter=""
-                ddGroups="[media]"
-                disableZoom="{Boolean}true"
-                fileNameParameter="./image/fileName"
-                fileReferenceParameter="./image/fileReference"
-                id="dam"
-                mapParameter=""
-                name="./image/file"
-                requestSuffix="/image.img.png"
-                rotateParameter=""
-                title="Background Image"
-                xtype="html5smartimage"/>
+                    jcr:primaryType="cq:Widget"
+                    allowUpload="{Boolean}false"
+                    cropParameter=""
+                    ddGroups="[media]"
+                    disableZoom="{Boolean}true"
+                    fileNameParameter="./image/fileName"
+                    fileReferenceParameter="./image/fileReference"
+                    id="dam"
+                    mapParameter=""
+                    name="./image/file"
+                    requestSuffix="/image.img.png"
+                    rotateParameter=""
+                    title="Image"
+                    xtype="html5smartimage"/>
         </items>
     </items>
 </jcr:root>

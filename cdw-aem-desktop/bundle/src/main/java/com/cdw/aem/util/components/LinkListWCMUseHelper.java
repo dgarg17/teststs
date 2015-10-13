@@ -1,7 +1,7 @@
 package com.cdw.aem.util.components;
 
 import com.adobe.cq.sightly.WCMUse;
-import com.cdw.aem.util.SubCategoryProductLink;
+import com.cdw.aem.util.LinkList;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.slf4j.LoggerFactory;
@@ -11,9 +11,9 @@ import java.util.List;
 /**
  * Created by goutved on 7/29/2015.
  */
-public class SubCategoryProductLinksWCMUseHelper extends WCMUse {
+public class LinkListWCMUseHelper extends WCMUse {
 
-    protected org.slf4j.Logger log = LoggerFactory.getLogger(SubCategoryProductLinksWCMUseHelper.class);
+    protected org.slf4j.Logger log = LoggerFactory.getLogger(LinkListWCMUseHelper.class);
     private String[] secondaryLinksJson;
 
 
@@ -29,10 +29,10 @@ public class SubCategoryProductLinksWCMUseHelper extends WCMUse {
         log.debug(this.getClass().getName() + "secondaryLinksJson " + secondaryLinksJson.length);
     }
 
-    public List<SubCategoryProductLink> getSubCategoryProductLinks() {
-        List<SubCategoryProductLink> subCategoryProductLinks = (new Gson().fromJson(concatJson(secondaryLinksJson), new TypeToken<List<SubCategoryProductLink>>() {
+    public List<LinkList> getSubCategoryProductLinks() {
+        List<LinkList> linkLists = (new Gson().fromJson(concatJson(secondaryLinksJson), new TypeToken<List<LinkList>>() {
         }.getType()));
-        return subCategoryProductLinks;
+        return linkLists;
     }
 
     private String concatJson(String[] jsonArray) {
