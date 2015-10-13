@@ -21,7 +21,7 @@
                     ${properties.bodytext}
                 </p>
 
-                <div class="button-lockup"  data-sly-use.event="${'com.cdw.aem.components.TagginWCMUseHelper' @eventType=properties.eventType,eventTitle=properties.eventTitle,eventData=properties.eventData,elementType='CTA'}">
+                <div class="button-lockup"  data-sly-use.event="${'com.cdw.aem.components.TagginWCMUseHelper' @elementType='cta'}">
 
                     <a  data-sly-test="${(!(properties.eventTitle||properties.eventData)) && properties.ctalink}"
                         data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
@@ -34,7 +34,7 @@
                        href="${link.urlUpdate}"
                        target="${properties.ctatarget}"
                        class="btn button -red"
-                       onclick="${event.eventData @context='html'}">${properties.cdwctalabel} </a>
+                       onclick="${event.taggingEvent @context='html'}">${properties.cdwctalabel} </a>
 
                 </div>
             </div>

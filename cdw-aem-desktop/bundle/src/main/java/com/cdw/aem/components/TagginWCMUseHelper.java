@@ -38,6 +38,9 @@ public class TagginWCMUseHelper extends WCMUse {
             eventData="";
         }
         elementType = get("elementType", String.class);
+        if (elementType == null) {
+            elementType = getProperties().get("elementType", String.class);
+        }
 
     }
 
@@ -63,10 +66,10 @@ public class TagginWCMUseHelper extends WCMUse {
     }
 
     public String getSecondParam() {
-        return getComponent().getName() + "|" + eventTitle + "-"+ElementType.find(elementType).getName()+"+" + eventData;
+        return getComponent().getName() + "|" + eventTitle + "-"+ElementType.find(elementType).getName()+"|" + eventData;
     }
 
-    public String getEventData() {
+    public String getTaggingEvent() {
         return getMethodName() + "(\'" + getFirstParam() + "\',\'" + getSecondParam() + "\')";
     }
 
