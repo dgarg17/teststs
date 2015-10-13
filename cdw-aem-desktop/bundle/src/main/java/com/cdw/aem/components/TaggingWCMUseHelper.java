@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public class TagginWCMUseHelper extends WCMUse {
+public class TaggingWCMUseHelper extends WCMUse {
 
     protected Logger log = LoggerFactory.getLogger(this.getClass());
 
@@ -21,27 +21,26 @@ public class TagginWCMUseHelper extends WCMUse {
             eventType = getProperties().get("eventType", String.class);
         }
         if (eventType == null) {
-            eventType="sEvent";
+            eventType = "sEvent";
         }
         eventTitle = get("eventTitle", String.class);
         if (eventTitle == null) {
             eventTitle = getProperties().get("eventTitle", String.class);
         }
         if (eventTitle == null) {
-            eventTitle="";
+            eventTitle = "";
         }
         eventData = get("eventData", String.class);
         if (eventData == null) {
             eventData = getProperties().get("eventData", String.class);
         }
         if (eventData == null) {
-            eventData="";
+            eventData = "";
         }
         elementType = get("elementType", String.class);
         if (elementType == null) {
             elementType = getProperties().get("elementType", String.class);
         }
-
     }
 
     public String getMethodName() {
@@ -59,14 +58,14 @@ public class TagginWCMUseHelper extends WCMUse {
         if (eventType.equalsIgnoreCase("pEvent")) {
             return "Site Promotion";
         }
-        if(getCurrentPage().getProperties().get("ensightenPageName", String.class)==null){
+        if (getCurrentPage().getProperties().get("ensightenPageName", String.class) == null) {
             return "";
         }
         return getCurrentPage().getProperties().get("ensightenPageName", String.class);
     }
 
     public String getSecondParam() {
-        return getComponent().getName() + "|" + eventTitle + "-"+ElementType.find(elementType).getName()+"|" + eventData;
+        return getComponent().getName() + "|" + eventTitle + "-" + ElementType.find(elementType).getName() + "|" + eventData;
     }
 
     public String getTaggingEvent() {
