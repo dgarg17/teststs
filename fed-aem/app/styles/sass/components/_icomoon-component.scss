@@ -1,0 +1,182 @@
+$font-size-lg: 54px;
+$font-size-md: 40px;
+$font-size-sm: 32px;
+
+$base-lg: $font-size-lg + 6px;
+$base-md: $font-size-md + 6px;
+$base-sm: $font-size-sm + 6px;
+
+$margin-lg: (-$font-size-lg/2) 0 0 (-$font-size-lg/2);
+$margin-md: (-$font-size-md/2) 0 0 (-$font-size-md/2);
+$margin-sm: (-$font-size-sm/2) 0 0 (-$font-size-sm/2);
+
+$center-icon: 50%;
+
+
+.-icomoon-hold{
+	.shape{
+		display: block;
+		position: relative;
+		&.-square{
+			&.-large{
+				width: $base-lg;
+				height: $base-lg;
+				span{
+					position: absolute;
+					top: $center-icon;
+					left: $center-icon;
+					margin: $margin-lg;
+					font-size: $font-size-lg;
+					}
+				}
+			&.-medium{
+				width: $base-md;
+				height: $base-md;
+				span{
+					position: absolute;
+					top: $center-icon;
+					left: $center-icon;
+					margin: $margin-md;
+					font-size: $font-size-md;
+					}
+			}
+			&.-small{
+				width: $base-sm;
+				height: $base-sm;
+				span{
+					position: absolute;
+					top: $center-icon;
+					left: $center-icon;
+					margin: $margin-sm;
+					font-size: $font-size-sm;
+					}
+			}
+			
+			background: red;
+		}
+		&.-circle{
+			&.-large{
+				width: $base-lg;
+				height: $base-lg;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;				
+				span{
+					position: absolute;
+					top: $center-icon;
+					left:$center-icon;
+					margin: $margin-lg;
+					font-size: $font-size-lg;
+					}
+				}
+			&.-medium{
+				width: $base-md;
+				height: $base-md;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				span{
+					position: absolute;
+					top: $center-icon;
+					left:$center-icon;
+					margin: $margin-md;
+					font-size: $font-size-md;
+					}
+			}
+			&.-small{
+				width: $base-sm;
+				height: $base-sm;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				span{
+					position: absolute;
+					top: $center-icon;
+					left: $center-icon;
+					margin: $margin-sm;
+					font-size: $font-size-sm
+					}
+			}
+			
+			
+			background: red;
+		}	
+	}
+}
+
+#space-invader{
+
+  box-shadow:
+    0 0 0 1em red,
+    0 1em 0 1em red,
+    -2.5em 1.5em 0 .5em red,
+    2.5em 1.5em 0 .5em red,
+    -3em -3em 0 0 red,
+    3em -3em 0 0 red,
+    -2em -2em 0 0 red,
+    2em -2em 0 0 red,
+    -3em -1em 0 0 red,
+    -2em -1em 0 0 red,
+    2em -1em 0 0 red,
+    3em -1em 0 0 red,
+    -4em 0 0 0 red,
+    -3em 0 0 0 red,
+    3em 0 0 0 red,
+    4em 0 0 0 red,
+    -5em 1em 0 0 red,
+    -4em 1em 0 0 red,
+    4em 1em 0 0 red,
+    5em 1em 0 0 red,
+    -5em 2em 0 0 red,
+    5em 2em 0 0 red,
+    -5em 3em 0 0 red,
+    -3em 3em 0 0 red,
+    3em 3em 0 0 red,
+    5em 3em 0 0 red,
+    -2em 4em 0 0 red,
+    -1em 4em 0 0 red,
+    1em 4em 0 0 red,
+    2em 4em 0 0 red;
+
+    background: red;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+
+    margin: 50px 0 70px 65px;
+  }
+  
+  #yin-yang {
+	width: 96px;
+	height: 48px;
+	background: #eee;
+	border-color: red;
+	border-style: solid;
+	border-width: 2px 2px 50px 2px;
+	border-radius: 100%;
+	position: relative;
+}
+
+#yin-yang:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	background: #eee;
+	border: 18px solid red;
+	border-radius: 100%;
+	width: 12px;
+	height: 12px;
+}
+
+#yin-yang:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: red;
+	border: 18px solid #eee;
+	border-radius:100%;
+	width: 12px;
+	height: 12px;
+}
