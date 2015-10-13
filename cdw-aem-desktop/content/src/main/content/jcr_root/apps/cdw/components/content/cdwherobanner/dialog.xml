@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Dialog"
-    height="{Long}500"
+    height="650"
     title="dialog"
     xtype="dialog">
     <items
@@ -51,7 +51,7 @@
                         xtype="textarea"/>
                     <textcolor
                         jcr:primaryType="cq:Widget"
-                        colors="[4D4D4F,FFFFFF,CC0000,0072BC]"
+                        colors="[4D4D4F,FFFFFF,CC0000]"
                         fieldLabel="Text Color"
                         name="./textcolor"
                         xtype="colorfield"/>
@@ -95,6 +95,24 @@
                         fieldLabel="CTA Link"
                         name="./ctalink"
                         xtype="pathfield"/>
+                    <ctabutton
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="-red"
+                        fieldLabel="CTA Button Style"
+                        name="./ctabuttonstyle"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <red
+                                jcr:primaryType="nt:unstructured"
+                                text="Signature Red Button (Default)"
+                                value="-red"/>
+                            <white
+                                jcr:primaryType="nt:unstructured"
+                                text="White Ghost Button"
+                                value="-white"/>
+                        </options>
+                    </ctabutton>
                     <ctatarget
                         jcr:primaryType="cq:Widget"
                         defaultValue="_self"
