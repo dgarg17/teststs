@@ -87,8 +87,8 @@
 		</div>
 		<div class="layout">
 			<div class="layout-7">
-				<div class="box">
-					Aside
+				<div class="box product-placement" data-placement="cart_page.json_rr3">
+					Aside (RR TEST)
 				</div>
 			</div>
 			<div class="layout-5">
@@ -318,7 +318,24 @@
 		</div>
 	</footer>
 
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/main.js"></script>
+
+
+<script src="//media.richrelevance.com/rrserver/js/0.4/p13n.js?v=1.0.0.25285"></script>
+<script src="js/main.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		CDW.productPlacement.init({
+			'apiKey': 'c1b6edde3bea10a0',
+			'baseUrl': 'https://integration.richrelevance.com/rrserver/',
+			'sessionId': 'B9F16F4C4D9E4B8C9B71722D70392559',
+			'userId': '5428E218-6333-46E2-BE7F-0DEB216E6E56',
+			'type': 'cart',
+			'typeData': { 'itemId': [  ] },
+			'template': '',
+			'placements': [ 'cart_page.json_rr3','cart_page.json_rr4' ]
+		});
+	});
+</script>
 </body>
 </html>
