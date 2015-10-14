@@ -169,7 +169,7 @@
                     id="scene7"
                     name="./file"
                     requestSuffix=".img.png"
-                    title="Scene7 Background Image"
+                    title="Scene7 Image"
                     xtype="s7html5smartimage"/>
             <image
                     jcr:primaryType="cq:Widget"
@@ -184,7 +184,7 @@
                     name="./image/file"
                     requestSuffix="/image.img.png"
                     rotateParameter=""
-                    title="Image"
+                    title="DAM Image"
                     xtype="html5smartimage"/>
         </items>
     </items>
