@@ -10,12 +10,14 @@
 			href="${link.urlUpdate}"
 			data-sly-test="${(!(properties.eventTitle||properties.eventData))&&properties.ctalink}"
 			target="${properties.ctatarget}"
+			title="${properties.linkTitle}"
 			class="button -clear">
 			${properties.cdwctalabel}
 		</a>
 		<a
 				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
 				href="${link.urlUpdate}"
+				title="${properties.linkTitle}"
 				data-sly-test="${((properties.eventTitle||properties.eventData))&&properties.ctalink}"
 				target="${(properties.eventTitle||properties.eventData)&&properties.ctatarget}"
 				onclick="${event.taggingEvent @context='html'}"

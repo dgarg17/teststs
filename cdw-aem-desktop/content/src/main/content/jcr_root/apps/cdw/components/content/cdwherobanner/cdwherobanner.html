@@ -27,11 +27,13 @@
                         data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
                         href="${link.urlUpdate}"
                         target="${properties.ctatarget}"
+                        title="${properties.linkTitle}"
                         class="btn button -red" >${properties.cdwctalabel} </a>
 
                     <a data-sly-test="${(properties.eventTitle||properties.eventData)&&properties.ctalink}"
                        data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper'  @url=properties.ctalink}"
                        href="${link.urlUpdate}"
+                       title="${properties.linkTitle}"
                        target="${properties.ctatarget}"
                        class="btn button -red"
                        onclick="${event.taggingEvent @context='html'}">${properties.cdwctalabel} </a>

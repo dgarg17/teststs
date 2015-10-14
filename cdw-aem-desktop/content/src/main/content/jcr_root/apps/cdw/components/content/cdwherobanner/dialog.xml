@@ -114,6 +114,12 @@
                                 value="_self"/>
                         </options>
                     </ctatarget>
+                    <linkTitle
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="If defined, will populate the 'title' attribute of the 'a' element."
+                            fieldLabel="Link Tilte"
+                            name="./linkTitle"
+                            xtype="textfield"/>
                     <eventdata
                             jcr:primaryType="cq:Widget"
                             collapsed="{Boolean}true"
