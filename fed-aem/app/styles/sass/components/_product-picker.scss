@@ -156,6 +156,9 @@
 .layout-3, 
 .slick-carousel {
 	.product-picker { 
+		@media screen and (max-width: $screen-xs-min) {
+				min-height: 480px;
+			}
 
 		.pp-header-hold {
 			height:76px;
@@ -170,10 +173,14 @@
 		}
 
 		.pp-copy-hold {
-			height:190px;
+			height:210px;
+			
+			@media screen and (max-width: $screen-lg-min) and (min-width: $screen-sm-min + 1){
+				height:235px;
+			}
 
 			@media screen and (max-width: $screen-sm-min) and (min-width: $screen-xs-min + 1) {
-				height:170px;
+				height:210px;
 			}
 
 			@media screen and (max-width: $screen-xs-min) {
