@@ -52,7 +52,7 @@
 			b, strong { font-size: 20px; line-height: 22px; }
 			p { margin: 0; }	
 		}
-		.button { float: left; }	
+		.button { float: left; margin-top: 7px;}	
 	}
 
 	.image-lockup { 
@@ -158,10 +158,10 @@
 	.product-picker { 
 
 		.pp-header-hold {
-			height:62px;
+			height:76px;
 
 			@media screen and (max-width: $screen-sm-min) and (min-width: $screen-xs-min + 1) {
-				height:42px;
+				height:56px;
 			}
 
 			@media screen and (max-width: $screen-xs-min) {
@@ -170,10 +170,10 @@
 		}
 
 		.pp-copy-hold {
-			height:170px;
+			height:190px;
 
 			@media screen and (max-width: $screen-sm-min) and (min-width: $screen-xs-min + 1) {
-				height:140px;
+				height:170px;
 			}
 
 			@media screen and (max-width: $screen-xs-min) {
