@@ -50,9 +50,9 @@ public class TaggingWCMUseHelper extends WCMUse {
         return "CdwTagMan.createElementPageTag";
     }
 
-    public String getEventType() {
+   /* public String getEventType() {
         return "onClick";
-    }
+    }*/
 
     public String getFirstParam() {
         if (eventType.equalsIgnoreCase("pEvent")) {
