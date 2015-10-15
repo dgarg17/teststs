@@ -109,8 +109,8 @@
                                 value="-red"/>
                             <white
                                 jcr:primaryType="nt:unstructured"
-                                text="White Ghost Button"
-                                value="-white"/>
+                                text="White Clear Button"
+                                value="-clear"/>
                         </options>
                     </ctabutton>
                     <ctatarget
