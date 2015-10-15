@@ -1,15 +1,11 @@
 .lead-gen{
 	.hero{
-		.copy { padding: 90px 4% 0; 
+		.copy { padding: 40px 4% 0; 
 		h1{text-transform: none;}
-		p{line-height: 22px;}
 		@include span-columns(6);		
 		}
 	}
-	p{
-		font-size:18px;
-		line-height: 20px;
-	}
+	
 	.form { 
 		margin-bottom: 30px; 
 		padding: 15px; 
@@ -31,27 +27,11 @@
 @media screen and (max-width: $screen-md-min) {
 	.lead-gen{
 		.hero {
-		.copy { padding: 90px 4% 0; @include span-columns(12); }	
+		.copy { padding: 40px 4% 0; @include span-columns(12); }	
 		}
 			}
 	}	
 
-
-
-// .lead-gen-hero{}
-// .form-hold{
-// 	margin-top:-275px;
-// 	.form{
-// 		// margin-top:-275px;
-// 		min-height: 700px !important;
-// 	}
-// }
-// .copy{	
-// 	.-sub-font{
-// 		font-size:14px;
-// 		line-height: 16px;
-// 	}	
-// }
 
 .partner-lockup-area{
 	@include shift(8);

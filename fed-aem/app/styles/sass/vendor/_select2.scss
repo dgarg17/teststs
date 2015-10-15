@@ -742,13 +742,13 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
     }
 }
 
-.layout-3 {
-    .select2-container {
-        float:none;
-        display:block;
-        margin-left:0;
-    }
-}
+// .layout-3 {
+//     .select2-container {
+//         float:none;
+//         display:block;
+//         margin-left:0;
+//     }
+// }
 
 .select2-drop {
     border-radius:0;
@@ -814,7 +814,7 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
 @media screen and (max-width: $screen-xs-min) {
 
     .sub-cat-select {
-        display:none;
+        display:none ;
     }
 
     .sub-cat-select-mobile {
