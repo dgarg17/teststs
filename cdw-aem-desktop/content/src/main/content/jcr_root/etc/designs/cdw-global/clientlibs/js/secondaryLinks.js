@@ -1,12 +1,12 @@
 $(document).ready(function() {
 		//Initialize custom select drop downs
-		$('.product-display .partner-links').each(function() {
+		$('.product-display  .sub-cat-select').each(function() {
 			$(this).select2({
 				placeholder: $(this).data("secondary-label"),
 				minimumResultsForSearch: Infinity
 			});
 		});
-		$('.featured-item .partner-links').each(function() {
+		$('.featured-item .sub-cat-select').each(function() {
 			$(this).select2({
 				placeholder: $(this).data("secondary-label"),
 				minimumResultsForSearch: Infinity
