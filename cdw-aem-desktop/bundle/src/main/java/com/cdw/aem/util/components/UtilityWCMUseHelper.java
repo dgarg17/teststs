@@ -28,6 +28,9 @@ public class UtilityWCMUseHelper extends BaseComponent {
 	private static String ENSIGHTEN_BOOTSTRAP_PATH = "ensightenBootstrapPath";
 	private static String ENSIGHTEN_VOUCHER_CODE = "ensightenVoucherCode";
 	private static String DISABLE_ENSIGHTEN_TAGGING = "disableEnsightenTagging";
+	private static String RICH_RELEVENCE_BASEURL = "richRelevenceBaseUrl";
+	private static String RICH_RELEVENCE_APIKEY = "richRelevenceApiKey";
+	private static String RICH_RELEVENCE_BOOTSTRAPURL = "richRelevenceBootUrl";
 
 	private boolean isPublish =false;
 
@@ -99,4 +102,15 @@ public class UtilityWCMUseHelper extends BaseComponent {
 	public String getDisableEnsightenTagging(){
 		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(),DISABLE_ENSIGHTEN_TAGGING, "");
 	}
+	public String getRichRelevenceBaseUrl(){
+		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(),RICH_RELEVENCE_BASEURL, "");
+	}
+	public String getRichRelevenceApiKey(){
+		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(),RICH_RELEVENCE_APIKEY, "");
+	}
+	public String getRichRelevenceBootUrl(){
+		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(),RICH_RELEVENCE_BOOTSTRAPURL, "");
+	}
+
+
 }
