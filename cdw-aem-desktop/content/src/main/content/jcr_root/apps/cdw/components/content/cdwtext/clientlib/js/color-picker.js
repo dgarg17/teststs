@@ -37,7 +37,7 @@ ExperienceAEM.ColorPicker.Plugin = new Class({
         var colorField = new CQ.form.ColorField({
             fieldLabel: "Text Color",
             showHexValue: true,
-            colors:['4D4E53','CC0000','FFFFFF'],
+            colors:['4D4E53','CC0000','FFFFFF','8C8D8E','00A8E2','00AFAB','F8BF00','76BD22','F28B00','A45B96','FF828A'],
                     defaultColor : "4D4E53"
 
         });
