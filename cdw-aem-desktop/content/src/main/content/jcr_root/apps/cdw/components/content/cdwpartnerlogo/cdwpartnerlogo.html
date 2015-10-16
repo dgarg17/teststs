@@ -12,7 +12,7 @@
 			   title="${properties.linkTitle}"
 				href="${link.urlUpdate}"
 			   target="${properties.target}">
-				<img src="${utility.s7ImageRoot}${properties.scene7filename}?$partnerLockup$" alt="${properties.alt}" /></a>
+				<img src="${utility.s7ImageRoot}${properties.scene7filename}?$partnerLockup$&align=1,0" alt="${properties.alt}" /></a>
 
 				<a data-sly-unwrap="${!properties.partnerlogourl}"
 				   data-sly-test="${(properties.eventTitle||properties.eventData)}"
@@ -20,13 +20,13 @@
 				   data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.partnerlogourl}"
 				   href="${link.urlUpdate}"
 				   target="${properties.target}">
-					<img src="${utility.s7ImageRoot}${properties.scene7filename}?$partnerLockup$" alt="${properties.alt}"
+					<img src="${utility.s7ImageRoot}${properties.scene7filename}?$partnerLockup$&align=1,0" alt="${properties.alt}"
 						 onclick="${event.taggingEvent @context='html'}" /></a>
 		</div>
         </div>
 		<div data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" class="logo">
 			<img data-sly-test="${utility.s7CDWPartnerLogoTreatmentInheritedProperty}"
-				src="${utility.s7CDWPartnerLogoTreatmentInheritedProperty}?$partnerLockup$"
+				src="${utility.s7CDWPartnerLogoTreatmentInheritedProperty}?$partnerLockup$&align=-1,0"
 				alt="CDW Logo" />
 		</div>
 	</div>
