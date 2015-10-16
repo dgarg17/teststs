@@ -2,7 +2,7 @@
 
 <sly data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
 <script type="text/javascript">
-
+$( document ).ready(function() {
 
 if ($('.product-placement').data('placement') && ${properties.rrPageType=='brand' @ context="scriptString"}) {
     CDW.productPlacement.init({
@@ -16,6 +16,6 @@ if ($('.product-placement').data('placement') && ${properties.rrPageType=='brand
       	'placements': [$("#product-placement-1").data("placement")]
                 });
             }
-
+});
 </script>
 </sly>
