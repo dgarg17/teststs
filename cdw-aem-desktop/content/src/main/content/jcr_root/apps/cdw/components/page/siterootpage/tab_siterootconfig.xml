@@ -7,7 +7,7 @@
             jcr:primaryType="cq:Widget"
             collapsed="{Boolean}false"
             collapsible="{Boolean}true"
-			title="Domains &amp; Services"
+            title="Domains &amp; Services"
             xtype="dialogfieldset">
             <items jcr:primaryType="cq:WidgetCollection">
                 <sitedomain
@@ -29,20 +29,20 @@
                     xtype="textfield"/>
             </items>
         </domainConfigs>
-		<ensighten
+        <ensighten
             jcr:primaryType="cq:Widget"
             collapsed="{Boolean}false"
             collapsible="{Boolean}true"
-			title="Ensighten Configurations"
+            title="Ensighten Configurations"
             xtype="dialogfieldset">
             <items jcr:primaryType="cq:WidgetCollection">
-				<jsApiCmsSettingsToken
+                <jsApiCmsSettingsToken
                     jcr:primaryType="cq:Widget"
                     defaultValue="cdw"
                     fieldLabel="JS API CMS Settings Token"
                     name="./jsApiCmsSettingsToken"
                     xtype="textfield"/>
-				<ensightenBootstrapPath
+                <ensightenBootstrapPath
                     jcr:primaryType="cq:Widget"
                     allowBlank="false"
                     fieldLabel="Ensighten Bootstrap JS Path"
@@ -62,11 +62,35 @@
                     xtype="selection"/>
             </items>
         </ensighten>
-		<scene7
+        <richrelevence
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}true"
+            title="Rich Relevence Configurations"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <richrelevencebaseurl
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Rich Relevance Base URL"
+                    name="./richRelevenceBaseUrl"
+                    xtype="textfield"/>
+                <richrelevenceapikey
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Rich Relevance API Key"
+                    name="./richRelevenceApiKey"
+                    xtype="textfield"/>
+                <richrelevencebooturl
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Rich Relevance Bootstrapper URL"
+                    name="./richRelevenceBootUrl"
+                    xtype="textfield"/>
+            </items>
+        </richrelevence>
+        <scene7
             jcr:primaryType="cq:Widget"
             collapsed="{Boolean}true"
             collapsible="{Boolean}true"
-			title="Scene7 Configurations"
+            title="Scene7 Configurations"
             xtype="dialogfieldset">
             <items jcr:primaryType="cq:WidgetCollection">
                 <s7PartnerLogoCDWTreatment
