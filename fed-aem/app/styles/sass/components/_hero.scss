@@ -31,20 +31,24 @@
 }
 
 //Hero 1400px
-.layout-extended{
+.cdwextendedhero{
+	.layout-extended{
+	h1{color: $color-red;}
 	.hero-full{
 	background-image: url(/images/hero2.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	// Needs testing
 	min-height: 260px;
 	img {
 		@include span-columns(2);
 		@include shift(1);
 		margin-top: 200px;
+		margin-right: 2.35765% !important;
 	    }
 	}
+  }	
 }
+
 
 
