@@ -36,14 +36,7 @@ ExperienceAEM.ColorPicker.Plugin = new Class({
 
         var colorField = new CQ.form.ColorField({
             fieldLabel: "Text Color",
-<<<<<<< HEAD:cdw-aem-desktop/content/src/main/content/jcr_root/apps/cdw/components/content/cdwtext/clientlib/js/color-picker.js
-            showHexValue: true,
-            colors:['4D4E53','CC0000','FFFFFF','8C8D8E','00A8E2','00AFAB','F8BF00','76BD22','F28B00','A45B96','FF828A'],
-                    defaultColor : "4D4E53"
-
-=======
             showHexValue: true
->>>>>>> origin/defect-DE10246_RTE_ColorPickerConfiguration:cdw-aem-desktop/content/src/main/content/jcr_root/apps/cdw/components/content/cdwtext/clientlib/js/color-picker.js
         });
 
         if(config){
