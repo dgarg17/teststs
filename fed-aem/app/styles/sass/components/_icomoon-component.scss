@@ -13,8 +13,10 @@ $margin-sm: (-$font-size-sm/2) 0 0 (-$font-size-sm/2);
 $center-icon: 50%;
 
 
-.-icomoon-hold{
-	
+.-icomoon-hold{ @include clearfix;
+	.-left{float: left;}
+	.-right{float: right;}
+	.-center{margin: 0 auto;}
 	
 	.-large{
 		span{font-size: $font-size-lg;}
