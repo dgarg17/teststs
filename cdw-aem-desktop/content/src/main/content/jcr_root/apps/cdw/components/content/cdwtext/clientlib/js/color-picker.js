@@ -30,20 +30,32 @@ ExperienceAEM.ColorPicker.Plugin = new Class({
         }
     },
 
-    showDialog: function(context) {
-        var editorKernel = this.editorKernel, dm = editorKernel.getDialogManager();
+	showDialog: function(context) {
+	    var editorKernel = this.editorKernel, dm = editorKernel.getDialogManager();
         var config = this.config;
 
         var colorField = new CQ.form.ColorField({
             fieldLabel: "Text Color",
+<<<<<<< HEAD:cdw-aem-desktop/content/src/main/content/jcr_root/apps/cdw/components/content/cdwtext/clientlib/js/color-picker.js
             showHexValue: true,
             colors:['4D4E53','CC0000','FFFFFF','8C8D8E','00A8E2','00AFAB','F8BF00','76BD22','F28B00','A45B96','FF828A'],
                     defaultColor : "4D4E53"
 
+=======
+            showHexValue: true
+>>>>>>> origin/defect-DE10246_RTE_ColorPickerConfiguration:cdw-aem-desktop/content/src/main/content/jcr_root/apps/cdw/components/content/cdwtext/clientlib/js/color-picker.js
         });
 
+        if(config){
+            if(config.defaultColor){
+				colorField.defaultColor = config.defaultColor;
+				colorField.value = config.defaultColor;
+            }
 
-
+            if(config.colors && config.colors.length > 0){
+                colorField.colors = config.colors;
+            }
+        }
 
         var dialogConfig = {
             "jcr:primaryType": "cq:Dialog",
@@ -55,7 +67,7 @@ ExperienceAEM.ColorPicker.Plugin = new Class({
                     xtype: "panel",
                     layout: "form",
                     padding: "20px 0 0 10px",
-                    items: [colorField]
+                    items: [ colorField ]
             }],
             ok: function() {
                 this.close();
@@ -67,7 +79,7 @@ ExperienceAEM.ColorPicker.Plugin = new Class({
                 }
             }
         };
-
+		
         var removeBtn = new CQ.Ext.Button( {
             text: "Remove Applied Color",
             width: 150,
