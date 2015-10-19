@@ -4,5 +4,7 @@
         <div class="box product-placement" id="product-placement-1" data-placement="${properties.placementId}" ></div>
      </div>
   </div>
-
+<div data-sly-test="${(!properties.placementId) && (wcmmode.edit || wcmmode.design)}" >
+	<h6>Please configure the Placement Id.</h6>
+</div>
 

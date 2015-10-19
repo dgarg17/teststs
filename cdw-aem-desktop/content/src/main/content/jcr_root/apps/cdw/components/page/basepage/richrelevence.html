@@ -1,21 +1,22 @@
 <!-- RICH RELEVENCE -->
-
+ 
 <sly data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
 <script type="text/javascript">
-
-
+$( document).ready(function() {
+ 
 if ($('.product-placement').data('placement') && ${properties.rrPageType=='brand' @ context="scriptString"}) {
-    CDW.productPlacement.init({
+ 
+CDW.productPlacement.init({
         'apiKey': '${utility.richRelevenceApiKey @ context="scriptString"}',
         'baseUrl': '${utility.richRelevenceBaseUrl @ context="scriptString"}',
         'sessionId': CdwCms.settings.session_id,
         'userId': CdwCms.settings.persistent_id,
         'type': '${properties.rrPageType @ context="scriptString"}',
-        'typeData': '${properties.brandName @ context="scriptString"}',
+        'typeData': { brand: '${properties.brandName @ context="scriptString"}'},
         'template': '',
-      	'placements': [ '$("#product-placement-1").data("placement")']
+                'placements': [ $("#product-placement-1").data("placement")]
                 });
-            }
-
+}
+});
 </script>
 </sly>
