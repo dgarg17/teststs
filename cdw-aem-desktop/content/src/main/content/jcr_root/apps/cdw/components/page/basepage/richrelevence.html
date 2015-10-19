@@ -1,30 +1,22 @@
-
 <!-- RICH RELEVENCE -->
  
 <sly data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
 <script type="text/javascript">
 $( document).ready(function() {
-
-var multi = $('.product-placement');
-var placement_arr = [];
-
-$.each(multi, function (index, item) {
-    placement_arr.push({$(item).data('placement')} );  
-});
-console.log(placement_arr.length+"len") ;
-if(placement_arr.length>0)
+ 
+if ($('.product-placement').data('placement') && ${properties.rrPageType=='brand' @ context="scriptString"}) {
+ 
 CDW.productPlacement.init({
         'apiKey': '${utility.richRelevenceApiKey @ context="scriptString"}',
         'baseUrl': '${utility.richRelevenceBaseUrl @ context="scriptString"}',
         'sessionId': CdwCms.settings.session_id,
         'userId': CdwCms.settings.persistent_id,
         'type': '${properties.rrPageType @ context="scriptString"}',
-    	'typeData': { ${properties.rrPageType@ context="scriptString"}: '${properties.brandName @ context="scriptString"}'},
+        'typeData': { brand: '${properties.brandName @ context="scriptString"}'},
         'template': '',
-		'placements': placement_arr
+                'placements': [ $("#product-placement-1").data("placement")]
                 });
 }
-
 });
 </script>
 </sly>
