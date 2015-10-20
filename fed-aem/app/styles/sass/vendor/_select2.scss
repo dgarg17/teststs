@@ -713,7 +713,7 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
         border-radius:0;
         border:0;
         height:34px;
-        background:$color-gray90;
+        background:inherit;
         &:hover{background: #7a7b7f;}
 
         .select2-chosen {
