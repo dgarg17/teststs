@@ -58,18 +58,13 @@
                             text="Category Hubs"
                             value="category_hubs"/>
                     </options>
-                    <listeners
-                        jcr:primaryType="nt:unstructured"
-                        id="brandName"
-                        loadcontent="function(){var value= this.getValue();if(value==&quot;brand&quot;){this.findParentByType('dialogfieldset').getComponent(&quot;brandName&quot;).enable(this);}else{&#xa;this.findParentByType('dialogfieldset').getComponent(&quot;brandName&quot;).disable(this);}}"
-                        selectionchanged="function(box,value){if(value==&quot;brand&quot;){box.findParentByType('dialogfieldset').getComponent(&quot;brandName&quot;).enable(this);}else{box.findParentByType('dialogfieldset').getComponent(&quot;brandName&quot;).disable(this);}}"/>
                 </rrPageType>
-                <brandName
+                <placementcontext
                     jcr:primaryType="cq:Widget"
                     allowBlank="false"
-                    fieldLabel="Rich Relevance Brand Name"
-                    id="brandName"
-                    name="./brandName"
+                    fieldLabel="Rich Relevance Placement context"
+                    id="context"
+                    name="./context"
                     xtype="textfield"/>
             </items>
         </richrelevence>

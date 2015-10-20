@@ -404,11 +404,6 @@ function buildPlacement(data) {
 	//starRating.init();
 	addStar(); //Temporary function to do stars the old way
 
-	//Add Compare
-	window.$('.product-placement .rrProductsWrapper').compareCheckboxes({
-		//"showCompare": true
-	});
-
 	//Scrollable
 	window.$('.product-placement .scrollable').scrollableRecoPanel();
 }
@@ -449,6 +444,8 @@ var $http = _interopRequireWildcard(_commonModulesHttpHelper);
 var $ = require('jquery');
 var _ = require('lodash');
 
+var pricingApiBaseURL = "https://webdev.corp.server.com";
+
 var settings,
     defaults = {};
 
@@ -465,13 +462,14 @@ function priceFail() {
 }
 
 function getPrice(options) {
+
     settings = _.extend({}, defaults, options);
 
     var data = {
         productIdentifiers: settings.productList
     };
 
-    $http.get('/api/productprice/prices', { "data": data }).then(priceSuccess, priceFail);
+    $http.get(pricingApiBaseURL + '/api/productprice/prices', { "data": data }).then(priceSuccess, priceFail);
 }
 
 },{"../../../../../templates/product-placement/pricing.hbs":6,"../../common/modules/http-helper":3,"jquery":"jquery","lodash":"lodash"}],6:[function(require,module,exports){
