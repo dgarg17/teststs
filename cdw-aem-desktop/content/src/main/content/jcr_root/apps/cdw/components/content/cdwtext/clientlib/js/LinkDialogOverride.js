@@ -785,23 +785,23 @@ CQ.form.rte.plugins.LinkDialogOverride = CQ.Ext.extend(CQ.form.rte.ui.BaseWindow
 
         if(state) {
 
-            eventTypeField.enable();
+		    if (eventTypeField) eventTypeField.enable();
 
-            elementTitleField.enable();
+            if (elementTitleField) elementTitleField.enable();
 
-            eventDataField.enable();
+            if (eventDataField) eventDataField.enable();
 
-            ensightenFieldSet.expand();
+            if (ensightenFieldSet) ensightenFieldSet.expand();
 
         } else {
 
-            eventTypeField.disable();
+            if (eventTypeField) eventTypeField.disable();
 
-            elementTitleField.disable();
+            if (eventTypeField) elementTitleField.disable();
 
-            eventDataField.disable();
+            if (eventTypeField) eventDataField.disable();
 
-            ensightenFieldSet.collapse();
+            if (eventTypeField) ensightenFieldSet.collapse();
 
         }
 

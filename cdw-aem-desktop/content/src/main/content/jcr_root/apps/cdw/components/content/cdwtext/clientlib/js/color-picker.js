@@ -36,7 +36,7 @@ ExperienceAEM.ColorPicker.Plugin = new Class({
 
         var colorField = new CQ.form.ColorField({
             fieldLabel: "Text Color",
-           showHexValue: true
+            showHexValue: true
         });
 
         if(config){
