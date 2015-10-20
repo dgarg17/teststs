@@ -4,34 +4,19 @@
 <script type="text/javascript">
 $( document).ready(function() {
 
-<<<<<<< HEAD
 var placement_arr = [];
 $.each($('.product-placement'), function (index, item) {
 placement_arr.push($(item).data('placement')); 
 });
 console.log(placement_arr.length+"len") ;
 if(placement_arr.length>0){
-=======
-var multi = $('.product-placement');
-var placement_arr = [];
-
-$.each(multi, function (index, item) {
-    placement_arr.push({$(item).data('placement')} );  
-});
-console.log(placement_arr.length+"len") ;
-if(placement_arr.length>0)
->>>>>>> 9490bd1a4bff327847e6d9d36354aca0cbf707fb
 CDW.productPlacement.init({
         'apiKey': '${utility.richRelevenceApiKey @ context="scriptString"}',
         'baseUrl': '${utility.richRelevenceBaseUrl @ context="scriptString"}',
         'sessionId': CdwCms.settings.session_id,
         'userId': CdwCms.settings.persistent_id,
         'type': '${properties.rrPageType @ context="scriptString"}',
-<<<<<<< HEAD
     	'typeData': { ${properties.rrPageType@ context="scriptString"}: '${properties.context @ context="scriptString"}'},
-=======
-    	'typeData': { ${properties.rrPageType@ context="scriptString"}: '${properties.brandName @ context="scriptString"}'},
->>>>>>> 9490bd1a4bff327847e6d9d36354aca0cbf707fb
         'template': '',
 		'placements': placement_arr
                 });
