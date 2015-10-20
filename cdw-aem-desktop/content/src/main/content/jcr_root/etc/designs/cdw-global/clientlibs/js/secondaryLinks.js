@@ -12,6 +12,12 @@ $(document).ready(function() {
 				minimumResultsForSearch: Infinity
 			});
         });
+		$('.partner-menu .sub-cat-select').each(function() {
+		    $(this).select2({
+                placeholder: $(this).data("secondary-label"),
+                minimumResultsForSearch: Infinity
+            });
+        });
 		$('.select2-arrow').each(function() {
 			$(this).append('<i class="ico ico-down-arrow"></i>');
 		});
