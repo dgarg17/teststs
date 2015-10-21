@@ -106,6 +106,10 @@
                             width="50%"
                             type="checkbox"
                             xtype="selection"/>
+                    <eventDataDetails
+                            jcr:primaryType="cq:Widget"
+                            path="/apps/cdw/components/content/cdwherobanner/dialog/items/items/tab1/items/eventdata.infinity.json"
+                            xtype="cqinclude"/>
                 </items>
             </fieldConfig>
         </productPicker>
