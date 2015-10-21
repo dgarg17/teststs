@@ -14,9 +14,9 @@ $center-icon: 50%;
 
 
 .-icomoon-hold{ @include clearfix;
-	.-left{float: left;}
-	.-right{float: right;}
-	.-center{margin: 0 auto;}
+	// .-left{float: left;}
+	// .-right{float: right;}
+	// .-center{margin: 0 auto;}
 	
 	.-large{
 		span{font-size: $font-size-lg;}
