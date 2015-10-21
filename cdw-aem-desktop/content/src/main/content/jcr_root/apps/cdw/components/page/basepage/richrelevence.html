@@ -8,7 +8,6 @@ var placement_arr = [];
 $.each($('.product-placement'), function (index, item) {
 placement_arr.push($(item).data('placement')); 
 });
-console.log(placement_arr.length+"len") ;
 if(placement_arr.length>0){
 CDW.productPlacement.init({
         'apiKey': '${utility.richRelevenceApiKey @ context="scriptString"}',
