@@ -21,44 +21,60 @@
                         <links jcr:primaryType="nt:unstructured">
                             <linkDialogConfig
                                 jcr:primaryType="nt:unstructured"
-                                height="{Long}316">
+                                height="{Long}376">
                                 <linkAttributes jcr:primaryType="cq:WidgetCollection">
-                                    <linkAdvanced
+                                    <ensightenClickTracking
                                         jcr:primaryType="cq:Widget"
                                         collapsed="{Boolean}true"
                                         collapsible="{Boolean}true"
                                         inputValue="advanced"
-                                        name="./linkdialog/cq:adhocLinkTrackingTab"
-                                        title="Link tracking"
+                                        name="./linkdialog/ensightenLinkTrackingTab"
+                                        title="Ensighten Click Tracking"
                                         xtype="dialogfieldset">
                                         <items jcr:primaryType="cq:WidgetCollection">
                                             <enable
                                                 jcr:primaryType="nt:unstructured"
-                                                attribute="enabletracking"
-                                                fieldDescription="override analytics framework settings"
-                                                fieldLabel="Custom link tracking"
-                                                name="./linkdialog/cq:adhocLinkTrackingEnableTracking"
+                                                attribute="adhocensightenenable"
+                                                fieldLabel="Enable Ensighten Click Tracking"
+                                                name="./linkdialog/ensightenLinkTrackingEnableTracking"
                                                 xtype="checkbox">
                                                 <listeners
                                                     jcr:primaryType="nt:unstructured"
-                                                    check="function(component){var dlg=component.findParentByType('rtelinkdialog');dlg.enableSCFields(component.checked);}"/>
+                                                    check="function(component){var dlg=component.findParentByType('rtelinkdialog');dlg.enableEnsightenFields(component.checked);}"/>
                                             </enable>
-                                            <events
-                                                jcr:primaryType="nt:unstructured"
-                                                attribute="adhocevents"
-                                                fieldDescription="e.g.: event2, event7"
-                                                fieldLabel="Include SiteCatalyst events"
-                                                name="./linkdialog/cq:adhocLinkTrackingEvents"
+                                            <eventType
+                                                jcr:primaryType="cq:Widget"
+                                                attribute="adhocensighteneventtype"
+                                                defaultValue="standardClick"
+                                                fieldLabel="Event Type"
+                                                name="./linkdialog/ensightenEventType"
+                                                type="select"
+                                                xtype="selection">
+                                                <options jcr:primaryType="cq:WidgetCollection">
+                                                    <standardClick
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Standard Click (Default)"
+                                                        value="standardClick"/>
+                                                    <partnerClick
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Partner Click"
+                                                        value="partnerClick"/>
+                                                </options>
+                                            </eventType>
+                                            <elementTitle
+                                                jcr:primaryType="cq:Widget"
+                                                attribute="adhocensightenelementtitle"
+                                                fieldLabel="Element Title"
+                                                name="./linkdialog/ensightenElementTitle"
                                                 xtype="textfield"/>
-                                            <evars
-                                                jcr:primaryType="nt:unstructured"
-                                                attribute="adhocevars"
-                                                fieldDescription="e.g.: eVar1: pagedata.url, prop4: 'const'"
-                                                fieldLabel="Include SiteCatalyst variables"
-                                                name="./linkdialog/cq:adhocLinkTrackingEvars"
+                                            <eventData
+                                                jcr:primaryType="cq:Widget"
+                                                attribute="adhocensighteneventdata"
+                                                fieldLabel="Event Data"
+                                                name="./linkdialog/ensightenEventData"
                                                 xtype="textfield"/>
                                         </items>
-                                    </linkAdvanced>
+                                    </ensightenClickTracking>
                                 </linkAttributes>
                             </linkDialogConfig>
                         </links>
@@ -96,7 +112,7 @@
                             features="[bold,italic]"/>
                         <colorpicker
                             jcr:primaryType="nt:unstructured"
-                            colors="[4D4E53,CC0000,FFFFFF]"
+                            colors="[4D4E53,CC0000,FFFFFF,8C8D8E,00A8E2,00AFAB,F8BF00,76BD22,F28B00,A45B96,FF828A]"
                             defaultColor="4D4E53"
                             features="*"/>
                         <misctools

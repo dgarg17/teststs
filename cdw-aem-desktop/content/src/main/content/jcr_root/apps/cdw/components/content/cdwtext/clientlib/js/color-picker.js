@@ -30,20 +30,25 @@ ExperienceAEM.ColorPicker.Plugin = new Class({
         }
     },
 
-    showDialog: function(context) {
-        var editorKernel = this.editorKernel, dm = editorKernel.getDialogManager();
+	showDialog: function(context) {
+	    var editorKernel = this.editorKernel, dm = editorKernel.getDialogManager();
         var config = this.config;
 
         var colorField = new CQ.form.ColorField({
             fieldLabel: "Text Color",
-            showHexValue: true,
-            colors:['4D4E53','CC0000','FFFFFF'],
-                    defaultColor : "4D4E53"
-
+            showHexValue: true
         });
 
+        if(config){
+            if(config.defaultColor){
+				colorField.defaultColor = config.defaultColor;
+				colorField.value = config.defaultColor;
+            }
 
-
+            if(config.colors && config.colors.length > 0){
+                colorField.colors = config.colors;
+            }
+        }
 
         var dialogConfig = {
             "jcr:primaryType": "cq:Dialog",
@@ -55,7 +60,7 @@ ExperienceAEM.ColorPicker.Plugin = new Class({
                     xtype: "panel",
                     layout: "form",
                     padding: "20px 0 0 10px",
-                    items: [colorField]
+                    items: [ colorField ]
             }],
             ok: function() {
                 this.close();
@@ -67,7 +72,7 @@ ExperienceAEM.ColorPicker.Plugin = new Class({
                 }
             }
         };
-
+		
         var removeBtn = new CQ.Ext.Button( {
             text: "Remove Applied Color",
             width: 150,
