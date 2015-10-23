@@ -18,7 +18,7 @@ $(document).ready(function() {
 				minimumResultsForSearch: Infinity,
 			});
         });
-		$('.button-lockup .sub-cat-select').each(function() {
+		$('.cdw-multi-button .sub-cat-select').each(function() {
 			$(this).select2({
 				placeholder: $(this).data("secondary-label"),
 				minimumResultsForSearch: Infinity,
