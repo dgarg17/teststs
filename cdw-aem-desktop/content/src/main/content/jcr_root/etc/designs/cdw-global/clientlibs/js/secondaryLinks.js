@@ -1,6 +1,6 @@
 $(document).ready(function() {
 		//Initialize custom select drop downs
-		$('.product-display  .sub-cat-select').each(function() {
+		$('.product-display .sub-cat-select').each(function() {
 			$(this).select2({
 				placeholder: $(this).data("secondary-label"),
 				minimumResultsForSearch: Infinity
@@ -12,6 +12,19 @@ $(document).ready(function() {
 				minimumResultsForSearch: Infinity
 			});
         });
+		$('.partner-menu .sub-cat-select').each(function() {
+			$(this).select2({
+				placeholder: $(this).data("secondary-label"),
+				minimumResultsForSearch: Infinity,
+			});
+        });
+		$('.button-lockup .sub-cat-select').each(function() {
+			$(this).select2({
+				placeholder: $(this).data("secondary-label"),
+				minimumResultsForSearch: Infinity,
+			});
+        });
+		
 		$('.select2-arrow').each(function() {
 			$(this).append('<i class="ico ico-down-arrow"></i>');
 		});

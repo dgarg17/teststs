@@ -16,14 +16,13 @@ $(document).ready(function() {
 			$(this).select2({
 				placeholder: $(this).data("secondary-label"),
 				minimumResultsForSearch: Infinity,
-				color: "blue"
 			});
-			/*
-			$('.select2-result').each(function() {
-				var background-color-result = $(this).parent().css('background-color')
-				$(this).css('background-color', background-color-result);
-        	});
-			*/
+        });
+		$('.button-lockup .sub-cat-select').each(function() {
+			$(this).select2({
+				placeholder: $(this).data("secondary-label"),
+				minimumResultsForSearch: Infinity,
+			});
         });
 		
 		$('.select2-arrow').each(function() {
