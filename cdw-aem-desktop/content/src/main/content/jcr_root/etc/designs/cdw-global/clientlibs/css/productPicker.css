@@ -8,7 +8,7 @@ div .cssmultifieldpanel .x-panel-body.x-panel-body-noheader ,div .cssmultifieldp
      width:97%!important
      }
     div .cssmultifieldpanel  .cssselectfield input.x-form-text.x-form-field {
-      width:95%!important
+      width:100%!important
     }
   div.multifieldpanelbasecls-body.multifieldpanelbasecls-body-noheader,div.multifieldpanelbasecls.cssmultifieldpanel {
       width:100%!important
@@ -17,3 +17,9 @@ div .cssmultifieldpanel .x-panel-body.x-panel-body-noheader ,div .cssmultifieldp
        border-bottom-style: solid!important;
        border-width: 2px!important;
   }
+div.cssselectfield div.x-panel-body.x-panel-body-noheader.x-panel-body-noborder{
+ width:100%!important
+}
+div.cssselectfield div.x-form-field-wrap.x-form-field-trigger-wrap{
+    width:97%!important
+    }

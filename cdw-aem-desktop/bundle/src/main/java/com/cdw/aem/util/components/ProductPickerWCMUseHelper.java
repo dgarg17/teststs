@@ -33,10 +33,16 @@ public class ProductPickerWCMUseHelper extends WCMUse {
             for (ProductPicker productPicker : productPickers) {
                 productPicker.updateProductPicker(getCurrentPage());
             }
-        }else{
+        } else {
             return null;
         }
-        return (new Gson().toJson(productPickers)).replaceAll("\"","'");
+        String currentPageTitle = getCurrentPage().getProperties().get("ensightenPageName", String.class);
+        if (currentPageTitle == null) {
+            currentPageTitle = "";
+        }
+        return (new Gson().toJson(productPickers)).replaceAll(ProductPicker.COMPONENTNAME, getComponent().getName())
+                .replaceAll(ProductPicker.ENSIGHTENPAGENAME, currentPageTitle)
+                .replaceAll("\"", "'");
     }
 
     private String concatJson(String[] jsonArray) {
