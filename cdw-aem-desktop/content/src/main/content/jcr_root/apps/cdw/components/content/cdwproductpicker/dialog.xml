@@ -106,42 +106,42 @@
                             width="50%"
                             type="checkbox"
                             xtype="selection"/>
-                            <eventType
-                                    jcr:primaryType="cq:Widget"
-                                    allowBlank="{Boolean}false"
-                                    defaultValue="sEvent"
-                                    cls="cssselectfield"
-                                    fieldDescription="Event Type between cmCreateElementTag/cmCreatePromotionTag"
-                                    fieldLabel="Event Type"
-                                    name="./eventType"
-                                    key="eventType"
-                                    type="select"
-                                    xtype="selection">
-                                <options jcr:primaryType="cq:WidgetCollection">
-                                    <standard
-                                            jcr:primaryType="nt:unstructured"
-                                            text="Standard Click(Default)"
-                                            value="sEvent"/>
-                                    <partner
-                                            jcr:primaryType="nt:unstructured"
-                                            text="Partner Click"
-                                            value="pEvent"/>
-                                </options>
-                            </eventType>
-                            <eventTitle
-                                    jcr:primaryType="cq:Widget"
-                                    fieldLabel="Event Title"
-                                    name="./eventTitle"
-                                    key="eventTitle"
-                                    width="80%"
-                                    xtype="textfield"/>
-                            <eventData
-                                    jcr:primaryType="cq:Widget"
-                                    fieldLabel="Event Data"
-                                    name="./eventData"
-                                    key="eventData"
-                                    width="80%"
-                                    xtype="textfield"/>
+                    <eventType
+                            jcr:primaryType="cq:Widget"
+                            allowBlank="{Boolean}false"
+                            defaultValue="sEvent"
+                            cls="cssselectfield"
+                            fieldDescription="Event Type between cmCreateElementTag/cmCreatePromotionTag"
+                            fieldLabel="Event Type"
+                            name="./eventType"
+                            key="eventType"
+                            type="select"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <standard
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Standard Click(Default)"
+                                    value="sEvent"/>
+                            <partner
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Partner Click"
+                                    value="pEvent"/>
+                        </options>
+                    </eventType>
+                    <eventTitle
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Event Title"
+                            name="./eventTitle"
+                            key="eventTitle"
+                            width="80%"
+                            xtype="textfield"/>
+                    <eventData
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Event Data"
+                            name="./eventData"
+                            key="eventData"
+                            width="80%"
+                            xtype="textfield"/>
                 </items>
             </fieldConfig>
         </productPicker>

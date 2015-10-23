@@ -58,8 +58,6 @@ public class ProductPickerWCMUseHelper extends WCMUse {
         }
         json = json.substring(0, json.lastIndexOf(','));
 
-
     return"["+json+"]";
-
     }
 }

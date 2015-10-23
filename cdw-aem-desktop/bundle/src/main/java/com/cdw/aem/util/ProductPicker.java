@@ -28,7 +28,6 @@ public class ProductPicker {
     private String manufactureImage;
     private String name;
     private String url;
-
     private String description;
     private String pctaklink;
     private String ctaText;
