@@ -15,9 +15,17 @@ $(document).ready(function() {
 		$('.partner-menu .sub-cat-select').each(function() {
 			$(this).select2({
 				placeholder: $(this).data("secondary-label"),
-				minimumResultsForSearch: Infinity
+				minimumResultsForSearch: Infinity,
+				color: "blue"
 			});
+			/*
+			$('.select2-result').each(function() {
+				var background-color-result = $(this).parent().css('background-color')
+				$(this).css('background-color', background-color-result);
+        	});
+			*/
         });
+		
 		$('.select2-arrow').each(function() {
 			$(this).append('<i class="ico ico-down-arrow"></i>');
 		});

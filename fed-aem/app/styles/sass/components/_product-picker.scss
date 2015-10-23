@@ -116,7 +116,7 @@
 }
 
 .layout.slick-carousel {
-
+	.ico.slick-disabled{cursor: default;}
 	.slick-slide:focus {
 		outline:none;
 	}

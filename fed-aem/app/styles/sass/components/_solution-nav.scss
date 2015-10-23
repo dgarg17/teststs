@@ -1,3 +1,5 @@
+.poopface{background-color: red;}
+
 .partner-header-wrapper { 
 	margin: $component-spacing;
 	&.-aem-absolute-override{
@@ -85,7 +87,15 @@
 					color:#fff;
 					border-bottom:0;
 					position:relative;
-
+					
+					.select2-container{
+						.select2-choice{
+							// background-color: inherit;
+							&:hover{opacity: .5;} 
+						}
+						
+					}
+					
 					select {
 						background:none;
 						border:1px solid #fff;
