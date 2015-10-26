@@ -1,6 +1,7 @@
 package com.cdw.aem.util;
 
 import com.cdw.aem.components.ElementType;
+import com.cdw.aem.components.EnsightenTaggingWCMUseHelper;
 import com.day.cq.wcm.api.Page;
 import com.cdw.aem.util.LinkUtil;
 
@@ -18,9 +19,7 @@ import java.util.List;
  * campaignid	:	dgragvreagvrfgrf
  */
 public class ProductPicker {
-    public final static String ELEMENTTYPE="ELEMENT_TYPE";
-    public final static String ENSIGHTENPAGENAME="ENSIGHTEN_PAGE_NAME";
-    public final static String COMPONENTNAME="COMPONENT_NAME";
+
 
     private static String S7ImageRoot = "s7ImageRoot";
     private String productCode;
@@ -187,33 +186,10 @@ public class ProductPicker {
             this.manufactureImage = Utility.getSiteRootInheritedProperty(currentPage.getContentResource(), S7ImageRoot, "") + manufactureImage + "?";
         }
         if (!eventData.isEmpty() || !eventTitle.isEmpty()) {
-            eventCTA = getTaggingEvent().replaceAll(ELEMENTTYPE, "CTA");
-            eventImage = getTaggingEvent().replaceAll(ELEMENTTYPE, "IMG");
-            eventHeader = getTaggingEvent().replaceAll(ELEMENTTYPE, "H");
+            String taggingEvent=EnsightenTaggingWCMUseHelper.getTaggingEvent(eventData,eventTitle,eventType);
+            eventCTA = taggingEvent.replaceAll(EnsightenTaggingWCMUseHelper.ELEMENTTYPE, "CTA");
+            eventImage = taggingEvent.replaceAll(EnsightenTaggingWCMUseHelper.ELEMENTTYPE, "IMG");
+            eventHeader = taggingEvent.replaceAll(EnsightenTaggingWCMUseHelper.ELEMENTTYPE, "H");
         }
     }
-
-    private String getMethodName() {
-        if (eventType.equalsIgnoreCase("pEvent")) {
-            return "CdwTagMan.createPromotionTag";
-        }
-        return "CdwTagMan.createElementPageTag";
-    }
-
-    private String getFirstParam() {
-        if (eventType.equalsIgnoreCase("pEvent")) {
-            return "Site Promotion";
-        }
-        return ENSIGHTENPAGENAME;
-    }
-
-    private String getSecondParam() {
-        return COMPONENTNAME+ "|" + eventTitle + "-" + ELEMENTTYPE + "|" + eventData;
-    }
-
-    private String getTaggingEvent() {
-        return getMethodName() + "(\'" + getFirstParam() + "\',\'" + getSecondParam() + "\')";
-    }
-
-
 }

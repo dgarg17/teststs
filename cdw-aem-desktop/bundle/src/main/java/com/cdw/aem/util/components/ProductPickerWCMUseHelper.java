@@ -1,6 +1,7 @@
 package com.cdw.aem.util.components;
 
 import com.adobe.cq.sightly.WCMUse;
+import com.cdw.aem.components.EnsightenTaggingWCMUseHelper;
 import com.cdw.aem.util.ProductPicker;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -36,12 +37,8 @@ public class ProductPickerWCMUseHelper extends WCMUse {
         } else {
             return null;
         }
-        String currentPageTitle = getCurrentPage().getProperties().get("ensightenPageName", String.class);
-        if (currentPageTitle == null) {
-            currentPageTitle = "";
-        }
-        return (new Gson().toJson(productPickers)).replaceAll(ProductPicker.COMPONENTNAME, getComponent().getName())
-                .replaceAll(ProductPicker.ENSIGHTENPAGENAME, currentPageTitle)
+
+        return (new Gson().toJson(productPickers)).replaceAll(EnsightenTaggingWCMUseHelper.COMPONENTNAME, getComponent().getName())
                 .replaceAll("\"", "'");
     }
 
