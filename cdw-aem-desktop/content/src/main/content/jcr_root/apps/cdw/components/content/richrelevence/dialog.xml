@@ -17,6 +17,7 @@
                     <placementId
                         jcr:primaryType="cq:Widget"
                         allowBlank="false"
+                        fieldDescription="Note : Please configure the Rich Relevence page type and placement context in page properties."
                         fieldLabel="Placement ID"
                         name="./placementId"
                         xtype="textfield"/>
