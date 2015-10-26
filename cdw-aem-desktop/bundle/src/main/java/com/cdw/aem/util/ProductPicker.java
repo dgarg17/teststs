@@ -7,17 +7,6 @@ import com.cdw.aem.util.LinkUtil;
 
 import java.util.List;
 
-/**
- * Created by goutved on 08/18/2015.
- * productCode	:	12345
- * s7Image	:	/content/dam/geometrixx-outdoors/social/Avatar_3.jpg
- * s7MImage	:	/content/catalogs/geometrixx-outdoors/en/base-catalog/men/coats
- * name	:	sdfsgdaggrgrg
- * description	:	23433434sfsfsnsgalkgfangfldkhgfkgfgfdlkgagfgkflggfaglkfhgfagklhgfklgafhgflhgaglkhgglkhgdlghl
- * pctaklink	:	egrgarg
- * ctaText	:	egargrg
- * campaignid	:	dgragvreagvrfgrf
- */
 public class ProductPicker {
 
 
