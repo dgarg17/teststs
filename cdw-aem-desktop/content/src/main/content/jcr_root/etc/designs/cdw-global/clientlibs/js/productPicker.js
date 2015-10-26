@@ -46,6 +46,7 @@
 						}
 						productsOverride[j].ctaText=override[i].ctaText;
 						productsOverride[j].manufactureImage=override[i].manufactureImage;
+						productsOverride[j].linkTitle=override[i].linkTitle;
 						productsOverride[j].eventCTA=override[i].eventCTA;
 						productsOverride[j].eventHeader=override[i].eventHeader;
 						productsOverride[j].eventImage=override[i].eventImage;
@@ -86,11 +87,11 @@
 
 			contentString += "<div class='product-image'>";
 			if(products[i].eventImage==null|| products[i].eventImage==""){
-				contentString += "<a href='"+products[i].url +"'>";
+				contentString += "<a href='"+products[i].url +"' title='"+products[i].linkTitle+"'>";
 				contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" />";
 				contentString += "</a>";
 			}else{
-				contentString += "<a href='"+products[i].url +"'>";
+				contentString += "<a href='"+products[i].url +"' title='"+products[i].linkTitle+"'>";
 				contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" onclick=\""+products[i].eventImage+"\" />";
 				contentString += "</a>";
 			}
@@ -99,11 +100,11 @@
 			contentString += "<div class='pp-header-hold'>";
 			contentString += "<h6>";
 			if(products[i].eventHeader==null||products[i].eventHeader==""){
-				contentString += "<a href='" + products[i].url + "'>";
+				contentString += "<a href='" + products[i].url + "' title='"+products[i].linkTitle+"'>";
 				contentString += products[i].name;
 				contentString += "</a>";
 			}else{
-				contentString += "<a href='" + products[i].url + "'"+"onclick=\""+products[i].eventHeader+"\">";
+				contentString += "<a href='" + products[i].url + "' title='"+products[i].linkTitle+"' "+"onclick=\""+products[i].eventHeader+"\">";
 				contentString += products[i].name;
 				contentString += "</a>";
 
@@ -123,11 +124,11 @@
 				contentString += "</div>";
 			}
 			if(products[i].eventCTA==null||products[i].eventCTA==""){
-				contentString += "<a href='" + products[i].pctaklink + "' class='button -"+products[i].ctaButtonStyle+"'>"; //Override with pctaklink if provided
+				contentString += "<a href='" + products[i].pctaklink + "' title='"+products[i].linkTitle+"' class='button -"+products[i].ctaButtonStyle+"'>"; //Override with pctaklink if provided
 				contentString += products[i].ctaText; //Comes from page JSON
 				contentString += "</a>";
 			}else{
-				contentString += "<a href='" + products[i].pctaklink + "' class='button -"+products[i].ctaButtonStyle+"'"+"onclick=\""+products[i].eventCTA+"\">"; //Override with pctaklink if provided
+				contentString += "<a href='" + products[i].pctaklink + "' title='"+products[i].linkTitle+"' class='button -"+products[i].ctaButtonStyle+"'"+"onclick=\""+products[i].eventCTA+"\">"; //Override with pctaklink if provided
 				contentString += products[i].ctaText; //Comes from page JSON
 				contentString += "</a>";
 			}
@@ -191,11 +192,11 @@
 
 		contentString += "<div class='product-image'>";
 		if(products[i].eventImage==null|| products[i].eventImage==""){
-			contentString += "<a href='"+products[i].url +"'>";
+			contentString += "<a href='"+products[i].url +"' title='"+products[i].linkTitle+"' >";
 			contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" />";
 			contentString += "</a>";
 		}else{
-			contentString += "<a href='"+products[i].url +"'>";
+			contentString += "<a href='"+products[i].url +"' title='"+products[i].linkTitle+"'>";
 			contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" onclick=\""+products[i].eventImage+"\" />";
 			contentString += "</a>";
 		}
@@ -204,11 +205,11 @@
 		contentString += "<div class='pp-header-hold'>";
 		contentString += "<h6>";
 		if(products[i].eventHeader==null||products[i].eventHeader==""){
-			contentString += "<a href='" + products[i].url + "'>";
+			contentString += "<a href='" + products[i].url + "' title='"+products[i].linkTitle+"' >";
 			contentString += products[i].name;
 			contentString += "</a>";
 		}else{
-			contentString += "<a href='" + products[i].url + "'"+"onclick=\""+products[i].eventHeader+"\">";
+			contentString += "<a href='" + products[i].url + "'title='"+products[i].linkTitle+"' onclick=\""+products[i].eventHeader+"\">";
 			contentString += products[i].name;
 			contentString += "</a>";
 
@@ -228,11 +229,11 @@
 			contentString += "</div>";
 		}
 		if(products[i].eventCTA==null||products[i].eventCTA==""){
-			contentString += "<a href='" + products[i].pctaklink + "' class='button -"+products[i].ctaButtonStyle+"'>"; //Override with pctaklink if provided
+			contentString += "<a href='" + products[i].pctaklink + "' title='"+products[i].linkTitle+"' class='button -"+products[i].ctaButtonStyle+"'>"; //Override with pctaklink if provided
 			contentString += products[i].ctaText; //Comes from page JSON
 			contentString += "</a>";
 		}else{
-			contentString += "<a href='" + products[i].pctaklink + "' class='button -"+products[i].ctaButtonStyle+"'"+"onclick=\""+products[i].eventCTA+"\">"; //Override with pctaklink if provided
+			contentString += "<a href='" + products[i].pctaklink + "' title='"+products[i].linkTitle+"' class='button -"+products[i].ctaButtonStyle+"'"+"onclick=\""+products[i].eventCTA+"\">"; //Override with pctaklink if provided
 			contentString += products[i].ctaText; //Comes from page JSON
 			contentString += "</a>";
 		}

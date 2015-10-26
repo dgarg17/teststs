@@ -36,6 +36,7 @@ public class ProductPicker {
     private String eventData;
     private String eventTitle;
     private String eventType;
+    private String linkTitle;
     private String eventHeader = "";
     private String eventCTA = "";
     private String eventImage = "";
@@ -168,6 +169,13 @@ public class ProductPicker {
         this.eventImage = eventImage;
     }
 
+    public String getLinkTitle() {
+        return linkTitle;
+    }
+
+    public void setLinkTitle(String linkTitle) {
+        this.linkTitle = linkTitle;
+    }
 
     public void updateProductPicker(Page currentPage) {
         this.pctaklink = LinkUtil.updateUrl(pctaklink);

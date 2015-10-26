@@ -106,6 +106,14 @@
                             width="50%"
                             type="checkbox"
                             xtype="selection"/>
+                    <linkTitle
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Link Title"
+                            fieldDescription=" if defined, will populate the 'title' attribute of the 'a' element."
+                            key="linkTitle"
+                            width="80%"
+                            xtype="textfield"/>
+
                     <eventType
                             jcr:primaryType="cq:Widget"
                             allowBlank="{Boolean}false"
