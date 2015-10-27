@@ -698,22 +698,22 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
 
 /* CDW Custom Styles */
 
-.sub-cat-select{min-width: 197px;}
+// .sub-cat-select{min-width: 197px;} not sure whats breakings when used
 .sub-cat-select-mobile {
-    display:none;
+    display:none ;
 }
 
 .select2-container {
     float:left;
     margin:0px 0 10px 10px;
     font-size:16px;
-    text-align:center;
+    // text-align:center;
 
     .select2-choice {
         border-radius:0;
         border:0;
         height:34px;
-        background:$color-gray90;
+        background:$color-gray80;
         &:hover{background: #7a7b7f;}
 
         .select2-chosen {
@@ -742,23 +742,84 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
     }
 }
 
-.layout-3 {
-    .select2-container {
-        float:none;
-        display:block;
-        margin-left:0;
-    }
-}
+// .layout-3 {
+//     .select2-container {
+//         float:none;
+//         display:block;
+//         margin-left:0;
+//     }
+// }
 
 .select2-drop {
     border-radius:0;
-
     .select2-results {
         border:0;
         padding:0;
         border-radius:0;
         margin:0;
-
+        .red{background-color:red !important; &:hover{opacity: .5;}}        
+        
+        ._D02C30{background-color: $color-B1; &:hover{opacity: .5;}}
+        ._C20430{background-color: $color-C1; &:hover{opacity: .5;}}
+        ._F28B00{background-color: $color-D1; &:hover{opacity: .5;}}
+        ._009D4F{background-color: $color-E1; &:hover{opacity: .5;}}
+        ._009483{background-color: $color-F1; &:hover{opacity: .5;}}
+        ._007299{background-color: $color-G1; &:hover{opacity: .5;}}
+        ._76236D{background-color: $color-H1; &:hover{opacity: .5;}}
+        ._B42573{background-color: $color-I1; &:hover{opacity: .5;}}
+        ._FE4A5d{background-color: $color-B2; &:hover{opacity: .5;}}
+        ._D8292F{background-color: $color-C2; &:hover{opacity: .5;}}
+        ._F5B324{background-color: $color-D2; &:hover{opacity: .5;}}
+        ._3DAF2C{background-color: $color-E2; &:hover{opacity: .5;}}
+        ._00A19C{background-color: $color-F2; &:hover{opacity: .5;}}
+        ._007CBB{background-color: $color-G2; &:hover{opacity: .5;}}
+        ._923A80{background-color: $color-H2; &:hover{opacity: .5;}}
+        ._E01783{background-color: $color-I2; &:hover{opacity: .5;}}
+        ._FF828A{background-color: $color-B3; &:hover{opacity: .5;}}
+        ._E74C39{background-color: $color-C3; &:hover{opacity: .5;}}
+        ._F8BF00{background-color: $color-D3; &:hover{opacity: .5;}}
+        ._76BD22{background-color: $color-E3; &:hover{opacity: .5;}}
+        ._00AFAB{background-color: $color-F3; &:hover{opacity: .5;}}
+        ._00A8E2{background-color: $color-G3; &:hover{opacity: .5;}}
+        ._A45B96{background-color: $color-H3; &:hover{opacity: .5;}}
+        ._EA6CB0{background-color: $color-I3; &:hover{opacity: .5;}}
+        ._FFB0C0{background-color: $color-B4; &:hover{opacity: .5;}}
+        ._E57E3E{background-color: $color-C4; &:hover{opacity: .5;}}
+        ._FFD200{background-color: $color-D4; &:hover{opacity: .5;}}
+        ._A6CE39{background-color: $color-E4; &:hover{opacity: .5;}}
+        ._63CCCA{background-color: $color-F4; &:hover{opacity: .5;}}
+        ._00B3E3{background-color: $color-G4; &:hover{opacity: .5;}}
+        ._B588B9{background-color: $color-H4; &:hover{opacity: .5;}}
+        ._F6A7D7{background-color: $color-I4; &:hover{opacity: .5;}}
+        ._EEC7CE{background-color: $color-B5; &:hover{opacity: .5;}}
+        ._F2BD7D{background-color: $color-C5; &:hover{opacity: .5;}}
+        ._FFE900{background-color: $color-D5; &:hover{opacity: .5;}}
+        ._C3D600{background-color: $color-E5; &:hover{opacity: .5;}}
+        ._9ADADA{background-color: $color-F5; &:hover{opacity: .5;}}
+        ._54C9E8{background-color: $color-G5; &:hover{opacity: .5;}}
+        ._CEADD0{background-color: $color-H5; &:hover{opacity: .5;}}
+        ._E8BCD8{background-color: $color-I5; &:hover{opacity: .5;}}
+        ._F7DBE0{background-color: $color-B6; &:hover{opacity: .5;}}
+        ._F2D1A0{background-color: $color-C6; &:hover{opacity: .5;}}
+        ._FFEA77{background-color: $color-D6; &:hover{opacity: .5;}}
+        ._E2E768{background-color: $color-E6; &:hover{opacity: .5;}}
+        ._B0E3E4{background-color: $color-F6; &:hover{opacity: .5;}}
+        ._96D5EA{background-color: $color-G6; &:hover{opacity: .5;}}
+        ._E8BFDC{background-color: $color-H6; &:hover{opacity: .5;}}
+        ._EDD3E2{background-color: $color-I6; &:hover{opacity: .5;}}
+        ._D1D0CE{background-color: $color-J1; &:hover{opacity: .5;}}
+        ._BCBCBC{background-color: $color-J2; &:hover{opacity: .5;}}
+        ._A8A8AA{background-color: $color-J3; &:hover{opacity: .5;}}
+        ._898B8E{background-color: $color-J4; &:hover{opacity: .5;}}
+        ._63656A{background-color: $color-J5; &:hover{opacity: .5;}}
+        ._54565B{background-color: $color-J6; &:hover{opacity: .5;}}
+        ._4D4D4F{background-color: $color-J7; &:hover{opacity: .5;}}
+        ._CC0000{background-color: $color-A1; &:hover{opacity: .5;}}
+        ._FFFFFF{background-color: $color-white; &:hover{opacity: .5;}}
+        
+        
+        
+        
         .select2-result-selectable {
             color:#fff;
             height:34px;
@@ -814,7 +875,7 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
 @media screen and (max-width: $screen-xs-min) {
 
     .sub-cat-select {
-        display:none;
+        display:none ;
     }
 
     .sub-cat-select-mobile {

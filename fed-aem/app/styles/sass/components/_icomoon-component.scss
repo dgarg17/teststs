@@ -1,0 +1,126 @@
+$font-size-lg: 54px;
+$font-size-md: 40px;
+$font-size-sm: 32px;
+
+$base-lg: $font-size-lg + 16px;
+$base-md: $font-size-md + 16px;
+$base-sm: $font-size-sm + 16px;
+
+$margin-lg: (-$font-size-lg/2) 0 0 (-$font-size-lg/2);
+$margin-md: (-$font-size-md/2) 0 0 (-$font-size-md/2);
+$margin-sm: (-$font-size-sm/2) 0 0 (-$font-size-sm/2);
+
+$center-icon: 50%;
+
+
+// @media screen and (max-width: $screen-sm-min){
+// 	.-large{
+// 		span{font-size: $font-size-lg - 14px !important;}
+// 		}
+// 	}
+
+.-icomoon-hold{ @include clearfix;
+	// .-left{float: left;}
+	// .-right{float: right;}
+	// .-center{margin: 0 auto;}
+	.-large{
+		span{font-size: $font-size-lg;}
+	}
+	.-medium{
+		span{font-size: $font-size-md;}
+	}
+	.-small{
+		span{font-size: $font-size-sm;}
+	}
+	
+	.shape{
+		display: block;
+		position: relative;
+		color:white;
+		&.-square{
+			&.-large{
+				width: $base-lg;
+				height: $base-lg;
+				span{
+					position: absolute;
+					top: $center-icon;
+					left: $center-icon;
+					margin: $margin-lg;
+					font-size: $font-size-lg;
+					}
+				}
+			&.-medium{
+				width: $base-md;
+				height: $base-md;
+				span{
+					position: absolute;
+					top: $center-icon;
+					left: $center-icon;
+					margin: $margin-md;
+					font-size: $font-size-md;
+					}
+			}
+			&.-small{
+				width: $base-sm;
+				height: $base-sm;
+				span{
+					position: absolute;
+					top: $center-icon;
+					left: $center-icon;
+					margin: $margin-sm;
+					font-size: $font-size-sm;
+					}
+			}
+			
+			// background: red;
+		}
+		&.-circle{
+			&.-large{
+				width: $base-lg;
+				height: $base-lg;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;				
+				span{
+					position: absolute;
+					top: $center-icon;
+					left:$center-icon;
+					margin: $margin-lg;
+					font-size: $font-size-lg;
+					}
+				}
+			&.-medium{
+				width: $base-md;
+				height: $base-md;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				span{
+					position: absolute;
+					top: $center-icon;
+					left:$center-icon;
+					margin: $margin-md;
+					font-size: $font-size-md;
+					}
+			}
+			&.-small{
+				width: $base-sm;
+				height: $base-sm;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				span{
+					position: absolute;
+					top: $center-icon;
+					left: $center-icon;
+					margin: $margin-sm;
+					font-size: $font-size-sm
+					}
+			}
+			
+			
+			background: red;
+		}	
+	}
+}
+

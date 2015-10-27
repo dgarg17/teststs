@@ -11,7 +11,8 @@ $(function() {
 	});
 
 	//Partner Solution Nav Mobile Menu
-	$(document).on('click', '.partner-header .mobileNav', togglePartnerMenu);
+	$('.partner-header').on('click', '.mobileNav, .sol-nav-title', togglePartnerMenu);
+	
 	
 });
 

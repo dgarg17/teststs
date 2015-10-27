@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Dialog"
-    height="{Long}500"
+    height="650"
     title="dialog"
     xtype="dialog">
     <items
@@ -51,7 +51,7 @@
                         xtype="textarea"/>
                     <textcolor
                         jcr:primaryType="cq:Widget"
-                        colors="[4D4D4F,FFFFFF,CC0000,0072BC]"
+                        colors="[4D4D4F,FFFFFF,CC0000]"
                         fieldLabel="Text Color"
                         name="./textcolor"
                         xtype="colorfield"/>
@@ -79,7 +79,7 @@
                     </textalignment>
                     <backgroundcolor
                         jcr:primaryType="cq:Widget"
-                        colors="[CC0000,D02C30,FE4A5D,FF828A,FFB0C0,EEC7CE,C20430,D8292F,E74C39,E57E3E,F2BD7D,F28B00,F5B324,F8BF00,FFD200,FFE900,009D4F,3DAF2C,76BD22,A6CE39,C3D600,009483,00A19C,00AFAB,63CCCA,9ADADA,007299,007CBB,00A8E2,00B3E3,54C9E8,76236D,923A80,A45B96,B588B9,CEADD0,B42573,E01783,EA6CB0,F6A7D7,E8BCD8,898B8E,63656A,54565B,4D4D4F]"
+                        colors="[D02C30,C20430&#xa;,F28B00,009D4F,009483,007299,76236D,B42573,FE4A5D,D8292F,F5B324,3DAF2C,00A19C,007CBB,923A80,E01783,FF828A,E74C39,F8BF00,76BD22,00AFAB,00A8E2,A45B96,EA6CB0,FFB0C0,E57E3E,FFD200,A6CE39,63CCCA,00B3E3,B588B9,F6A7D7,EEC7CE,F2BD7D,FFE900,C3D600,9ADADA,54C9E8,CEADD0,E8BCD8,F7DBE0,F2D1A0,FFEA77,E2E768,B0E3E4,96D5EA,E8BFDC,EDD3E2,D1D0CE,BCBCBC,A8A8AA,898B8E,63656A,54565B,4D4D4F,CC0000,FFFFFF]"
                         fieldLabel="Background Color"
                         name="./backgroundcolor"
                         xtype="colorfield"/>
@@ -95,6 +95,24 @@
                         fieldLabel="CTA Link"
                         name="./ctalink"
                         xtype="pathfield"/>
+                    <ctabutton
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="-red"
+                        fieldLabel="CTA Button Style"
+                        name="./ctabuttonstyle"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <red
+                                jcr:primaryType="nt:unstructured"
+                                text="Signature Red Button (Default)"
+                                value="-red"/>
+                            <white
+                                jcr:primaryType="nt:unstructured"
+                                text="White Clear Button"
+                                value="-clear"/>
+                        </options>
+                    </ctabutton>
                     <ctatarget
                         jcr:primaryType="cq:Widget"
                         defaultValue="_self"
@@ -114,6 +132,51 @@
                                 value="_self"/>
                         </options>
                     </ctatarget>
+                    <linkTitle
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="If defined, will populate the 'title' attribute of the 'a' element."
+                            fieldLabel="Link Title"
+                            name="./linkTitle"
+                            xtype="textfield"/>
+                    <eventdata
+                            jcr:primaryType="cq:Widget"
+                            collapsed="{Boolean}true"
+                            collapsible="{Boolean}true"
+                            title="Ensighten Event data"
+                            xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <eventType
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    defaultValue="sEvent"
+                                    fieldDescription="Event Type between cmCreateElementTag/cmCreatePromotionTag"
+                                    fieldLabel="Event Type"
+                                    name="./eventType"
+                                    type="select"
+                                    xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <standard
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Standard Click(Default)"
+                                            value="sEvent"/>
+                                    <partner
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Partner Click"
+                                            value="pEvent"/>
+                                </options>
+                            </eventType>
+                            <eventTitle
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Event Title"
+                                    name="./eventTitle"
+                                    xtype="textfield"/>
+                            <eventData
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Event Data"
+                                    name="./eventData"
+                                    xtype="textfield"/>
+                        </items>
+                    </eventdata>
                 </items>
             </tab1>
             <image
