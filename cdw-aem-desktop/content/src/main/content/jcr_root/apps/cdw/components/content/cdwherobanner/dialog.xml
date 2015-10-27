@@ -135,14 +135,14 @@
                     <linkTitle
                             jcr:primaryType="cq:Widget"
                             fieldDescription="If defined, will populate the 'title' attribute of the 'a' element."
-                            fieldLabel="Link Tilte"
+                            fieldLabel="Link Title"
                             name="./linkTitle"
                             xtype="textfield"/>
                     <eventdata
                             jcr:primaryType="cq:Widget"
                             collapsed="{Boolean}true"
                             collapsible="{Boolean}true"
-                            title="Event data"
+                            title="Ensighten Event data"
                             xtype="dialogfieldset">
                         <items jcr:primaryType="cq:WidgetCollection">
                             <eventType
