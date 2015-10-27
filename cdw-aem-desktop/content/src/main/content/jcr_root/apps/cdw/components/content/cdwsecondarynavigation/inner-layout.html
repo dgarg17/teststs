@@ -25,7 +25,7 @@
 						<a href="${item.ctaLink}" target="${item.ctaTarget}" style="color:#${properties.textColor @ context='styleString'};">${item.ctaText}</a>
 					</li>
 					</sly>
-					<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount > 1}" class="other-categories" class="_${properties.textColor @ context='styleString'}">
+					<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount > 1}" class="other-categories _${properties.textColor @ context='styleString'}">
 						<select class="partner-links sub-cat-select" data-secondary-label="${properties.secondaryLinksLabel}">
 							<option value=""></option>
 							<sly data-sly-list="${linksHelper.secondaryItems}">
