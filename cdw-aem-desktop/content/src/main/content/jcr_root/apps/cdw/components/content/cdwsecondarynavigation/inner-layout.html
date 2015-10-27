@@ -29,7 +29,7 @@
 						<select class="partner-links sub-cat-select" data-secondary-label="${properties.secondaryLinksLabel}">
 							<option value=""></option>
 							<sly data-sly-list="${linksHelper.secondaryItems}">
-							<option class="_${properties.backgroundColor @ context='styleString'}" value="${item.ctaText}" data-target="${item.ctaTarget}" data-link="${item.ctaLink}">${item.ctaText}</option>
+							<option class="_${properties.backgroundColor @ context='styleString'} _${properties.textColor @ context='styleString'}" value="${item.ctaText}" data-target="${item.ctaTarget}" data-link="${item.ctaLink}">${item.ctaText}</option>
 							</sly>
 						</select>
 						<select class="partner-links mobile-sub-cat-select">
