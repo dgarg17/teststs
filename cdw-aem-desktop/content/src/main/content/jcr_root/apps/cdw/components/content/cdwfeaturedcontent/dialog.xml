@@ -70,7 +70,120 @@
                             jcr:primaryType="cq:Widget"
                             fieldLabel="Description"
                             name="./bodytext"
-                            xtype="richtext"/>
+                            xtype="richtext">
+							<rtePlugins jcr:primaryType="nt:unstructured">
+		                        <links jcr:primaryType="nt:unstructured">
+		                            <linkDialogConfig
+		                                jcr:primaryType="nt:unstructured"
+		                                height="{Long}376">
+		                                <linkAttributes jcr:primaryType="cq:WidgetCollection">
+		                                    <ensightenClickTracking
+		                                        jcr:primaryType="cq:Widget"
+		                                        collapsed="{Boolean}true"
+		                                        collapsible="{Boolean}true"
+		                                        inputValue="advanced"
+		                                        name="./linkdialog/ensightenLinkTrackingTab"
+		                                        title="Ensighten Click Tracking"
+		                                        xtype="dialogfieldset">
+		                                        <items jcr:primaryType="cq:WidgetCollection">
+		                                            <enable
+		                                                jcr:primaryType="nt:unstructured"
+		                                                attribute="adhocensightenenable"
+		                                                fieldLabel="Enable Ensighten Click Tracking"
+		                                                name="./linkdialog/ensightenLinkTrackingEnableTracking"
+		                                                xtype="checkbox">
+		                                                <listeners
+		                                                    jcr:primaryType="nt:unstructured"
+		                                                    check="function(component){var dlg=component.findParentByType('rtelinkdialog');dlg.enableEnsightenFields(component.checked);}"/>
+		                                            </enable>
+		                                            <eventType
+		                                                jcr:primaryType="cq:Widget"
+		                                                attribute="adhocensighteneventtype"
+		                                                defaultValue="standardClick"
+		                                                fieldLabel="Event Type"
+		                                                name="./linkdialog/ensightenEventType"
+		                                                type="select"
+		                                                xtype="selection">
+		                                                <options jcr:primaryType="cq:WidgetCollection">
+		                                                    <standardClick
+		                                                        jcr:primaryType="nt:unstructured"
+		                                                        text="Standard Click (Default)"
+		                                                        value="standardClick"/>
+		                                                    <partnerClick
+		                                                        jcr:primaryType="nt:unstructured"
+		                                                        text="Partner Click"
+		                                                        value="partnerClick"/>
+		                                                </options>
+		                                            </eventType>
+		                                            <elementTitle
+		                                                jcr:primaryType="cq:Widget"
+		                                                attribute="adhocensightenelementtitle"
+		                                                fieldLabel="Element Title"
+		                                                name="./linkdialog/ensightenElementTitle"
+		                                                xtype="textfield"/>
+		                                            <eventData
+		                                                jcr:primaryType="cq:Widget"
+		                                                attribute="adhocensighteneventdata"
+		                                                fieldLabel="Event Data"
+		                                                name="./linkdialog/ensightenEventData"
+		                                                xtype="textfield"/>
+													<overrideComponentName
+		                                                jcr:primaryType="cq:Widget"
+		                                                attribute="overridecomponentname"
+														value="Featured Content-RTE"
+		                                                name="./linkdialog/overrideComponentName"
+		                                                xtype="hidden"/>
+		                                        </items>
+		                                    </ensightenClickTracking>
+		                                </linkAttributes>
+		                            </linkDialogConfig>
+		                        </links>
+								<misctools
+		                            jcr:primaryType="nt:unstructured"
+		                            features="[specialchars]">
+		                            <specialCharsConfig jcr:primaryType="nt:unstructured">
+		                                <chars jcr:primaryType="nt:unstructured">
+		                                    <registered
+		                                        jcr:primaryType="nt:unstructured"
+		                                        entity="&amp;reg;"/>
+		                                    <leftsinglequote
+		                                        jcr:primaryType="nt:unstructured"
+		                                        entity="&amp;lsquo;"/>
+		                                    <rightsinglequote
+		                                        jcr:primaryType="nt:unstructured"
+		                                        entity="&amp;rsquo;"/>
+		                                    <leftdoublequote
+		                                        jcr:primaryType="nt:unstructured"
+		                                        entity="&amp;ldquo;"/>
+		                                    <rightdoublequote
+		                                        jcr:primaryType="nt:unstructured"
+		                                        entity="&amp;rdquo;"/>
+		                                    <trademark
+		                                        jcr:primaryType="nt:unstructured"
+		                                        entity="&amp;trade;"/>
+		                                    <endash
+		                                        jcr:primaryType="nt:unstructured"
+		                                        entity="&amp;ndash; "/>
+		                                    <emdash
+		                                        jcr:primaryType="nt:unstructured"
+		                                        entity="&amp;mdash; "/>
+		                                    <pound
+		                                        jcr:primaryType="nt:unstructured"
+		                                        entity="&amp;pound; "/>
+		                                    <copyright
+		                                        jcr:primaryType="nt:unstructured"
+		                                        entity="&amp;copy; "/>
+		                                    <middledot
+		                                        jcr:primaryType="nt:unstructured"
+		                                        entity="&amp;middot; "/>
+		                                    <rightanglequote
+		                                        jcr:primaryType="nt:unstructured"
+		                                        entity="&amp;raquo;"/>
+		                                </chars>
+		                            </specialCharsConfig>
+		                        </misctools>
+							</rtePlugins>
+					</text>
                     <alignment
                             jcr:primaryType="cq:Widget"
                             defaultValue="-left"
