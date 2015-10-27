@@ -11,7 +11,7 @@
 		
 	}
 
-	.partner-header { background:blue; padding: 0 20px; color:#fff; position:relative; @include clearfix;
+	.partner-header { background:green; padding: 0 20px; color:#fff; position:relative; @include clearfix;
 	.wrap-sol-nav{padding-top: 10px}
 		&.stick {
 			position:fixed;
@@ -89,8 +89,14 @@
 					position:relative;
 					
 					.select2-container{
+						.selection{
+							.select2-selection{
+								background-color: inherit;
+							}
+						}
+						background-color: inherit;
 						.select2-choice{
-							// background-color: inherit;
+							background-color: inherit !important;
 							&:hover{opacity: .5;} 
 						}
 						
@@ -109,8 +115,6 @@
 					}
 
 					.sub-cat-select {
-						font-size:14px;
-						line-height:14px;
 						position:absolute;
 						bottom:-22px;
 						width:180px;
