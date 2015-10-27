@@ -700,20 +700,20 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
 
 // .sub-cat-select{min-width: 197px;} not sure whats breakings when used
 .sub-cat-select-mobile {
-    display:none;
+    display:none ;
 }
 
 .select2-container {
     float:left;
     margin:0px 0 10px 10px;
     font-size:16px;
-    text-align:center;
+    // text-align:center;
 
     .select2-choice {
         border-radius:0;
         border:0;
         height:34px;
-        background:$color-gray90;
+        background:$color-gray80;
         &:hover{background: #7a7b7f;}
 
         .select2-chosen {
@@ -742,13 +742,13 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
     }
 }
 
-.layout-3 {
-    .select2-container {
-        float:none;
-        display:block;
-        margin-left:0;
-    }
-}
+// .layout-3 {
+//     .select2-container {
+//         float:none;
+//         display:block;
+//         margin-left:0;
+//     }
+// }
 
 .select2-drop {
     border-radius:0;
@@ -814,7 +814,7 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
 @media screen and (max-width: $screen-xs-min) {
 
     .sub-cat-select {
-        display:none;
+        display:none ;
     }
 
     .sub-cat-select-mobile {

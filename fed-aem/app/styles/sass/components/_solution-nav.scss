@@ -1,4 +1,7 @@
-.partner-header-wrapper { margin: $component-spacing;
+.poopface{background-color: red;}
+
+.partner-header-wrapper { 
+	margin: $component-spacing;
 	&.-aem-absolute-override{
 		.partner-header{
 			&.stick{
@@ -8,7 +11,7 @@
 		
 	}
 
-	.partner-header { background:$color-gray90; padding: 0 20px; color:#fff; position:relative; @include clearfix;
+	.partner-header { background:blue; padding: 0 20px; color:#fff; position:relative; @include clearfix;
 	.wrap-sol-nav{padding-top: 10px}
 		&.stick {
 			position:fixed;
@@ -19,17 +22,40 @@
 		}
 
 		h1 {
-			margin: 0 0 12px; font-size: 40px; line-height: 42px; font-weight: bold;
+			margin: 0 0 12px; font-size: 30px; line-height: 34px; font-weight: bold;
 		}
+		
+@media screen and (max-width: $screen-sm-min) {    
+    .sol-nav-title { font-size:28px;  line-height:30px;  }
+	.partner-logo {display: none }
+}
+
+@media screen and (max-width: $screen-xs-min) {    
+    .sol-nav-title { font-size:22px;  line-height:24px;  }
+	.partner-logo {display: none; }
+    .partner-header {
+    	.partner-menu {
+    		li {
+    			&.other-categories {
+			    	.sub-cat-select {
+						display:none;
+					}
+					.mobile-sub-cat-select {
+						display:block;
+						margin:auto;
+					}
+				}
+			}
+		}
+    }
+}
 		
 		.partner-logo {
 			&.layout-1{
 				//Vertical
 				.img-hold{
 					background-color: white; 
-					padding: 0px 10px 0px 0; 
-					display: inline-block;
-					max-width:100%; 
+					padding: 0px 10px 0px 0;  
 					margin-top:10px;
 					}
 			}
@@ -37,10 +63,8 @@
 				//Horizontal
 				.img-hold{
 					background-color: white; 
-					padding: 0px 10px 0px 0; 
-					display: inline-block;
-					max-width:100%; 
-					margin-top:25px;
+					padding: 0px 10px 0px 0;
+					margin-top:15px;
 					}
 			}
 			img{margin: 5px;}
@@ -63,7 +87,15 @@
 					color:#fff;
 					border-bottom:0;
 					position:relative;
-
+					
+					.select2-container{
+						.select2-choice{
+							// background-color: inherit;
+							&:hover{opacity: .5;} 
+						}
+						
+					}
+					
 					select {
 						background:none;
 						border:1px solid #fff;
@@ -132,38 +164,7 @@
 
 }
 
-@media screen and (max-width: $screen-sm-min) {
-    
-    .sol-nav-title { font-size:28px; line-height:30px; }
-
-}
-
-@media screen and (max-width: $screen-xs-min) {
-    
-    .sol-nav-title { font-size:22px; line-height:24px; }
-
-    .partner-header {
-
-    	.partner-menu {
-
-    		li {
-
-    			&.other-categories {
-
-			    	.sub-cat-select {
-						display:none;
-					}
-
-					.mobile-sub-cat-select {
-						display:block;
-						margin:auto;
-					}
-				}
-			}
-		}
-    }
-
-}
+// comment
 
 @media screen and (max-width: $screen-xxs-min) {
     

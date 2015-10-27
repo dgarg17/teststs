@@ -28,9 +28,7 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		
-	}
-	
-	
+	}	
 	h4, p, .button-lockup { overflow: hidden; }
 	
 	.copy{ overflow: hidden;	
@@ -50,9 +48,9 @@
 	.button-lockup { @include clearfix;
 		.pricing-block { margin-right: 10px; float: left; 
 			b, strong { font-size: 20px; line-height: 22px; }
-			p { margin: 0; }	
+			p {font-size: 14px; margin: 0; }	
 		}
-		.button { float: left; }	
+		.button { float: left; margin-top: 3px;}	
 	}
 
 	.image-lockup { 
@@ -118,7 +116,7 @@
 }
 
 .layout.slick-carousel {
-
+	.ico.slick-disabled{cursor: default;}
 	.slick-slide:focus {
 		outline:none;
 	}
@@ -156,12 +154,15 @@
 .layout-3, 
 .slick-carousel {
 	.product-picker { 
+		@media screen and (max-width: $screen-xs-min) {
+				min-height: 480px;
+			}
 
 		.pp-header-hold {
-			height:62px;
+			height:76px;
 
 			@media screen and (max-width: $screen-sm-min) and (min-width: $screen-xs-min + 1) {
-				height:42px;
+				height:56px;
 			}
 
 			@media screen and (max-width: $screen-xs-min) {
@@ -170,10 +171,14 @@
 		}
 
 		.pp-copy-hold {
-			height:170px;
+			height:210px;
+			
+			@media screen and (max-width: $screen-lg-min) and (min-width: $screen-sm-min + 1){
+				height:235px;
+			}
 
 			@media screen and (max-width: $screen-sm-min) and (min-width: $screen-xs-min + 1) {
-				height:140px;
+				height:210px;
 			}
 
 			@media screen and (max-width: $screen-xs-min) {
