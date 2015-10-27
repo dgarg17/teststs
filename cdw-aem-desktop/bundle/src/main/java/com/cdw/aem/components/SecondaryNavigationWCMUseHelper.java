@@ -17,6 +17,11 @@ public class SecondaryNavigationWCMUseHelper extends WCMUse {
 	private List<SecondaryNavigationItem> secondaryItems;
 	private String[] linksJson;
 	
+	private String imageLayout = "layout-2";
+	private String navLayout = "layout-10";
+	private String s7Preset = "$aem-hori-logo$";
+	private String imageStyle = "";
+	
 	@Override
     public void activate() throws Exception {
 		linksJson = get("json", String[].class);
@@ -25,6 +30,17 @@ public class SecondaryNavigationWCMUseHelper extends WCMUse {
             linksJson[0] = get("json", String.class);
         }
 		setupLists();
+		// image & layout logic
+		String orientation = getProperties().get("logoOrientation", "horizontal");
+		if ("vertical".equals(orientation)) {
+			imageLayout = "layout-1";
+			navLayout = "layout-11";
+			s7Preset = "$aem-vert-logo$";
+		}
+		String background = getProperties().get("logoBackground", "transparent");
+		if (!"transparent".equals(background)) {
+			imageStyle = "background-color:" + background + ";";
+		}
     }
 	
 	private void setupLists () {
@@ -85,6 +101,22 @@ public class SecondaryNavigationWCMUseHelper extends WCMUse {
 	
 	public int getSecondaryItemsCount() {
 		return (int) secondaryItems.size();
+	}
+	
+	public String getS7Preset() {
+		return s7Preset;
+	}
+	
+	public String getImageLayout() {
+		return imageLayout;
+	}
+	
+	public String getNavLayout() {
+		return navLayout;
+	}
+	
+	public String getImageStyle() {
+		return imageStyle;
 	}
 
 }
