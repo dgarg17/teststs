@@ -45,7 +45,6 @@
 						margin:auto;
 					}
 				}
-				
 			}
 
 		}
@@ -103,31 +102,16 @@
 				display:inline-block;
 				list-style:none;
 				padding-right:5%;
-				&._FFFFFF{
-					.select2-chosen{color: $color-white !important;}
-					a{border: 1px solid $color-white;}
-					}
-				&._4D4D4F{
-					.select2-chosen{color: $color-J7 !important;}
-					a{border: 1px solid $color-J7}
-					}
-				
-					
-				
+
 				&.other-categories {
 					text-align:center;
+					color:#fff;
 					border-bottom:0;
 					position:relative;
 					
 					.select2-container{
-						.selection{
-							.select2-selection{
-								background-color: inherit;
-							}
-						}
-						background-color: inherit;
 						.select2-choice{
-							background-color: inherit !important;
+							background: inherit !important;
 							&:hover{opacity: .5;} 
 						}
 						
@@ -136,6 +120,7 @@
 					select {
 						background:none;
 						border:1px solid #fff;
+						color:#fff;
 						padding:8px;
 						cursor:pointer;
 
@@ -165,6 +150,15 @@
 						}
 					}
 				}
+				
+				&._FFFFFF{
+					.select2-chosen{color: $color-white !important;}
+					a{border: 1px solid $color-white;}
+					}
+				&._4D4E53{
+					.select2-chosen{color: $color-gray90 !important;}
+					a{border: 1px solid $color-gray90}
+					}
 			}
 		}
 
@@ -283,7 +277,8 @@
 		}
 
 	}
-}
+
 	
 
 	
+}
