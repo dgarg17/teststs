@@ -2,7 +2,14 @@
 <div class="product-picker product-display" data-sly-test="${properties.productCategoryName}">
     <div class="pp-header-hold">
         <h5 data-sly-test="${properties.productCategoryNameUrl}">
-            <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.productCategoryNameUrl}"
+            <a   data-sly-test.event="${properties.eventData||properties.eventTitle}"
+                 data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.productCategoryNameUrl}"
+                 data-sly-use.event="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='H'}"
+                 href="${link.urlUpdate}"
+                 onclick="${event.taggingEvent @context='html'}"
+                    > ${properties.productCategoryName}</a>
+            <a    data-sly-test="${!event}"
+                    data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.productCategoryNameUrl}"
                href="${link.urlUpdate}"> ${properties.productCategoryName}</a>
         </h5>
         <h5 data-sly-test="${!properties.productCategoryNameUrl}">
@@ -13,11 +20,22 @@
         <p>${properties.productCategoryDescription}</p>
     </div>
     <div class="pp-product-lockup">
-        <div class="product-image" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
-            <a href="${link.urlUpdate}"  target="${properties.productCategoryImageTarget}"
-               data-sly-test="${properties.productCategoryImageUrl}"
+        <div class="product-image"
+             data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
+            <a href="${link.urlUpdate}"
+               target="${properties.productCategoryImageTarget}"
+               data-sly-test.eventImage="${properties.productCategoryImageUrl&&(properties.eventData||properties.eventTitle)}"
+               data-sly-use.eventTagging="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='IMG'}"
+               data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.productCategoryImageUrl}"
+               >
+            <img alt="product Category" src="${utility.S7ImageRoot}${properties.productCategoryImage}?$product-200$"
+                 onclick="${eventTagging.taggingEvent @context='html'}" />
+            </a>
+            <a href="${link.urlUpdate}"
+               target="${properties.productCategoryImageTarget}"
+               data-sly-test="${!eventImage}"
                data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.productCategoryImageUrl}">
-            <img alt="product Category" src="${utility.S7ImageRoot}${properties.productCategoryImage}?$product-200$" />
+                <img alt="product Category" src="${utility.S7ImageRoot}${properties.productCategoryImage}?$product-200$" />
             </a>
             <img alt="product Category" src="${utility.S7ImageRoot}${properties.productCategoryImage}?$product-200$" data-sly-test="${!properties.productCategoryImageUrl}"/>
         </div>

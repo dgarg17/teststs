@@ -4,10 +4,10 @@
 
         <a data-sly-test.header="${properties.headLineTextLink&&(properties.eventData||properties.eventTitle)}"
            data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.headLineTextLink}"
-           data-sly-use.event="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='H'}"
+           data-sly-use.eventTagging="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='H'}"
            href="${link.urlUpdate}"
            target="${properties.headLineTextTarget}"
-           onclick="${event.taggingEvent @context='html'}"
+           onclick="${eventTagging.taggingEvent @context='html'}"
                 >${properties.headline}</a>
         <a data-sly-test="${!header}"
            data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.headLineTextLink}"
@@ -38,7 +38,7 @@
             data-sly-test="${!event}"
             target="${secondaryLinks.subCategoryProductLinks[0].ctatarget}"
             class="btn button ${properties.ctabuttonstyle}">${secondaryLinks.subCategoryProductLinks[0].ctalabel} </a>
-        <h1>${secondaryLinks.subCategoryProductLinks.toString}</h1>
+
     </div>
 
     <div class="button-lockup" data-sly-test="${secondaryLinks.count>1}">
