@@ -714,10 +714,14 @@ CQ.form.rte.plugins.LinkDialogOverride = CQ.Ext.extend(CQ.form.rte.ui.BaseWindow
                 this.objToEdit.attributes.adhocensightenelementtitle = elementTitleField.getValue() || "";
 
                 this.objToEdit.attributes.adhocensighteneventdata = eventDataField.getValue() || "";
+				
+				var componentName = "Rich Text";
+				var overrideComponentName = this.getField("linkdialog/overrideComponentName");
+				if (overrideComponentName && overrideComponentName.getValue() != undefined) componentName = overrideComponentName.getValue();
 
                 if (ensightenEnableField.getValue()) {
 
-					var eventData = "Rich Text|" + this.objToEdit.attributes.adhocensightenelementtitle + "|" + this.objToEdit.attributes.adhocensighteneventdata;
+					var eventData = componentName + "|" + this.objToEdit.attributes.adhocensightenelementtitle + "|" + this.objToEdit.attributes.adhocensighteneventdata;
 					var page_name = window.cdwTagManagementData.page_name;
 
                     var onClickMethod = "javascript:CdwTagMan.createElementPageTag(window.cdwTagManagementData.page_name, '" + eventData + "');";
