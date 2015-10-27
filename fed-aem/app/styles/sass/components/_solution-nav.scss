@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-.poopface{background-color: red;}
 
->>>>>>> develop
 .partner-header-wrapper { 
 	margin: $component-spacing;
 	&.-aem-absolute-override{
@@ -26,8 +22,7 @@
 
 		h1 {
 			margin: 0 0 12px; font-size: 30px; line-height: 34px; font-weight: bold;
-<<<<<<< HEAD
-=======
+
 		}
 		
 @media screen and (max-width: $screen-sm-min) {    
@@ -50,8 +45,9 @@
 						margin:auto;
 					}
 				}
+				
 			}
->>>>>>> develop
+
 		}
     }
 }
@@ -106,16 +102,20 @@
 			li {
 				display:inline-block;
 				list-style:none;
-				color:$color-white;
 				padding-right:5%;
-
-				a {
-					color:$color-white;
-				}
-
+				&._FFFFFF{
+					.select2-chosen{color: $color-white !important;}
+					a{border: 1px solid $color-white;}
+					}
+				&._4D4D4F{
+					.select2-chosen{color: $color-J7 !important;}
+					a{border: 1px solid $color-J7}
+					}
+				
+					
+				
 				&.other-categories {
 					text-align:center;
-					color:#fff;
 					border-bottom:0;
 					position:relative;
 					
@@ -136,7 +136,6 @@
 					select {
 						background:none;
 						border:1px solid #fff;
-						color:#fff;
 						padding:8px;
 						cursor:pointer;
 
@@ -284,8 +283,7 @@
 		}
 
 	}
-
-	
-
-	
 }
+	
+
+	
