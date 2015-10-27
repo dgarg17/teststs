@@ -1,37 +1,59 @@
 package com.cdw.aem.util.components;
 
 import com.adobe.cq.sightly.WCMUse;
+import com.cdw.aem.components.EnsightenTaggingWCMUseHelper;
 import com.cdw.aem.util.LinkList;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
  * Created by goutved on 7/29/2015.
  */
-public class LinkListWCMUseHelper extends WCMUse {
+public class LinkListWCMUseHelper extends EnsightenTaggingWCMUseHelper {
 
     protected org.slf4j.Logger log = LoggerFactory.getLogger(LinkListWCMUseHelper.class);
     private String[] secondaryLinksJson;
+    private int startWith=1;
+
 
 
     @Override
     public void activate() throws Exception {
-
+        super.activate();
         secondaryLinksJson = get("json", String[].class);
         if (secondaryLinksJson == null) {
             secondaryLinksJson = new String[1];
             secondaryLinksJson[0] = get("json", String.class);
-
         }
+        String i=get("startWith", String.class);
+       if(i!=null&& StringUtils.isNumeric(i)){
+           log.debug("startWith is integer  " +Integer.parseInt(i));
+           startWith=Integer.parseInt(i);
+       }else if(get("startWith", Integer.class)!=null){
+           startWith=get("startWith", Integer.class);
+       }else{
+           startWith=1;
+       }
         log.debug(this.getClass().getName() + "secondaryLinksJson " + secondaryLinksJson.length);
     }
 
     public List<LinkList> getSubCategoryProductLinks() {
         List<LinkList> linkLists = (new Gson().fromJson(concatJson(secondaryLinksJson), new TypeToken<List<LinkList>>() {
         }.getType()));
+        int count=startWith;
+        for(LinkList linkList:linkLists){
+            if(count==1&&linkLists.size()==1){
+                linkList.setEventSelect(getTaggingEvent());
+            }else {
+                linkList.setEventSelect(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, getElementType().toUpperCase() + "-" + count));
+
+            }count++;
+        }
         return linkLists;
     }
 
@@ -55,4 +77,12 @@ public class LinkListWCMUseHelper extends WCMUse {
         return secondaryLinksJson.length;
     }
 
+    @Override
+    public String toString() {
+        return "LinkListWCMUseHelper{" +
+                "secondaryLinksJson=" + Arrays.toString(secondaryLinksJson) +
+                ", startWith=" + startWith +
+                ", EnsightenTaggingWCMUseHelper=" + super.toString() +
+                '}';
+    }
 }

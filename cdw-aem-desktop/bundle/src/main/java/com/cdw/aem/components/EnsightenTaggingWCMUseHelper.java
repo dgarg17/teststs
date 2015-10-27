@@ -46,6 +46,9 @@ public class EnsightenTaggingWCMUseHelper extends WCMUse {
         if (elementType == null) {
             elementType = getProperties().get("elementType", String.class);
         }
+        if(elementType==null){
+            elementType="cta";
+        }
     }
 
     public static String getMethodName(String eventType) {
@@ -77,7 +80,7 @@ public class EnsightenTaggingWCMUseHelper extends WCMUse {
         return COMPONENTNAME + "|" + eventTitle + "-" + ELEMENTTYPE  + "|" + eventData;
     }
     public String getSecondParam() {
-        return getSecondParam(eventData,eventTitle).replaceAll(COMPONENTNAME,getComponent().getName()).replaceAll(ELEMENTTYPE,elementType.toUpperCase());
+        return getSecondParam(eventData, eventTitle).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, elementType.toUpperCase());
     }
 
     public String getTaggingEvent() {
@@ -87,4 +90,29 @@ public class EnsightenTaggingWCMUseHelper extends WCMUse {
         return getMethodName(eventType) + "(" + getFirstParam(eventType) + ",\'" + getSecondParam(eventData,eventTitle) + "\')";
     }
 
+    public String getEventType() {
+        return eventType;
+    }
+
+    public String getEventTitle() {
+        return eventTitle;
+    }
+
+    public String getElementType() {
+        return elementType;
+    }
+
+    public String getEventData() {
+        return eventData;
+    }
+
+    @Override
+    public String toString() {
+        return "EnsightenTaggingWCMUseHelper{" +
+                "eventType='" + eventType + '\'' +
+                ", eventTitle='" + eventTitle + '\'' +
+                ", eventData='" + eventData + '\'' +
+                ", elementType='" + elementType + '\'' +
+                '}';
+    }
 }
