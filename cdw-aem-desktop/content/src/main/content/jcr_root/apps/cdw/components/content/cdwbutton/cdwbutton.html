@@ -1,3 +1,34 @@
-<div class="button-lockup -${properties.alignment}" data-sly-test="${properties.ctalink}">
-    <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"  href="${link.urlUpdate}" class="button -${properties.buttonStyle}" target="${properties.ctatarget}">${properties.cdwctalabel} </a>
-</div>
+<!-- Enhanced CDW Button with single/multi link options -->
+
+ <div class="cdw-multi-button">
+	<div class="button-lockup ${properties.alignment}"
+         data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.secondaryLinks}"
+         data-sly-test="${properties.secondaryLinks&&secondaryLinks.count==1}">
+         <a href="${secondaryLinks.subCategoryProductLinks[0].ctalink}"
+           target="${secondaryLinks.subCategoryProductLinks[0].ctatarget}"
+           class="button ${properties.buttonStyle}">${secondaryLinks.subCategoryProductLinks[0].ctalabel} </a>
+	</div>
+
+    <div class="button-lockup ${properties.alignment}" data-sly-test="${secondaryLinks.count>1}">
+        <select class="partner-links sub-cat-select ${properties.buttonStyle}" data-secondary-label="${properties.dropdownlabel}"
+                data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.secondaryLinks}"
+                >
+			<option></option>
+            <sly data-sly-list="${secondaryLinks.subCategoryProductLinks}">
+                <option class="${properties.buttonStyle}" value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}">
+                    ${item.ctalabel}
+                </option>
+            </sly>
+        </select>
+        <select class="partner-links sub-cat-select-mobile" data-secondary-label="${properties.dropdownlabel}"
+                data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.secondaryLinks}">
+            <option></option>
+            <!--closing option-->
+            <sly data-sly-list="${secondaryLinks.subCategoryProductLinks}">
+                <option value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}">
+                    ${item.ctalabel}
+                </option>
+            </sly>
+        </select>
+    </div>
+    </div>
