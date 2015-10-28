@@ -391,10 +391,10 @@ html[dir="rtl"] .select2-results {
 .select2-results-dept-6 .select2-result-label { padding-left: 110px }
 .select2-results-dept-7 .select2-result-label { padding-left: 120px }
 
-.select2-results .select2-highlighted {
-    background: #3875d7;
-    color: #fff;
-}
+// .select2-results .select2-highlighted {
+//     background: #3875d7;
+//     color: #fff;
+// }
 
 .select2-results li em {
     background: #feffde;
@@ -708,7 +708,23 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
     margin:0px 0 10px 10px;
     font-size:16px;
     // text-align:center;
+    
+        &.-red {
+            .select2-choice{
+              background-color: $color-red;
+            &:hover { background-color: lighten($color-red, 10%); }
+            &.-border { border: 1px solid $color-red; color: $color-red; background: #fff; }  
+            } 
+        }
+        &.-gray { 
+            .select2-choice{
+                background-color: $color-gray80;
+            &:hover { background-color: lighten($color-gray80, 10%); }
 
+            &.-border { border: 1px solid $color-gray80; color: $color-gray80; background: #fff; }
+            }
+    }
+        
     .select2-choice {
         border-radius:0;
         border:0;
@@ -756,8 +772,7 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
         border:0;
         padding:0;
         border-radius:0;
-        margin:0;
-        .red{background-color:red !important; &:hover{opacity: .5;}}        
+        margin:0;      
         
         ._D02C30{background-color: $color-B1 !important; &:hover{opacity: .5;}}
         ._C20430{background-color: $color-C1 !important; &:hover{opacity: .5;}}
@@ -827,6 +842,16 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
             &.select2-highlighted{color: $color-gray90;}
             .select2-match{color: $color-gray90 !important;}
             }
+         .-red {
+            background-color: $color-red; color: $color-white;
+            &:hover { background-color: lighten($color-red, 10%); }
+            &.-border { border: 1px solid $color-red; color: $color-red; background: #fff; }  
+            }
+         .-gray { background-color: $color-gray80; color: $color-white;
+            &:hover { background-color: lighten($color-gray80, 10%); }
+            &.-border { border: 1px solid $color-gray80; color: $color-gray80; background: #fff; }
+         } 
+        
             
         
         
