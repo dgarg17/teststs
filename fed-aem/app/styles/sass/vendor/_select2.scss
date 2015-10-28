@@ -704,11 +704,38 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
 }
 
 .select2-container {
-    // float:left; probably broke something
-    margin:0px 0 10px 10px;
+    // float:left; check this doesnt break things
+    margin:0 0 10px 0;
     font-size:16px;
+    border: 1px solid $color-white;
     // text-align:center;
+    
+        &.-red {
+            .select2-choice{
+              background-color: $color-red;
+            &:hover { background-color: lighten($color-red, 10%); }
+            &.-border { border: 1px solid $color-red; color: $color-red; background: #fff; }  
+            } 
+        }
+        &.-gray { 
+            .select2-choice{
+                background-color: $color-gray80;
+            &:hover { background-color: lighten($color-gray80, 10%); }
 
+            &.-border { border: 1px solid $color-gray80; color: $color-gray80; background: #fff; }
+            }
+        }
+        &.-white {
+            .select2-choice{
+                .select2-chosen{color: $color-gray80;}
+                i.ico{color: $color-gray80;}
+            background-color: $color-white; 
+            border:1px solid $color-gray80;
+            &:hover { background-color: darken($white, 3%); }
+            }
+        }
+        
+        
     .select2-choice {
         border-radius:0;
         border:0;
@@ -756,8 +783,7 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
         border:0;
         padding:0;
         border-radius:0;
-        margin:0;
-        .red{background-color:red !important; &:hover{opacity: .5;}}        
+        margin:0;      
         
         ._D02C30{background-color: $color-B1 !important; &:hover{opacity: .5;}}
         ._C20430{background-color: $color-C1 !important; &:hover{opacity: .5;}}
@@ -821,11 +847,34 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
         //Controls font color in dropdown
         .x4D4E53{
             &.select2-highlighted{color: $color-gray90;}
-            .select2-match{color: $color-gray90 !important;}
+            .select2-result-label{color: $color-gray90 !important;}
             }
+
         .xFFFFFF{
-            .select2-match{color: $color-white;}
+            .select2-result-label{color: $color-white;}
         }
+
+         .-red {
+            background-color: $color-red; color: $color-white;
+            &:hover { background-color: lighten($color-red, 10%); }
+            &.-border { border: 1px solid $color-red; color: $color-red; background: #fff; }  
+            }
+         .-gray { background-color: $color-gray80; color: $color-white;
+            &:hover { background-color: lighten($color-gray80, 10%); }
+            &.-border { border: 1px solid $color-gray80; color: $color-gray80; background: #fff; }
+         }
+         .-clear { 
+            background-color: none;
+            border: 1px solid $color-white;
+            &:hover { color: $color-white; background: rgba(255, 255, 255, 0.1); }
+         } 
+         .-white { 
+            border:1px solid $color-gray80;
+            color: $color-gray80;
+            &:hover { background-color: darken($white, 3%); }
+          }
+        
+
             
         
         
