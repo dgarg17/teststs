@@ -89,7 +89,7 @@
                             value="-white"/>
                         <ghostButton
                             jcr:primaryType="nt:unstructured"
-                            text="Ghost Button ( Application only for single link CTA Button)"
+                            text="Ghost Button (Only for single link CTA Button)"
                             value="-clear"/>
                     </options>
                 </buttonStyle>
