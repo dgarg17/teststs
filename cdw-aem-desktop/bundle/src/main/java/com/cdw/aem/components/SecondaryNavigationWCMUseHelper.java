@@ -9,10 +9,11 @@ import org.slf4j.Logger;
 
 import java.util.List;
 
-public class SecondaryNavigationWCMUseHelper extends WCMUse {
+public class SecondaryNavigationWCMUseHelper extends EnsightenTaggingWCMUseHelper {
 
     protected Logger log = LoggerFactory.getLogger(this.getClass());
-
+    public static String PRIMARY_ELEMENT_TYPE="LINK";
+    public static String SECONDARY_ELEMENT_TYPE="LINK-SECONDARY";
 	private List<SecondaryNavigationItem> primaryItems;
 	private List<SecondaryNavigationItem> secondaryItems;
 	private String[] linksJson;
@@ -39,7 +40,13 @@ public class SecondaryNavigationWCMUseHelper extends WCMUse {
 					primaryItems.remove(item);
 				}
             }
-        }
+			for (int i = 1; i > primaryItems.size(); i++) {
+				SecondaryNavigationItem item = primaryItems.get((i - 1));
+				item.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE,PRIMARY_ELEMENT_TYPE + "-" + i));
+				}
+			}
+
+
 		// initialize secondary list with all items
 		secondaryItems = new Gson().fromJson(concatJson(linksJson), new TypeToken<List<SecondaryNavigationItem>>() {
          }.getType());
@@ -51,8 +58,13 @@ public class SecondaryNavigationWCMUseHelper extends WCMUse {
 					secondaryItems.remove(item);
 				}
             }
-        }
+			for (int i = 1; i > secondaryItems.size(); i++) {
+				SecondaryNavigationItem item = secondaryItems.get((i - 1));
+				item.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE,SECONDARY_ELEMENT_TYPE + "-" + i));
+			}
+		}
 	}
+
 	
 	private String concatJson(String[] jsonArray) {
 
