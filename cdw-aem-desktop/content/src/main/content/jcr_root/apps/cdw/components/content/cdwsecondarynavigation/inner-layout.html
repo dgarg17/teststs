@@ -1,41 +1,51 @@
 <div class="partner-header layout-extended" style="color:#${properties.textColor @ context='styleString'};background-color:#${properties.backgroundColor @ context='styleString'};">
-	<div class="layout">
+	<div class="layout" data-sly-use.linksHelper="${'com.cdw.aem.components.SecondaryNavigationWCMUseHelper' @json=properties.links}">
 		<div class="mobileNav ico ico-uni71"></div>
-		<div data-sly-test="${properties.fileReference}" class="partner-logo" class="layout-1">
-			<sly data-sly-test="${properties.logoLink}">
-			<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.logoLink}"
-						href="${link.urlUpdate}">
-				<img src="${properties.fileReference}?hei=55" />
-			</a>
-			</sly>
-			<sly data-sly-test="${!properties.logoLink}">
-			<img src="${properties.fileReference}?&fmt=jpeg&qlt=100,0&op_sharpen=1&resMode=trilin&hei=55" />
-			</sly>
-		</div>
-		<div data-sly-use.linksHelper="${'com.cdw.aem.components.SecondaryNavigationWCMUseHelper' @json=properties.links}" class="layout-11">
-			<div data-sly-test="${properties.headline}">
-				<h1 class="sol-nav-title">${properties.headline}</h1>
-			</div>
-			<ul class="partner-menu">
-				<sly data-sly-list="${linksHelper.primaryItems}">
-				<li>
-					<a href="${item.ctaLink}" target="${item.ctaTarget}" style="color:#${properties.textColor @ context='styleString'};">${item.ctaText}</a>
-				</li>
+		<div data-sly-test="${properties.fileReference}" class="partner-logo ${linksHelper.imageLayout}">
+			<div class="img-hold" style="${linksHelper.imageStyle @ context='styleString'}">
+				<sly data-sly-test="${properties.logoLink}">
+				<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.logoLink}"
+							href="${link.urlUpdate}">
+					<img src="${properties.fileReference}?${linksHelper.s7Preset}" />
+				</a>
 				</sly>
-				<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount > 1}" class="other-categories">
-					<select class="partner-links" style="color:#${properties.textColor @ context='styleString'};border-color:#${properties.textColor @ context='styleString'};">
-						<option value="">${properties.secondaryLinksLabel}</option>
-						<sly data-sly-list="${linksHelper.secondaryItems}">
-						<option value="${item.ctaText}" data-target="${item.ctaTarget}" data-link="${item.ctaLink}">${item.ctaText}</option>
-						</sly>
-					</select>
-				</li>
-				<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount == 1}" class="other-categories">
-					<div class="button-lockup">
-                        <a class="button -clear" style="color:#${properties.textColor @ context='styleString'};border-color:#${properties.textColor @ context='styleString'};" href="${linksHelper.secondaryItems[0].ctaLink}" target="${linksHelper.secondaryItems[0].ctaTarget}">${linksHelper.secondaryItems[0].ctaText}</a>
-					</div>
-				</li>
-			</ul>
+				<sly data-sly-test="${!properties.logoLink}">
+				<img src="${properties.fileReference}?${linksHelper.s7Preset}" />
+				</sly>
+			</div>
+		</div>
+		<div class="${linksHelper.navLayout}">
+			<div class="wrap-sol-nav">
+				<div data-sly-test="${properties.headline}">
+					<h1 class="sol-nav-title">${properties.headline}</h1>
+				</div>
+				<ul class="partner-menu">
+					<sly data-sly-list="${linksHelper.primaryItems}">
+					<li>
+						<a href="${item.ctaLink}" target="${item.ctaTarget}" style="color:#${properties.textColor @ context='styleString'};">${item.ctaText}</a>
+					</li>
+					</sly>
+					<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount > 1}" class="other-categories _${properties.textColor @ context='styleString'}">
+						<select class="partner-links sub-cat-select" data-secondary-label="${properties.secondaryLinksLabel}">
+							<option value=""></option>
+							<sly data-sly-list="${linksHelper.secondaryItems}">
+							<option class="_${properties.backgroundColor @ context='styleString'} _${properties.textColor @ context='styleString'}" value="${item.ctaText}" data-target="${item.ctaTarget}" data-link="${item.ctaLink}">${item.ctaText}</option>
+							</sly>
+						</select>
+						<select class="partner-links mobile-sub-cat-select">
+							<option value="">${properties.secondaryLinksLabel}</option>
+							<sly data-sly-list="${linksHelper.secondaryItems}">
+							<option value="${item.ctaText}" data-target="${item.ctaTarget}" data-link="${item.ctaLink}">${item.ctaText}</option>
+							</sly>
+						</select>
+					</li>
+					<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount == 1}" class="other-categories">
+						<div class="button-lockup">
+	                        <a class="button -clear" style="color:#${properties.textColor @ context='styleString'};border-color:#${properties.textColor @ context='styleString'};" href="${linksHelper.secondaryItems[0].ctaLink}" target="${linksHelper.secondaryItems[0].ctaTarget}">${linksHelper.secondaryItems[0].ctaText}</a>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

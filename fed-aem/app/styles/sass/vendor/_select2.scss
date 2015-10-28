@@ -391,10 +391,10 @@ html[dir="rtl"] .select2-results {
 .select2-results-dept-6 .select2-result-label { padding-left: 110px }
 .select2-results-dept-7 .select2-result-label { padding-left: 120px }
 
-.select2-results .select2-highlighted {
-    background: #3875d7;
-    color: #fff;
-}
+// .select2-results .select2-highlighted {
+//     background: #3875d7;
+//     color: #fff;
+// }
 
 .select2-results li em {
     background: #feffde;
@@ -704,11 +704,37 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
 }
 
 .select2-container {
-    float:left;
+    // float:left; check this doesnt break things
     margin:0px 0 10px 10px;
     font-size:16px;
     // text-align:center;
+    
+        &.-red {
+            .select2-choice{
+              background-color: $color-red;
+            &:hover { background-color: lighten($color-red, 10%); }
+            &.-border { border: 1px solid $color-red; color: $color-red; background: #fff; }  
+            } 
+        }
+        &.-gray { 
+            .select2-choice{
+                background-color: $color-gray80;
+            &:hover { background-color: lighten($color-gray80, 10%); }
 
+            &.-border { border: 1px solid $color-gray80; color: $color-gray80; background: #fff; }
+            }
+        }
+        &.-white {
+            .select2-choice{
+                .select2-chosen{color: $color-gray80;}
+                i.ico{color: $color-gray80;}
+            background-color: $color-white; 
+            border:1px solid $color-gray80;
+            &:hover { background-color: darken($white, 3%); }
+            }
+        }
+        
+        
     .select2-choice {
         border-radius:0;
         border:0;
@@ -752,34 +778,118 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
 
 .select2-drop {
     border-radius:0;
-
     .select2-results {
         border:0;
         padding:0;
         border-radius:0;
-        margin:0;
-
+        margin:0;      
+        
+        ._D02C30{background-color: $color-B1 !important; &:hover{opacity: .5;}}
+        ._C20430{background-color: $color-C1 !important; &:hover{opacity: .5;}}
+        ._F28B00{background-color: $color-D1 !important; &:hover{opacity: .5;}}
+        ._009D4F{background-color: $color-E1 !important; &:hover{opacity: .5;}}
+        ._009483{background-color: $color-F1 !important; &:hover{opacity: .5;}}
+        ._007299{background-color: $color-G1 !important; &:hover{opacity: .5;}}
+        ._76236D{background-color: $color-H1 !important; &:hover{opacity: .5;}}
+        ._B42573{background-color: $color-I1 !important; &:hover{opacity: .5;}}
+        ._FE4A5d{background-color: $color-B2 !important; &:hover{opacity: .5;}}
+        ._D8292F{background-color: $color-C2 !important; &:hover{opacity: .5;}}
+        ._F5B324{background-color: $color-D2 !important; &:hover{opacity: .5;}}
+        ._3DAF2C{background-color: $color-E2 !important; &:hover{opacity: .5;}}
+        ._00A19C{background-color: $color-F2 !important; &:hover{opacity: .5;}}
+        ._007CBB{background-color: $color-G2 !important; &:hover{opacity: .5;}}
+        ._923A80{background-color: $color-H2 !important; &:hover{opacity: .5;}}
+        ._E01783{background-color: $color-I2 !important; &:hover{opacity: .5;}}
+        ._FF828A{background-color: $color-B3 !important; &:hover{opacity: .5;}}
+        ._E74C39{background-color: $color-C3 !important; &:hover{opacity: .5;}}
+        ._F8BF00{background-color: $color-D3 !important; &:hover{opacity: .5;}}
+        ._76BD22{background-color: $color-E3 !important; &:hover{opacity: .5;}}
+        ._00AFAB{background-color: $color-F3 !important; &:hover{opacity: .5;}}
+        ._00A8E2{background-color: $color-G3 !important; &:hover{opacity: .5;}}
+        ._A45B96{background-color: $color-H3 !important; &:hover{opacity: .5;}}
+        ._EA6CB0{background-color: $color-I3 !important; &:hover{opacity: .5;}}
+        ._FFB0C0{background-color: $color-B4 !important; &:hover{opacity: .5;}}
+        ._E57E3E{background-color: $color-C4 !important; &:hover{opacity: .5;}}
+        ._FFD200{background-color: $color-D4 !important; &:hover{opacity: .5;}}
+        ._A6CE39{background-color: $color-E4 !important; &:hover{opacity: .5;}}
+        ._63CCCA{background-color: $color-F4 !important; &:hover{opacity: .5;}}
+        ._00B3E3{background-color: $color-G4 !important; &:hover{opacity: .5;}}
+        ._B588B9{background-color: $color-H4 !important; &:hover{opacity: .5;}}
+        ._F6A7D7{background-color: $color-I4 !important; &:hover{opacity: .5;}}
+        ._EEC7CE{background-color: $color-B5 !important; &:hover{opacity: .5;}}
+        ._F2BD7D{background-color: $color-C5 !important; &:hover{opacity: .5;}}
+        ._FFE900{background-color: $color-D5 !important; &:hover{opacity: .5;}}
+        ._C3D600{background-color: $color-E5 !important; &:hover{opacity: .5;}}
+        ._9ADADA{background-color: $color-F5 !important; &:hover{opacity: .5;}}
+        ._54C9E8{background-color: $color-G5 !important; &:hover{opacity: .5;}}
+        ._CEADD0{background-color: $color-H5 !important; &:hover{opacity: .5;}}
+        ._E8BCD8{background-color: $color-I5 !important; &:hover{opacity: .5;}}
+        ._F7DBE0{background-color: $color-B6 !important; &:hover{opacity: .5;}}
+        ._F2D1A0{background-color: $color-C6 !important; &:hover{opacity: .5;}}
+        ._FFEA77{background-color: $color-D6 !important; &:hover{opacity: .5;}}
+        ._E2E768{background-color: $color-E6 !important; &:hover{opacity: .5;}}
+        ._B0E3E4{background-color: $color-F6 !important; &:hover{opacity: .5;}}
+        ._96D5EA{background-color: $color-G6 !important; &:hover{opacity: .5;}}
+        ._E8BFDC{background-color: $color-H6 !important; &:hover{opacity: .5;}}
+        ._EDD3E2{background-color: $color-I6 !important; &:hover{opacity: .5;}}
+        ._D1D0CE{background-color: $color-J1 !important; &:hover{opacity: .5;}}
+        ._BCBCBC{background-color: $color-J2 !important; &:hover{opacity: .5;}}
+        ._A8A8AA{background-color: $color-J3 !important; &:hover{opacity: .5;}}
+        ._898B8E{background-color: $color-J4 !important; &:hover{opacity: .5;}}
+        ._63656A{background-color: $color-J5 !important; &:hover{opacity: .5;}}
+        ._54565B{background-color: $color-J6 !important; &:hover{opacity: .5;}}
+        ._4D4D4F{
+            background-color: $color-J7 !important; &:hover{opacity: .5;}}
+        ._CC0000{background-color: $color-A1 !important; &:hover{opacity: .5;}}
+        ._FFFFFF{
+            background-color: $color-white !important; 
+            &:hover{opacity: .5;}
+            .select2-result{
+                span{color: $color-white;}
+                }
+            }
+        ._4D4E53{
+            &.select2-highlighted{color: $color-gray90;}
+            .select2-match{color: $color-gray90 !important;}
+            }
+         .-red {
+            background-color: $color-red; color: $color-white;
+            &:hover { background-color: lighten($color-red, 10%); }
+            &.-border { border: 1px solid $color-red; color: $color-red; background: #fff; }  
+            }
+         .-gray { background-color: $color-gray80; color: $color-white;
+            &:hover { background-color: lighten($color-gray80, 10%); }
+            &.-border { border: 1px solid $color-gray80; color: $color-gray80; background: #fff; }
+         }
+         .-clear { 
+            background-color: none;
+            border: 1px solid $color-white;
+            &:hover { color: $color-white; background: rgba(255, 255, 255, 0.1); }
+         } 
+         .-white { 
+            border:1px solid $color-gray80;
+            color: $color-gray80;
+            &:hover { background-color: darken($white, 3%); }
+          }
+        
+            
+        
+        
+        
         .select2-result-selectable {
-            color:#fff;
             height:34px;
             border-radius:0;
             border:0;
-            background:$color-gray90;
+            
 
             &:hover {
-                background:$color-gray60;
-
-                .select2-result-label {
-                    //text-decoration:underline;
-                }
+               
             }
 
             .select2-result-label {
                 height:34px;
                 line-height:34px;
                 margin:0 15px;
-                // text-align:center;
-                color:#fff;
                 padding:0;
             }
         }
