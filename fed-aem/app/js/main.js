@@ -33,14 +33,8 @@ $(window).scroll(function () {
 });
 
 var togglePartnerMenu = function() {
-	switch ($('.partner-menu').is(':visible')) {
-		case true:
 			$('.mobileNav').removeClass('ico-uni52').addClass('ico-uni71');
 			$('.partner-menu').slideUp();
-			break;
-		case false:
-			$('.mobileNav').removeClass('ico-uni71').addClass('ico-uni52');
-			$('.partner-menu').slideDown();
-			break;
+			
 	}
-}
+
