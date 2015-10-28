@@ -25,11 +25,11 @@
 						<a href="${item.ctaLink}" target="${item.ctaTarget}" style="color:#${properties.textColor @ context='styleString'};">${item.ctaText}</a>
 					</li>
 					</sly>
-					<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount > 1}" class="other-categories _${properties.textColor @ context='styleString'}">
+					<li data-sly-test="${linksHelper.hasSecondaryItems && linksHelper.secondaryItemsCount > 1}" class="other-categories x${properties.textColor @ context='styleString'}">
 						<select class="partner-links sub-cat-select" data-secondary-label="${properties.secondaryLinksLabel}">
 							<option value=""></option>
 							<sly data-sly-list="${linksHelper.secondaryItems}">
-							<option class="_${properties.backgroundColor @ context='styleString'} _${properties.textColor @ context='styleString'}" value="${item.ctaText}" data-target="${item.ctaTarget}" data-link="${item.ctaLink}">${item.ctaText}</option>
+							<option class="_${properties.backgroundColor @ context='styleString'} x${properties.textColor @ context='styleString'}" value="${item.ctaText}" data-target="${item.ctaTarget}" data-link="${item.ctaLink}">${item.ctaText}</option>
 							</sly>
 						</select>
 						<select class="partner-links mobile-sub-cat-select">
