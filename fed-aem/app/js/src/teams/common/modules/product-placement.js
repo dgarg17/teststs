@@ -167,14 +167,29 @@ function addStar() {
 }
 
 function buildPlacement(data) { 
-    var template = require('../../../../../templates/product-placement/richrelevance.hbs'),
+	//console.log(RR.data.JSON.placements);
+    var template = require('../../../../../templates/product-placement/richrelevance-brand.hbs'),
         productList = [];
 	
     for(var p=0; p<data.length; p++) {
+	
+        for(var i=0; i < data[p].items.length; i++) {
+            if (data[p].items[i].id) {
+				//console.log(data[p].items[i].imageURL);
+				data[p].items[i].imageURL = data[p].items[i].imageURL.replace("?$product_80$", "");
+				//console.log(data[p].items[i].imageURL);
+                //productList.push(data[p].items[i].id);
+            }
+        }
+	
+	
         $('.product-placement[data-placement="'+data[p].placement_name+'"]').append(template(data[p]));
 		
         for(var i=0; i < data[p].items.length; i++) {
             if (data[p].items[i].id) {
+				//console.log(data[p].items[i].imageURL);
+				//data[p].items[i].imageURL = data[p].items[i].imageURL.replace("?$product_80$", "");
+				//console.log(data[p].items[i].imageURL);
                 productList.push(data[p].items[i].id);
             }
         }
@@ -188,12 +203,14 @@ function buildPlacement(data) {
 	addStar(); //Temporary function to do stars the old way
 
     //Add Compare
+	/*
 	window.$('.product-placement .rrProductsWrapper').compareCheckboxes({
 	    //"showCompare": true
 	});
-
+	*/
+	
     //Scrollable
-    window.$('.product-placement .scrollable').scrollableRecoPanel();
+    //window.$('.product-placement .scrollable').scrollableRecoPanel();
 
 }
 
