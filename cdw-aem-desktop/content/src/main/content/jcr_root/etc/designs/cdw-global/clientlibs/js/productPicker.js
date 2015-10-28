@@ -46,6 +46,10 @@
 						}
 						productsOverride[j].ctaText=override[i].ctaText;
 						productsOverride[j].manufactureImage=override[i].manufactureImage;
+						productsOverride[j].linkTitle=override[i].linkTitle;
+						productsOverride[j].eventCTA=override[i].eventCTA;
+						productsOverride[j].eventHeader=override[i].eventHeader;
+						productsOverride[j].eventImage=override[i].eventImage;
 						productsOverride[j].campaignid=override[i].campaignid;
 						productsOverride[j].imagePosition=$("#imagePosition-"+uniqueId).val();
 						productsOverride[j].productLayout=$("#productLayout-"+uniqueId).val();
@@ -61,13 +65,10 @@
 				}	}
 		}
 
-		// console.log(productsOverride);
 		if(productLayout=='4up'&&productOverflow!="wrap"){
                popCarousel(productsOverride,uniqueId);
-             //  console.log("slick-carousel");
 		}else{
 			popProducts(productsOverride,uniqueId,productLayout);
-			  // console.log("wrap");
 		  }
 	}
 
@@ -85,16 +86,29 @@
 			}
 
 			contentString += "<div class='product-image'>";
-			contentString += "<a href='"+products[i].url +"'>";
-			contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" />";
-			contentString += "</a>";
+			if(products[i].eventImage==null|| products[i].eventImage==""){
+				contentString += "<a href='"+products[i].url +"' title='"+products[i].linkTitle+"'>";
+				contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" />";
+				contentString += "</a>";
+			}else{
+				contentString += "<a href='"+products[i].url +"' title='"+products[i].linkTitle+"'>";
+				contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" onclick=\""+products[i].eventImage+"\" />";
+				contentString += "</a>";
+			}
 			contentString += "</div>";
 
 			contentString += "<div class='pp-header-hold'>";
 			contentString += "<h6>";
-			contentString += "<a href='" + products[i].url + "'>";
-			contentString += products[i].name;
-			contentString += "</a>";
+			if(products[i].eventHeader==null||products[i].eventHeader==""){
+				contentString += "<a href='" + products[i].url + "' title='"+products[i].linkTitle+"'>";
+				contentString += products[i].name;
+				contentString += "</a>";
+			}else{
+				contentString += "<a href='" + products[i].url + "' title='"+products[i].linkTitle+"' "+"onclick=\""+products[i].eventHeader+"\">";
+				contentString += products[i].name;
+				contentString += "</a>";
+
+			}
 			contentString += "</h6>";
 			contentString += "</div>";
 
@@ -109,9 +123,15 @@
 				contentString += "<p>" + products[i].priceName + "</p>";
 				contentString += "</div>";
 			}
-			contentString += "<a href='" + products[i].pctaklink + "' class='button -"+products[i].ctaButtonStyle+"'>"; //Override with pctaklink if provided
-			contentString += products[i].ctaText; //Comes from page JSON
-			contentString += "</a>";
+			if(products[i].eventCTA==null||products[i].eventCTA==""){
+				contentString += "<a href='" + products[i].pctaklink + "' title='"+products[i].linkTitle+"' class='button -"+products[i].ctaButtonStyle+"'>"; //Override with pctaklink if provided
+				contentString += products[i].ctaText; //Comes from page JSON
+				contentString += "</a>";
+			}else{
+				contentString += "<a href='" + products[i].pctaklink + "' title='"+products[i].linkTitle+"' class='button -"+products[i].ctaButtonStyle+"'"+"onclick=\""+products[i].eventCTA+"\">"; //Override with pctaklink if provided
+				contentString += products[i].ctaText; //Comes from page JSON
+				contentString += "</a>";
+			}
 			contentString += "</div>";
 			contentString += "</div>";
 			contentString += "</div>";
@@ -171,46 +191,63 @@
 		}
 
 		contentString += "<div class='product-image'>";
-		contentString += "<a href='"+products[i].url +"'>";
-		contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" />";
-		contentString += "</a>";
+		if(products[i].eventImage==null|| products[i].eventImage==""){
+			contentString += "<a href='"+products[i].url +"' title='"+products[i].linkTitle+"' >";
+			contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" />";
+			contentString += "</a>";
+		}else{
+			contentString += "<a href='"+products[i].url +"' title='"+products[i].linkTitle+"'>";
+			contentString += "<img alt='' src='"+ products[i].imageUrl+ "$product-200$'"+" onclick=\""+products[i].eventImage+"\" />";
+			contentString += "</a>";
+		}
 		contentString += "</div>";
 
-			contentString += "<div class='pp-header-hold'>";
-			contentString += "<h6>";
-			contentString += "<a href='" + products[i].url + "'>";
+		contentString += "<div class='pp-header-hold'>";
+		contentString += "<h6>";
+		if(products[i].eventHeader==null||products[i].eventHeader==""){
+			contentString += "<a href='" + products[i].url + "' title='"+products[i].linkTitle+"' >";
 			contentString += products[i].name;
 			contentString += "</a>";
-			contentString += "</h6>";
-			contentString += "</div>";
+		}else{
+			contentString += "<a href='" + products[i].url + "'title='"+products[i].linkTitle+"' onclick=\""+products[i].eventHeader+"\">";
+			contentString += products[i].name;
+			contentString += "</a>";
 
-			contentString += "<div class='pp-copy-hold'>";
-			contentString += "<p>" + products[i].description + "</p>";
-			contentString += "</div>";
+		}
+		contentString += "</h6>";
+		contentString += "</div>";
 
-			contentString += "<div class='button-lockup'>";
-			if(products[i].hidePrice!='true'){
-					contentString += "<div class='pricing-block'>";
-					contentString += "<b>" + products[i].price + "</b>";
-					contentString += "<br/><p>" + products[i].priceName + "</p>";
-					contentString += "</div>";
-			}
-			contentString += "<a href='" + products[i].pctaklink + "' class='button -"+products[i].ctaButtonStyle+"'>";
+		contentString += "<div class='pp-copy-hold'>";
+		contentString += "<p>" + products[i].description + "</p>";
+		contentString += "</div>";
+
+		contentString += "<div class='button-lockup'>";
+		if(products[i].hidePrice!='true'){
+			contentString += "<div class='pricing-block'>";
+			contentString += "<b>" + products[i].price + "</b>";
+			contentString += "<br/><p>" + products[i].priceName + "</p>";
+			contentString += "</div>";
+		}
+		if(products[i].eventCTA==null||products[i].eventCTA==""){
+			contentString += "<a href='" + products[i].pctaklink + "' title='"+products[i].linkTitle+"' class='button -"+products[i].ctaButtonStyle+"'>"; //Override with pctaklink if provided
 			contentString += products[i].ctaText; //Comes from page JSON
 			contentString += "</a>";
-			contentString += "</div>";
-			contentString += "</div>";
-			contentString += "</div>";
-			if((i+1)%numberOfColumn==0){
-			//console.log("inside closing "+i);
-					contentString+="</div>"
-					}
+		}else{
+			contentString += "<a href='" + products[i].pctaklink + "' title='"+products[i].linkTitle+"' class='button -"+products[i].ctaButtonStyle+"'"+"onclick=\""+products[i].eventCTA+"\">"; //Override with pctaklink if provided
+			contentString += products[i].ctaText; //Comes from page JSON
+			contentString += "</a>";
 		}
+		contentString += "</div>";
+		contentString += "</div>";
+		contentString += "</div>";
+		if((i+1)%numberOfColumn==0){
+			contentString+="</div>"
+		}
+	}
 		if(products.length%numberOfColumn!=0 ){
 			contentString += "</div>";
 		}
 		$productContainer.append(contentString);
-
 	}
 
 	$(document).ready(function() {

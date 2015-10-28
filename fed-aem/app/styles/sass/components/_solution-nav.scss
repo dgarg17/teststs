@@ -1,4 +1,3 @@
-.poopface{background-color: red;}
 
 .partner-header-wrapper { 
 	margin: $component-spacing;
@@ -11,7 +10,7 @@
 		
 	}
 
-	.partner-header { background:blue; padding: 0 20px; color:#fff; position:relative; @include clearfix;
+	.partner-header { background:green; padding: 0 20px; color:#fff; position:relative; @include clearfix;
 	.wrap-sol-nav{padding-top: 10px}
 		&.stick {
 			position:fixed;
@@ -23,7 +22,34 @@
 
 		h1 {
 			margin: 0 0 12px; font-size: 30px; line-height: 34px; font-weight: bold;
+
 		}
+		
+@media screen and (max-width: $screen-sm-min) {    
+    .sol-nav-title { font-size:28px;  line-height:30px;  }
+	.partner-logo {display: none }
+}
+
+@media screen and (max-width: $screen-xs-min) {    
+    .sol-nav-title { font-size:22px;  line-height:24px;  }
+	.partner-logo {display: none; }
+    .partner-header {
+    	.partner-menu {
+    		li {
+    			&.other-categories {
+			    	.sub-cat-select {
+						display:none;
+					}
+					.mobile-sub-cat-select {
+						display:block;
+						margin:auto;
+					}
+				}
+			}
+
+		}
+    }
+}
 		
 @media screen and (max-width: $screen-sm-min) {    
     .sol-nav-title { font-size:28px;  line-height:30px;  }
@@ -75,12 +101,7 @@
 			li {
 				display:inline-block;
 				list-style:none;
-				color:$color-white;
 				padding-right:5%;
-
-				a {
-					color:$color-white;
-				}
 
 				&.other-categories {
 					text-align:center;
@@ -90,7 +111,7 @@
 					
 					.select2-container{
 						.select2-choice{
-							// background-color: inherit;
+							background: inherit !important;
 							&:hover{opacity: .5;} 
 						}
 						
@@ -109,8 +130,6 @@
 					}
 
 					.sub-cat-select {
-						font-size:14px;
-						line-height:14px;
 						position:absolute;
 						bottom:-22px;
 						width:180px;
@@ -131,6 +150,15 @@
 						}
 					}
 				}
+				
+				&._FFFFFF{
+					.select2-chosen{color: $color-white !important;}
+					a{border: 1px solid $color-white;}
+					}
+				&._4D4E53{
+					.select2-chosen{color: $color-gray90 !important;}
+					a{border: 1px solid $color-gray90}
+					}
 			}
 		}
 

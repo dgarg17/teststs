@@ -1,6 +1,7 @@
 package com.cdw.aem.util.components;
 
 import com.adobe.cq.sightly.WCMUse;
+import com.cdw.aem.components.EnsightenTaggingWCMUseHelper;
 import com.cdw.aem.util.ProductPicker;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -33,10 +34,12 @@ public class ProductPickerWCMUseHelper extends WCMUse {
             for (ProductPicker productPicker : productPickers) {
                 productPicker.updateProductPicker(getCurrentPage());
             }
-        }else{
+        } else {
             return null;
         }
-        return (new Gson().toJson(productPickers)).replaceAll("\"","'");
+
+        return (new Gson().toJson(productPickers)).replaceAll(EnsightenTaggingWCMUseHelper.COMPONENTNAME, getComponent().getName())
+                .replaceAll("\"", "'");
     }
 
     private String concatJson(String[] jsonArray) {
@@ -52,8 +55,6 @@ public class ProductPickerWCMUseHelper extends WCMUse {
         }
         json = json.substring(0, json.lastIndexOf(','));
 
-
     return"["+json+"]";
-
     }
 }
