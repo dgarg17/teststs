@@ -20,7 +20,7 @@
 
 			<div class="layout">
 				<div class="layout-12">
-					<div class="box product-placement" data-placement="cart_page.json_rr3">
+					<div class="box product-placement product-placement-brand" data-placement="home_page.json_brand_showcase_h" data-brand="Apple Computer">
 						
 					</div>
 				</div>
@@ -35,21 +35,23 @@
 	</footer>
 	
 	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="//media.richrelevance.com/rrserver/js/0.4/p13n.js?v=1.0.0.25285"></script>
+	<script src="//media.richrelevance.com/rrserver/js/1.0/p13n.js?v=1.0.0.25285"></script>
 	<script src="js/dist/main.js"></script>
 
 	<script type="text/javascript">
 		$(function() {
-			CDW.productPlacement.init({
-				'apiKey': 'c1b6edde3bea10a0',
-				'baseUrl': 'https://integration.richrelevance.com/rrserver/',
-				'sessionId': 'B9F16F4C4D9E4B8C9B71722D70392559',
-				'userId': '5428E218-6333-46E2-BE7F-0DEB216E6E56',
-				'type': 'cart',
-				'typeData': { 'itemId': [  ] },
-				'template': '',
-				'placements': [ 'cart_page.json_rr3' ]
-			});
+            if ($('.product-placement').data('placement')) {
+                CDW.productPlacement.init({
+                    'apiKey': 'c1b6edde3bea10a0',
+                    'baseUrl': 'https://integration.richrelevance.com/rrserver/',
+                    'sessionId': '225EB747B6054CB5AA55CA27265BD9C7',
+                    'userId': '5428E218-6333-46E2-BE7F-0DEB216E6E56',
+                    'type': 'brand',
+                    'typeData': { brand: $('.product-placement').data('brand') },
+                    'template': '',
+                    'placements': [ $('.product-placement').data('placement')]
+                });
+            }
 		});
 	</script>
 	
