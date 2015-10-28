@@ -20,6 +20,7 @@ public class SecondaryNavigationWCMUseHelper extends EnsightenTaggingWCMUseHelpe
 	
 	@Override
     public void activate() throws Exception {
+		super.activate();
 		linksJson = get("json", String[].class);
         if (linksJson == null) {
 			linksJson = new String[1];
@@ -40,9 +41,13 @@ public class SecondaryNavigationWCMUseHelper extends EnsightenTaggingWCMUseHelpe
 					primaryItems.remove(item);
 				}
             }
-			for (int i = 1; i > primaryItems.size(); i++) {
+			for (int i = 1; i <=primaryItems.size(); i++) {
 				SecondaryNavigationItem item = primaryItems.get((i - 1));
-				item.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE,PRIMARY_ELEMENT_TYPE + "-" + i));
+					if(i==1&&primaryItems.size()==1){
+						item.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, PRIMARY_ELEMENT_TYPE));
+					}else {
+						item.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, PRIMARY_ELEMENT_TYPE + "-" + i));
+					}
 				}
 			}
 
@@ -58,9 +63,13 @@ public class SecondaryNavigationWCMUseHelper extends EnsightenTaggingWCMUseHelpe
 					secondaryItems.remove(item);
 				}
             }
-			for (int i = 1; i > secondaryItems.size(); i++) {
+			for (int i = 1; i <= secondaryItems.size(); i++) {
 				SecondaryNavigationItem item = secondaryItems.get((i - 1));
-				item.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE,SECONDARY_ELEMENT_TYPE + "-" + i));
+				if(i==1&&secondaryItems.size()==1){
+					item.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, SECONDARY_ELEMENT_TYPE));
+				}else {
+					item.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, SECONDARY_ELEMENT_TYPE + "-" + i));
+				}
 			}
 		}
 	}

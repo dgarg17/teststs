@@ -7,41 +7,90 @@
 		<h4 data-sly-test="${properties.headline}"
 			style="color:#${properties.textcolor @ context='styleString'};">${properties.headline}</h4>
 		<p data-sly-test="${properties.bodytext}">${properties.bodytext}</p>
-		<div data-sly-test="${properties.ctalink}" class="button-lockup">
+		<div data-sly-test="${properties.ctalink}" class="button-lockup"
+			 data-sly-use.eventTagging="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='cta'}">
 			<a class="button ${properties.ctabuttonstyle}"
+			   data-sly-test="${(properties.eventData|| properties.eventTitle)}"
 				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
+			    onclick="${eventTagging.taggingEvent @context='html'}"
 				href="${link.urlUpdate}" target="${properties.ctatarget}">${properties.cdwctalabel}</a>
+			<a class="button ${properties.ctabuttonstyle}"
+			   data-sly-test="${!(properties.eventData|| properties.eventTitle)}"
+			   data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
+			   href="${link.urlUpdate}" target="${properties.ctatarget}">${properties.cdwctalabel}</a>
 		</div>
 	</div> 
     <div data-sly-use.info="com.cdw.aem.components.FeaturedContentWCMUseHelper"  class=" ${info.imgcssClass} image ">
-		<div data-sly-test="${properties.scene7filename1}" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" class="img">
+		<div data-sly-test="${properties.scene7filename1}"
+			 data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"
+			 data-sly-use.eventTagging="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='img-1'}"
+			 class="img">
 			<a data-sly-unwrap="${!properties.imglink}"
+			   data-sly-test="${(properties.eventData|| properties.eventTitle)}"
 				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink}"
 				href="${link.urlUpdate}" target="${properties.imgctatarget}">
 				<img
 					src="${utility.s7ImageRoot}${properties.scene7filename1}?$product_150$"
+					onclick="${eventTagging.taggingEvent @context='html'}"
 					alt="" />
 				<h6 data-sly-test="${properties.imglabel}">${properties.imglabel}</h6> 
-			</a>      
+			</a>
+			<a data-sly-unwrap="${!properties.imglink}"
+			   data-sly-test="${!(properties.eventData|| properties.eventTitle)}"
+			   data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink}"
+			   href="${link.urlUpdate}" target="${properties.imgctatarget}">
+				<img
+						src="${utility.s7ImageRoot}${properties.scene7filename1}?$product_150$"
+						alt="" />
+				<h6 data-sly-test="${properties.imglabel}">${properties.imglabel}</h6>
+			</a>
 		</div> 
-		<div data-sly-test="${properties.scene7filename2}" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" class="img">
+		<div data-sly-test="${properties.scene7filename2}"
+			 data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"
+			 data-sly-use.eventTagging="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='img-2'}"
+			 class="img">
 			<a data-sly-unwrap="${!properties.imglink2}"
+			   data-sly-test="${(properties.eventData|| properties.eventTitle)}"
 				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink2}"
 				href="${link.urlUpdate}" target="${properties.imgctatarget2}">
 				<img
 					src="${utility.s7ImageRoot}${properties.scene7filename2}?$product_150$"
+					onclick="${eventTagging.taggingEvent @context='html'}"
 					alt="" />
 				<h6 data-sly-test="${properties.imglabel2}">${properties.imglabel2}</h6>
-			</a> 
+			</a>
+			<a data-sly-unwrap="${!properties.imglink2}"
+			   data-sly-test="${!(properties.eventData|| properties.eventTitle)}"
+			   data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink2}"
+			   href="${link.urlUpdate}" target="${properties.imgctatarget2}">
+				<img
+						src="${utility.s7ImageRoot}${properties.scene7filename2}?$product_150$"
+						alt="" />
+				<h6 data-sly-test="${properties.imglabel2}">${properties.imglabel2}</h6>
+			</a>
 		</div>
-		<div data-sly-test="${properties.scene7filename3}" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"  class="img">
+		<div data-sly-test="${properties.scene7filename3}"
+			 data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}"
+			 data-sly-use.eventTagging="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='img-3'}"
+			 class="img">
 			<a data-sly-unwrap="${!properties.imglink3}"
 				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink3}"
+			   data-sly-test="${(properties.eventData|| properties.eventTitle)}"
 				href="${link.urlUpdate}" target="${properties.imgctatarget3}">
 				<img
 					src="${utility.s7ImageRoot}${properties.scene7filename3}?$product_150$"
+					onclick="${eventTagging.taggingEvent @context='html'}"
 					alt="" />    
 				<h6 data-sly-test="${properties.imglabel3}">${properties.imglabel3}</h6>  
+			</a>
+			<a data-sly-unwrap="${!properties.imglink3}"
+			   data-sly-test="${!(properties.eventData|| properties.eventTitle)}"
+			   data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink3}"
+			   href="${link.urlUpdate}" target="${properties.imgctatarget3}">
+				<img
+						src="${utility.s7ImageRoot}${properties.scene7filename3}?$product_150$"
+						alt="" />
+				<h6 data-sly-test="${properties.imglabel3}">${properties.imglabel3}</h6>
 			</a>
 		</div>
 	</div>
