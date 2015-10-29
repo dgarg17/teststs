@@ -12,10 +12,12 @@
 			<a class="button ${properties.ctabuttonstyle}"
 			   data-sly-test="${(properties.eventData|| properties.eventTitle)}"
 				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
+			   title="${properties.linkTitle}"
 			    onclick="${eventTagging.taggingEvent @context='html'}"
 				href="${link.urlUpdate}" target="${properties.ctatarget}">${properties.cdwctalabel}</a>
 			<a class="button ${properties.ctabuttonstyle}"
 			   data-sly-test="${!(properties.eventData|| properties.eventTitle)}"
+			   title="${properties.linkTitle}"
 			   data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
 			   href="${link.urlUpdate}" target="${properties.ctatarget}">${properties.cdwctalabel}</a>
 		</div>
@@ -27,6 +29,7 @@
 			 class="img">
 			<a data-sly-unwrap="${!properties.imglink}"
 			   data-sly-test="${(properties.eventData|| properties.eventTitle)}"
+			   title="${properties.linkTitle}"
 				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink}"
 				href="${link.urlUpdate}" target="${properties.imgctatarget}">
 				<img
@@ -37,6 +40,7 @@
 			</a>
 			<a data-sly-unwrap="${!properties.imglink}"
 			   data-sly-test="${!(properties.eventData|| properties.eventTitle)}"
+			   title="${properties.linkTitle}"
 			   data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink}"
 			   href="${link.urlUpdate}" target="${properties.imgctatarget}">
 				<img
@@ -51,6 +55,7 @@
 			 class="img">
 			<a data-sly-unwrap="${!properties.imglink2}"
 			   data-sly-test="${(properties.eventData|| properties.eventTitle)}"
+			   title="${properties.linkTitle}"
 				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink2}"
 				href="${link.urlUpdate}" target="${properties.imgctatarget2}">
 				<img
@@ -61,6 +66,7 @@
 			</a>
 			<a data-sly-unwrap="${!properties.imglink2}"
 			   data-sly-test="${!(properties.eventData|| properties.eventTitle)}"
+			   title="${properties.linkTitle}"
 			   data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink2}"
 			   href="${link.urlUpdate}" target="${properties.imgctatarget2}">
 				<img
@@ -76,6 +82,7 @@
 			<a data-sly-unwrap="${!properties.imglink3}"
 				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink3}"
 			   data-sly-test="${(properties.eventData|| properties.eventTitle)}"
+			   title="${properties.linkTitle}"
 				href="${link.urlUpdate}" target="${properties.imgctatarget3}">
 				<img
 					src="${utility.s7ImageRoot}${properties.scene7filename3}?$product_150$"
@@ -85,6 +92,7 @@
 			</a>
 			<a data-sly-unwrap="${!properties.imglink3}"
 			   data-sly-test="${!(properties.eventData|| properties.eventTitle)}"
+			   title="${properties.linkTitle}"
 			   data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.imglink3}"
 			   href="${link.urlUpdate}" target="${properties.imgctatarget3}">
 				<img

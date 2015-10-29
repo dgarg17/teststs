@@ -77,12 +77,4 @@ public class LinkListWCMUseHelper extends EnsightenTaggingWCMUseHelper {
         return  linksJson.length;
     }
 
-    @Override
-    public String toString() {
-        return "LinkListWCMUseHelper{" +
-                "secondaryLinksJson=" + Arrays.toString(secondaryLinksJson) +
-                ", startWith=" + startWith +
-                ", EnsightenTaggingWCMUseHelper=" + super.toString() +
-                '}';
-    }
 }

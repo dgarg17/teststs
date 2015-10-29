@@ -6,12 +6,14 @@
            data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.headLineTextLink}"
            data-sly-use.eventTagging="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='H'}"
            href="${link.urlUpdate}"
+           title="${properties.linkTitle}"
            target="${properties.headLineTextTarget}"
            onclick="${eventTagging.taggingEvent @context='html'}"
                 >${properties.headline}</a>
-        <a data-sly-test="${!header}"
+        <a data-sly-test.header="${properties.headLineTextLink&&!(properties.eventData||properties.eventTitle)}"
            data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.headLineTextLink}"
            href="${link.urlUpdate}"
+           title="${properties.linkTitle}"
            target="${properties.headLineTextTarget}">${properties.headline}</a>
 
         <p data-sly-test="${!properties.headLineTextLink}" data-sly-unwrap>
@@ -29,15 +31,17 @@
          data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.secondaryLinks}"
          data-sly-test="${properties.secondaryLinks&&secondaryLinks.count==1}">
 
-        <a href="${secondaryLinks.subCategoryProductLinks[0].ctalink}"
+        <a href="${secondaryLinks.linkDetails[0].ctalink}"
            data-sly-test.event="${(properties.eventData|| properties.eventTitle)}"
-           target="${secondaryLinks.subCategoryProductLinks[0].ctatarget}"
-           onclick="${secondaryLinks.subCategoryProductLinks[0].eventSelect @context='html'}"
-           class="btn button ${properties.ctabuttonstyle}">${secondaryLinks.subCategoryProductLinks[0].ctalabel} </a>
-        <a href="${secondaryLinks.subCategoryProductLinks[0].ctalink}"
-            data-sly-test="${!event}"
-            target="${secondaryLinks.subCategoryProductLinks[0].ctatarget}"
-            class="btn button ${properties.ctabuttonstyle}">${secondaryLinks.subCategoryProductLinks[0].ctalabel} </a>
+           target="${secondaryLinks.linkDetails[0].ctatarget}"
+           title="${properties.linkTitle}"
+           onclick="${secondaryLinks.linkDetails[0].eventSelect @context='html'}"
+           class="btn button ${properties.ctabuttonstyle}">${secondaryLinks.linkDetails[0].ctalabel} </a>
+        <a href="${secondaryLinks.linkDetails[0].ctalink}"
+           data-sly-test.event="${!(properties.eventData|| properties.eventTitle)}"
+           title="${properties.linkTitle}"
+            target="${secondaryLinks.linkDetails[0].ctatarget}"
+            class="btn button ${properties.ctabuttonstyle}">${secondaryLinks.linkDetails[0].ctalabel} </a>
 
     </div>
 
@@ -47,13 +51,13 @@
 
             <option></option>
             <sly  data-sly-test.event="${(properties.eventData|| properties.eventTitle)}"
-                 data-sly-list="${secondaryLinks.subCategoryProductLinks}">
+                 data-sly-list="${secondaryLinks.linkDetails}">
                 <option value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}" data-change="${item.eventSelect @context='html'}">
                     ${item.ctalabel}
                 </option>
             </sly>
             <sly data-sly-test="${!event}"
-                 data-sly-list="${secondaryLinks.subCategoryProductLinks}">
+                 data-sly-list="${secondaryLinks.linkDetails}">
                 <option value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}"  >
                     ${item.ctalabel}
                 </option>
@@ -65,13 +69,13 @@
             <option>${properties.secondaryLabel}</option>
             <!--closing option-->
             <sly data-sly-test="${event}"
-                 data-sly-list="${secondaryLinks.subCategoryProductLinks}">
+                 data-sly-list="${secondaryLinks.linkDetails}">
                 <option value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}" data-change="${item.eventSelect @context='html'}">
                     ${item.ctalabel}
                 </option>
             </sly>
             <sly data-sly-test="${!event}"
-                 data-sly-list="${secondaryLinks.subCategoryProductLinks}">
+                 data-sly-list="${secondaryLinks.linkDetails}">
                 <option value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}">
                     ${item.ctalabel}
                 </option>

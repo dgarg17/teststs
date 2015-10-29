@@ -9,6 +9,7 @@
             <div class="img-hold" style="${linksHelper.imageStyle @ context='styleString'}">
                 <sly data-sly-test="${properties.logoLink&&(properties.eventData||properties.eventTitle)}">
                     <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.logoLink}"
+                       title="${properties.linkTitle}"
                        href="${link.urlUpdate}">
                         <img src="${properties.fileReference}?${linksHelper.s7Preset}"
                              onclick="${eventTagging.taggingEvent @context='html'}"/>
@@ -16,6 +17,7 @@
                 </sly>
                 <sly data-sly-test="${properties.logoLink&&!(properties.eventData||properties.eventTitle)}">
                     <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.logoLink}"
+                       title="${properties.linkTitle}"
                        href="${link.urlUpdate}">
                         <img src="${properties.fileReference}?${linksHelper.s7Preset}"/>
                     </a>
@@ -40,6 +42,7 @@
                         <li>
                             <a href="${item.ctaLink}" target="${item.ctaTarget}"
                                style="color:#${properties.textColor @ context='styleString'};"
+                               title="${properties.linkTitle}"
                                onclick="${item.eventDetails @context='html'}">${item.ctaText}</a>
                         </li>
                     </sly>
@@ -47,6 +50,7 @@
                          data-sly-list="${linksHelper.primaryItems}">
                         <li>
                             <a href="${item.ctaLink}" target="${item.ctaTarget}"
+                               title="${properties.linkTitle}"
                                style="color:#${properties.textColor @ context='styleString'};">${item.ctaText}</a>
                         </li>
                     </sly>
@@ -104,9 +108,11 @@
                                style="color:#${properties.textColor @ context='styleString'};border-color:#${properties.textColor @ context='styleString'};"
                                href="${linksHelper.secondaryItems[0].ctaLink}"
                                target="${linksHelper.secondaryItems[0].ctaTarget}"
+                               title="${properties.linkTitle}"
                                onclick="${linksHelper.secondaryItems[0].eventDetails @context='html'}">${linksHelper.secondaryItems[0].ctaText}</a>
                             <a data-sly-test="${!(properties.eventData||properties.eventTitle)}" class="button -clear"
                                style="color:#${properties.textColor @ context='styleString'};border-color:#${properties.textColor @ context='styleString'};"
+                               title="${properties.linkTitle}"
                                href="${linksHelper.secondaryItems[0].ctaLink}"
                                target="${linksHelper.secondaryItems[0].ctaTarget}">${linksHelper.secondaryItems[0].ctaText}</a>
                         </div>
