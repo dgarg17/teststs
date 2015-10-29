@@ -9,7 +9,7 @@
             addItemLabel="Add New Link"
             autoScroll="{Boolean}true"
             cls="multifieldcls"
-            name="./secondaryLinks"
+            name="./ctaLinks"
             title="CTA  Link Configuration"
             xtype="multifield">
             <fieldConfig
