@@ -4,9 +4,9 @@
 	<div class="button-lockup ${properties.alignment}"
          data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks}"
          data-sly-test="${properties.ctaLinks&&ctaLinks.count==1}">
-         <a href="${ctaLinks.subCategoryProductLinks[0].ctalink}"
-           target="${ctaLinks.subCategoryProductLinks[0].ctatarget}"
-           class="button ${properties.buttonStyle}">${ctaLinks.subCategoryProductLinks[0].ctalabel} </a>
+         <a href="${ctaLinks.linkDetails[0].ctalink}"
+           target="${ctaLinks.linkDetails[0].ctatarget}"
+           class="button ${properties.buttonStyle}">${ctaLinks.linkDetails[0].ctalabel} </a>
 	</div>
 
     <div class="button-lockup ${properties.alignment}" data-sly-test="${ctaLinks.count>1}">
@@ -14,7 +14,7 @@
                 data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks}"
                 >
 			<option></option>
-            <sly data-sly-list="${ctaLinks.subCategoryProductLinks}">
+            <sly data-sly-list="${ctaLinks.linkDetails}">
                 <option class="${properties.buttonStyle}" value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}">
                     ${item.ctalabel}
                 </option>
@@ -24,7 +24,7 @@
                 data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks}">
             <option></option>
             <!--closing option-->
-            <sly data-sly-list="${ctaLinks.subCategoryProductLinks}">
+            <sly data-sly-list="${ctaLinks.linkDetails}">
                 <option value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}">
                     ${item.ctalabel}
                 </option>
