@@ -17,18 +17,18 @@ import java.util.List;
 public class LinkListWCMUseHelper extends EnsightenTaggingWCMUseHelper {
 
     protected org.slf4j.Logger log = LoggerFactory.getLogger(LinkListWCMUseHelper.class);
-    private String[] secondaryLinksJson;
+    private String linksJson[];
     private int startWith=1;
-
 
 
     @Override
     public void activate() throws Exception {
         super.activate();
-        secondaryLinksJson = get("json", String[].class);
-        if (secondaryLinksJson == null) {
-            secondaryLinksJson = new String[1];
-            secondaryLinksJson[0] = get("json", String.class);
+         linksJson = get("json", String[].class);
+        if ( linksJson == null) {
+             linksJson = new String[1];
+             linksJson[0] = get("json", String.class);
+
         }
         String i=get("startWith", String.class);
        if(i!=null&& StringUtils.isNumeric(i)){
@@ -39,11 +39,11 @@ public class LinkListWCMUseHelper extends EnsightenTaggingWCMUseHelper {
        }else{
            startWith=1;
        }
-        log.debug(this.getClass().getName() + "secondaryLinksJson " + secondaryLinksJson.length);
+        log.debug(this.getClass().getName() + "LinksJson " +  linksJson.length);
     }
 
-    public List<LinkList> getSubCategoryProductLinks() {
-        List<LinkList> linkLists = (new Gson().fromJson(concatJson(secondaryLinksJson), new TypeToken<List<LinkList>>() {
+    public List<LinkList> getLinkDetails() {
+        List<LinkList> linkLists = (new Gson().fromJson(concatJson( linksJson), new TypeToken<List<LinkList>>() {
         }.getType()));
         int count=startWith;
         for(LinkList linkList:linkLists){
@@ -74,7 +74,7 @@ public class LinkListWCMUseHelper extends EnsightenTaggingWCMUseHelper {
     }
 
     public int getCount() {
-        return secondaryLinksJson.length;
+        return  linksJson.length;
     }
 
     @Override
