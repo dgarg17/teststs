@@ -2,29 +2,29 @@
 
  <div class="cdw-multi-button">
 	<div class="button-lockup ${properties.alignment}"
-         data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.secondaryLinks}"
-         data-sly-test="${properties.secondaryLinks&&secondaryLinks.count==1}">
-         <a href="${secondaryLinks.subCategoryProductLinks[0].ctalink}"
-           target="${secondaryLinks.subCategoryProductLinks[0].ctatarget}"
-           class="button ${properties.buttonStyle}">${secondaryLinks.subCategoryProductLinks[0].ctalabel} </a>
+         data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks}"
+         data-sly-test="${properties.ctaLinks&&ctaLinks.count==1}">
+         <a href="${ctaLinks.subCategoryProductLinks[0].ctalink}"
+           target="${ctaLinks.subCategoryProductLinks[0].ctatarget}"
+           class="button ${properties.buttonStyle}">${ctaLinks.subCategoryProductLinks[0].ctalabel} </a>
 	</div>
 
-    <div class="button-lockup ${properties.alignment}" data-sly-test="${secondaryLinks.count>1}">
+    <div class="button-lockup ${properties.alignment}" data-sly-test="${ctaLinks.count>1}">
         <select class="partner-links sub-cat-select ${properties.buttonStyle}" data-secondary-label="${properties.dropdownlabel}"
-                data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.secondaryLinks}"
+                data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks}"
                 >
 			<option></option>
-            <sly data-sly-list="${secondaryLinks.subCategoryProductLinks}">
+            <sly data-sly-list="${ctaLinks.subCategoryProductLinks}">
                 <option class="${properties.buttonStyle}" value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}">
                     ${item.ctalabel}
                 </option>
             </sly>
         </select>
         <select class="partner-links sub-cat-select-mobile" data-secondary-label="${properties.dropdownlabel}"
-                data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.secondaryLinks}">
+                data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks}">
             <option></option>
             <!--closing option-->
-            <sly data-sly-list="${secondaryLinks.subCategoryProductLinks}">
+            <sly data-sly-list="${ctaLinks.subCategoryProductLinks}">
                 <option value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}">
                     ${item.ctalabel}
                 </option>
