@@ -59,12 +59,8 @@ public class EnsightenTaggingWCMUseHelper extends WCMUse {
     }
 
     public String getMethodName() {
-       return getMethodName(elementType);
+       return getMethodName(eventType);
     }
-
-   /* public String getEventType() {
-        return "onClick";
-    }*/
 
     public static  String getFirstParam(String eventType) {
         if (eventType.equalsIgnoreCase("pEvent")) {
