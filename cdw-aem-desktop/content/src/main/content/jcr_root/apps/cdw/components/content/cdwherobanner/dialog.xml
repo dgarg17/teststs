@@ -142,7 +142,7 @@
                             jcr:primaryType="cq:Widget"
                             collapsed="{Boolean}true"
                             collapsible="{Boolean}true"
-                            title="Ensighten Event data"
+                            title="Ensighten Event Data"
                             xtype="dialogfieldset">
                         <items jcr:primaryType="cq:WidgetCollection">
                             <eventType

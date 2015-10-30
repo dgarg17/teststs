@@ -2,7 +2,7 @@
 
  <div class="cdw-multi-button">
 	<div class="button-lockup ${properties.alignment}"
-         data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks}"
+         data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks,elementType='cta'}"
          data-sly-test="${properties.ctaLinks&&ctaLinks.count==1}">
          <a href="${ctaLinks.linkDetails[0].ctalink}"
             data-sly-test="${(properties.eventData|| properties.eventTitle)}"
@@ -19,7 +19,7 @@
 
     <div class="button-lockup ${properties.alignment}" data-sly-test="${ctaLinks.count>1}">
         <select class="partner-links sub-cat-select ${properties.buttonStyle}" data-secondary-label="${properties.dropdownlabel}"
-                data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks}"
+                data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks,elementType='links-secondary'}"
                 >
 			<option></option>
             <sly data-sly-list="${ctaLinks.linkDetails}"    data-sly-test="${(properties.eventData|| properties.eventTitle)}" >
@@ -34,7 +34,7 @@
             </sly>
         </select>
         <select class="partner-links sub-cat-select-mobile" data-secondary-label="${properties.dropdownlabel}"
-                data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks}">
+                data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks,elementType='links-secondary'}">
             <option></option>
             <!--closing option-->
             <sly data-sly-list="${ctaLinks.linkDetails}"  data-sly-test="${(properties.eventData|| properties.eventTitle)}">

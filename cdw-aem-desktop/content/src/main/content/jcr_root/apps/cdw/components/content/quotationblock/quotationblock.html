@@ -1,11 +1,12 @@
 <!--/* CDW  Quotation block component */ -->
 
 <div style="color:#${properties.textcolor @ context='styleString'};"
-	 data-sly-use.eventTagging="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='cta'}"
+	 data-sly-use.eventTagging="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='Q-link'}"
 	 class="quote ${properties.textalignment} ${properties.backgroundcolor} ${properties.opacity}">
 	<a  data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.quotelink}"
 		href="${link.urlUpdate}"  target="${properties.quotetarget}"
 		onclick="${eventTagging.taggingEvent @context='html'}"
+		title="${properties.linkTitle}"
 		data-sly-test="${(properties.eventData|| properties.eventTitle)}"
 		data-sly-unwrap="${!properties.quotelink}">
         <p data-sly-test="${properties.quotetext}" class="quote-text">
@@ -14,31 +15,36 @@
  	</a>
 	<a  data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.quotelink}"
 		data-sly-test="${!(properties.eventData|| properties.eventTitle)}"
+		title="${properties.linkTitle}"
 		href="${link.urlUpdate}"  target="${properties.quotetarget}" data-sly-unwrap="${!properties.quotelink}">
 		<p data-sly-test="${properties.quotetext}" class="quote-text">
 			<span class="ico ico-quote-left"></span>${properties.quotetext}<span class="ico ico-quote-right"></span>
 		</p>
 	</a>
-	<div class="credit"   data-sly-use.event="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='link'}">
+	<div class="credit"   data-sly-use.event="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='link-1'}">
 		<img data-sly-test="${properties.fileReference}" src="${properties.fileReference}?&fmt=jpeg&qlt=100,0&op_sharpen=1&resMode=trilin" alt=""/>
 		<div class="inner-copy">
 			<p>
 				<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.sourcelink}"
 				   onclick="${event.taggingEvent @context='html'}"
 				   data-sly-test="${(properties.eventData|| properties.eventTitle)}"
+				   title="${properties.linkTitle}"
 				   href="${link.urlUpdate}"  target="${properties.sourcetarget}" data-sly-unwrap="${!properties.sourcelink}" >${properties.sourceName}</a>
 				<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.sourcelink}"
 				   data-sly-test="${!(properties.eventData|| properties.eventTitle)}"
+				   title="${properties.linkTitle}"
 				   href="${link.urlUpdate}"  target="${properties.sourcetarget}" data-sly-unwrap="${!properties.sourcelink}" >${properties.sourceName}</a>
 
-			<div data-sly-test="${properties.sourcedcontenttitle}" data-sly-unwrap>, ${properties.sourcedcontenttitle}</div></p>
+			<div  data-sly-use.eventDetails="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='link-2'}" data-sly-test="${properties.sourcedcontenttitle}" data-sly-unwrap>, ${properties.sourcedcontenttitle}</div></p>
 			<p class="rm" data-sly-test="${properties.ctalabel && properties.ctalink}">
 				<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
-				   onclick="${event.taggingEvent @context='html'}"
+				   onclick="${eventDetails.taggingEvent @context='html'}"
+				   title="${properties.linkTitle}"
 				   data-sly-test="${(properties.eventData|| properties.eventTitle)}"
 				   href="${link.urlUpdate}"  target="${properties.ctatarget}"  data-sly-unwrap="${!properties.ctalink}" >${properties.ctalabel}</a>
 				<a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
 				   data-sly-test="${!(properties.eventData|| properties.eventTitle)}"
+				   title="${properties.linkTitle}"
 				   href="${link.urlUpdate}"  target="${properties.ctatarget}"  data-sly-unwrap="${!properties.ctalink}" >${properties.ctalabel}</a>
 
 			</p>
