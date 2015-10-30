@@ -56,14 +56,5 @@ public class  SecondaryNavigationItem {
 		this.eventDetails = eventDetails;
 	}
 
-	@Override
-	public String toString() {
-		return "SecondaryNavigationItem{" +
-				"ctaLink='" + ctaLink + '\'' +
-				", ctaText='" + ctaText + '\'' +
-				", ctaTarget='" + ctaTarget + '\'' +
-				", isSecondary=" + Arrays.toString(isSecondary) +
-				", eventDetails='" + eventDetails + '\'' +
-				'}';
-	}
+
 }

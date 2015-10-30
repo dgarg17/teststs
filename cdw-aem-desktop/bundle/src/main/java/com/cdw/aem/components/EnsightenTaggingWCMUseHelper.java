@@ -102,13 +102,5 @@ public class EnsightenTaggingWCMUseHelper extends WCMUse {
         return eventData;
     }
 
-    @Override
-    public String toString() {
-        return "EnsightenTaggingWCMUseHelper{" +
-                "eventType='" + eventType + '\'' +
-                ", eventTitle='" + eventTitle + '\'' +
-                ", eventData='" + eventData + '\'' +
-                ", elementType='" + elementType + '\'' +
-                '}';
-    }
+
 }

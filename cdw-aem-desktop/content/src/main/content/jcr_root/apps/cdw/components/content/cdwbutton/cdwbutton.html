@@ -8,7 +8,7 @@
             data-sly-test="${(properties.eventData|| properties.eventTitle)}"
             title="${properties.linkTitle}"
            target="${ctaLinks.linkDetails[0].ctatarget}"
-            onclick="${ctaLinks.linkDetails[0].eventSelect @context='html'}"
+            onclick="${ctaLinks.linkDetails[0].eventDetails @context='html'}"
            class="button ${properties.buttonStyle}">${ctaLinks.linkDetails[0].ctalabel} </a>
         <a href="${ctaLinks.linkDetails[0].ctalink}"
            title="${properties.linkTitle}"
@@ -23,7 +23,7 @@
                 >
 			<option></option>
             <sly data-sly-list="${ctaLinks.linkDetails}"    data-sly-test="${(properties.eventData|| properties.eventTitle)}" >
-            <option class="${properties.buttonStyle}" value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}" data-change="${item.eventSelect @context='html'}">
+            <option class="${properties.buttonStyle}" value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}" data-change="${item.eventDetails @context='html'}">
                 ${item.ctalabel}
             </option>
         </sly>
@@ -38,7 +38,7 @@
             <option></option>
             <!--closing option-->
             <sly data-sly-list="${ctaLinks.linkDetails}"  data-sly-test="${(properties.eventData|| properties.eventTitle)}">
-                <option value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}" data-change="${item.eventSelect @context='html'}">
+                <option value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}" data-change="${item.eventDetails @context='html'}">
                     ${item.ctalabel}
                 </option>
             </sly>

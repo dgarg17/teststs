@@ -48,9 +48,9 @@ public class LinkListWCMUseHelper extends EnsightenTaggingWCMUseHelper {
         int count=startWith;
         for(LinkList linkList:linkLists){
             if(count==1&&linkLists.size()==1){
-                linkList.setEventSelect(getTaggingEvent());
+                linkList.setEventDetails(getTaggingEvent());
             }else {
-                linkList.setEventSelect(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, getElementType().toUpperCase() + "-" + count));
+                linkList.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, getElementType().toUpperCase() + "-" + count));
 
             }count++;
         }
