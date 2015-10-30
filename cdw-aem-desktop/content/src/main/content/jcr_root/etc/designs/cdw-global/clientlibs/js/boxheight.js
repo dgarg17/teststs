@@ -10,7 +10,8 @@ $(document).ready(function(){
 
 var resizeMultiupBoxes = function() {
 
-	var $fixHeight = $('.-box-height').parent();
+	//var $fixHeight = $('.-box-height').parent();
+	/*
 	$fixHeight.each(function() {
 		$fixHeight.css('height', '').find('.-box-height').css('height', '');
 	});
@@ -25,6 +26,14 @@ var resizeMultiupBoxes = function() {
 			$(this).css('height', '').find('.-box-height').css('height', '');
 		}
 	});
+	*/
+	
+	$(".-box-height").each(function() {
+		$(this).parent().parent().addClass("box-height-container");
+	});
+	
+	
+	
 }
 
 var alignButtons = function() {
