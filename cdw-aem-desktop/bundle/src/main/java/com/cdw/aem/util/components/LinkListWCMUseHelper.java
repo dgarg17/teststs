@@ -14,23 +14,23 @@ import java.util.List;
 public class LinkListWCMUseHelper extends WCMUse {
 
     protected org.slf4j.Logger log = LoggerFactory.getLogger(LinkListWCMUseHelper.class);
-    private String[] secondaryLinksJson;
+    private String linksJson[];
 
 
     @Override
     public void activate() throws Exception {
 
-        secondaryLinksJson = get("json", String[].class);
-        if (secondaryLinksJson == null) {
-            secondaryLinksJson = new String[1];
-            secondaryLinksJson[0] = get("json", String.class);
+         linksJson = get("json", String[].class);
+        if ( linksJson == null) {
+             linksJson = new String[1];
+             linksJson[0] = get("json", String.class);
 
         }
-        log.debug(this.getClass().getName() + "secondaryLinksJson " + secondaryLinksJson.length);
+        log.debug(this.getClass().getName() + "LinksJson " +  linksJson.length);
     }
 
-    public List<LinkList> getSubCategoryProductLinks() {
-        List<LinkList> linkLists = (new Gson().fromJson(concatJson(secondaryLinksJson), new TypeToken<List<LinkList>>() {
+    public List<LinkList> getLinkDetails() {
+        List<LinkList> linkLists = (new Gson().fromJson(concatJson( linksJson), new TypeToken<List<LinkList>>() {
         }.getType()));
         return linkLists;
     }
@@ -52,7 +52,7 @@ public class LinkListWCMUseHelper extends WCMUse {
     }
 
     public int getCount() {
-        return secondaryLinksJson.length;
+        return  linksJson.length;
     }
 
 }
