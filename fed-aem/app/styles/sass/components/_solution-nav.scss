@@ -17,6 +17,7 @@
 			top: 0 ;
 			left:0;
 			right:0;
+			width: 100%;
 			z-index:2000;
 		}
 
@@ -80,7 +81,6 @@
 			&.layout-1{
 				//Vertical
 				.img-hold{
-					background-color: white; 
 					padding: 0px 10px 0px 0;  
 					margin-top:10px;
 					}
@@ -88,7 +88,6 @@
 			&.layout-2{
 				//Horizontal
 				.img-hold{
-					background-color: white; 
 					padding: 0px 10px 0px 0;
 					margin-top:15px;
 					}

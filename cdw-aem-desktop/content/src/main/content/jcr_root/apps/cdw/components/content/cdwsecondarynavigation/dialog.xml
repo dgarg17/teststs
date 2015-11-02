@@ -129,7 +129,7 @@
                             text="White"
                             value="white"/>
                     </options>
-				</logoOrientation>
+				</logoBackground>
                 <headline
                     jcr:primaryType="cq:Widget"
                     fieldLabel="Showcase Headline"
