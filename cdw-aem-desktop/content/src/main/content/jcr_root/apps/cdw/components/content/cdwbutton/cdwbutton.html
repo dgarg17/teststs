@@ -1,3 +1,34 @@
-<div class="button-lockup -${properties.alignment}" data-sly-test="${properties.ctalink}">
-    <a data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"  href="${link.urlUpdate}" class="button -${properties.buttonStyle}" target="${properties.ctatarget}">${properties.cdwctalabel} </a>
-</div>
+<!-- Enhanced CDW Button with single/multi link options -->
+
+ <div class="cdw-multi-button">
+	<div class="button-lockup ${properties.alignment}"
+         data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks}"
+         data-sly-test="${properties.ctaLinks&&ctaLinks.count==1}">
+         <a href="${ctaLinks.linkDetails[0].ctalink}"
+           target="${ctaLinks.linkDetails[0].ctatarget}"
+           class="button ${properties.buttonStyle}">${ctaLinks.linkDetails[0].ctalabel} </a>
+	</div>
+
+    <div class="button-lockup ${properties.alignment}" data-sly-test="${ctaLinks.count>1}">
+        <select class="partner-links sub-cat-select ${properties.buttonStyle}" data-secondary-label="${properties.dropdownlabel}"
+                data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks}"
+                >
+			<option></option>
+            <sly data-sly-list="${ctaLinks.linkDetails}">
+                <option class="${properties.buttonStyle}" value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}">
+                    ${item.ctalabel}
+                </option>
+            </sly>
+        </select>
+        <select class="partner-links sub-cat-select-mobile" data-secondary-label="${properties.dropdownlabel}"
+                data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks}">
+            <option></option>
+            <!--closing option-->
+            <sly data-sly-list="${ctaLinks.linkDetails}">
+                <option value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}">
+                    ${item.ctalabel}
+                </option>
+            </sly>
+        </select>
+    </div>
+    </div>
