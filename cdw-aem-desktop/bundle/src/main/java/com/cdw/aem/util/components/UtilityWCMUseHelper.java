@@ -19,6 +19,7 @@ public class UtilityWCMUseHelper extends BaseComponent {
 	private String formatPhoneNumber;
 
 	private static String SITE_DOMAIN_PROPERTY = "siteDomain";
+	private static String CANONICAL_DOMAIN_PROPERTY = "canonicalDomain";
 	private static String S7_CDW_PARTNER_LOGO_TREATMENT_PROPERTY = "s7CDWPartnerLogoTreatment";
 	private static String S7_IMAGE_ROOT = "s7ImageRoot";
 	private static String SERVICE_DOMAIN = "serviceDomain";
@@ -31,6 +32,10 @@ public class UtilityWCMUseHelper extends BaseComponent {
 	private static String RICH_RELEVENCE_BASEURL = "richRelevenceBaseUrl";
 	private static String RICH_RELEVENCE_APIKEY = "richRelevenceApiKey";
 	private static String RICH_RELEVENCE_BOOTSTRAPURL = "richRelevenceBootUrl";
+	
+	private static String OG_TITLE_PROPERTY = "ogTitle";
+	private static String OG_DESCRIPTION_PROPERTY = "ogDescription";
+	private static String OG_PAGE_TYPE_PROPERTY = "ogPageType";
 
 	private boolean isPublish =false;
 
@@ -68,6 +73,12 @@ public class UtilityWCMUseHelper extends BaseComponent {
 
 	public String getS7CDWPartnerLogoTreatmentInheritedProperty(){
 		return Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(), S7_CDW_PARTNER_LOGO_TREATMENT_PROPERTY, "");
+	}
+	
+	public String getCanonicalDomain() {
+		String canonicalDomain = Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(), CANONICAL_DOMAIN_PROPERTY, "");
+		if (canonicalDomain.endsWith("/")) canonicalDomain = canonicalDomain.substring(0, (canonicalDomain.length() - 1));
+		return canonicalDomain;
 	}
 
 	public Page getSiteRootPage() {
@@ -111,6 +122,17 @@ public class UtilityWCMUseHelper extends BaseComponent {
 	public String getRichRelevenceBootUrl(){
 		return  Utility.getSiteRootInheritedProperty(getCurrentPage().getContentResource(),RICH_RELEVENCE_BOOTSTRAPURL, "");
 	}
-
-
+	public String getOpenGraphTitle(){
+		String ogTitle = getCurrentPage().getProperties().get(OG_TITLE_PROPERTY,"");
+		if ("".equals(ogTitle)) ogTitle = getCurrentPage().getTitle();
+		return ogTitle;
+	}
+	public String getOpenGraphDescription(){
+		String ogDescription = getCurrentPage().getProperties().get(OG_DESCRIPTION_PROPERTY,"");
+		if ("".equals(ogDescription)) ogDescription = getCurrentPage().getDescription();
+		return ogDescription;
+	}
+	public String getOpenGraphPageType(){
+		return getCurrentPage().getProperties().get(OG_PAGE_TYPE_PROPERTY,"website");
+	}
 }
