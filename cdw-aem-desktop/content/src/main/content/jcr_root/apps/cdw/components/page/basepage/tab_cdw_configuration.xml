@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Panel"
     title="CDW Configuration">
     <items jcr:primaryType="cq:WidgetCollection">
@@ -29,5 +29,42 @@
                     xtype="textfield"/>
             </items>
         </ensighten>
+        <richrelevence
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Rich Relevence"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <rrPageType
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="brand"
+                    fieldLabel="Rich Relevence Page Type"
+                    name="./rrPageType"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <brand
+                            jcr:primaryType="nt:unstructured"
+                            text="Brand"
+                            value="brand"/>
+                        <homepage
+                            jcr:primaryType="nt:unstructured"
+                            text="Home Page"
+                            value="homepage"/>
+                        <categoryhubs
+                            jcr:primaryType="nt:unstructured"
+                            text="Category Hubs"
+                            value="category_hubs"/>
+                    </options>
+                </rrPageType>
+                <placementcontext
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Rich Relevance Placement context"
+                    id="context"
+                    name="./context"
+                    xtype="textfield"/>
+            </items>
+        </richrelevence>
     </items>
 </jcr:root>

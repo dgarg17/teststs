@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	<title>Buttons</title>
 	<link rel="stylesheet" href="/styles/dist/main.css">
 	<style>
 		.box { margin-bottom: 20px; padding: 15px; min-height: 200px; background-color: #bbb; }
 	</style>
+	<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/js/select2.min.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+		//Initialize custom select drop downs
+
+		$('.cdw-multi-button .sub-cat-select').each(function() {
+			$(this).select2({
+				placeholder: "View Models and Pricing", 
+				minimumResultsForSearch: Infinity
+			});
+		});
+
+		$('.select2-arrow').each(function() {
+			$(this).append('<i class="ico ico-down-arrow"></i>');
+		});
+
+
+	});
+
+	</script>
 </head>
 <body>
 	<header role="banner">
@@ -32,11 +55,44 @@
 					</div>					
 				</div>
 			</div>
+			<div class="layout" style="background-color: black;">
+				<div class="layout-12">
+					<div class="cdw-multi-button">
+						<div class="button-lockup">
+							<select class="sub-cat-select partner-links -red">
+								<option></option>
+								<option class="-red">Basic PDU</option>
+								<option class="-red">Metered PDU</option>
+								<option class="-red">Switched PDU</option>
+							</select>
+							<select class="sub-cat-select-mobile partner-links">
+								<option>Label Text</option>
+								<option>Basic PDU</option>
+								<option>Metered PDU</option>
+								<option>Switched PDU</option>
+							</select>
+						</div>	
+					</div>				
+				</div>
+			</div>
 			<div class="layout">
 				<div class="layout-12">
-					<div class="button-lockup -center">
-						<a href="/" class="button -gray">Learn more</a>
-					</div>					
+					<div class="cdw-multi-button">
+						<div class="button-lockup">
+							<select class="sub-cat-select partner-links -gray">
+								<option></option>
+								<option class="-gray">Basic PDU</option>
+								<option class="-gray">Metered PDU</option>
+								<option class="-gray">Switched PDU</option>
+							</select>
+							<select class="sub-cat-select-mobile partner-links">
+								<option>Label Text</option>
+								<option>Basic PDU</option>
+								<option>Metered PDU</option>
+								<option>Switched PDU</option>
+							</select>
+						</div>	
+					</div>				
 				</div>
 			</div>
 			<div class="layout">
