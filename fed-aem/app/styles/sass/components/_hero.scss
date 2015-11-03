@@ -10,7 +10,7 @@
 	background-position: center;
 	.btn{font-weight: bold; font-size:18px;}
 	/* should use button class */
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 	min-height: 320px;
 	margin-bottom: 20px;
 	color:white;
@@ -26,11 +26,12 @@
 
 //Hero 1400px
 .cdwextendedhero{
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 	.layout-extended{
 		h1{color: $color-red;}
+		h4{margin:0 0 0 10px;}
 		.hero-full{
-			background-image: url(images/hero2.jpg);
+			background-image: url(/images/hero2.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;

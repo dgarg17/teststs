@@ -22,13 +22,21 @@ h1, h2, h3, h4, h5 {
         color: $color-red;
     }
     span {
-         /* Red Bar Highlight */
-         &.-highlight {
-            padding:  0 5px; 
-            background-color: $color-red; 
-            color: white;
-            font-weight: 900;          
-         }
+        $title-pad: 0.1em;
+        $title-lineheight: $title-pad + 1.5;
+        &.-highlight {
+            display: inline;
+            font-weight: 900;
+            background: $color-red;
+            text-transform: uppercase;
+            color: $color-white; 
+            padding: $title-pad;
+            padding-left: 0;
+            padding-right: 0;
+            line-height: $title-lineheight;
+            box-shadow: 10px 0 0 $color-red, -10px 0 0 $color-red;
+            box-decoration-break: clone;
+        }
      }
 }
 h1 { margin: 0 0 15px; font-size: 54px; line-height: 56px; font-weight: 900; }
