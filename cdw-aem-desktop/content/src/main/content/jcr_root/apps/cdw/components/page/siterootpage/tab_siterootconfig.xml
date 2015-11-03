@@ -15,6 +15,12 @@
                     fieldLabel="Site Domain"
                     name="./siteDomain"
                     xtype="textfield"/>
+				<canonicaldomain
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Canonical Domain"
+                    name="./canonicalDomain"
+					allowBlank="{Boolean}false"
+                    xtype="textfield"/>
                 <serviceDomain
                     jcr:primaryType="cq:Widget"
                     fieldDescription="This field defines the Service Domain for product picker."

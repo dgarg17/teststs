@@ -10,6 +10,7 @@
 	background-position: center;
 	.btn{font-weight: bold; font-size:18px;}
 	/* should use button class */
+	padding-bottom: 20px;
 	min-height: 320px;
 	margin-bottom: 20px;
 	color:white;
@@ -18,33 +19,31 @@
 		display: inline-block;
 		.hero-brand-logo{margin:4px;}
 		}
-	.copy{padding: 60px 0 0 4.27%;}
-	// &.-partner-logo{
-	// 	background-image: none;
-	// 	color: $color-gray90;
-	// 	.hero-brand-logo{margin:4px;}
-	// 	.product-hold{
-	// 		@include span-columns(12);
-	// 	}
-	// }
+	.copy{padding: 40px 0 0 4.27%;}
+
 	
 }
 
 //Hero 1400px
-.layout-extended{
-	.hero-full{
-	background-image: url(../images/hero2.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	// Needs testing
-	min-height: 260px;
-	img {
-		@include span-columns(2);
-		@include shift(1);
-		margin-top: 200px;
-	    }
+.cdwextendedhero{
+	padding-bottom: 20px;
+	.layout-extended{
+		h1{color: $color-red;}
+		.hero-full{
+			background-image: url(images/hero2.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			min-height: 260px;
+		img {
+			@include span-columns(2);
+			@include shift(1);
+			margin-top: 200px;
+			margin-right: 2.35765% !important;
+			}
 	}
+  }	
 }
+
 
 
