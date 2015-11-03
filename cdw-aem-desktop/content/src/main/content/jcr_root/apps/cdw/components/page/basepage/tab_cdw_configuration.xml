@@ -3,10 +3,52 @@
     jcr:primaryType="cq:Panel"
     title="CDW Configuration">
     <items jcr:primaryType="cq:WidgetCollection">
+		<seo
+			jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="SEO / OpenGraph"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+				<canonicaldomain
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Override Canonical Domain"
+                    name="./canonicalDomain"
+					xtype="textfield"/>
+				<ogTitle
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="OpenGraph Title"
+                    name="./ogTitle"
+					xtype="textfield"/>
+				<ogDescription
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="OpenGraph Description"
+                    name="./ogDescription"
+					xtype="textarea"/>
+				<ogPageType
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="website"
+                    fieldLabel="OpenGraph Page Type"
+                    name="./ogPageType"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <left
+                            jcr:primaryType="nt:unstructured"
+                            text="Website (Default)"
+                            value="website"/>
+                        <center
+                            jcr:primaryType="nt:unstructured"
+                            text="Article"
+                            value="article"/>
+                    </options>
+                </ogPageType>
+			</items>
+        </seo>
         <ensighten
             jcr:primaryType="cq:Widget"
             collapsed="{Boolean}false"
-            collapsible="{Boolean}false"
+            collapsible="{Boolean}true"
             title="Ensighten"
             xtype="dialogfieldset">
             <items jcr:primaryType="cq:WidgetCollection">
