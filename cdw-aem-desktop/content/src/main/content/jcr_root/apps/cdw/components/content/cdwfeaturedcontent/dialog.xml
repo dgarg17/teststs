@@ -1,315 +1,380 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-          jcr:primaryType="cq:Dialog"
-          height="{Long}700"
-          title="dialog"
-          xtype="dialog">
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}700"
+    title="dialog"
+    xtype="dialog">
     <items
-            jcr:primaryType="cq:Widget"
-            xtype="tabpanel">
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
             <secondarryLinks
-                    jcr:primaryType="cq:Widget"
-                    path="/apps/cdw/components/content/cdwsubcategoryproduct/dialog/items/secondaryLinks.infinity.json"
-                    xtype="cqinclude"/>
+                jcr:primaryType="cq:Widget"
+                path="/apps/cdw/components/content/cdwsubcategoryproduct/dialog/items/secondaryLinks.infinity.json"
+                xtype="cqinclude"/>
             <tab1
-                    jcr:primaryType="cq:Widget"
-                    anchor="100%"
-                    title="Text"
-                    xtype="panel">
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Text"
+                xtype="panel">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <headline
-                            jcr:primaryType="cq:Widget"
-                            fieldDescription="Maximum length is 70 characters."
-                            fieldLabel="Headline"
-                            maxLength="70"
-                            name="./headline"
-                            xtype="textfield"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Maximum length is 70 characters."
+                        fieldLabel="Headline"
+                        maxLength="70"
+                        name="./headline"
+                        xtype="textfield"/>
                     <headlinecolor
-                            jcr:primaryType="cq:Widget"
-                            colors="[4D4E53,CC0000]"
-                            defaultValue="4D4E53"
-                            fieldDescription="Default Value is Dark Grey(#4D4E53"
-                            fieldLabel="Headline Font Color"
-                            name="./textcolor"
-                            xtype="colorfield"/>
+                        jcr:primaryType="cq:Widget"
+                        colors="[4D4E53,CC0000]"
+                        defaultValue="4D4E53"
+                        fieldDescription="Default Value is Dark Grey(#4D4E53"
+                        fieldLabel="Headline Font Color"
+                        name="./textcolor"
+                        xtype="colorfield"/>
                     <headLineTextLink
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="HeadLine Link"
-                            fieldDescription="CTA link for the HeadLine"
-                            name="./headLineTextLink"
-                            xtype="pathfield"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="CTA link for the HeadLine"
+                        fieldLabel="HeadLine Link"
+                        name="./headLineTextLink"
+                        xtype="pathfield"/>
                     <headLineTextTarget
-                            jcr:primaryType="cq:Widget"
-                            defaultValue="_self"
-                            fieldDescription="Link opens in same window by default."
-                            fieldLabel="HeadLine Target"
-                            name="./headLineTextTarget"
-                            type="select"
-                            xtype="selection">
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="_self"
+                        fieldDescription="Link opens in same window by default."
+                        fieldLabel="HeadLine Target"
+                        name="./headLineTextTarget"
+                        type="select"
+                        xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <new
-                                    jcr:primaryType="nt:unstructured"
-                                    text="New Window"
-                                    value="_blank"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="New Window"
+                                value="_blank"/>
                             <same
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Same Window (Default)"
-                                    value="_self"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Same Window (Default)"
+                                value="_self"/>
                         </options>
                     </headLineTextTarget>
                     <redbarhighlight
-                            jcr:primaryType="cq:Widget"
-                            fieldDescription="If selected, it would override headline color."
-                            fieldLabel="Red Bar Headline Treatment?"
-                            name="./redbarhighlight"
-                            type="checkbox"
-                            xtype="selection"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="If selected, it would override headline color."
+                        fieldLabel="Red Bar Headline Treatment?"
+                        name="./redbarhighlight"
+                        type="checkbox"
+                        xtype="selection"/>
                     <text
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="Description"
-                            name="./bodytext"
-                            xtype="richtext">
-							<rtePlugins jcr:primaryType="nt:unstructured">
-		                        <links jcr:primaryType="nt:unstructured">
-		                            <linkDialogConfig
-		                                jcr:primaryType="nt:unstructured"
-		                                height="{Long}376">
-		                                <linkAttributes jcr:primaryType="cq:WidgetCollection">
-		                                    <ensightenClickTracking
-		                                        jcr:primaryType="cq:Widget"
-		                                        collapsed="{Boolean}true"
-		                                        collapsible="{Boolean}true"
-		                                        inputValue="advanced"
-		                                        name="./linkdialog/ensightenLinkTrackingTab"
-		                                        title="Ensighten Click Tracking"
-		                                        xtype="dialogfieldset">
-		                                        <items jcr:primaryType="cq:WidgetCollection">
-		                                            <enable
-		                                                jcr:primaryType="nt:unstructured"
-		                                                attribute="adhocensightenenable"
-		                                                fieldLabel="Enable Ensighten Click Tracking"
-		                                                name="./linkdialog/ensightenLinkTrackingEnableTracking"
-		                                                xtype="checkbox">
-		                                                <listeners
-		                                                    jcr:primaryType="nt:unstructured"
-		                                                    check="function(component){var dlg=component.findParentByType('rtelinkdialog');dlg.enableEnsightenFields(component.checked);}"/>
-		                                            </enable>
-		                                            <eventType
-		                                                jcr:primaryType="cq:Widget"
-		                                                attribute="adhocensighteneventtype"
-		                                                defaultValue="standardClick"
-		                                                fieldLabel="Event Type"
-		                                                name="./linkdialog/ensightenEventType"
-		                                                type="select"
-		                                                xtype="selection">
-		                                                <options jcr:primaryType="cq:WidgetCollection">
-		                                                    <standardClick
-		                                                        jcr:primaryType="nt:unstructured"
-		                                                        text="Standard Click (Default)"
-		                                                        value="standardClick"/>
-		                                                    <partnerClick
-		                                                        jcr:primaryType="nt:unstructured"
-		                                                        text="Partner Click"
-		                                                        value="partnerClick"/>
-		                                                </options>
-		                                            </eventType>
-		                                            <elementTitle
-		                                                jcr:primaryType="cq:Widget"
-		                                                attribute="adhocensightenelementtitle"
-		                                                fieldLabel="Element Title"
-		                                                name="./linkdialog/ensightenElementTitle"
-		                                                xtype="textfield"/>
-		                                            <eventData
-		                                                jcr:primaryType="cq:Widget"
-		                                                attribute="adhocensighteneventdata"
-		                                                fieldLabel="Event Data"
-		                                                name="./linkdialog/ensightenEventData"
-		                                                xtype="textfield"/>
-													<overrideComponentName
-		                                                jcr:primaryType="cq:Widget"
-		                                                attribute="overridecomponentname"
-														value="Featured Content-RTE"
-		                                                name="./linkdialog/overrideComponentName"
-		                                                xtype="hidden"/>
-		                                        </items>
-		                                    </ensightenClickTracking>
-		                                </linkAttributes>
-		                            </linkDialogConfig>
-		                        </links>
-								<misctools
-		                            jcr:primaryType="nt:unstructured"
-		                            features="[specialchars]">
-		                            <specialCharsConfig jcr:primaryType="nt:unstructured">
-		                                <chars jcr:primaryType="nt:unstructured">
-		                                    <registered
-		                                        jcr:primaryType="nt:unstructured"
-		                                        entity="&amp;reg;"/>
-		                                    <leftsinglequote
-		                                        jcr:primaryType="nt:unstructured"
-		                                        entity="&amp;lsquo;"/>
-		                                    <rightsinglequote
-		                                        jcr:primaryType="nt:unstructured"
-		                                        entity="&amp;rsquo;"/>
-		                                    <leftdoublequote
-		                                        jcr:primaryType="nt:unstructured"
-		                                        entity="&amp;ldquo;"/>
-		                                    <rightdoublequote
-		                                        jcr:primaryType="nt:unstructured"
-		                                        entity="&amp;rdquo;"/>
-		                                    <trademark
-		                                        jcr:primaryType="nt:unstructured"
-		                                        entity="&amp;trade;"/>
-		                                    <endash
-		                                        jcr:primaryType="nt:unstructured"
-		                                        entity="&amp;ndash; "/>
-		                                    <emdash
-		                                        jcr:primaryType="nt:unstructured"
-		                                        entity="&amp;mdash; "/>
-		                                    <pound
-		                                        jcr:primaryType="nt:unstructured"
-		                                        entity="&amp;pound; "/>
-		                                    <copyright
-		                                        jcr:primaryType="nt:unstructured"
-		                                        entity="&amp;copy; "/>
-		                                    <middledot
-		                                        jcr:primaryType="nt:unstructured"
-		                                        entity="&amp;middot; "/>
-		                                    <rightanglequote
-		                                        jcr:primaryType="nt:unstructured"
-		                                        entity="&amp;raquo;"/>
-		                                </chars>
-		                            </specialCharsConfig>
-		                        </misctools>
-							</rtePlugins>
-					</text>
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./bodytext"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <links jcr:primaryType="nt:unstructured">
+                                <linkDialogConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    height="{Long}376">
+                                    <linkAttributes jcr:primaryType="cq:WidgetCollection">
+                                        <ensightenClickTracking
+                                            jcr:primaryType="cq:Widget"
+                                            collapsed="{Boolean}true"
+                                            collapsible="{Boolean}true"
+                                            inputValue="advanced"
+                                            name="./linkdialog/ensightenLinkTrackingTab"
+                                            title="Ensighten Click Tracking"
+                                            xtype="dialogfieldset">
+                                            <items jcr:primaryType="cq:WidgetCollection">
+                                                <enable
+                                                    jcr:primaryType="nt:unstructured"
+                                                    attribute="adhocensightenenable"
+                                                    fieldLabel="Enable Ensighten Click Tracking"
+                                                    name="./linkdialog/ensightenLinkTrackingEnableTracking"
+                                                    xtype="checkbox">
+                                                    <listeners
+                                                        jcr:primaryType="nt:unstructured"
+                                                        check="function(component){var dlg=component.findParentByType('rtelinkdialog');dlg.enableEnsightenFields(component.checked);}"/>
+                                                </enable>
+                                                <eventType
+                                                    jcr:primaryType="cq:Widget"
+                                                    attribute="adhocensighteneventtype"
+                                                    defaultValue="standardClick"
+                                                    fieldLabel="Event Type"
+                                                    name="./linkdialog/ensightenEventType"
+                                                    type="select"
+                                                    xtype="selection">
+                                                    <options jcr:primaryType="cq:WidgetCollection">
+                                                        <standardClick
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Standard Click (Default)"
+                                                            value="standardClick"/>
+                                                        <partnerClick
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Partner Click"
+                                                            value="partnerClick"/>
+                                                    </options>
+                                                </eventType>
+                                                <elementTitle
+                                                    jcr:primaryType="cq:Widget"
+                                                    attribute="adhocensightenelementtitle"
+                                                    fieldLabel="Element Title"
+                                                    name="./linkdialog/ensightenElementTitle"
+                                                    xtype="textfield"/>
+                                                <eventData
+                                                    jcr:primaryType="cq:Widget"
+                                                    attribute="adhocensighteneventdata"
+                                                    fieldLabel="Event Data"
+                                                    name="./linkdialog/ensightenEventData"
+                                                    xtype="textfield"/>
+                                                <overrideComponentName
+                                                    jcr:primaryType="cq:Widget"
+                                                    attribute="overridecomponentname"
+                                                    name="./linkdialog/overrideComponentName"
+                                                    value="Featured Content-RTE"
+                                                    xtype="hidden"/>
+                                            </items>
+                                        </ensightenClickTracking>
+                                    </linkAttributes>
+                                </linkDialogConfig>
+                            </links>
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="[specialchars]">
+                                <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                    <chars jcr:primaryType="nt:unstructured">
+                                        <registered
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;reg;"/>
+                                        <leftsinglequote
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;lsquo;"/>
+                                        <rightsinglequote
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;rsquo;"/>
+                                        <leftdoublequote
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;ldquo;"/>
+                                        <rightdoublequote
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;rdquo;"/>
+                                        <trademark
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;trade;"/>
+                                        <endash
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;ndash; "/>
+                                        <emdash
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;mdash; "/>
+                                        <pound
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;pound; "/>
+                                        <copyright
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;copy; "/>
+                                        <middledot
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;middot; "/>
+                                        <rightanglequote
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;raquo;"/>
+                                    </chars>
+                                </specialCharsConfig>
+                            </misctools>
+                        </rtePlugins>
+                    </text>
                     <alignment
-                            jcr:primaryType="cq:Widget"
-                            defaultValue="-left"
-                            fieldDescription="Module is Left aligned by default."
-                            fieldLabel="Module Alignment"
-                            name="./alignment"
-                            type="select"
-                            xtype="selection">
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="-left"
+                        fieldDescription="Module is Left aligned by default."
+                        fieldLabel="Module Alignment"
+                        name="./alignment"
+                        type="select"
+                        xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <top
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Top"
-                                    value="-top"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Top"
+                                value="-top"/>
                             <left
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Left(Default)"
-                                    value="-left"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Left(Default)"
+                                value="-left"/>
                             <right
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Right"
-                                    value="-right"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="-right"/>
                             <bottom
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Bottom"
-                                    value="-bottom"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Bottom"
+                                value="-bottom"/>
                         </options>
                     </alignment>
                     <imagesource
-                            jcr:primaryType="cq:Widget"
-                            defaultValue="dam"
-                            fieldLabel="Image Source"
-                            name="./imagesrc"
-                            type="select"
-                            xtype="selection">
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="dam"
+                        fieldLabel="Image Source"
+                        name="./imagesrc"
+                        type="select"
+                        xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <dam
-                                    jcr:primaryType="nt:unstructured"
-                                    text="AEM DAM (Default)"
-                                    value="dam"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="AEM DAM (Default)"
+                                value="dam"/>
                             <scene7
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Scene 7"
-                                    value="scene7"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Scene 7"
+                                value="scene7"/>
+                            <icomoon
+                                jcr:primaryType="nt:unstructured"
+                                text="Icomoon"
+                                value="icomoon"/>
                         </options>
                         <listeners
-                                jcr:primaryType="nt:unstructured"
-                                loadcontent="function(){var value= this.getValue();var newvalue=&quot;&quot;; if(value==&quot;dam&quot;){ newvalue=&quot;scene7&quot;;}else{newvalue=&quot;dam&quot;;}this.findParentByType('tabpanel').getComponent(newvalue).disable(this); this.findParentByType('tabpanel').getComponent(value).enable(this);}"
-                                selectionchanged="function(box,value){if(value==&quot;dam&quot;){newvalue=&quot;scene7&quot;;box.findParentByType('tabpanel').getComponent(newvalue).disable(this);box.findParentByType('tabpanel').getComponent(value).enable(this);}else{newvalue=&quot;dam&quot;;box.findParentByType('tabpanel').getComponent(newvalue).disable(this);box.findParentByType('tabpanel').getComponent(value).enable(this);}}"/>
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(){var value= this.getValue();if(value==&quot;dam&quot;){this.findParentByType('tabpanel').getComponent(&quot;scene7&quot;).disable(this); this.findParentByType('tabpanel').getComponent(&quot;icomoon&quot;).disable(this);&#xa;this.findParentByType('tabpanel').getComponent(value).enable(this);}&#xa;else if(value==&quot;scene7&quot;){this.findParentByType('tabpanel').getComponent(&quot;dam&quot;).disable(this); this.findParentByType('tabpanel').getComponent(&quot;icomoon&quot;).disable(this);&#xa;this.findParentByType('tabpanel').getComponent(value).enable(this);}&#xa;else{this.findParentByType('tabpanel').getComponent(&quot;scene7&quot;).disable(this); this.findParentByType('tabpanel').getComponent(&quot;dam&quot;).disable(this);&#xa;this.findParentByType('tabpanel').getComponent(value).enable(this);}}&#xa;"
+                            selectionchanged="function(box,value){&#xa;&#xa;if (value==&quot;icomoon&quot;){&#xa;box.findParentByType('tabpanel').getComponent(&quot;scene7&quot;).disable(this);&#xa;box.findParentByType('tabpanel').getComponent(&quot;dam&quot;).disable(this);&#xa;box.findParentByType('tabpanel').getComponent(&quot;icomoon&quot;).enable(this);&#xa;}&#xa;else if(value==&quot;dam&quot;){box.findParentByType('tabpanel').getComponent(&quot;scene7&quot;).disable(this);&#xa;box.findParentByType('tabpanel').getComponent(&quot;icomoon&quot;).disable(this);&#xa;box.findParentByType('tabpanel').getComponent(value).enable(this);}&#xa;else{&#xa;box.findParentByType('tabpanel').getComponent(&quot;dam&quot;).disable(this);&#xa;box.findParentByType('tabpanel').getComponent(&quot;icomoon&quot;).disable(this);&#xa;box.findParentByType('tabpanel').getComponent(value).enable(this);}&#xa;}&#xa;"/>
                     </imagesource>
                     <secondaryLabel
-                            jcr:primaryType="cq:Widget"
-                            defaultValue="See More Categories"
-                            fieldDescription="Max character limit is 30,Application only for two or more links,Defaults to 'See More Categories'."
-                            fieldLabel="Dropdown Button Label"
-                            maxLength="{Long}30"
-                            name="./secondaryLabel"
-                            xtype="textfield"/>
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="See More Categories"
+                        fieldDescription="Max character limit is 30,Application only for two or more links,Defaults to 'See More Categories'."
+                        fieldLabel="Dropdown Button Label"
+                        maxLength="{Long}30"
+                        name="./secondaryLabel"
+                        xtype="textfield"/>
                     <ctabutton
-                            jcr:primaryType="cq:Widget"
-                            defaultValue="-red"
-                            fieldLabel="CTA Button Style"
-                            fieldDescription="Applicable only for single bottom."
-                            name="./ctabuttonstyle"
-                            type="select"
-                            xtype="selection">
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="-red"
+                        fieldDescription="Applicable only for single bottom."
+                        fieldLabel="CTA Button Style"
+                        name="./ctabuttonstyle"
+                        type="select"
+                        xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <red
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Signature Red Button (Default)"
-                                    value="-red"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Signature Red Button (Default)"
+                                value="-red"/>
                             <white
-                                    jcr:primaryType="nt:unstructured"
-                                    text="White Ghost Button"
-                                    value="-white"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="White Ghost Button"
+                                value="-white"/>
                             <gray
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Dark Grey Button"
-                                    value="-gray"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Dark Grey Button"
+                                value="-gray"/>
                         </options>
                     </ctabutton>
                     <resType
-                            jcr:primaryType="cq:Widget"
-                            defaultValue="foundation/components/image"
-                            ignoreData="{Boolean}true"
-                            name="./image/sling:resourceType"
-                            value="foundation/components/image"
-                            xtype="hidden"/>
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="foundation/components/image"
+                        ignoreData="{Boolean}true"
+                        name="./image/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
                     <linkTitle
-                            jcr:primaryType="cq:Widget"
-                            fieldDescription="If defined, will populate the 'title' attribute of the 'a' element."
-                            fieldLabel="Link Title"
-                            name="./linkTitle"
-                            xtype="textfield"/>
-
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="If defined, will populate the 'title' attribute of the 'a' element."
+                        fieldLabel="Link Title"
+                        name="./linkTitle"
+                        xtype="textfield"/>
                     <eventDataDetails
-                            jcr:primaryType="cq:Widget"
-                            path="/apps/cdw/components/content/cdwherobanner/dialog/items/items/tab1/items/eventdata.infinity.json"
-                            xtype="cqinclude"/>
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/cdw/components/content/cdwherobanner/dialog/items/items/tab1/items/eventdata.infinity.json"
+                        xtype="cqinclude"/>
                 </items>
             </tab1>
             <layout
-                    jcr:primaryType="cq:Widget"
-                    ddGroups="[s7media]"
-                    disabled="{Boolean}true"
-                    fileNameParameter="./fileName"
-                    fileReferenceParameter="./fileReference"
-                    id="scene7"
-                    name="./file"
-                    requestSuffix=".img.png"
-                    title="Scene7 Image"
-                    xtype="s7html5smartimage"/>
+                jcr:primaryType="cq:Widget"
+                ddGroups="[s7media]"
+                disabled="{Boolean}true"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                id="scene7"
+                name="./file"
+                requestSuffix=".img.png"
+                title="Scene7 Image"
+                xtype="s7html5smartimage"/>
             <image
-                    jcr:primaryType="cq:Widget"
-                    allowUpload="{Boolean}false"
-                    cropParameter=""
-                    ddGroups="[media]"
-                    disableZoom="{Boolean}true"
-                    fileNameParameter="./image/fileName"
-                    fileReferenceParameter="./image/fileReference"
-                    id="dam"
-                    mapParameter=""
-                    name="./image/file"
-                    requestSuffix="/image.img.png"
-                    rotateParameter=""
-                    title="DAM Image"
-                    xtype="html5smartimage"/>
+                jcr:primaryType="cq:Widget"
+                allowUpload="{Boolean}false"
+                cropParameter=""
+                ddGroups="[media]"
+                disableZoom="{Boolean}true"
+                fileNameParameter="./image/fileName"
+                fileReferenceParameter="./image/fileReference"
+                id="dam"
+                mapParameter=""
+                name="./image/file"
+                requestSuffix="/image.img.png"
+                rotateParameter=""
+                title="DAM Image"
+                xtype="html5smartimage"/>
+            <icomoon
+                jcr:primaryType="cq:Widget"
+                id="icomoon"
+                title="Icomoon Configuration"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <classname
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Classname"
+                        name="./classname"
+                        xtype="textfield"/>
+                    <size
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="-large"
+                        fieldLabel="Size"
+                        name="./size"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <large
+                                jcr:primaryType="nt:unstructured"
+                                text="Large"
+                                value="-large"/>
+                            <medium
+                                jcr:primaryType="nt:unstructured"
+                                text="Medium"
+                                value="-medium"/>
+                            <small
+                                jcr:primaryType="nt:unstructured"
+                                text="Small"
+                                value="-small"/>
+                        </options>
+                    </size>
+                    <shape
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="-circle"
+                        fieldLabel="Shape"
+                        name="./shape"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <circle
+                                jcr:primaryType="nt:unstructured"
+                                text="Circle (Default)"
+                                value="shape -circle"/>
+                            <square
+                                jcr:primaryType="nt:unstructured"
+                                text="Square"
+                                value="shape -square"/>
+                            <noshape
+                                jcr:primaryType="nt:unstructured"
+                                text="No shape"
+                                value="-noshape"/>
+                        </options>
+                    </shape>
+                    <backgroundcolor
+                        jcr:primaryType="cq:Widget"
+                        colors="[D02C30,C20430,F28B00,009D4F,009483,007299,76236D,B42573,FE4A5D,D8292F,F5B324,3DAF2C,00A19C,007CBB,923A80,E01783,FF828A,E74C39,F8BF00,76BD22,00AFAB,00A8E2,A45B96,EA6CB0,FFB0C0,E57E3E,FFD200,A6CE39,63CCCA,00B3E3,B588B9,F6A7D7,EEC7CE,F2BD7D,FFE900,C3D600,9ADADA,54C9E8,CEADD0,E8BCD8,F7DBE0,F2D1A0,FFEA77,E2E768,B0E3E4,96D5EA,E8BFDC,EDD3E2,D1D0CE,BCBCBC,A8A8AA,898B8E,63656A,54565B,4D4D4F,CC0000,FFFFFF]"
+                        fieldLabel="Color"
+                        name="./bgcolor"
+                        xtype="colorfield"/>
+                </items>
+            </icomoon>
         </items>
     </items>
 </jcr:root>
