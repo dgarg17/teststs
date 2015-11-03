@@ -1,25 +1,46 @@
-$(function() {
+$(document).ready(function(){
 
-	resize2upBoxes();
-
+	resizeMultiupBoxes();
+	
 	$(window).resize(function() {
-		
-		resize2upBoxes();
-
+		resizeMultiupBoxes();
 	});
-
+	
 });
 
-var resize2upBoxes = function() {
-	var $fixHeight = $('.layout .layout-6 .content-container-item').parent();
+var resizeMultiupBoxes = function() {
+
+	//var $fixHeight = $('.-box-height').parent();
+	/*
 	$fixHeight.each(function() {
-		if ($(window).width() > 734) {
+		$fixHeight.css('height', '').find('.-box-height').css('height', '');
+	});
+	$fixHeight.promise().done(function() {
+		if ($(window).width() > 735) {
+			$(this).find('.-box-height').css('height', $(this).parents('.layout').height() - 50);
+			$(this).find('.cdw-youtube-video').css('height', $(this).parents('.layout').height() - 20);
+			$(this).find('.media iframe').css('height', $(this).parents('.layout').height() - 20);
 			$(this).css('height', $(this).parents('.layout').height());
-			$(this).find('.content-container-item').css('height', $(this).parents('.layout').height() - 20);
 		}
 		else {
-			$(this).css('height', '');
-			$(this).find('.content-container-item').css('height', '');
+			$(this).css('height', '').find('.-box-height').css('height', '');
 		}
 	});
+	*/
+	
+	$(".-box-height").each(function() {
+		$(this).parent().parent().addClass("box-height-container");
+	});
+	
+	
+	
 }
+
+var alignButtons = function() {
+
+
+
+}
+
+
+

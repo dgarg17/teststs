@@ -24,7 +24,7 @@ $(document).ready(function() {
 				minimumResultsForSearch: Infinity,
 			});
         });
-		
+
 		$('.select2-arrow').each(function() {
 			$(this).append('<i class="ico ico-down-arrow"></i>');
 		});

@@ -2,12 +2,15 @@ package com.cdw.aem.components;
 
 import com.cdw.aem.util.LinkUtil;
 
-public class SecondaryNavigationItem {
+import java.util.Arrays;
+
+public class  SecondaryNavigationItem {
 	
 	private String ctaLink;
 	private String ctaText;
 	private String ctaTarget = "_self";
 	private String isSecondary[];
+	private String eventDetails="";
 	
 	public String getCtaLink() {
 		return LinkUtil.updateUrl(ctaLink);
@@ -44,4 +47,14 @@ public class SecondaryNavigationItem {
 	public void setIsSecondary(String[] isSecondary) {
 		this.isSecondary = isSecondary;
 	}
+
+	public String getEventDetails() {
+		return eventDetails;
+	}
+
+	public void setEventDetails(String eventDetails) {
+		this.eventDetails = eventDetails;
+	}
+
+
 }
