@@ -5,5 +5,15 @@
 <meta name="description" content="${head.description}">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <title>${head.title @ context='html'}</title>
-<link rel="shortcut icon" href="${head.faviconPath}" />  
+<link rel="shortcut icon" href="${head.faviconPath}" />
+
+
+<sly data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
+<link rel="canonical" href="${utility.canonicalDomain}${currentPage.path}.html" />
+<meta property="og:type" content="${utility.openGraphPageType}" />
+<meta property="og:title" content="${utility.openGraphTitle}" />
+<meta property="og:url" content="${utility.canonicalDomain}${currentPage.path}.html" />
+<meta data-sly-test="${properties['image/fileReference'] || properties['image/file'] }" property="og:image" content="${utility.canonicalDomain}${currentPage.path}.img.png" />
+<meta property="og:description" content="${utility.openGraphDescription}" />
+</sly>
 <div data-sly-include="metadata-extra.html" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->

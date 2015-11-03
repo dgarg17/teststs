@@ -1,12 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Panel"
     title="CDW Configuration">
     <items jcr:primaryType="cq:WidgetCollection">
+		<seo
+			jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="SEO / OpenGraph"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+				<canonicaldomain
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Override Canonical Domain"
+                    name="./canonicalDomain"
+					xtype="textfield"/>
+				<ogTitle
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="OpenGraph Title"
+                    name="./ogTitle"
+					xtype="textfield"/>
+				<ogDescription
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="OpenGraph Description"
+                    name="./ogDescription"
+					xtype="textarea"/>
+				<ogPageType
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="website"
+                    fieldLabel="OpenGraph Page Type"
+                    name="./ogPageType"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <left
+                            jcr:primaryType="nt:unstructured"
+                            text="Website (Default)"
+                            value="website"/>
+                        <center
+                            jcr:primaryType="nt:unstructured"
+                            text="Article"
+                            value="article"/>
+                    </options>
+                </ogPageType>
+			</items>
+        </seo>
         <ensighten
             jcr:primaryType="cq:Widget"
             collapsed="{Boolean}false"
-            collapsible="{Boolean}false"
+            collapsible="{Boolean}true"
             title="Ensighten"
             xtype="dialogfieldset">
             <items jcr:primaryType="cq:WidgetCollection">
@@ -29,42 +71,5 @@
                     xtype="textfield"/>
             </items>
         </ensighten>
-        <richrelevence
-            jcr:primaryType="cq:Widget"
-            collapsed="{Boolean}false"
-            collapsible="{Boolean}false"
-            title="Rich Relevence"
-            xtype="dialogfieldset">
-            <items jcr:primaryType="cq:WidgetCollection">
-                <rrPageType
-                    jcr:primaryType="cq:Widget"
-                    defaultValue="brand"
-                    fieldLabel="Rich Relevence Page Type"
-                    name="./rrPageType"
-                    type="select"
-                    xtype="selection">
-                    <options jcr:primaryType="cq:WidgetCollection">
-                        <brand
-                            jcr:primaryType="nt:unstructured"
-                            text="Brand"
-                            value="brand"/>
-                        <homepage
-                            jcr:primaryType="nt:unstructured"
-                            text="Home Page"
-                            value="homepage"/>
-                        <categoryhubs
-                            jcr:primaryType="nt:unstructured"
-                            text="Category Hubs"
-                            value="category_hubs"/>
-                    </options>
-                </rrPageType>
-                <placementcontext
-                    jcr:primaryType="cq:Widget"
-                    fieldLabel="Rich Relevance Placement context"
-                    id="context"
-                    name="./context"
-                    xtype="textfield"/>
-            </items>
-        </richrelevence>
     </items>
 </jcr:root>

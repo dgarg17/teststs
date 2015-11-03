@@ -8,6 +8,8 @@ public class LinkList {
     private String ctalabel;
     private String ctalink;
     private String ctatarget="_blank";
+    private String eventDetails="";
+
 
     public String getCtalabel() {
         return ctalabel;
@@ -33,4 +35,11 @@ public class LinkList {
         this.ctatarget = ctatarget;
     }
 
+    public String getEventDetails() {
+        return eventDetails;
+    }
+
+    public void setEventDetails(String eventDetails) {
+        this.eventDetails = eventDetails;
+    }
 }

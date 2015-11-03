@@ -106,7 +106,7 @@
                     <padding
                         jcr:primaryType="cq:Widget"
                         defaultValue="-padding-none"
-                        fieldLabel="Include Bottom Padding?"
+                        fieldLabel="Include Top and bottom Padding?"
                         name="./padding"
                         type="select"
                         xtype="selection">

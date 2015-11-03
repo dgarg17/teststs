@@ -3754,6 +3754,9 @@ a.hotzone {
     clear: both;
     content: "";
     display: table; }
+  .featured-item.-top.-center .-icomoon-hold div, .featured-item.-bottom.-center .-icomoon-hold div {
+    margin: 0 auto;
+    text-align: center; }
   .featured-item.-top.-center .copy, .featured-item.-bottom.-center .copy {
     text-align: center; }
   .featured-item.-top.-center .button-lockup, .featured-item.-bottom.-center .button-lockup {

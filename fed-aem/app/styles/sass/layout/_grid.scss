@@ -3,7 +3,7 @@
 	background-size:cover; 
 	background-repeat:no-repeat; 
 	background-position:center;
-	&.-padding-50{padding-bottom: $column-control-space50;}
+	&.-padding-50{padding: $column-control-space50;}
 	&.-padding-none{padding: $column-control-space-none;}
 	.cc-child-bg{
 		background-size:cover; 
@@ -18,7 +18,7 @@
 	background-size:cover; 
 	background-repeat:no-repeat; 
 	background-position:center;
-	&.-padding-50{padding-bottom: $column-control-space50;}
+	&.-padding-50{padding: $column-control-space50;}
 	&.-padding-none{padding: $column-control-space-none;}
 	.cc-child-bg{
 		background-size:cover; 
@@ -30,7 +30,7 @@
 	background-size:cover; 
 	background-repeat:no-repeat; 
 	background-position:center;
-	&.-padding-50{padding-bottom: $column-control-space50;}
+	&.-padding-50{padding: $column-control-space50;}
 	&.-padding-none{padding: $column-control-space-none;}
 	.cc-child-bg{
 		background-size:cover; 
@@ -42,7 +42,7 @@
 	position: relative; 
 	margin: 0 auto; 
 	max-width:765px;
-	&.-padding-50{padding-bottom: $column-control-space50;}
+	&.-padding-50{padding: $column-control-space50;}
 	&.-padding-none{padding: $column-control-space-none;}
 	.cc-child-bg{
 		background-size:cover; 
@@ -54,7 +54,7 @@
 	position: relative; 
 	margin: 0 auto; 
 	max-width: 960px;
-	&.-padding-50{padding-bottom: $column-control-space50;}
+	&.-padding-50{padding: $column-control-space50;}
 	&.-padding-none{padding: $column-control-space-none;}
 	.cc-child-bg{
 		background-size:cover; 
@@ -113,17 +113,13 @@
 	
 @media screen and (max-width: $screen-xs-min) {
 	.layout { @include outer-container;
-		.layout-11 { @include span-columns(12) }
-		.layout-10 { @include span-columns(12); }
-		.layout-9 { @include span-columns(12); }
-		.layout-8 { @include span-columns(12); }
+		.layout-11 { @include span-columns(10) }
 		.layout-7 { @include span-columns(12); }
-		.layout-6 { @include span-columns(12); }
 		.layout-5 { @include span-columns(12); }
+		.layout-6 { @include span-columns(12); }
 		.layout-4 { @include span-columns(12); }
 		.layout-3 { @include span-columns(12); }
-		.layout-2 { @include span-columns(12); }
-		.layout-1 { @include span-columns(12); }
+		.layout-1 { @include span-columns(2); }
 	}
 }
 

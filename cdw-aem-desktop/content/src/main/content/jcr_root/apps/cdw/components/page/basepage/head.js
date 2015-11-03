@@ -45,7 +45,7 @@ use(["/libs/wcm/foundation/components/utils/ResourceUtils.js"], function (Resour
     });
 
     var faviconPathPromise = designPathPromise.then(function (designPath) {
-        return designPath + "/clientlibs/images/favicon.ico";
+        return designPath + "/favicon.ico";
     });
 
     var titlePromise = ResourceUtils.getContainingPage(granite.resource).then(function (pageResource) {

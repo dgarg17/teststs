@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	resizeMultiupBoxes();
+	//resizeMultiupBoxes();
 	
 	$(window).resize(function() {
 		resizeMultiupBoxes();
