@@ -8,7 +8,7 @@
 		}
 	}
 	line-height:24px;
-	padding:45px;
+	padding:40px;
 	
 	.ico-quote-left, .ico-quote-right{
 		font-size:30px;
@@ -57,9 +57,9 @@
 			color:inherit;
 		}
 
-		// .credit {
-		// 	color:#fff;
-		// }
+		.credit {
+			color:$color-gray80;
+		}
 	}
 	&.-black {
 		&.-opacity{
