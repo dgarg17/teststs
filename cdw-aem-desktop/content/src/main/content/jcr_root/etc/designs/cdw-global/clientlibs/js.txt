@@ -10,3 +10,4 @@ select2.min.js
 youtube.js
 secondaryLinks.js
 partnerLinks.js
+rrcms.js

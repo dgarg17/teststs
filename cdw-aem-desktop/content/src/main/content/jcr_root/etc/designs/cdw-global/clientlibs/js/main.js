@@ -11,7 +11,15 @@ $(function() {
 	});
 
 	//Partner Solution Nav Mobile Menu
-	$(document).on('click', '.partner-header .mobileNav', togglePartnerMenu);
+	
+	
+	$('.partner-header').click(function() {
+		if ($(this).find(".mobileNav").css("display") == "block") {
+			//alert("partner header clicked blk");
+			togglePartnerMenu();
+		}
+		
+	});
 	
 });
 

@@ -130,18 +130,16 @@
                             value="-right"/>
                     </options>
                 </alignment>
-             
                 <linkTitle
-                        jcr:primaryType="cq:Widget"
-                        fieldDescription="If defined, will populate the 'title' attribute of the 'a' element."
-                        fieldLabel="Link Title"
-                        name="./linkTitle"
-                        xtype="textfield"/>
-
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="If defined, will populate the 'title' attribute of the 'a' element."
+                    fieldLabel="Link Title"
+                    name="./linkTitle"
+                    xtype="textfield"/>
                 <eventDataDetails
-                        jcr:primaryType="cq:Widget"
-                        path="/apps/cdw/components/content/cdwherobanner/dialog/items/items/tab1/items/eventdata.infinity.json"
-                        xtype="cqinclude"/>
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/cdw/components/content/cdwherobanner/dialog/items/items/tab1/items/eventdata.infinity.json"
+                    xtype="cqinclude"/>
             </items>
         </configurations>
     </items>
