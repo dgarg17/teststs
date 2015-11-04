@@ -89,7 +89,7 @@
                     <linkTitle
                             jcr:primaryType="cq:Widget"
                             fieldDescription="If defined, will populate the 'title' attribute of the 'a' element."
-                            fieldLabel="Link Tilte"
+                            fieldLabel="Link Title"
                             name="./linkTitle"
                             xtype="textfield"/>
 

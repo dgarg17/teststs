@@ -1,11 +1,16 @@
 package com.cdw.aem.components;
 
 import com.adobe.cq.sightly.WCMUse;
+import com.cdw.aem.util.ProductPicker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
 public class EnsightenTaggingWCMUseHelper extends WCMUse {
+
+    public final static String ELEMENTTYPE="ELEMENT_TYPE";
+    public final static String ENSIGHTENPAGENAME="window.cdwTagManagementData.page_name";
+    public final static String COMPONENTNAME="COMPONENT_NAME";
 
     protected Logger log = LoggerFactory.getLogger(this.getClass());
 
@@ -41,35 +46,61 @@ public class EnsightenTaggingWCMUseHelper extends WCMUse {
         if (elementType == null) {
             elementType = getProperties().get("elementType", String.class);
         }
+        if(elementType==null){
+            elementType="cta";
+        }
     }
 
-    public String getMethodName() {
+    public static String getMethodName(String eventType) {
         if (eventType.equalsIgnoreCase("pEvent")) {
             return "CdwTagMan.createPromotionTag";
         }
         return "CdwTagMan.createElementPageTag";
     }
 
-   /* public String getEventType() {
-        return "onClick";
-    }*/
-
-    public String getFirstParam() {
-        if (eventType.equalsIgnoreCase("pEvent")) {
-            return "Site Promotion";
-        }
-        if (getCurrentPage().getProperties().get("ensightenPageName", String.class) == null) {
-            return "";
-        }
-        return getCurrentPage().getProperties().get("ensightenPageName", String.class);
+    public String getMethodName() {
+       return getMethodName(eventType);
     }
 
+    public static  String getFirstParam(String eventType) {
+        if (eventType.equalsIgnoreCase("pEvent")) {
+            return "\'Site Promotion\'";
+        }
+        return ENSIGHTENPAGENAME;
+    }
+    public String getFirstParam() {
+        return getFirstParam(eventType);
+    }
+
+    public static String getSecondParam(String eventData,String eventTitle ) {
+        return COMPONENTNAME + "|" + eventTitle + "-" + ELEMENTTYPE  + "|" + eventData;
+    }
     public String getSecondParam() {
-        return getComponent().getName() + "|" + eventTitle + "-" + ElementType.find(elementType).getName() + "|" + eventData;
+        return getSecondParam(eventData, eventTitle).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, elementType.toUpperCase());
     }
 
     public String getTaggingEvent() {
-        return getMethodName() + "(\'" + getFirstParam() + "\',\'" + getSecondParam() + "\')";
+        return getMethodName() + "(" + getFirstParam() + ",\'" + getSecondParam() + "\')";
     }
+    public static String getTaggingEvent(String eventData,String eventTitle,String eventType) {
+        return getMethodName(eventType) + "(" + getFirstParam(eventType) + ",\'" + getSecondParam(eventData,eventTitle) + "\')";
+    }
+
+    public String getEventType() {
+        return eventType;
+    }
+
+    public String getEventTitle() {
+        return eventTitle;
+    }
+
+    public String getElementType() {
+        return elementType;
+    }
+
+    public String getEventData() {
+        return eventData;
+    }
+
 
 }

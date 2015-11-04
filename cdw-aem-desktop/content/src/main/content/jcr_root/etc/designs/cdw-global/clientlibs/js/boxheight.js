@@ -4,6 +4,7 @@ $(document).ready(function(){
 	
 	$(window).resize(function() {
 		resizeMultiupBoxes();
+<<<<<<< HEAD
 	});
 	
 });
@@ -25,13 +26,53 @@ var resizeMultiupBoxes = function() {
 			$(this).css('height', '').find('.-box-height').css('height', '');
 		}
 	});
+=======
+	});
+	
+});
+
+var resizeMultiupBoxes = function() {
+
+	$(".-box-height").each(function() {
+		$(this).parent().parent().parent().addClass("-box-height-container");
+        //var theHeight = $(this).parent().parent().height();
+       // alert(theHeight);
+	});
+
+	$(".-box-height-container").each(function() {
+
+        	var maxHeight = 0;
+            $(this).children().each(function() {
+				if ($(this).children().children().height() > maxHeight) {
+					maxHeight = $(this).children().children().height();
+                }
+            });
+            $(this).children().each(function() {
+            	if ($(this).children().children(".-box-height").hasClass("youtube-wrapper")) {
+					$(this).children().children(".-box-height").children().height(maxHeight+39);
+                }
+                else {
+					$(this).children().children(".-box-height").height(maxHeight);
+                }
+            });
+
+
+	});
+
+	
+	
+>>>>>>> develop
 }
 
 var alignButtons = function() {
 
 
 
+<<<<<<< HEAD
 }
 
 
 
+=======
+}
+>>>>>>> develop
