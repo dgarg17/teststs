@@ -116,7 +116,6 @@
 
                     <eventType
                             jcr:primaryType="cq:Widget"
-                            allowBlank="{Boolean}false"
                             defaultValue="sEvent"
                             cls="cssselectfield"
                             fieldDescription="Event Type between cmCreateElementTag/cmCreatePromotionTag"
