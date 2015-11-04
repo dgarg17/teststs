@@ -130,23 +130,16 @@
                             value="-right"/>
                     </options>
                 </alignment>
-                <dropdownlabel
-                    jcr:primaryType="cq:Widget"
-                    fieldDescription="If more than one link is defined, then a drop-down presentation will occur with each link being an item in the drop-down with a label. Note:The label doesn't show up in author mode."
-                    fieldLabel="Dropdown Label"
-                    name="./dropdownlabel"
-                    xtype="textfield"/>
                 <linkTitle
-                        jcr:primaryType="cq:Widget"
-                        fieldDescription="If defined, will populate the 'title' attribute of the 'a' element."
-                        fieldLabel="Link Title"
-                        name="./linkTitle"
-                        xtype="textfield"/>
-
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="If defined, will populate the 'title' attribute of the 'a' element."
+                    fieldLabel="Link Title"
+                    name="./linkTitle"
+                    xtype="textfield"/>
                 <eventDataDetails
-                        jcr:primaryType="cq:Widget"
-                        path="/apps/cdw/components/content/cdwherobanner/dialog/items/items/tab1/items/eventdata.infinity.json"
-                        xtype="cqinclude"/>
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/cdw/components/content/cdwherobanner/dialog/items/items/tab1/items/eventdata.infinity.json"
+                    xtype="cqinclude"/>
             </items>
         </configurations>
     </items>
