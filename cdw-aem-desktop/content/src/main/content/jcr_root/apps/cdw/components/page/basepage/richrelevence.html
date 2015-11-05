@@ -12,8 +12,8 @@ if(placement_arr.length>0){
 CDW.productPlacement.init({
         'apiKey': '${utility.richRelevenceApiKey @ context="scriptString"}',
         'baseUrl': '${utility.richRelevenceBaseUrl @ context="scriptString"}',
-        'sessionId': CdwCms.settings.session_id,
-        'userId': CdwCms.settings.persistent_id,
+        'sessionId': (CdwCms && CdwCms.settings.session_id) ? CdwCms.settings.session_id : "",
+		'userId': (CdwCms && CdwCms.settings.persistent_id) ? CdwCms.settings.persistent_id : "",
         'type': '${properties.rrPageType @ context="scriptString"}',
     	'typeData': { ${properties.rrPageType@ context="scriptString"}: '${properties.context @ context="scriptString"}'},
         'template': '',
