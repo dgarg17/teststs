@@ -13,16 +13,14 @@ $margin-sm: (-$font-size-sm/2) 0 0 (-$font-size-sm/2);
 $center-icon: 50%;
 
 
-// @media screen and (max-width: $screen-sm-min){
-// 	.-large{
-// 		span{font-size: $font-size-lg - 14px !important;}
-// 		}
-// 	}
+@media screen and (max-width: $screen-sm-min){
+	.-large{
+		span{font-size: $font-size-lg - 14px !important;}
+		}
+	}
 
 .-icomoon-hold{ @include clearfix;
-	// .-left{float: left;}
-	// .-right{float: right;}
-	// .-center{margin: 0 auto;}
+
 	.-large{
 		span{font-size: $font-size-lg;}
 	}
@@ -119,7 +117,7 @@ $center-icon: 50%;
 			}
 			
 			
-			background: red;
+			
 		}	
 	}
 }
