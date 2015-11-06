@@ -86,13 +86,7 @@
 	}
 	
 	&.-right { @include clearfix;
-		.select2-container{float: right;}
-		.layout-4 {  float: right; margin:0 0 0 2.35765%; }
-		// img.feature-image { float: right; margin:0 0 50px 0; }		
-	}
-	&.-left { @include clearfix;		
-		.select2-container{float: left;}
-			
+		.layout-4 {  float: right; margin:0 0 0 2.35765%; }	
 	}
 
 	.select2-container {
