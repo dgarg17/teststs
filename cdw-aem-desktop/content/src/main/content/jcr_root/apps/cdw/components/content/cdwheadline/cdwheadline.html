@@ -1,4 +1,4 @@
-<div  data-sly-test="${(properties.headline1 || properties.headline2)}" class="headline-feature ${properties.textalignment}" style="color:#${properties.textcolor @ context='styleString'};">
+<div  data-sly-test="${(properties.headline1 || properties.headline2)}" class="headline-feature ${properties.textstyle} ${properties.textalignment}" style="color:#${properties.textcolor @ context='styleString'};">
 
 	<sly data-sly-test="${properties.textsize=='h2'}">
 		<h2 data-sly-test="${properties.headline1}"> ${properties.headline1}

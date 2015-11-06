@@ -32,28 +32,6 @@
                         fieldLabel="Text Color"
                         name="./textcolor"
                         xtype="colorfield"/>
-                    <textalignment
-                        jcr:primaryType="cq:Widget"
-                        defaultValue="-left"
-                        fieldLabel="Text Alignment"
-                        name="./textalignment"
-                        type="select"
-                        xtype="selection">
-                        <options jcr:primaryType="cq:WidgetCollection">
-                            <left
-                                jcr:primaryType="nt:unstructured"
-                                text="Left (Default)"
-                                value="-left"/>
-                            <right
-                                jcr:primaryType="nt:unstructured"
-                                text="Right"
-                                value="-right"/>
-                            <center
-                                jcr:primaryType="nt:unstructured"
-                                text="Center"
-                                value="-center"/>
-                        </options>
-                    </textalignment>
                     <textsize
                         jcr:primaryType="cq:Widget"
                         defaultValue="h2"
@@ -76,6 +54,58 @@
                                 value="h4"/>
                         </options>
                     </textsize>
+                    <textstyle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="prelo-black"
+                        fieldLabel="Text Style"
+                        name="./textstyle"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <preloblack
+                                jcr:primaryType="nt:unstructured"
+                                text="PreloBlack (default) &#xa;"
+                                value="prelo-black"/>
+                            <prelobold
+                                jcr:primaryType="nt:unstructured"
+                                text="Prelo-Bold"
+                                value="prelo-bold"/>
+                            <prelosemi_bold
+                                jcr:primaryType="nt:unstructured"
+                                text="Prelo-SemiBold"
+                                value="prelo-semibold"/>
+                            <preloslab_bold
+                                jcr:primaryType="nt:unstructured"
+                                text="PreloSlab-Bold "
+                                value=" preloslab-bold"/>
+                            <preloslab_semibold
+                                jcr:primaryType="nt:unstructured"
+                                text="PreloSlab-SemiBold "
+                                value="preloslab-semibold"/>
+                        </options>
+                    </textstyle>
+                    <textalignment
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="-left"
+                        fieldLabel="Text Alignment"
+                        name="./textalignment"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left (Default)"
+                                value="-left"/>
+                            <right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="-right"/>
+                            <center
+                                jcr:primaryType="nt:unstructured"
+                                text="Center"
+                                value="-center"/>
+                        </options>
+                    </textalignment>
                 </items>
             </tab1>
         </items>
