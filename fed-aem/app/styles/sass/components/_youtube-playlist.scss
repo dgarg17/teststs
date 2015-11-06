@@ -1,0 +1,45 @@
+.youtube-playlist {
+	.video-hero {
+		line-height: 0;
+		.video-hero-image-container {
+			h2 {
+				color: $color-white;
+				font-size: 96px;
+				margin-top: 25%;
+				position: absolute;
+				text-align: center;
+				width: 100%;
+			}
+			.ico-play-circle-o {
+				color: $color-white;
+				cursor: pointer;
+				font-size: 96px;
+				margin-top: 550px;
+				position: absolute;
+				right: 10px;
+				text-align: right;
+				width: 100%;
+			}
+			.video-hero-image {
+				display: block;
+			}
+		}
+		.youtube-playlist-video {
+			display: none;
+		}
+	}
+	
+	.video-thumbnails {
+		margin-top: 3px;
+		.video-thumb {
+			cursor: pointer;
+			display: block;
+			float: left;
+			margin-left: 3px;
+			width: 192.5px;
+			&:first-of-type {
+				margin-left: 0;
+			}
+		}
+	}
+}
