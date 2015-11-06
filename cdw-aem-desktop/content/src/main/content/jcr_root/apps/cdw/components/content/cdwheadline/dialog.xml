@@ -64,7 +64,7 @@
                         <options jcr:primaryType="cq:WidgetCollection">
                             <preloblack
                                 jcr:primaryType="nt:unstructured"
-                                text="PreloBlack (default) &#xa;"
+                                text="PreloBlack (default)"
                                 value="prelo-black"/>
                             <prelobold
                                 jcr:primaryType="nt:unstructured"
