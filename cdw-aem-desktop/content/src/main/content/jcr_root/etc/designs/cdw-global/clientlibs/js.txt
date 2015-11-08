@@ -11,3 +11,4 @@ youtube.js
 secondaryLinks.js
 partnerLinks.js
 rrcms.js
+scrollTriggers.js
