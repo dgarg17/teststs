@@ -186,7 +186,7 @@
                     <textAlignment
                             jcr:primaryType="cq:Widget"
                             defaultValue="-left"
-                            fieldDescription="Alignment for Header and the Description,Left alignment is  default."
+                            fieldDescription="Header and Description is left aligned by default"
                             fieldLabel="Text Alignment"
                             name="./textAlignment"
                             type="select"
@@ -209,7 +209,7 @@
                     <imageAlignment
                             jcr:primaryType="cq:Widget"
                             defaultValue="-left"
-                            fieldDescription="Alignment for Image in its position, Left alignment is default."
+                            fieldDescription="Image is left aligned by default."
                             fieldLabel="Image Alignment"
                             name="./imageAlignment"
                             type="select"
@@ -233,7 +233,7 @@
                     <ctaAlignment
                             jcr:primaryType="cq:Widget"
                             defaultValue="-left"
-                            fieldDescription="Cta is Left aligned by default."
+                            fieldDescription="CTA is left aligned by default."
                             fieldLabel="CTA Alignment"
                             name="./ctaAlignment"
                             type="select"
