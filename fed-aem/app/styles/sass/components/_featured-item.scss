@@ -88,7 +88,8 @@
 		&.-right{float: right;}
 		&.-left{float:left;}
 		&.-center{
-			div{margin: 0 auto;}}
+			div{margin: 0 auto;}
+			span{text-align: center; display: block;}}
 	}
 	
 	&.-right { @include clearfix;
