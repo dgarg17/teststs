@@ -183,7 +183,6 @@
                             </misctools>
                         </rtePlugins>
                     </text>
-
                     <textAlignment
                             jcr:primaryType="cq:Widget"
                             defaultValue="-left"
@@ -203,8 +202,8 @@
                                     value="-right"/>
                             <bottom
                                     jcr:primaryType="nt:unstructured"
-                                    text="Bottom"
-                                    value="-bottom"/>
+                                    text="Center"
+                                    value="-center"/>
                         </options>
                     </textAlignment>
                     <imageAlignment
@@ -227,8 +226,8 @@
                                     value="-right"/>
                             <bottom
                                     jcr:primaryType="nt:unstructured"
-                                    text="Bottom"
-                                    value="-bottom"/>
+                                    text="Center"
+                                    value="-center"/>
                         </options>
                     </imageAlignment>
                     <ctaAlignment
@@ -250,8 +249,8 @@
                                     value="-right"/>
                             <bottom
                                     jcr:primaryType="nt:unstructured"
-                                    text="Bottom"
-                                    value="-bottom"/>
+                                    text="Center"
+                                    value="-center"/>
                         </options>
                     </ctaAlignment>
                     <moduleAlignment
