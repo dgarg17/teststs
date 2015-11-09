@@ -18,8 +18,19 @@
                     xtype="cqinclude"/>
                 <image
                     jcr:primaryType="cq:Widget"
-                    path="/libs/wcm/foundation/components/page/tab_image.infinity.json"
-                    xtype="cqinclude"/>
+                    allowUpload="{Boolean}false"
+                    cropParameter="./image/imageCrop"
+                    ddGroups="[media]"
+                    disableZoom="{Boolean}true"
+                    fileNameParameter="./image/fileName"
+                    fileReferenceParameter="./image/fileReference"
+                    mapParameter=""
+                    name="./image/file"
+                    renditionSuffix="/_jcr_content/renditions/original"
+                    requestSuffix=".img.png"
+                    rotateParameter=""
+                    title="Image"
+                    xtype="html5smartimage"/>
                 <cloudservices
                     jcr:primaryType="cq:Widget"
                     path="/libs/wcm/foundation/components/page/tab_cloudservices.infinity.json"
