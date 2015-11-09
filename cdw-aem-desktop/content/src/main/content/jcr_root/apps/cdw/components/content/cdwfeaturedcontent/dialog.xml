@@ -183,33 +183,104 @@
                             </misctools>
                         </rtePlugins>
                     </text>
-                    <alignment
-                        jcr:primaryType="cq:Widget"
-                        defaultValue="-left"
-                        fieldDescription="Module is Left aligned by default."
-                        fieldLabel="Module Alignment"
-                        name="./alignment"
-                        type="select"
-                        xtype="selection">
+
+                    <textAlignment
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="-left"
+                            fieldDescription="Alignment for Header and the Description,Left alignment is  default."
+                            fieldLabel="Text Alignment"
+                            name="./textAlignment"
+                            type="select"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <left
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Left(Default)"
+                                    value="-left"/>
+                            <right
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Right"
+                                    value="-right"/>
+                            <bottom
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Bottom"
+                                    value="-bottom"/>
+                        </options>
+                    </textAlignment>
+                    <imageAlignment
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="-left"
+                            fieldDescription="Alignment for Image in its position, Left alignment is default."
+                            fieldLabel="Image Alignment"
+                            name="./imageAlignment"
+                            type="select"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+
+                            <left
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Left(Default)"
+                                    value="-left"/>
+                            <right
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Right"
+                                    value="-right"/>
+                            <bottom
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Bottom"
+                                    value="-bottom"/>
+                        </options>
+                    </imageAlignment>
+                    <ctaAlignment
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="-left"
+                            fieldDescription="Cta is Left aligned by default."
+                            fieldLabel="CTA Alignment"
+                            name="./ctaAlignment"
+                            type="select"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <left
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Left(Default)"
+                                    value="-left"/>
+                            <right
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Right"
+                                    value="-right"/>
+                            <bottom
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Bottom"
+                                    value="-bottom"/>
+                        </options>
+                    </ctaAlignment>
+                    <moduleAlignment
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="-left"
+                            fieldDescription="Image position is Left aligned by default."
+                            fieldLabel="Module Alignment/Image Position"
+                            name="./alignment"
+                            type="select"
+                            xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <top
-                                jcr:primaryType="nt:unstructured"
-                                text="Top"
-                                value="-top"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Top"
+                                    value="-top"/>
                             <left
-                                jcr:primaryType="nt:unstructured"
-                                text="Left(Default)"
-                                value="-left"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Left(Default)"
+                                    value="-left"/>
                             <right
-                                jcr:primaryType="nt:unstructured"
-                                text="Right"
-                                value="-right"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Right"
+                                    value="-right"/>
                             <bottom
-                                jcr:primaryType="nt:unstructured"
-                                text="Bottom"
-                                value="-bottom"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Bottom"
+                                    value="-bottom"/>
                         </options>
-                    </alignment>
+                    </moduleAlignment>
                     <imagesource
                         jcr:primaryType="cq:Widget"
                         defaultValue="dam"

@@ -12,29 +12,47 @@
 .featured-item {  padding: 0; margin: $component-spacing; @include clearfix;
 	&:last-child { border: none; }
 	
-	/*img { margin: 0 auto; display: block; }*/
-	img.feature-image { margin: 0 15px 50px 0; float: left; }
-
-	.product-image {
-		img {
-			margin:15px;
-			float:left;
-		}
-		&:after {
-			content:'';
-			display:block;
-			clear:both;
-		}
+	img.feature-image { 
+		// margin: 0 15px 50px 0;  
+		&.-left{float: left;}
+		&.-right{float: right;}
+		&.-center{margin: 0 auto; display: block;}
 	}
 	
-
+	// may not need
+	// .product-image {
+	// 	img {
+	// 		margin:15px;
+	// 		float:left;
+	// 	}
+	// 	&:after {
+	// 		content:'';
+	// 		display:block;
+	// 		clear:both;
+	// 	}
+	// }
 	
+	.button-lockup{
+		&.-right{
+			.select2-container{float: right;}
+			a{float: right;}
+		}
+		&.-left{
+			.select2-container{float: left;}
+			a{float: left;}
+		}
+		&.-center{
+			text-align: center;
+			.select2-container{float:none;}
+			}
+		}
 	
-	
-	h4, p, .button-lockup { overflow: hidden; }
 	
 	.copy{ 	
-		p { margin: 0 0 15px; }	
+		p { margin: 0 0 15px; }
+		&.-right{text-align: right;}
+		&.-left{text-align: left;}
+		&.-center{text-align: center;}	
 		
 	}
 
@@ -57,33 +75,24 @@
 			max-width:100%;
 			max-height:175px;
 		}
+		&.-left{
+			img{float: left;}
+		}
+		&.-right{
+			img{float: right;}
+		}
+		
+			
+	}
+	.-icomoon-hold{
+		&.-right{float: right;}
+		&.-left{float:left;}
+		&.-center{
+			div{margin: 0 auto;}}
 	}
 	
 	&.-right { @include clearfix;
-		.copy{text-align: right;}
-		.select2-container{float: right;}
-		.layout-4 {  float: right; margin:0 0 0 2.35765%; }
-		img.feature-image { float: right; margin:0 0 50px 0; }
-		.button-lockup{
-				a{float: right;}
-		}		
-	}
-	&.-left { @include clearfix;
-		.copy{text-align: left;}
-		.select2-container{float: left;}
-		img.feature-image { float: left; }
-		.button-lockup{
-				a{float: left;}
-		}	
-	}
-	&.-top, &.-bottom { @include clearfix;
-		&.-center{
-			.copy{text-align: center;}
-			.button-lockup{
-				text-align: center;
-				.select2-container{float:none;}
-				}
-		}
+		.layout-4 {  float: right; margin:0 0 0 2.35765%; }	
 	}
 
 	.select2-container {
@@ -91,16 +100,7 @@
 	}
 
 }
-// ?????
-// .layout-12 {
-// 	
-// 	.select2-container {
-// 		float:left;
-// 		display:inline-block;
-// 		width:auto;
-// 	}
-// 
-// }
+
 
 @media screen and (max-width: $screen-md-min) and (min-width: $screen-sm-min + 1) {
 	//Rows
