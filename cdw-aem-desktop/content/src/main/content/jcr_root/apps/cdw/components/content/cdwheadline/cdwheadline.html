@@ -1,17 +1,17 @@
-<div  data-sly-test="${(properties.headline1 || properties.headline2)}" class="headline-feature ${properties.textstyle} ${properties.textalignment}" style="color:#${properties.textcolor @ context='styleString'};">
+<div  data-sly-test="${(properties.headline1 || properties.headline2)}" class="headline-feature ${properties.textalignment}" style="color:#${properties.textcolor @ context='styleString'};">
 
 	<sly data-sly-test="${properties.textsize=='h2'}">
-		<h2 data-sly-test="${properties.headline1}"> ${properties.headline1}
+		<h2 data-sly-test="${properties.headline1}" class="${properties.textstyle}"> ${properties.headline1}
 		<i data-sly-test="${properties.headline2}"  class="ico-and-thinner"></i> ${properties.headline2}</h2>
      </sly>
 
      <sly data-sly-test="${properties.textsize=='h3'}" >
-		<h3 data-sly-test="${properties.headline1}"> ${properties.headline1}
+		<h3 data-sly-test="${properties.headline1}" class="${properties.textstyle}"> ${properties.headline1}
 		<i data-sly-test="${properties.headline2}"  class="ico-and-thinner"></i> ${properties.headline2}</h3>
      </sly>
 
 	<sly data-sly-test="${properties.textsize=='h4'}" >
-		<h4 data-sly-test="${properties.headline1}"> ${properties.headline1}
+		<h4 data-sly-test="${properties.headline1}" class="${properties.textstyle}" > ${properties.headline1}
 		<i data-sly-test="${properties.headline2}"  class="ico-and-thinner"></i> ${properties.headline2}</h4>
     </sly>
 
