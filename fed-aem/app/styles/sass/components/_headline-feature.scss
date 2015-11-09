@@ -1,13 +1,14 @@
+
 .headline-feature{
 	// h1,h2,h3,h4{font-weight: 900;}
 	&.-center{width: 100%; text-align: center;}
 	&.-right{float: right;}
 	&.-left{float: left;}
-	&.prelo-black{font-weight: 900;}
-	&.prelo-bold{font-weight: 800;}
-	&.prelo-semibold{font-weight: bold;}
-	&.preloslab-bold{font-weight: 800; font-family: "PreloSlab"}
-	&.preloslab-semibold{font-weight: bold; font-family: "PreloSlab"}
+	.prelo-black{font-weight: 900;}
+	.prelo-bold{font-weight: 800;}
+	.prelo-semibold{font-weight: bold;}
+	.preloslab-bold{font-weight: 800; font-family: "PreloSlab"}
+	.preloslab-semibold{font-weight: bold; font-family: "PreloSlab"}
 
 }
 .cdwheadline{
