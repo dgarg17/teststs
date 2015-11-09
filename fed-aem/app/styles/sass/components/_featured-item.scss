@@ -84,6 +84,12 @@
 		
 			
 	}
+	.-icomoon-hold{
+		&.-right{float: right;}
+		&.-left{float:left;}
+		&.-center{
+			div{margin: 0 auto;}}
+	}
 	
 	&.-right { @include clearfix;
 		.layout-4 {  float: right; margin:0 0 0 2.35765%; }	
