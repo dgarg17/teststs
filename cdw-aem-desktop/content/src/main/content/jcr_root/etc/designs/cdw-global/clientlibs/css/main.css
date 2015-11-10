@@ -4205,6 +4205,24 @@ a.hotzone {
 
 .headline-feature.-left {
   float: left; }
+  
+.headline-feature .prelo-black {
+  font-weight: 900; }
+
+.headline-feature .prelo-bold {
+  font-weight: 800; }
+
+.headline-feature .prelo-semibold {
+  font-weight: bold; }
+
+.headline-feature .preloslab-bold {
+  font-weight: 800;
+  font-family: "PreloSlab"; }
+
+.headline-feature .preloslab-semibold {
+  font-weight: bold;
+  font-family: "PreloSlab"; }
+
 
 .cdwheadline::after {
   clear: both;
