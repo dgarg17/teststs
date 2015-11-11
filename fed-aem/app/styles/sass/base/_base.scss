@@ -1,5 +1,12 @@
 /* Base Elements */
-body { margin: 0; padding: 0; font-family: "Prelo", verdana, sans-serif; font-size: 16px; line-height: 20px; color: $base-color; }
+body { 
+    margin: 0; 
+    padding: 0; 
+    font-family: "Prelo", verdana, sans-serif; 
+    font-size: 16px; 
+    line-height: 20px; 
+    color: $base-color; 
+    -webkit-font-smoothing: antialiased; }
 
 input { color: $base-color; }
 
