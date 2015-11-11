@@ -33,9 +33,9 @@ function switchYouTubePlaylist(element) {
 	$(".youtube-playlist-video").attr("data-tracking-id",element.data('tracking-id'));
 	$(".youtube-playlist-video").attr("title",element.data('video-title'));
 	$(".youtube-playlist-video").attr("data-video-summary",element.data('video-summary'));
-	$(".youtube-playlist-video").attr("data-video-width",element.data('video-width'));
-	$(".youtube-playlist-video").attr("data-video-size-unit",element.data('video-size-unit'));
-	$(".youtube-playlist-video").attr("data-video-aspect-ratio",element.data('video-aspect-ratio'));
+	//$(".youtube-playlist-video").attr("data-video-width",element.data('video-width'));
+	//$(".youtube-playlist-video").attr("data-video-size-unit",element.data('video-size-unit'));
+	//$(".youtube-playlist-video").attr("data-video-aspect-ratio",element.data('video-aspect-ratio'));
 	$(".video-hero-text-container h2").html(element.data('video-headline-text'));
 	$(".video-hero-text-container .video-title").html(element.data('video-title'));
 	$(".video-hero-text-container .video-summary").html(element.data('video-summary'));
