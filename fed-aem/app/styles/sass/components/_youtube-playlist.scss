@@ -1,6 +1,7 @@
 .youtube-playlist-player {
 	.video-hero {
 		line-height: 0;
+		position: relative;
 		.video-hero-image-container {
 			.video-hero-text-container {
 				color: $color-white;
@@ -26,6 +27,7 @@
 				}
 			}
 			.ico-play-circle-o {
+				bottom: 10px;
 				color: $color-white;
 				cursor: pointer;
 				font-size: 96px;
@@ -46,21 +48,25 @@
 		}
 	}
 	
+	#global-video-settings {
+		display: none;
+	}
+	
 	.video-thumbnails {
 		margin-top: 3px;
 		margin-bottom: 20px;
 		margin-left: -3px;
 		.video-thumb {
+			background-color: #fff;
 			cursor: pointer;
 			display: block;
+			height: 120px;
 			float: left;
 			margin-left: 3px;
 			width: 192.5px;
-			opacity: 0.5;
 			&.active {
-				opacity: 1;
-				.arrow-down {
-					/*display: block;*/
+				img { 
+					opacity: 1;
 				}
 			}
 			&.hover {
@@ -68,6 +74,7 @@
 			}
 			img {
 				height: 120px;
+				opacity: 0.5;
 				width: 200px;
 			}
 			.arrow-down {
@@ -80,6 +87,24 @@
 				position: absolute;
 				width: 0;
 			}
+		}
+	}
+}
+
+.youtube-playlist-player-wrapper {
+	&.-left {
+		.youtube-playlist-player {
+			float: left;
+		}
+	}
+	&.-center {
+		.youtube-playlist-player {
+			margin: 0 auto;
+		}
+	}
+	&.-right {
+		.youtube-playlist-player {
+			float: right;
 		}
 	}
 }
@@ -102,8 +127,6 @@
 				}
 				.ico-play-circle-o {
 					font-size: 72px;
-					margin-top: 45%;
-					right: 5%;
 				}
 				.video-hero-image {
 				}
@@ -142,8 +165,6 @@
 				}
 				.ico-play-circle-o {
 					font-size: 60px;
-					margin-top: 40%;
-					right: 5%;
 				}
 				.video-hero-image {
 				}
@@ -182,6 +203,7 @@
 		}
 		.video-thumbnails {
 			.video-thumb {
+				height: 120px;
 				width: 191.3px;
 				&.active {
 					.arrow-down {
@@ -224,6 +246,7 @@
 		}
 		.video-thumbnails {
 			.video-thumb {
+				height: 90px;
 				width: 151.3px;
 				&.active {
 					.arrow-down {
@@ -259,8 +282,6 @@
 				}
 				.ico-play-circle-o {
 					font-size: 40px;
-					margin-top: 35%;
-					right: 5%;
 				}
 				.video-hero-image {
 				}
@@ -270,6 +291,7 @@
 		}
 		.video-thumbnails {
 			.video-thumb {
+				height: 88px;
 				width: 148.5px;
 				&.active {
 					.arrow-down {
@@ -291,7 +313,6 @@
 			.video-hero-image-container {
 				.video-hero-text-container {
 					margin-top: 100px;
-					width: 570px;
 					h2 {
 						font-size: 32px;
 						line-height: 64px;
@@ -306,8 +327,6 @@
 				}
 				.ico-play-circle-o {
 					font-size: 40px;
-					margin-top: 270px;
-					right: 610px;
 				}
 				.video-hero-image {
 				}
@@ -329,13 +348,12 @@
 	}
 }
 
-.layout-8 {
+.layout-8, .layout-9, .layout-10, .layout-11 {
 	.youtube-playlist-player {
 		.video-hero {
 			.video-hero-image-container {
 				.video-hero-text-container {
 					margin-top: 140px;
-					width: 780px;
 					h2 {
 						font-size: 60px;
 					}
@@ -349,8 +367,6 @@
 				}
 				.ico-play-circle-o {
 					font-size: 60px;
-					margin-top: 360px;
-					right: 420px;
 				}
 				.video-hero-image {
 				}
@@ -361,13 +377,12 @@
 	}
 }
 
-.layout-4 {
+.layout-4, .layout-5, .layout-3, .layout-2, .layout-1 {
 	.youtube-playlist-player {
 		.video-hero {
 			.video-hero-image-container {
 				.video-hero-text-container {
 					margin-top: 60px;
-					width: 390px;
 					h2 {
 						font-size: 32px;
 						line-height: 32px;
@@ -383,8 +398,6 @@
 				}
 				.ico-play-circle-o {
 					font-size: 32px;
-					margin-top: 170px;
-					right: 805px;
 				}
 				.video-hero-image {
 				}
@@ -394,6 +407,7 @@
 		}
 		.video-thumbnails {
 			.video-thumb {
+				height: 110px;
 				width: 184px;
 				&.active {
 					.arrow-down {
@@ -403,6 +417,35 @@
 				img {
 					height: 110px;
 					width: 184px;
+				}
+			}
+		}
+	}
+}
+
+.layout-3, .layout-2, .layout-1 {
+	.youtube-playlist-player {
+		.video-hero {
+			.video-hero-image-container {
+				.video-hero-text-container {
+					margin-top: 30px;
+					h2 {
+						font-size: 16px;
+						line-height: 16px;
+					}
+					.video-title {
+						font-size: 14px;
+						line-height: 14px;
+						margin-bottom: 0;
+					}
+					.video-summary {
+						font-size: 14px;
+						line-height: 14px;
+						margin-bottom: 0px;
+					}
+				}
+				.ico-play-circle-o {
+					font-size: 16px;
 				}
 			}
 		}
