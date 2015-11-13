@@ -45,11 +45,11 @@
                 </ogPageType>
 			</items>
         </seo>
-        <ensighten
+        <ensightenBasic
             jcr:primaryType="cq:Widget"
-            collapsed="{Boolean}false"
+            collapsed="{Boolean}true"
             collapsible="{Boolean}true"
-            title="Ensighten"
+            title="Ensighten Basic"
             xtype="dialogfieldset">
             <items jcr:primaryType="cq:WidgetCollection">
                 <ensightenPageType
@@ -70,11 +70,56 @@
                     name="./ensightenVoucherCode"
                     xtype="textfield"/>
             </items>
-        </ensighten>
+        </ensightenBasic>
+		<ensightenScroll
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            title="Ensighten Scroll Triggers"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <linkItems
+		            jcr:primaryType="cq:Widget"
+		            addItemLabel="Add Scroll Trigger"
+		            autoScroll="{Boolean}true"
+					hideLabel="{Boolean}true"
+		            cls="multifieldcls"
+					width="100%"
+					name="./ensightenScrollTriggers"
+		            title="Triggers"
+		            xtype="multifield">
+		            <fieldConfig
+		                jcr:primaryType="cq:Widget"
+		                baseCls="multifieldpanelbasecls"
+		                cls="cssmultifieldpanel"
+		                ctCls="multifieldpanelcollapsedctcls"
+						xtype="multifieldpanel">
+		                <items jcr:primaryType="cq:WidgetCollection">
+		                    <tagName
+		                        jcr:primaryType="cq:Widget"
+		                        allowBlank="{Boolean}false"
+								maxLength="50"
+		                        emptyText="Tag Name"
+		                        key="tagName"
+		                        width="80%"
+		                        xtype="textfield"/>
+		                    <elementName
+		                        jcr:primaryType="cq:Widget"
+		                        allowBlank="{Boolean}false"
+								maxLength="100"
+		                        emptyText="Element Name"
+		                        key="elementName"
+		                        width="80%"
+		                        xtype="textfield"/>
+		                </items>
+		            </fieldConfig>
+		        </linkItems>
+            </items>
+        </ensightenScroll>
         <richrelevence
             jcr:primaryType="cq:Widget"
-            collapsed="{Boolean}false"
-            collapsible="{Boolean}false"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
             title="Rich Relevence"
             xtype="dialogfieldset">
             <items jcr:primaryType="cq:WidgetCollection">
