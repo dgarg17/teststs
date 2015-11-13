@@ -20,13 +20,14 @@ var resizeMultiupBoxes = function() {
 
         	var maxHeight = 0;
             $(this).children().each(function() {
+					alert($(this).children().children().height);
 				if ($(this).children().children().height() > maxHeight) {
 					maxHeight = $(this).children().children().height();
                 }
             });
             $(this).children().each(function() {
             	if ($(this).children().children(".-box-height").hasClass("youtube-wrapper")) {
-					$(this).children().children(".-box-height").children().height(maxHeight+39);
+					//$(this).children().children(".-box-height").children().height(maxHeight+39);
                 }
                 else {
 					$(this).children().children(".-box-height").height(maxHeight);
