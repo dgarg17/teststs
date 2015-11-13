@@ -1,4 +1,5 @@
-<main id="content" role="main" class="lead-gen">
+<main id="content" role="main" class="lead-gen" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
+  <div data-sly-test="${utility.getSiteRootPagePath}" data-sly-resource="${ '/jcr:content/breadcrumbs' @ prependPath=utility.getSiteRootPagePath, resourceType='/apps/cdw/components/content/cdwbreadcrumbs'}" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
 <div class="layout">
   <div class="layout-12">
   <div data-sly-resource="${ @path='herobanner', resourceType='cdw/components/content/cdwherobanner'}" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->

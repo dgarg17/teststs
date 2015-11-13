@@ -1,4 +1,5 @@
-<main id="content" role="main">
+<main id="content" role="main" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
+    <div data-sly-test="${utility.getSiteRootPagePath}" data-sly-resource="${ '/jcr:content/breadcrumbs' @ prependPath=utility.getSiteRootPagePath, resourceType='/apps/cdw/components/content/cdwbreadcrumbs'}" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
   <div class="container">
     <div data-sly-test="${!wcmmode.disabled}">
         <h1>Site Root Configurations</h1>
@@ -17,8 +18,6 @@
             <li>Rich Relevance Base URL : ${utility.richRelevenceBaseUrl}</li>
             <li>Rich Relevance API Key: ${utility.richRelevenceApiKey}</li>
             <li>Rich Relevance Bootstrapper URL : ${utility.richRelevenceBootUrl}</li>
-
-
         </ul>
     </div>
   </div>

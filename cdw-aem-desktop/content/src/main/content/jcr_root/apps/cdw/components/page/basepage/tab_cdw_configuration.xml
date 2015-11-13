@@ -3,6 +3,13 @@
     jcr:primaryType="cq:Panel"
     title="CDW Configuration">
     <items jcr:primaryType="cq:WidgetCollection">
+        <prefixsubheadline
+                jcr:primaryType="cq:Widget"
+                fieldLabel="BreadCrumbs"
+                fieldDescription="BreadCrumbs are disabled by default"
+                name="./enableBreadcrumbs"
+                type="checkbox"
+                xtype="selection"/>
 		<seo
 			jcr:primaryType="cq:Widget"
             collapsed="{Boolean}false"
