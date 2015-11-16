@@ -17,15 +17,32 @@ public class YouTubeVideoItem {
 	
 	public YouTubeVideoItem(Node node) throws Exception {
 		if (node != null) {
-			if (node.hasProperty("videoId")) videoId = node.getProperty("videoId").getString();
+			if (node.hasProperty("videoId")) {
+				videoId = node.getProperty("videoId").getString();
+			}
+			
 			heroImagePath = thumbnailImagePath = heroImagePath = node.getPath().replace("/jcr:content/", "/_jcr_content/") + "/thumbnailImage.img.png";
-			if (node.hasNode("heroImage") && node.getNode("heroImage").hasProperty("fileReference")) heroImagePath = node.getPath().replace("/jcr:content/", "/_jcr_content/") + "/heroImage.img.png";
-			if (node.hasProperty("headlineOne")) headlineText = node.getProperty("headlineOne").getString();
-			if (node.hasProperty("headlineOne") && node.hasProperty("headlineTwo")) headlineText += " <span class='ico-and'></span> ";
-			if (node.hasProperty("headlineTwo")) headlineText += node.getProperty("headlineTwo").getString();
-			if (node.hasProperty("videoTitle")) videoTitle = node.getProperty("videoTitle").getString();
-			if (node.hasProperty("videoSummary")) videoSummary = node.getProperty("videoSummary").getString();
-			if (node.hasProperty("trackingId")) trackingId = node.getProperty("trackingId").getString();
+			if (node.hasNode("heroImage") && node.getNode("heroImage").hasProperty("fileReference")) {
+				heroImagePath = node.getPath().replace("/jcr:content/", "/_jcr_content/") + "/heroImage.img.png";
+			}
+			if (node.hasProperty("headlineOne")) {
+				headlineText = node.getProperty("headlineOne").getString();
+			}
+			if (node.hasProperty("headlineOne") && node.hasProperty("headlineTwo")) {
+				headlineText += " <span class='ico-and'></span> ";
+			}
+			if (node.hasProperty("headlineTwo")) {
+				headlineText += node.getProperty("headlineTwo").getString();
+			}
+			if (node.hasProperty("videoTitle")) {
+				videoTitle = node.getProperty("videoTitle").getString();
+			}
+			if (node.hasProperty("videoSummary")) {
+				videoSummary = node.getProperty("videoSummary").getString();
+			}
+			if (node.hasProperty("trackingId")) {
+				trackingId = node.getProperty("trackingId").getString();
+			}
 		}
 	}
 	
