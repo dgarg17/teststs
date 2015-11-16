@@ -4,7 +4,7 @@
     a, a:hover { text-decoration: none; }
 
     /* Circle Default */
-    span { min-width: 20px; min-height: 20px; display: block; }
+    i { min-width: 20px; min-height: 20px; display: block; }
     
     &:not(.-no-color) {
         .ico-twitter { color: $color-twitter; border-color: $color-twitter; }
@@ -18,12 +18,12 @@
     }
 
     &:not(.-square) {
-        span { min-width: 20px; border-width: 1px; border-style: solid; display: block;  border-radius: 50%; }
+        i { min-width: 20px; border-width: 1px; border-style: solid; display: block;  border-radius: 50%; }
     }
 
     /* Versions */
     &.-square {
-        span { min-width: 20px; display: block; }
+        i { min-width: 20px; display: block; }
 
         .icon { border: none; }
         .ico-twitter { background-color: $color-twitter; color: $white; }
@@ -40,7 +40,7 @@
         font-size: 16px; line-height: 18px;
 
         &:not(.-square) {
-            span { min-width: 18px; min-height: 18px; display: block;  @include border-radius(9px); }
+            i { min-width: 18px; min-height: 18px; display: block;  @include border-radius(9px); }
         }
     }
 }
