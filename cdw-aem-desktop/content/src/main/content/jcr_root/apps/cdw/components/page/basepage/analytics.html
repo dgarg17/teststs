@@ -3,24 +3,24 @@
 <script type="text/javascript" src="${utility.serviceDomain}/assets/tagmanagement/cdwtagmanagement.js"></script>
 <script type="text/javascript">
 	var cdwTagManagementData = {};window.cdwTagManagementData = {'page_name':'${properties.ensightenPageName @ context="scriptString"}','page_type':'${properties.ensightenPageType @ context="scriptString"}','page_url':'${currentPage.path @ context="scriptString"}','voucher_code':'${utility.ensightenVoucherCode @ context="scriptString"}'};
-	if(CdwCms) {
-		if(CdwCms.settings.persistent_id) {
+	if(typeof CdwCms != 'undefined') {
+		if(typeof CdwCms.settings.persistent_id != 'undefined') {
 			Object.defineProperty(cdwTagManagementData,'persistent_id', { value : '', writable : true});
 			cdwTagManagementData.persistent_id = CdwCms.settings.persistent_id;
 		}
-		if(CdwCms.settings.session_id) {
+		if(typeof CdwCms.settings.session_id != 'undefined') {
 			Object.defineProperty(cdwTagManagementData,'session_id', { value : '', writable : true});
 			cdwTagManagementData.session_id = CdwCms.settings.session_id;
 		}
-		if(CdwCms.settings.login_status) {
+		if(typeof CdwCms.settings.login_status != 'undefined') {
 			Object.defineProperty(cdwTagManagementData,'login_status', { value : '', writable : true});
 			cdwTagManagementData.login_status = CdwCms.settings.login_status;
 		}
-		if(CdwCms.settings.organization_name) {
+		if(typeof CdwCms.settings.organization_name != 'undefined') {
 			Object.defineProperty(cdwTagManagementData,'organization_name', { value : '', writable : true});
 			cdwTagManagementData.organization_name = CdwCms.settings.organization_name;
 		}
-		if(CdwCms.settings.site_name) {
+		if(typeof CdwCms.settings.site_name != 'undefined') {
 		        Object.defineProperty(cdwTagManagementData,'site_name', { value : '', writable : true});
 		        cdwTagManagementData.site_name = CdwCms.settings.site_name;
 		}
@@ -28,4 +28,4 @@
 </script>
 <script type="text/javascript" src="${utility.ensightenBootstrapPath @ context='uri'}"></script>
 </sly>
-<sly data-sly-include="analytics-extra.html" />  
+<sly data-sly-include="analytics-extra.html" />

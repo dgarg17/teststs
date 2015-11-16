@@ -1,0 +1,76 @@
+<!-- RICH RELEVENCE -->
+ 
+<sly data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
+<script type="text/javascript">
+var envBaseUrl = '${utility.siteDomainInheritedProperty @ context="scriptString"}';
+
+function setupSlickCarousel() {
+	$.each($(".productDescription"), function(index, value) {
+		$(this).attr("href",$(this).attr("href").replace("http%3A%2F%2Flocalhost%3A3000",encodeURI(envBaseUrl)));
+	});
+	
+	$('.slick-carousel-rr').slick({
+		infinite: false, 
+		slidesToShow: 5, 
+		slidesToScroll: 5, 
+		swipeToSlide: false, 
+		prevArrow: '<span class="ico prev ico-chevron-left"></span>', 
+		nextArrow: '<span class="ico next ico-chevron-right"></span>', 
+		responsive: [
+			{
+			  breakpoint: 970,
+			  settings: {
+				slidesToShow: 3, 
+				slidesToScroll: 3
+			  }
+			},
+			{
+			  breakpoint: 750,
+			  settings: {
+				slidesToShow: 2, 
+				slidesToScroll: 2
+				
+			  }
+			},
+			{
+			  breakpoint: 580,
+			  settings: {
+				slidesToShow: 1, 
+				slidesToScroll: 1, 
+				adaptiveHeight: true
+			  }
+			}
+		]
+  });
+}
+
+$( document).ready(function() {
+var rrSID = "";
+var rrPID = "";
+if (typeof CdwCms != 'undefined') {
+	if(typeof CdwCms.settings.persistent_id != 'undefined') {
+		rrPID = CdwCms.settings.persistent_id;
+	}
+	if(typeof CdwCms.settings.session_id != 'undefined') {
+		rrSID = CdwCms.settings.session_id;
+	}
+}
+var placement_arr = [];
+$.each($('.product-placement'), function (index, item) {
+	placement_arr.push($(item).data('placement')); 
+});
+if(placement_arr.length>0){
+	CDW.productPlacement.init({
+			'apiKey': '${utility.richRelevenceApiKey @ context="scriptString"}',
+			'baseUrl': '${utility.richRelevenceBaseUrl @ context="scriptString"}',
+			'sessionId': rrSID,
+			'userId': rrPID,
+			'type': '${properties.rrPageType @ context="scriptString"}',
+			'typeData': { ${properties.rrPageType@ context="scriptString"}: '${properties.context @ context="scriptString"}'},
+			'template': '',
+			'placements': placement_arr
+					});
+	}
+});
+</script>
+</sly>

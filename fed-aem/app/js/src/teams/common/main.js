@@ -34,11 +34,14 @@ $(function() {
 
 //Pin Partner Nav to top on scoll
 $(window).scroll(function () {
-    if ($(window).scrollTop() > $('.partner-header-wrapper').offset().top) {
-        $('.partner-header').addClass('stick');
-    } else {
-        $('.partner-header').removeClass('stick');
-    }
+	if ($('.partner-header-wrapper').length) {
+	console.log("partner header wrapper found");
+		if ($(window).scrollTop() > $('.partner-header-wrapper').offset().top) {
+			$('.partner-header').addClass('stick');
+		} else {
+			$('.partner-header').removeClass('stick');
+		}
+	}
 });
 
 var togglePartnerMenu = function() {

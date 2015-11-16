@@ -2,8 +2,14 @@
 .button-lockup { @include clearfix;
     margin: $component-spacing;
     overflow: hidden;
-	&.-right{a{float: right;}}
-    &.-left{a{float: left;}}
+	&.-right{
+        a{float: right;}
+        .select2-container{float: right;}
+        }
+    &.-left{
+        a{float: left;}
+        .select2-container{float: left;}
+        }
     &.-center{text-align: center;}
     
     //Override for Product Display component
@@ -12,7 +18,7 @@
     
 .button {
     text-align: center; 
-    padding:8px 20px;
+    padding:10px 20px;
 	font-size:16px;
     line-height:18px;
 	font-weight: 500;

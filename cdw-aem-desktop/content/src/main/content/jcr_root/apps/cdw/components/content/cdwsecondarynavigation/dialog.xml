@@ -94,6 +94,78 @@
                     fieldLabel="Logo Link"
                     name="./logoLink"
                     xtype="pathfield"/>
+				<logoOrientation
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Logo Orientation"
+                    name="./logoOrientation"
+					defaultValue="horizontal"
+					type="select"
+                    xtype="selection">
+					<options jcr:primaryType="cq:WidgetCollection">
+                        <horizontal
+                            jcr:primaryType="nt:unstructured"
+                            text="Horizontal (Default)"
+                            value="horizontal"/>
+                        <vertical
+                            jcr:primaryType="nt:unstructured"
+                            text="Vertical"
+                            value="vertical"/>
+                    </options>
+				</logoOrientation>
+				<logoBackground
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Logo Background Style"
+                    name="./logoBackground"
+					defaultValue="transparent"
+					type="select"
+                    xtype="selection">
+					<options jcr:primaryType="cq:WidgetCollection">
+                        <transparent
+                            jcr:primaryType="nt:unstructured"
+                            text="Transparent (Default)"
+                            value="transparent"/>
+                        <white
+                            jcr:primaryType="nt:unstructured"
+                            text="White"
+                            value="white"/>
+                    </options>
+				</logoBackground>
+				<logoOrientation
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Logo Orientation"
+                    name="./logoOrientation"
+					defaultValue="horizontal"
+					type="select"
+                    xtype="selection">
+					<options jcr:primaryType="cq:WidgetCollection">
+                        <horizontal
+                            jcr:primaryType="nt:unstructured"
+                            text="Horizontal (Default)"
+                            value="horizontal"/>
+                        <vertical
+                            jcr:primaryType="nt:unstructured"
+                            text="Vertical"
+                            value="vertical"/>
+                    </options>
+				</logoOrientation>
+				<logoBackground
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Logo Background Style"
+                    name="./logoBackground"
+					defaultValue="transparent"
+					type="select"
+                    xtype="selection">
+					<options jcr:primaryType="cq:WidgetCollection">
+                        <transparent
+                            jcr:primaryType="nt:unstructured"
+                            text="Transparent (Default)"
+                            value="transparent"/>
+                        <white
+                            jcr:primaryType="nt:unstructured"
+                            text="White"
+                            value="white"/>
+                    </options>
+				</logoBackground>>
                 <headline
                     jcr:primaryType="cq:Widget"
                     fieldLabel="Showcase Headline"
@@ -106,6 +178,17 @@
                     name="./secondaryLinksLabel"
 					defaultValue="More Links"
                     xtype="textfield"/>
+                <linkTitle
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="If defined, will populate the 'title' attribute of the 'a' element."
+                        fieldLabel="Link Title"
+                        name="./linkTitle"
+                        xtype="textfield"/>
+
+                <eventDataDetails
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/cdw/components/content/cdwherobanner/dialog/items/items/tab1/items/eventdata.infinity.json"
+                        xtype="cqinclude"/>
             </items>
         </global>
         <image

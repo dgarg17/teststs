@@ -1,0 +1,1136 @@
+/****************************************************RR Horizontal Product placement */
+
+.rrProductsWrapper {
+  margin: 0 auto 10px;
+  padding: 25px 20px;
+  color: #4d4e53;
+  font-family: Verdana, Geneva, sans-serif;
+  background-color: #ececee;
+  border: none;
+  
+}
+.rrProductsWrapper .divider {
+  border-bottom: 1px solid #efefef;
+}
+.rrProductsWrapper .rrProductPlacementWrapper {
+  padding: 0 0 0 20px;
+  position: relative;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper .reviewRatingsContainer {
+  height: 42px !important;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .scrollable {
+  position: relative;
+  overflow: hidden;
+  margin: 0 30px 0 0;
+  height: 310px;
+}
+.rrProductsWrapper .button-wrapper{
+    margin: 0px auto;
+    width: 100px;
+	 position: absolute;
+    top: 265px;
+    text-align: center;
+	margin-left: 35px;
+}
+
+.rrProductsWrapper .rrProductPlacementWrapper .scrollable .items {
+  position: relative;
+  width: 20000em;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .ico-chevron-right{
+	top:162px;
+	position: absolute!important;
+   
+    right: -10px!important;
+    font-size: 30px;
+    width: 25px;
+    color: #555;
+    overflow: hidden;
+    text-indent:0px!important;
+	
+}
+.rrProductsWrapper .rrProductPlacementWrapper .ico-chevron-right{   
+    right: -9px!important;    
+    }
+.rrProductsWrapper .rrProductPlacementWrapper .ico-chevron-left{
+	top:162px;
+	 position:  absolute!important;
+   left: -16px!important;
+    font-size: 30px;
+    width: 25px;
+    color: #555;
+    overflow: hidden;
+    background:none!important;
+	
+}
+.rrProductsWrapper .rrProductPlacementWrapper .ico-chevron-left{   
+    right: -25px!important;    
+    }
+.rrProductsWrapper .rrProductPlacementWrapper .nextProducts {
+  position: absolute;
+  top: 150px;
+  right: -10px;
+  text-indent: -9999px;
+  background: url('https://img.cdw.com/content/products/rr-product-carrousel-controls.png') 0 0 no-repeat;
+  width: 18px;
+  height: 30px;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .previousProducts {
+  position: absolute;
+  top: 150px;
+  left: -10px;
+  text-indent: -9999px;
+  background: url('https://img.cdw.com/content/products/rr-product-carrousel-controls.png') -18px 0 no-repeat;
+  width: 18px;
+  height: 30px;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .disabled {
+  opacity: .50;
+  filter: alpha(opacity=50);
+  cursor: default !important;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productSet {
+  float: left;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .lastProduct {
+  background-image: none;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper .productImage {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  border: none;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper .productDescription {
+  font-size: 12px;
+  color: #0070BC;
+  line-height: 16px;
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+  height: 45px;
+  overflow: hidden;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper .productDescription:hover {
+  text-decoration: underline;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper .productRating {
+  display: block;
+  padding: 5px 0;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper .price_value {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 5px 5px 0 0;
+}
+
+.hubsPageWrapperNew .rrProductsWrapper .rrProductPlacementWrapper .productWrapper .price_value {
+  padding-top: 0px;
+}
+
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper .productPriceLabel {
+  font-weight: normal;
+  font-size: 11px;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper .compareOption {
+  display: block;
+  font-size: 11px;
+  padding: 5px 0;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper .compareCheckBox {
+  vertical-align: middle;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper .compareCheckBoxlbl {
+  padding: 2px 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper .compareCheckBoxlbl .compareInitiator {
+  text-decoration: underline;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper .compareCheckBoxlbl .compareInitiator:hover {
+  cursor: pointer;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper .reviewRatingsContainer {
+  height: 30px;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .compareTrayWrapper {
+  text-align: right;
+  font-size: 11px;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .compareTrayWrapper strong {
+  font-size: 13px;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .compareTrayWrapper .blueButton {
+  font-size: 14px;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .productWrapper {
+  background: none;
+  padding: 9px 4px;
+  width: 210px;
+  height: 100%;
+  float: left;
+}
+
+.rr-product-frame {
+  background: #fff;
+  padding: 10px;
+  border: solid 1px #dddddd;
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+  position: relative;
+}
+
+.rrProductsWrapper .rrProductPlacementWrapper h3 {
+  font-size: 13px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.rrProductsWrapper .rrProductPlacementWrapper .nextProducts, .rrProductsWrapper .rrProductPlacementWrapper .previousProducts {
+  top: 150px;
+}
+.rrProductsWrapper .rrProductPlacementWrapper .scrollable {
+  /*height:277px!important;*/
+}
+.rrProductsWrapper .compareTrayWrapper img {
+  border: solid 1px #dddddd;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+.rrProductPlacementWrapper .productWrapper .reviewRatingsContainer a span {
+  /*color:#0070b0c!important;*/
+  text-decoration: none;
+  color: #0070bc;
+  font-size:12px;
+  position:absolute;
+  margin:4px;
+}
+.rrProductPlacementWrapper .productWrapper .reviewRatingsContainer a .rrNumberBlue {
+  /*color:#0070b0c!important;*/
+  font-size: 11px !important;
+  text-decoration: none;
+}
+
+.productDetailWrapper .reviewRatingsContainer a {
+  float: left;
+  margin: 10px 0 0 0;
+  border: solid 1px #fff;
+  clear: both;
+  font-weight: normal;
+}
+.productDetailWrapper .reviewRatingsContainer a span {
+  float: left;
+  font-weight: normal;
+  width: auto !important;
+  margin-top: 3px !important;
+}
+.productDetailWrapper .reviewRatingsContainer .starImage {
+  float: left;
+  width: 105px;
+}
+.productDetailWrapper .rr-product-frame {
+  /*height:264px;*/
+}
+
+.rrProductsWrapper .rrProductPlacementWrapper .price_type {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+/* Product Page - Horizontal */
+.productDetailWrapper .cdwProductRecoTopCarousel .productDetailWrapper .rr-product-frame {
+  background: #fff;
+  padding: 10px;
+  border: solid 1px #dddddd;
+  height: 244px;
+}
+.productDetailWrapper .rr-product-frame .price_type {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+.productDetailWrapper .productWrapper {
+  background: none;
+  padding: 9px 4px;
+  width: 210px;
+  height: 100%;
+}
+.productDetailWrapper .rrProductsWrapper {
+  background: url('https://img.cdw.com/assets/misc/rr-horiz-bottom-shadow_03.jpg') no-repeat center bottom;
+  width: 960px;
+  padding: 0;
+  border: 1px solid #fff;
+  /* should add clearfix class to this element instead of doing this - we don't currently have access to all instances of the HTML - when we do, we can make this change */
+}
+.productDetailWrapper .rrProductsWrapper .rrProductPlacementWrapper {
+  background-color: #ececee;
+  padding: 25px 20px 25px 40px !important;
+  margin: 0 auto 11px auto;
+  /* 11px on bottom to equal the height of the shadow image on the bottom of the parent eleement */
+}
+.productDetailWrapper .cdwCartRecoTopCarousel, .productDetailWrapper .cdwCartRecoBotCarousel {
+  height: 429px;
+  margin-bottom: 30px;
+}
+.productDetailWrapper .rrProductsWrapper .rrProductPlacementWrapper .nextProducts {
+  top: 180px !important;
+  right: 10px !important;
+}
+.productDetailWrapper .rrProductsWrapper .rrProductPlacementWrapper .previousProducts {
+  top: 180px !important;
+  left: 10px !important;
+}
+.productDetailWrapper .rrProductsWrapper .rrProductPlacementWrapper .productWrapper .productDescription {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/****************************************************Cart Page - Horizontal - Carousel CDW placement */
+.cartWrapper .rrProductsWrapper .rrProductPlacementWrapper .scrollable {
+  height: auto;
+}
+
+/****************************************************Search Results Page - bottom panel */
+.searchResultsWrapper #vert.rr-pt {
+  background: none;
+  border: none;
+  color: #4d4e53 !important;
+  font-family: Verdana, Geneva, sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+.searchResultsWrapper #vert.rr-pt .rr-product-frame {
+  background: #fff;
+  padding: 10px;
+  padding-bottom: inherit;
+  border: solid 1px #dddddd;
+}
+.searchResultsWrapper #vert.rr-pt img {
+  border: medium none;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+.searchResultsWrapper #vert.rr-pt a:hover {
+  text-decoration: underline !important;
+}
+.searchResultsWrapper #vert.rr-pt a.description {
+  color: #0070BC;
+  display: block;
+  font-size: 12px;
+  height: 77px;
+  line-height: 16px;
+  padding: 5px 0;
+  text-decoration: none;
+  margin: 0;
+}
+.searchResultsWrapper .rr-pt h2.vert {
+  padding: 0;
+  font-family: Verdana,Geneva,sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  background: none;
+  border: medium none;
+}
+.searchResultsWrapper .rr-pt li.vert div.price span.price_value {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 5px 5px 0 0;
+  display: inline !important;
+  margin-left: 0px;
+}
+.searchResultsWrapper .rr-pt li span {
+  color: #4D4E53;
+  font-family: Verdana,Geneva,sans-serif;
+}
+.searchResultsWrapper .rr-pt li.vert {
+  border: 0;
+  background: none;
+  height: 100%;
+  padding: 0px 4px;
+  margin: 0 !important;
+  text-align: center;
+  width: 173px;
+}
+.searchResultsWrapper #rec3 {
+  background: none !important;
+}
+.searchResultsWrapper .rr-pt ul {
+  list-style: none outside none;
+  padding: 0;
+  float: left;
+}
+.searchResultsWrapper #rr_placement_1 {
+  margin: 0;
+}
+.searchResultsWrapper #vert span.price_type {
+  font-size: 11px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+.searchResultsWrapper #vert.rr-pt img {
+  padding-bottom: 0;
+  margin-bottom: 15px;
+}
+
+#vert .reviewRatingsContainer .starImage {
+  width: 105px !important;
+}
+#vert .reviewRatingsContainer span {
+  float: left;
+  padding-top: 4px;
+}
+
+/****************************************************Search Results Page - No Results -  Horizontal - RR placement */
+#pnlNoResults .starImage {
+  width: 105px !important;
+}
+#pnlNoResults .productDescription {
+  color: #0070BC;
+  display: block;
+  font-size: 12px;
+  height: 77px;
+  line-height: 16px;
+  padding: 5px 0;
+  text-decoration: none;
+}
+#pnlNoResults .productDescription:hover {
+  text-decoration: underline;
+}
+#pnlNoResults .reviewRatingsContainer {
+  height: 30px !important;
+}
+#pnlNoResults .reviewRatingsContainer span {
+  float: left;
+  padding-top: 4px;
+}
+
+.searchResultsWrapper #pnlNoResults .cdwSearchReco {
+  padding: 0 !important;
+  margin: 0 0 10px 0;
+  background: #ececee;
+  height: 429px;
+}
+.searchResultsWrapper #pnlNoResults .rrProductsWrapper {
+  background: url('https://img.cdw.com/assets/misc/rr-horiz-bottom-shadow_03.jpg') bottom no-repeat;
+  margin-bottom: 10px;
+}
+
+.rrProductsWrapper .rrProductPlacementWrapper {
+  padding: 0 0 0 20px;
+  position: relative;
+  /*min-height:390px;*/
+}
+
+.searchResultsWrapper #pnlNoResults .rrProductPlacementWrapper {
+  min-height: 390px;
+}
+
+#pnlNoResults .rrProductPlacementWrapper .price_type {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+/****************************************************Search Results Page - Horizontal */
+.searchResultsWrapper .cdwSearchReco {
+  padding: 25px 20px 40px;
+  background: url('https://img.cdw.com/assets/misc/rr-horiz-search-bottom-shadow_03.jpg') -10px 0 no-repeat;
+  min-height: 315px;
+  background-position: bottom;
+  background-color: #ececee;
+  border: none;
+}
+
+#ca-container .searchResultsWrapper .cdwSearchReco, .ca-printableContentWrapper .cdwSearchReco {
+  display: none;
+}
+
+#ca-container #pnlNoResults .cdwSearchReco {
+  display: block;
+}
+
+/* Vertical carousel */
+.rrProductsWrapperVerticle {
+  width: 174px;
+  margin: 0 auto;
+  border: 0;
+  padding: 10px 8px;
+  color: #4d4e53;
+  font-family: Verdana, Geneva, sans-serif;
+  background: none;
+  background-color: #ececee;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper {
+  position: relative;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .rr-product-frame {
+  height: 290px;
+  margin-bottom: inherit;
+  /*overwriting the values which make this section have equal-heights divs - doesn't work for vertical carousels*/
+  padding-bottom: inherit;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .verticalScrollable {
+  position: relative;
+  overflow: hidden;
+  height: 1060px;
+  margin: 10px 0;
+  clear: left;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .verticalScrollable .items {
+  position: absolute;
+  height: 20000em;
+  width: 174px;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .carouselControls {
+  height: 23px;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .nextProducts {
+  text-indent: -9999px;
+  background: url('https://img.cdw.com/content/products/rr-product-carrousel-controls.png') -30px -60px no-repeat;
+  width: 30px;
+  height: 18px;
+  font-size: 0px;
+  line-height: 0px;
+  display: block;
+  text-transform: capitalize;
+  float: left;
+  margin-right: 5px;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .previousProducts {
+  text-indent: -9999px;
+  background: url('https://img.cdw.com/content/products/rr-product-carrousel-controls.png') 0px -60px no-repeat;
+  width: 30px;
+  height: 18px;
+  font-size: 0px;
+  line-height: 0px;
+  display: block;
+  text-transform: capitalize;
+  float: left;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .disabled {
+  opacity: .50;
+  filter: alpha(opacity=50);
+  cursor: default !important;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper h3 {
+  font-size: 13px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  line-height: 1.4em;
+  margin: 0 0 10px 0;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .productWrapper {
+  background: url('https://img.cdw.com/content/products/rr-verticle-product-divider.png') 0 190px no-repeat;
+  margin-bottom: 10px;
+  /*.margin-bottom: 0px;*/
+  padding-bottom: 20px;
+  background: none;
+  margin-bottom: 0px;
+  /*.margin-bottom: 0px!important;*/
+  padding-bottom: 9px;
+  background-position: bottom;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .productWrapper .productImage {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 0 10px;
+  background: #fff;
+  display: block;
+  text-align: center;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .productWrapper .productDescription {
+  font-size: 12px;
+  color: #0070BC;
+  line-height: 16px;
+  display: block;
+  text-decoration: none;
+  padding: 0;
+  height: 75px;
+  width: 152px;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .productWrapper .productDescription:hover {
+  text-decoration: underline;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .productWrapper .productRating {
+  display: block;
+  padding: 5px 0;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .productWrapper .price_value {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 5px 5px 0;
+  display: block;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .productWrapper .price_type {
+  font-weight: normal;
+  font-size: 10px;
+  padding-bottom: 5px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .productWrapper .compareOption {
+  display: block;
+  font-size: 11px;
+  padding: 5px 0;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .productWrapper .compareCheckBox {
+  vertical-align: middle;
+}
+.rrProductsWrapperVerticle .rrProductPlacementWrapper .productWrapper .compareCheckBoxlbl {
+  padding: 2px 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.rrProductsWrapperVerticle .reviewRatingsContainer {
+  width: auto;
+  /*height: 20px;*/
+  clear: both;
+  font-weight: normal;
+}
+.rrProductsWrapperVerticle.reviewRatingsContainer .starImage {
+  float: left !important;
+  width: 80px !important;
+}
+
+.searchResultsWrapper .rrProductsWrapperVerticle .rrProductPlacementWrapper .verticalScrollable {
+  height: 1280px;
+}
+
+.searchRecentlyViewedWrapper div.price {
+  margin-top: 5px;
+}
+.searchRecentlyViewedWrapper .reviewRatingsContainer .starImage {
+  float: none !important;
+}
+
+/****************************************************Account Homepage - Vertical */
+.ExtranetContent .productDescription {
+  font-size: 12px;
+  color: #0070BC;
+  line-height: 16px;
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+  height: auto;
+  max-height: 60px;
+}
+.ExtranetContent .productDescription:hover {
+  text-decoration: underline;
+}
+.ExtranetContent .rrProductPlacementWrapper .rr-product-frame {
+  height: 244px;
+  margin-bottom: 9px;
+}
+.ExtranetContent .rrProductPlacementWrapper .price_value {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 5px 5px 0;
+  display: block;
+}
+.ExtranetContent .rrProductPlacementWrapper .price_type {
+  font-weight: normal;
+  font-size: 10px;
+  padding-bottom: 5px;
+  /*display: inline-block;*/
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+.ExtranetContent .rrProductPlacementWrapper .productImage {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 0 10px;
+  background: #fff;
+  display: block;
+  text-align: center;
+}
+.ExtranetContent .cdwHomeReco {
+  margin-top: 10px;
+}
+.ExtranetContent .rrProductsWrapperVerticle {
+  width: 262px;
+}
+.ExtranetContent .reviewRatingsContainer {
+  width: auto;
+  /*height: 20px;*/
+  clear: both;
+  font-weight: normal;
+}
+.ExtranetContent .reviewRatingsContainer .starImage {
+  float: left !important;
+  width: 80px !important;
+}
+.ExtranetContent .rrProductsWrapperVerticle .rrProductPlacementWrapper .verticalScrollable {
+  position: relative;
+  overflow: hidden;
+  height: 1100px !important;
+  margin: 10px 0 0 0;
+  clear: left;
+}
+.ExtranetContent .productWrapperLast .rr-product-frame {
+  margin-bottom: 0 !important;
+}
+.ExtranetContent .rrProductsWrapperVerticle .rrProductPlacementWrapper .verticalScrollable .items {
+  height: auto !important;
+  width: 260px;
+}
+.ExtranetContent .rrProductsWrapperVerticle .rrProductPlacementWrapper .productWrapper .productDescription {
+  width: auto;
+}
+
+/*****************************************************Hub Page -  Vertical - RR placement */
+.hubsPageWrapperNew .rrProductsWrapperVerticle .rrProductPlacementWrapper .verticalScrollable {
+  height: 1160px !important;
+}
+.hubsPageWrapperNew .rrProductsWrapperVerticle .reviewRatingsContainer a {
+  /*color: #0070b0c!important;*/
+  text-decoration: none;
+}
+.hubsPageWrapperNew .rrProductsWrapper {
+  background: url('https://img.cdw.com/assets/misc/rr-horiz-search-bottom-shadow_03.jpg') no-repeat center bottom #ececee;
+}
+.hubsPageWrapperNew #horiz span {
+  /*color:#0070b0c!important;*/
+}
+.hubsPageWrapperNew .rrProductsWrapperVerticle .rrProductPlacementWrapper .rr-product-frame {
+  margin-bottom: 9px;
+}
+.hubsPageWrapperNew .cdwCategoryReco {
+  min-width: 700px;
+  margin-left: 10px;
+  margin-top: 55px;
+}
+.hubsPageWrapperNew .seeAllTrayWrapper {
+  margin-bottom: -15px;
+}
+.hubsPageWrapperNew .rrProductsWrapper {
+  width: 700px !important;
+}
+.hubsPageWrapperNew .cdwCategoryReco .rrProductPlacementWrapper h3 {
+  background: url('https://img.cdw.com/content/hubs/HubL2-rr-ribbon.png') no-repeat;
+  background-position: left;
+  padding: 15px 30px 15px 15px;
+  height: 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 13px !important;
+  display: block;
+  float: left;
+  width: auto !important;
+  clear: both;
+  margin: -47px 0 0 -49px;
+}
+.hubsPageWrapperNew .horizontal-rr-placements-wrapper .rrProductsWrapper .rrProductPlacementWrapper .scrollable {
+  clear: both;
+}
+.hubsPageWrapperNew .cdwCategoryReco {
+  /*background: url("https://img.cdw.com/assets/misc/rr-horiz-search-bottom-shadow_03.jpg") -10px 0 no-repeat;
+  background-position: bottom;*/
+}
+.hubsPageWrapperNew .horizontal-rr-placements-wrapper .links a {
+  color: #0070BC;
+  text-decoration: none;
+}
+.hubsPageWrapperNew .horizontal-rr-placements-wrapper .links a:hover {
+  text-decoration: underline;
+}
+.hubsPageWrapperNew .horizontal-rr-placements-wrapper .seeAllTrayWrapper {
+  width: auto !important;
+  display: block;
+  float: left;
+  margin: 30px 0 0 -20px;
+}
+.hubsPageWrapperNew .horizontal-rr-placements-wrapper .rrProductsWrapper .rrProductPlacementWrapper .compareTrayWrapper {
+  margin-top: 30px;
+}
+.hubsPageWrapperNew .horizontal-rr-placements-wrapper .rrProductsWrapper .rrProductPlacementWrapper .productWrapper .rr-product-frame img {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  border: none;
+}
+.hubsPageWrapperNew .horizontal-rr-placements-wrapper .reviewRatingsContainer div {
+  /*float: left;*/
+  padding-bottom: 0 !important;
+}
+.hubsPageWrapperNew .horizontal-rr-placements-wrapper .reviewRatingsContainer a {
+  /*float: left;*/
+  margin: 10px 0 0 0;
+  border: solid 1px #fff;
+  clear: both;
+  font-weight: normal;
+}
+.hubsPageWrapperNew .reviewRatingsContainer .reviewRatingsContainer img {
+  margin: 0 !important;
+  float: left;
+}
+.hubsPageWrapperNew .horizontal-rr-placements-wrapper .reviewRatingsContainer div {
+  margin-left: 0;
+}
+.hubsPageWrapperNew .horizontal-rr-placements-wrapper .reviewRatingsContainer .starImage {
+  float: left;
+  width: 105px !important;
+}
+.hubsPageWrapperNew .horizontal-rr-placements-wrapper .reviewRatingsContainer a span {
+  float: left;
+  font-weight: normal;
+  width: auto !important;
+  margin-top: 3px !important;
+}
+.hubsPageWrapperNew .rr-product-frame .price_value {
+  display: block;
+}
+.hubsPageWrapperNew .rr-product-frame .price_type {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+/*****************************************************Hub Page -  Horizontal - RR placement */
+.searchResultsWrapper.hubsPageWrapperNew .rr-product-frame {
+  min-height: 260px;
+}
+
+.hubsPageWrapperNew .rrProductsWrapper .rrProductPlacementWrapper .scrollable {
+  min-height: 290px;
+}
+
+/*******************************************Showcase Page -  Horizontal - RR placement 
+.showcase-wrapper .rr-product-frame {
+  background: #fff;
+  padding: 10px;
+  border: solid 1px #dddddd !important;
+}
+.showcase-wrapper .rr-product-frame .description {
+  font-weight: normal !important;
+  font-size: 12px !important;
+  color: #0070BC;
+  line-height: 16px;
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+  height: 50px;
+}
+.showcase-wrapper .rr-pt#horiz {
+  background: #f0f0f2 !important;
+  border: none;
+  min-width: 928px !important;
+  margin-left: 0;
+  padding: 10px 0 25px 10px;
+}
+.showcase-wrapper .rr-pt#horiz ul {
+  margin-left: 0;
+}
+.showcase-wrapper .rr-pt#horiz li.horiz {
+  border: none !important;
+  padding: 0;
+  margin: 0 3px;
+  width: 177px;
+  height: auto;
+}
+.showcase-wrapper .rr-pt#horiz a.description {
+  margin: 0;
+}
+//.showcase-wrapper .footer_gradient {
+//  display: none;
+//}
+.showcase-wrapper .rr-pt#horiz h2.horiz {
+  margin: 0 auto 15px auto;
+  background: #f0f0f2;
+  padding: 0;
+  margin: 0 0 15px 0;
+  color: #4d4e53;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 13px;
+}
+.showcase-wrapper .rr-pt#horiz img {
+  border: none;
+  margin-bottom: 10px;
+}
+.showcase-wrapper .rr-pt#horiz a.description:hover {
+  text-decoration: underline;
+}
+.showcase-wrapper .rr-pt#horiz li.horiz div.price {
+  color: #4d4e53;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 13px;
+  margin-left: 0px !important;
+}
+.showcase-wrapper .rr-pt#horiz li.horiz div.price span span.price_value {
+  color: #4d4e53;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  display: inline;
+  padding-left: 10px;
+}
+.showcase-wrapper .rr-pt li.horiz div.price {
+  margin-left: 5px;
+}
+.showcase-wrapper .rr-pt#horiz .cdwHomeReco {
+  width: 918px;
+}
+.showcase-wrapper #rrRecoPlacement1 {
+  margin-bottom: 0;
+}
+.showcase-wrapper .rr-pt#horiz h2.horiz {
+  font-size: 13px;
+  font-family: Verdana, Geneva, sans-serif !important;
+  text-align: left;
+  font-weight: bold !important;
+  color: #4d4e53 !important;
+  display: table-cell;
+  padding-bottom: 15px;
+}
+.showcase-wrapper .cdwHomeReco {
+  background: #f0f0f2 !important;
+  border: none;
+  float: left;
+  display: block;
+  padding: 15px 10px;
+}
+.showcase-wrapper .cdwCategoryReco {
+  background: #f0f0f2 !important;
+  border: none;
+  padding: 15px 10px;
+}
+.showcase-wrapper .rr-pt {
+  width: auto !important;
+}
+.showcase-wrapper .vertRRplacementMarginLeft {
+  background: #f0f0f2 !important;
+  border: none;
+  margin-left: 5px;
+  width: 200px;
+}
+.showcase-wrapper .vertRRplacementMarginLeft .cdwHomeReco {
+  width: 200px;
+}
+.showcase-wrapper .vertRRplacementMarginLeft .rr-pt#vert {
+  background: #f0f0f2;
+  border: none;
+  margin-left: 0;
+  width: auto;
+  background-image: none !important;
+}
+.showcase-wrapper .vertRRplacementMarginLeft .rr-pt#vert ul {
+  float: left;
+}
+.showcase-wrapper .vertRRplacementMarginLeft .rr-pt li.vert {
+  width: 200px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-image: none !important;
+}
+.showcase-wrapper .vertRRplacementMarginLeft .rr-product-frame {
+  margin-bottom: 9px;
+}
+.showcase-wrapper .vertRRplacementMarginLeft .rr-pt#vert h2.vert {
+  text-align: left;
+  font-weight: bold;
+  margin: 0 auto 15px auto;
+  background: #f0f0f2;
+  padding: 0;
+  margin: 0 0 15px 0;
+  color: #4d4e53 !important;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 13px;
+  border: none;
+}
+.showcase-wrapper .vertRRplacementMarginLeft .rr-pt li.vert {
+  border: none;
+  margin: 0;
+  background: 0;
+  padding: 0;
+}
+.showcase-wrapper .vertRRplacementMarginLeft .rr-pt#vert img {
+  border: none;
+}*/
+
+/*******************************************Showcase Page -  Vertical - RR placement */
+.vmware .vertRRplacementMarginLeft, .lenovo .vertRRplacementMarginLeft {
+  margin-left: 0;
+}
+
+.showcase-wrapper .vertRRplacementMarginLeft .rr-pt#vert a.description {
+  font-weight: normal;
+  font-size: 12px;
+  height: 61px;
+  overflow: hidden;
+}
+
+.save-for-later .confirmation-container {
+  width: 210px !important;
+}
+.save-for-later .confirmation-container span {
+  font-size: 11px !important;
+}
+
+/*******************************************Home page */
+/*.homepage_wrapper .waystoshop .product_wrapper .price_type {display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; -o-text-overflow: ellipsis;}*/
+.waystoshop .rr span.price_type {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+/* Review Ratings - star section */
+.reviewRatingsContainer {
+  height: auto;
+  position: relative;
+}
+.reviewRatingsContainer > div {
+  float: none;
+  padding-top: 5px;
+}
+.reviewRatingsContainer > div a {
+  float: none;
+  text-decoration: none;
+}
+
+/**********************************************
+*********** RICH RELAVANCE FEED CSS ***********
+**********************************************/
+
+	/*--RESET--*/
+	/* independent of layout or client we want to reset elements we will use to ensure consistency across browsers */
+	.rr-pt div, .rr-pt span, .rr-pt h1, .rr-pt h2, .rr-pt h3, .rr-pt h4, .rr-pt h5, .rr-pt h6, .rr-pt p, .rr-pt a, .rr-pt em, .rr-pt img, .rr-pt ul, .rr-pt li, .rr-pt table, .rr-pt caption, .rr-pt tbody, .rr-pt tfoot, .rr-pt thead, .rr-pt tr, .rr-pt th, .rr-pt td {color:#000000; margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;background: transparent;}
+	.rr-pt ul { list-style: none;}
+	.rr-pt table { border-collapse: collapse;	border-spacing: 0; }
+	
+	/*--STRUCTURE--*/
+	/* the STRUCTURE section defines styles that build up our layouts */
+	.rr-pt li { float:left;}
+	.rr-pt {width:100%; overflow:hidden;}	
+	.rr-pt h2 {
+		position: relative; /* peekaboo bug fix for IE6 */
+		min-width: 0; /* peekaboo bug fix for IE7 */
+		display:block;
+	}
+	.rr-pt li,
+	.rr-pt li a, 
+	.rr-pt li span, 
+	.rr-pt-hrz 
+	.rr-pt li div { display:block; }
+	
+	/*--STYLE--*/
+	/* the STYLE section defines styles that are specific to a client or placement */
+	/* custom padding tweaks for CDW */
+	#rrRecoPlacement2 {margin-top:10px;}
+	#rrRecoPlacement1 {margin-bottom:10px;}
+	#rr_cart_2 {margin-top:10px;}	
+	
+	/* global */
+	.rr-pt {font-family: Arial,Helvetica,sans-serif;}	
+	.rr-pt li {padding-top:5px;}		
+	.rr-pt li#rec0 {border:none;}
+	.rr-pt li span {font-size:12px; color:#333333;}
+	.rr-pt a { text-decoration:none; font-size:12px; color:#333333;}
+
+	/* horizontal layout */
+	.rr-pt#horiz { border: 1px solid #A4A799; background-color:#ffffff; min-width:960px; }
+    .rr-pt#horiz3 {  border: 1px solid #B1B0A0; background-color:#ffffff; min-width:555px; }
+	.rr-pt h2.horiz { font-size:14px; background:#EBEAD8; font-weight:bold; color:#333333; padding:5px 10px; }
+	.rr-pt h2.horiz#horiz3 { background:#B1B0A0; color:#ffffff; }
+	.rr-pt li.horiz { text-align:center; border-left:1px solid #D3D2BE; border-right:0px solid black; /*height:140px;*/ padding:0px 0px; margin:5px 0px; width:24.9%;}
+    .rr-pt li.three-column {border-left:1px solid #D2D2D2; width:33.2%;}
+	.rr-pt li.horiz div.price { text-align:left; font-size:12px; font-weight:normal; color:#333333;margin-left:15px;margin-bottom:3px;}
+	.rr-pt li.horiz div.price span.price_value { font-size:14px; font-weight:bold;}
+	.rr-pt#horiz a.description { text-align:left; height:44px;margin-top:3px;margin-left:15px;margin-right:15px;margin-bottom:5px;}
+	.rr-pt#horiz3 a.description { text-align:left; height:44px;margin-top:3px;margin-left:15px;margin-right:15px;margin-bottom:5px;}
+	.rr-pt#horiz img {margin:5px;}
+	.rr-pt#horiz3 img {margin:5px;}
+	
+	/* vertical layout */
+	.rr-pt#vert { border: 1px solid #A4A799; background-color:#efefef;}
+	.rr-pt#vert-alt { border: 1px solid #9CB126; background-color:#ffffff;}
+	.rr-pt h2.vert { font-size:14px; background:#EBEAD8; border-bottom:1px solid #A4A799; font-weight:bold; color:#333333; padding:5px 10px; }
+	.rr-pt h2.vert-alt { font-size:14px; background:#9CB126; border-bottom:1px solid #9CB126; font-weight:bold; color:#ffffff; padding:5px 10px; }
+	.rr-pt li.vert { text-align:center; border-bottom:0px solid #D3D2BE; border-top:1px solid #D3D2BE; border-right:0px solid black; /*padding:0px 0px;*/ margin:0px 10px; width:164px;}
+	.rr-pt li.vert-alt { text-align:center; border-bottom:0px solid #9CB126; border-top:1px solid #9CB126; border-right:0px solid black; /*padding:0px 0px;*/ margin:0px 10px; width:164px;}
+	.rr-pt li.vert div.price { text-align:left; font-size:12px; font-weight:normal; color:#333333;margin-bottom:5px;}
+	.rr-pt li.vert div.price span.price_value { font-size:14px; font-weight:bold;}	
+	.rr-pt#vert a.description {text-align:left; margin-top:5px; margin-bottom:10px;}	
+	.rr-pt#vert-alt a.description {text-align:left; margin-top:5px; margin-bottom:10px;}
+	.rr-pt#vert img {margin:5px;border:1px solid #D3D2BE;}	
+	.rr-pt#vert-alt img {margin:5px;}
+
+    #ca-container .reviewRatingsContainer { visibility: hidden; }
+
+	 
+	.product-placement-brand {
+		background-color: transparent; 
+		&.box {
+			background-color: transparent;
+			padding: 0 20px;
+		}
+		.rrProductsWrapper {
+			background-color: #fff;
+			padding: 0;
+			.rrProductPlacementWrapper {
+				h3 {
+					font-family: "Prelo",verdana,sans-serif;
+					font-size: 28px;
+					font-weight: 400;
+				}
+				.rr-product-frame {
+					border: 0;
+					padding: 10px 15px;
+					&:hover {
+						//background-color: #ccc;
+					}
+					.productDescription {
+						font-family: "Prelo",verdana,sans-serif;
+						font-size: 16px;
+					}
+					.price {
+						.price_value {
+							font-family: "Prelo",verdana,sans-serif;
+							font-size: 18px;
+						}
+						.price_type {
+							font-family: "Prelo",verdana,sans-serif;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+	 
+
+
+
+	 
+	 
+	 
+/**********************************************
+********* END RICH RELAVANCE FEED CSS *********
+**********************************************/

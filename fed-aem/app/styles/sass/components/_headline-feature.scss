@@ -1,6 +1,10 @@
-.headline-feature{font-weight: 900;
+.headline-feature{
+	h1,h2,h3,h4{font-weight: 900;}
 	&.-center{width: 100%; text-align: center;}
-		&.-right{float: right;}
-		&.-left{float: left;}
+	&.-right{float: right;}
+	&.-left{float: left;}
 
+}
+.cdwheadline{
+	@include clearfix;
 }

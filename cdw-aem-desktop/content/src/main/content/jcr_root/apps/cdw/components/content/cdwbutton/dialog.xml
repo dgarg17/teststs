@@ -1,97 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-          jcr:primaryType="cq:Dialog"
-          title="Button"
-          xtype="tabpanel">
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    cls="tabpanelcss"
+    xtype="tabpanel">
     <items jcr:primaryType="cq:WidgetCollection">
-        <configurations
-                jcr:primaryType="cq:Widget"
-                title="Button Options"
-                xtype="panel">
-
+        <ctaLinks
+            jcr:primaryType="cq:Widget"
+            title="CTA Link Configuration"
+            xtype="panel">
             <items jcr:primaryType="cq:WidgetCollection">
-                <buttonStype
+                <ctaLinks
+                    jcr:primaryType="cq:Widget"
+                    addItemLabel="Add New Link"
+                    autoScroll="{Boolean}true"
+                    cls="multifieldcls"
+                    name="./ctaLinks"
+                    title="CTA  Link Configuration"
+                    xtype="multifield">
+                    <fieldConfig
                         jcr:primaryType="cq:Widget"
-                        defaultValue="red"
-                        fieldLabel="Button Style"
-                        fieldDescription="Default Button Style is set to Signature Red"
-                        name="./buttonStyle"
-                        type="select"
-                        xtype="selection">
+                        baseCls="multifieldpanelbasecls"
+                        cls="cssmultifieldpanel"
+                        ctCls="multifieldpanelcollapsedctcls"
+                        xtype="multifieldpanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <ctalabel
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="Maximum of 30 characters"
+                                fieldLabel="CTA Label"
+                                key="ctalabel"
+                                maxLength="{Long}30"
+                                name="secondaryCtaLabel"
+                                width="80%"
+                                xtype="textfield"/>
+                            <ctalink
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                cls="csspathfield"
+                                fieldLabel="CTA Link"
+                                key="ctalink"
+                                name="secondaryCtalink"
+                                xtype="pathfield"/>
+                            <ctatarget
+                                jcr:primaryType="cq:Widget"
+                                cls="cssselectfield"
+                                defaultValue="_self"
+                                fieldDescription="CTA link opens in same window by default."
+                                fieldLabel="CTA Target"
+                                key="ctatarget"
+                                name="secondaryCtaTarget"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <same
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Same Window (Default)"
+                                        value="_self"/>
+                                    <new
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New Window"
+                                        value="_blank"/>
+                                </options>
+                            </ctatarget>
+                        </items>
+                    </fieldConfig>
+                </ctaLinks>
+                <dropdownlabel
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="See More Categories"
+                    fieldDescription="If more than one link is defined, then a drop-down presentation will occur with each link being an item in the drop-down with a label. Note:The label doesn't show up in author mode."
+                    fieldLabel="Dropdown Label"
+                    name="./dropdownlabel"
+                    xtype="textfield"/>
+            </items>
+        </ctaLinks>
+        <configurations
+            jcr:primaryType="cq:Widget"
+            title="Button Options"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <buttonStyle
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="-red"
+                    fieldDescription="Default Button Style is set to Signature Red."
+                    fieldLabel="Button Style"
+                    name="./buttonStyle"
+                    type="select"
+                    xtype="selection">
                     <options jcr:primaryType="cq:WidgetCollection">
                         <signatureRed
-                                jcr:primaryType="nt:unstructured"
-                                text="Signature Red"
-                                value="red"/>
+                            jcr:primaryType="nt:unstructured"
+                            text="Signature Red (Default)"
+                            value="-red"/>
                         <darkGrey
-                                jcr:primaryType="nt:unstructured"
-                                text="Dark Grey"
-                                value="gray"/>
-                        <ghostButton
-                                jcr:primaryType="nt:unstructured"
-                                text="Ghost Button"
-                                value="clear"/>
+                            jcr:primaryType="nt:unstructured"
+                            text="Dark Grey"
+                            value="-gray"/>
                         <greyClear
-                                jcr:primaryType="nt:unstructured"
-                                text="Grey Clear"
-                                value="white"/>
+                            jcr:primaryType="nt:unstructured"
+                            text="Grey Clear"
+                            value="-white"/>
+                        <ghostButton
+                            jcr:primaryType="nt:unstructured"
+                            text="Ghost Button (Only for single link CTA Button)"
+                            value="-clear"/>
                     </options>
-                </buttonStype>
-                <ctalabel
-                        jcr:primaryType="cq:Widget"
-                        fieldDescription="There is no character limit"
-                        fieldLabel="CTA Label"
-                        name="./cdwctalabel"
-                        xtype="textfield"/>
-                <ctalink
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="CTA Link"
-                        name="./ctalink"
-                        xtype="pathfield"/>
-                <ctatarget
-                        jcr:primaryType="cq:Widget"
-                        defaultValue="_self"
-                        fieldDescription="CTA link opens in same window by default."
-                        fieldLabel="CTA Target"
-                        name="./ctatarget"
-                        type="select"
-                        xtype="selection">
-                    <options jcr:primaryType="cq:WidgetCollection">
-                        <new
-                                jcr:primaryType="nt:unstructured"
-                                text="New Window"
-                                value="_blank"/>
-                        <same
-                                jcr:primaryType="nt:unstructured"
-                                text="Same Window (Default)"
-                                value="_self"/>
-                    </options>
-                </ctatarget>
+                </buttonStyle>
                 <alignment
-                        jcr:primaryType="cq:Widget"
-                        defaultValue="center"
-                        fieldDescription="By default the cta button is center aligned"
-                        fieldLabel="CTA Alignment"
-                        name="./alignment"
-                        type="select"
-                        xtype="selection">
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="-center"
+                    fieldDescription="By default the CTA Button is center aligned.&#xa;Please Note : For multilink CTA Button, right alignment doesn't work as expected in author mode."
+                    fieldLabel="CTA Alignment"
+                    name="./alignment"
+                    type="select"
+                    xtype="selection">
                     <options jcr:primaryType="cq:WidgetCollection">
-                        <left
-                                jcr:primaryType="nt:unstructured"
-                                text="Left"
-                                value="left"/>
+                        <Left
+                            jcr:primaryType="nt:unstructured"
+                            text="Left"
+                            value="-left"/>
                         <Center
-                                jcr:primaryType="nt:unstructured"
-                                text="Center"
-                                value="center"/>
+                            jcr:primaryType="nt:unstructured"
+                            text="Center (Default)"
+                            value="-center"/>
                         <Right
-                                jcr:primaryType="nt:unstructured"
-                                text="Right"
-                                value="right"/>
+                            jcr:primaryType="nt:unstructured"
+                            text="Right"
+                            value="-right"/>
                     </options>
                 </alignment>
-
+                <linkTitle
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="If defined, will populate the 'title' attribute of the 'a' element."
+                    fieldLabel="Link Title"
+                    name="./linkTitle"
+                    xtype="textfield"/>
+                <eventDataDetails
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/cdw/components/content/cdwherobanner/dialog/items/items/tab1/items/eventdata.infinity.json"
+                    xtype="cqinclude"/>
             </items>
         </configurations>
     </items>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sass Grid</title>
+	<link rel="stylesheet" href="/styles/dist/main.css">
+	<style>
+		.box { margin-bottom: 20px; padding: 15px; min-height: 200px; background-color: #bbb; }
+	</style>
+</head>
+<body>
+	<header role="banner">
+		<div class="container">
+			<h1>Templates</h1>
+		</div>
+	</header>
+	<main id="content" role="main">
+		<div class="container">
+			<div class="box">Heade</div>
+
+			<div class="layout">
+				<div class="layout-12">
+					<div class="box product-placement product-placement-brand" data-placement="home_page.json_brand_showcase_h" data-brand="Apple Computer">
+						
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<h6>Footer</h6>
+		</div>
+	</footer>
+	
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="//media.richrelevance.com/rrserver/js/1.0/p13n.js?v=1.0.0.25285"></script>
+	<script src="js/dist/rrcms.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+            if ($('.product-placement').data('placement')) {
+                CDW.productPlacement.init({
+                    'apiKey': 'c1b6edde3bea10a0',
+                    'baseUrl': 'https://integration.richrelevance.com/rrserver/',
+                    'sessionId': '225EB747B6054CB5AA55CA27265BD9C7',
+                    'userId': '5428E218-6333-46E2-BE7F-0DEB216E6E56',
+                    'type': 'brand',
+                    'typeData': { brand: $('.product-placement').data('brand') },
+                    'template': '',
+                    'placements': [ $('.product-placement').data('placement')]
+                });
+            }
+		});
+	</script>
+	
+</body>
+</html>

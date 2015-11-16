@@ -9,22 +9,40 @@ import org.slf4j.Logger;
 
 import java.util.List;
 
-public class SecondaryNavigationWCMUseHelper extends WCMUse {
+public class SecondaryNavigationWCMUseHelper extends EnsightenTaggingWCMUseHelper {
 
     protected Logger log = LoggerFactory.getLogger(this.getClass());
-
+    public static String PRIMARY_ELEMENT_TYPE="LINK";
+    public static String SECONDARY_ELEMENT_TYPE="LINK-SECONDARY";
 	private List<SecondaryNavigationItem> primaryItems;
 	private List<SecondaryNavigationItem> secondaryItems;
 	private String[] linksJson;
 	
+	private String imageLayout = "layout-2";
+	private String navLayout = "layout-10";
+	private String s7Preset = "$aem-hori-logo$";
+	private String imageStyle = "";
+
 	@Override
     public void activate() throws Exception {
+		super.activate();
 		linksJson = get("json", String[].class);
         if (linksJson == null) {
 			linksJson = new String[1];
             linksJson[0] = get("json", String.class);
         }
 		setupLists();
+		// image & layout logic
+		String orientation = getProperties().get("logoOrientation", "horizontal");
+		if ("vertical".equals(orientation)) {
+			imageLayout = "layout-1";
+			navLayout = "layout-11";
+			s7Preset = "$aem-vert-logo$";
+		}
+		String background = getProperties().get("logoBackground", "transparent");
+		if (!"transparent".equals(background)) {
+			imageStyle = "background-color:" + background + ";";
+		}
     }
 	
 	private void setupLists () {
@@ -39,7 +57,17 @@ public class SecondaryNavigationWCMUseHelper extends WCMUse {
 					primaryItems.remove(item);
 				}
             }
-        }
+			for (int i = 1; i <=primaryItems.size(); i++) {
+				SecondaryNavigationItem item = primaryItems.get((i - 1));
+					if(i==1&&primaryItems.size()==1){
+						item.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, PRIMARY_ELEMENT_TYPE));
+					}else {
+						item.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, PRIMARY_ELEMENT_TYPE + "-" + i));
+					}
+				}
+			}
+
+
 		// initialize secondary list with all items
 		secondaryItems = new Gson().fromJson(concatJson(linksJson), new TypeToken<List<SecondaryNavigationItem>>() {
          }.getType());
@@ -51,8 +79,17 @@ public class SecondaryNavigationWCMUseHelper extends WCMUse {
 					secondaryItems.remove(item);
 				}
             }
-        }
+			for (int i = 1; i <= secondaryItems.size(); i++) {
+				SecondaryNavigationItem item = secondaryItems.get((i - 1));
+				if(i==1&&secondaryItems.size()==1){
+					item.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, SECONDARY_ELEMENT_TYPE));
+				}else {
+					item.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, SECONDARY_ELEMENT_TYPE + "-" + i));
+				}
+			}
+		}
 	}
+
 	
 	private String concatJson(String[] jsonArray) {
 
@@ -85,6 +122,22 @@ public class SecondaryNavigationWCMUseHelper extends WCMUse {
 	
 	public int getSecondaryItemsCount() {
 		return (int) secondaryItems.size();
+	}
+
+	public String getS7Preset() {
+		return s7Preset;
+	}
+
+	public String getImageLayout() {
+		return imageLayout;
+	}
+
+	public String getNavLayout() {
+		return navLayout;
+	}
+
+	public String getImageStyle() {
+		return imageStyle;
 	}
 
 }

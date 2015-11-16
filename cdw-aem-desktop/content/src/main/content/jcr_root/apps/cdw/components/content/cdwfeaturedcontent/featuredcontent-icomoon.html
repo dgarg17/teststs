@@ -1,0 +1,8 @@
+<div class="-icomoon-hold">
+	<div data-sly-test="${!(properties.shape=='-noshape')}" class="${properties.shape} ${properties.size}"  style="background:#${properties.bgcolor @ context='styleString'};">
+		<span class="ico-${properties.classname}"></span>
+	</div>
+    <div data-sly-test="${properties.shape=='-noshape'}" class="${properties.shape} ${properties.size}">
+		<span  style="color:#${properties.bgcolor @ context='styleString'};" class="ico-${properties.classname}"></span>
+	</div>
+</div>

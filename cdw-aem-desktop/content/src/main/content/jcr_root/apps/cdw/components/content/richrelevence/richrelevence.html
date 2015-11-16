@@ -1,0 +1,10 @@
+<!-- Rich relevence -->
+  <div data-sly-test="${properties.placementId}" class="layout">
+     <div class="layout-12">
+        <div class="box product-placement product-placement-brand" data-placement="${properties.placementId}" ></div>
+     </div>
+  </div>
+<div data-sly-test="${(!properties.placementId) && (wcmmode.edit || wcmmode.design)}" >
+	<h6>Please configure the Placement Id.</h6>
+</div>
+

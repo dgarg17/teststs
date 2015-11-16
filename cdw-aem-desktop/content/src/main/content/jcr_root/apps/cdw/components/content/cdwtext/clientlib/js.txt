@@ -1,1 +1,3 @@
+#base=js
 color-picker.js
+LinkDialogOverride.js

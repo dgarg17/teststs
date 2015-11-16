@@ -1,25 +1,47 @@
-$(function() {
+$(document).ready(function(){
 
-	resize2upBoxes();
-
+	resizeMultiupBoxes();
+	
 	$(window).resize(function() {
-		
-		resize2upBoxes();
-
+		resizeMultiupBoxes();
 	});
-
+	
 });
 
-var resize2upBoxes = function() {
-	var $fixHeight = $('.layout .layout-6 .content-container-item').parent();
-	$fixHeight.each(function() {
-		if ($(window).width() > 734) {
-			$(this).css('height', $(this).parents('.layout').height());
-			$(this).find('.content-container-item').css('height', $(this).parents('.layout').height() - 20);
-		}
-		else {
-			$(this).css('height', '');
-			$(this).find('.content-container-item').css('height', '');
-		}
+var resizeMultiupBoxes = function() {
+
+	$(".-box-height").each(function() {
+		$(this).parent().parent().parent().addClass("-box-height-container");
+        //var theHeight = $(this).parent().parent().height();
+       // alert(theHeight);
 	});
+
+	$(".-box-height-container").each(function() {
+
+        	var maxHeight = 0;
+            $(this).children().each(function() {
+				if ($(this).children().children().height() > maxHeight) {
+					maxHeight = $(this).children().children().height();
+                }
+            });
+            $(this).children().each(function() {
+            	if ($(this).children().children(".-box-height").hasClass("youtube-wrapper")) {
+					$(this).children().children(".-box-height").children().height(maxHeight+39);
+                }
+                else {
+					$(this).children().children(".-box-height").height(maxHeight);
+                }
+            });
+
+
+	});
+
+	
+	
+}
+
+var alignButtons = function() {
+
+
+
 }
