@@ -15,7 +15,7 @@ public class YouTubeVideoItem {
 	private String trackingId = "";
 	private String thumbnailImagePath = "";
 	
-	YouTubeVideoItem(Node node) throws Exception {
+	public YouTubeVideoItem(Node node) throws Exception {
 		if (node != null) {
 			if (node.hasProperty("videoId")) videoId = node.getProperty("videoId").getString();
 			heroImagePath = thumbnailImagePath = heroImagePath = node.getPath().replace("/jcr:content/", "/_jcr_content/") + "/thumbnailImage.img.png";
