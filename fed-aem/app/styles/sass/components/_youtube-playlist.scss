@@ -1,5 +1,6 @@
 .youtube-playlist-player {
 	.video-hero {
+		cursor: pointer;
 		line-height: 0;
 		position: relative;
 		.video-hero-image-container {
@@ -39,6 +40,7 @@
 			}
 			.video-hero-image {
 				display: block;
+				width: 100%;
 			}
 		}
 		.youtube-playlist-video {
