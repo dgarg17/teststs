@@ -1,0 +1,36 @@
+<!--/* CDW YouTube Multi-Player Component */ -->
+<sly data-sly-use.playlistHelper="${'com.cdw.aem.components.YouTubePlaylistWCMUseHelper'}">
+<div data-sly-test="${playlistHelper.hasData}" class="youtube-playlist-player-wrapper ${properties.alignment}">
+	<div class="youtube-playlist-player">
+		<div class="video-hero">
+			<div class="video-hero-image-container">
+				<div class="video-hero-text-container">
+					<h2 class="video-headline-text"></h2>
+					<p class="video-title"></p>
+					<p class="video-summary"></p>
+				</div>
+				<div class="ico-play-circle-o"></div>
+				<img class="video-hero-image" src="${playlistHelper.videos[0].heroImagePath}" />
+			</div>
+		</div>
+		<div class="global-video-settings" data-video-width="${properties.videoWidth}" data-video-size-unit="${properties.sizeUnits}" data-video-aspect-ratio="${properties.videoAspectRatio}"></div>
+		<div class="video-thumbnails">
+			<sly data-sly-list="${playlistHelper.videos}">
+			<div class="video-thumb" 
+				data-video-id="${item.videoId}" 
+				data-hero-image="${item.heroImagePath}" 
+				data-video-headline-text="${item.headlineText @ context='unsafe'}" 
+				data-video-title="${item.videoTitle}" 
+				data-video-summary="${item.videoSummary}" 
+				data-tracking-id="${item.trackingId}" >
+				<img src="${item.thumbnailImagePath}" />
+			</div>
+			</sly>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+<div data-sly-test="${!playlistHelper.hasData && (wcmmode.edit || wcmmode.design)}">
+	<h6>Please configure the YouTube Multi-Player component.</h6>
+</div>
+</sly>

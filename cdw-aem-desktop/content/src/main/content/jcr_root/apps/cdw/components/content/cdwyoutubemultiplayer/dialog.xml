@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}600"
+    title="LiveClicker Video and Text"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <videos
+            jcr:primaryType="cq:Widget"
+            title="Videos"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <videos
+                    jcr:primaryType="cq:Widget"
+                    name=""
+                    prefix="./"
+                    xtype="mtmulticompositefield">
+                    <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                        <videoId
+                            jcr:primaryType="cq:Widget"
+                            allowBlank="{Boolean}false"
+                            fieldLabel="YouTube Video Id"
+                            name="videoId"
+							autoWidth="{Boolean}false"
+		                    width="80%"
+                            xtype="textfield"/>
+                        <trackingId
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Tracking Id"
+                            name="trackingId"
+							autoWidth="{Boolean}false"
+		                    width="80%"
+                            xtype="textfield"/>
+                        <fullSizeImage
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Hero Image"
+                            name="heroImage/fileReference"
+                            rootPath="/content/dam"
+							autoWidth="{Boolean}false"
+		                    width="80%"
+                            xtype="pathfield"/>
+                        <thumbnailImage
+                            jcr:primaryType="cq:Widget"
+                            allowBlank="{Boolean}false"
+                            fieldLabel="Thumbnail Image"
+                            name="thumbnailImage/fileReference"
+                            rootPath="/content/dam"
+							autoWidth="{Boolean}false"
+		                    width="80%"
+                            xtype="pathfield"/>
+                        <fullSizeImageResourceType
+                            jcr:primaryType="cq:Widget"
+                            name="heroImage/sling:resourceType"
+                            value="foundation/components/image"
+                            xtype="hidden"/>
+                        <thumbnailImageResourceType
+                            jcr:primaryType="cq:Widget"
+                            name="thumbnailImage/sling:resourceType"
+                            value="foundation/components/image"
+                            xtype="hidden"/>
+                        <headlineOne
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Headline One"
+                            name="headlineOne"
+							autoWidth="{Boolean}false"
+		                    width="80%"
+                            xtype="textfield"/>
+                        <headlineTwo
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="If a value is defined here, Headline Text One and Headline Text Two will be combined with an 'and' glyph in between."
+                            fieldLabel="Headline Text Two"
+                            name="headlineTwo"
+							autoWidth="{Boolean}false"
+		                    width="80%"
+                            xtype="textfield"/>
+                        <videoTitle
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Video Title"
+                            name="videoTitle"
+							autoWidth="{Boolean}false"
+		                    width="80%"
+                            xtype="textfield"/>
+                        <videoDescription
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Video Summary"
+                            name="videoSummary"
+							autoWidth="{Boolean}false"
+		                    width="80%"
+                            xtype="textfield"/>
+                    </fieldConfigs>
+                </videos>
+            </items>
+        </videos>
+        <global
+            jcr:primaryType="cq:Widget"
+            title="Global Attributes"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <videoWidth
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="100"
+                    fieldLabel="Video Width"
+                    name="./videoWidth"
+                    xtype="numberfield"/>
+                <sizeUnit
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="%"
+                    fieldLabel="Size Units"
+                    name="./sizeUnits"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <pixel
+                            jcr:primaryType="nt:unstructured"
+                            text="Pixels"
+                            value="px"/>
+                        <percentage
+                            jcr:primaryType="nt:unstructured"
+                            text="Percentage (Default)"
+                            value="%"/>
+                    </options>
+                </sizeUnit>
+                <aspectRatio
+                    jcr:primaryType="cq:Widget"
+                    defaultValue=".56"
+                    fieldLabel="Aspect Ratio"
+                    name="./videoAspectRatio"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <sixteenByNine
+                            jcr:primaryType="nt:unstructured"
+                            text="16:9 (Default)"
+                            value=".56"/>
+                        <fourByThree
+                            jcr:primaryType="nt:unstructured"
+                            text="4:3"
+                            value=".75"/>
+                    </options>
+                </aspectRatio>
+                <alignment
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="-center"
+                    fieldLabel="Alignment"
+                    name="./alignment"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <center
+                            jcr:primaryType="nt:unstructured"
+                            text="Center (Default)"
+                            value="-center"/>
+                        <left
+                            jcr:primaryType="nt:unstructured"
+                            text="Left"
+                            value="-left"/>
+                        <right
+                            jcr:primaryType="nt:unstructured"
+                            text="Right"
+                            value="-right"/>
+                    </options>
+                </alignment>
+            </items>
+        </global>
+    </items>
+</jcr:root>
