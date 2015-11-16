@@ -5,6 +5,7 @@ var _ = require('lodash');
 
 import * as HandleBarsHelpers from './modules/handlebars-helpers';
 import * as productPlacement from './modules/product-placement';
+import * as socialShare from './modules/social-share';
 
 /* Variables */
 window.CDW = {};
@@ -26,6 +27,9 @@ $(function() {
 	//Partner Solution Nav Mobile Menu
 	$(document).on('click', '.partner-header .mobileNav', togglePartnerMenu);
 	
+	//Social Share
+    socialShare.init();
+
 });
 
 //Pin Partner Nav to top on scoll
