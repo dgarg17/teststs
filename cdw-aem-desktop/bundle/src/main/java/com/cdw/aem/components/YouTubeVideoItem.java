@@ -19,7 +19,7 @@ public class YouTubeVideoItem {
 		if (node != null) {
 			if (node.hasProperty("videoId")) videoId = node.getProperty("videoId").getString();
 			heroImagePath = thumbnailImagePath = heroImagePath = node.getPath().replace("/jcr:content/", "/_jcr_content/") + "/thumbnailImage.img.png";
-			if (node.hasNode("heroImage")) heroImagePath = node.getPath().replace("/jcr:content/", "/_jcr_content/") + "/heroImage.img.png";
+			if (node.hasNode("heroImage") && node.getNode("heroImage").hasProperty("fileReference")) heroImagePath = node.getPath().replace("/jcr:content/", "/_jcr_content/") + "/heroImage.img.png";
 			if (node.hasProperty("headlineOne")) headlineText = node.getProperty("headlineOne").getString();
 			if (node.hasProperty("headlineOne") && node.hasProperty("headlineTwo")) headlineText += " <span class='ico-and'></span> ";
 			if (node.hasProperty("headlineTwo")) headlineText += node.getProperty("headlineTwo").getString();
