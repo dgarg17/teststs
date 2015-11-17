@@ -6,14 +6,14 @@ var youtubePlaylist = function (thisPlayer) {
 youtubePlaylist.prototype.buildPlayer = function(thisPlayer) {
 	var firstVideo = thisPlayer.find(".video-thumb").first();
 	var globalVideoSettings = thisPlayer.find(".global-video-settings");
-	thisPlayer.find('.video-hero').append('<iframe class="youtube-playlist-video" id="' + firstVideo.data('video-id') + '" data-video-id="' + firstVideo.data('video-id') + '" data-video-width="' + globalVideoSettings.data('video-width') + '" data-video-size-unit="' + globalVideoSettings.data('video-size-unit') + '" data-video-aspect-ratio="' + globalVideoSettings.data('video-aspect-ratio') + '" data-tracking-id="' + firstVideo.data('tracking-id') + '" data-video-summary="' + firstVideo.data('video-summary') + '" frameborder="0" allowfullscreen="1" title="' + firstVideo.data('video-title') + '"  src="https://www.youtube.com/embed/' + firstVideo.data('video-id') + '?enablejsapi=1&amp;origin=http%3A%2F%2Fwww.cdw.com%3A4502"></iframe>');
+	thisPlayer.find('.video-hero').append('<iframe class="youtube-playlist-video" id="' + firstVideo.data('video-id') + '" data-video-id="' + firstVideo.data('video-id') + '" data-video-width="' + globalVideoSettings.data('video-width') + '" data-video-size-unit="' + globalVideoSettings.data('video-size-unit') + '" data-video-aspect-ratio="' + globalVideoSettings.data('video-aspect-ratio') + '" data-tracking-id="' + firstVideo.data('tracking-id') + '" data-video-summary="' + firstVideo.data('video-summary') + '" frameborder="0" allowfullscreen="1" title="' + firstVideo.data('video-title') + '"  src="' + this.formatUrl(firstVideo.data('video-id')) + '"></iframe>');
 	thisPlayer.find(".video-hero-text-container h2").html(firstVideo.data('video-headline-text'));
 	thisPlayer.find(".video-hero-text-container .video-title").html(firstVideo.data('video-title'));
 	thisPlayer.find(".video-hero-text-container .video-summary").html(firstVideo.data('video-summary'));
 }
 
 youtubePlaylist.prototype.formatUrl = function(url) {
-	return "https://www.youtube.com/embed/" + url + "?enablejsapi=1&amp;origin=http%3A%2F%2Fwww.cdw.com%3A4502";
+	return "https://www.youtube.com/embed/" + url + "?enablejsapi=1&amp;origin=http%3A%2F%2Fwww.cdw.com%3A4502&autoplay=1";
 }
 
 youtubePlaylist.prototype.resizePlayer = function(thisPlayer) {
@@ -33,7 +33,13 @@ youtubePlaylist.prototype.setupPlayer = function(thisPlayer) {
 		$(this).addClass("active");
 		that.swapPlayer($(this),thisPlayer);
 	});
-	thisPlayer.find(".video-hero-image").css("height",thisPlayer.find(".video-hero").height());
+	
+	// Set Aspect Ratio
+	if (thisPlayer.find(".global-video-settings").data("video-size-unit") != "%") {
+		thisPlayer.find(".video-hero").width(thisPlayer.find(".global-video-settings").data("video-width"));
+	}
+	thisPlayer.find(".video-hero-image").css("height",thisPlayer.find(".video-hero").width() * thisPlayer.find(".global-video-settings").data("video-aspect-ratio")); 
+	
 	this.resizePlayer(thisPlayer);
 }
 
