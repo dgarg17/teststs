@@ -1,3 +1,7 @@
-<main id="content" role="main">
-<div class="${properties.contentwidth}" data-sly-resource="${ @path='mainpar', resourceType='foundation/components/parsys'}" data-sly-unwrap="${properties.contentwidth=='full'}"></div><!--/* /data-sly-unwrap */-->
+<main id="content" role="main" >
+    <div data-sly-include="subheader.html" data-sly-unwrap></div>
+
+    <div class="${properties.contentwidth}"
+         data-sly-resource="${ @path='mainpar', resourceType='foundation/components/parsys'}"
+         data-sly-unwrap="${properties.contentwidth=='full'}"></div><!--/* /data-sly-unwrap */-->
 </main>
