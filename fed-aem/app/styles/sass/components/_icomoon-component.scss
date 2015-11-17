@@ -1,11 +1,14 @@
+$font-size-xl: 72px;
 $font-size-lg: 54px;
 $font-size-md: 40px;
 $font-size-sm: 32px;
 
+$base-xl: $font-size-xl + 16px;
 $base-lg: $font-size-lg + 16px;
 $base-md: $font-size-md + 16px;
 $base-sm: $font-size-sm + 16px;
 
+$margin-xl: (-$font-size-xl/2) 0 0 (-$font-size-xl/2);
 $margin-lg: (-$font-size-lg/2) 0 0 (-$font-size-lg/2);
 $margin-md: (-$font-size-md/2) 0 0 (-$font-size-md/2);
 $margin-sm: (-$font-size-sm/2) 0 0 (-$font-size-sm/2);
@@ -20,9 +23,10 @@ $center-icon: 50%;
 // 	}
 
 .-icomoon-hold{ @include clearfix;
-	// .-left{float: left;}
-	// .-right{float: right;}
-	// .-center{margin: 0 auto;}
+	margin-bottom: 20px;
+	.-xlarge{
+		span{font-size: $font-size-xl;}
+	}
 	.-large{
 		span{font-size: $font-size-lg;}
 	}
@@ -38,6 +42,17 @@ $center-icon: 50%;
 		position: relative;
 		color:white;
 		&.-square{
+			&.-xlarge{
+				width: $base-xl;
+				height: $base-xl;
+				span{
+					position: absolute;
+					top: $center-icon;
+					left: $center-icon;
+					margin: $margin-xl;
+					font-size: $font-size-xl;
+					}
+				}
 			&.-large{
 				width: $base-lg;
 				height: $base-lg;
@@ -71,8 +86,6 @@ $center-icon: 50%;
 					font-size: $font-size-sm;
 					}
 			}
-			
-			// background: red;
 		}
 		&.-circle{
 			&.-large{
@@ -117,9 +130,6 @@ $center-icon: 50%;
 					font-size: $font-size-sm
 					}
 			}
-			
-			
-			background: red;
 		}	
 	}
 }
