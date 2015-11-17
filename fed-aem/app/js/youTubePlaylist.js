@@ -13,7 +13,7 @@ youtubePlaylist.prototype.buildPlayer = function(thisPlayer) {
 }
 
 youtubePlaylist.prototype.formatUrl = function(url) {
-	return "https://www.youtube.com/embed/" + url + "?enablejsapi=1&amp;origin=http%3A%2F%2Fwww.cdw.com%3A4502&autoplay=1";
+	return "https://www.youtube.com/embed/" + url + "?enablejsapi=1&amp;origin=http%3A%2F%2Fwww.cdw.com%3A4502";
 }
 
 youtubePlaylist.prototype.resizePlayer = function(thisPlayer) {
@@ -27,6 +27,7 @@ youtubePlaylist.prototype.setupPlayer = function(thisPlayer) {
 	thisPlayer.find('.video-hero').click(function() {
 		thisPlayer.find(".video-hero-image-container").hide();
 		thisPlayer.find(".youtube-playlist-video").show();
+		thisPlayer.find(".youtube-playlist-video").attr("src",thisPlayer.find(".youtube-playlist-video").attr("src") + "&autoplay=1");
 	});
 	thisPlayer.find(".video-thumb").click(function() {
 		thisPlayer.find(".video-thumb").removeClass("active");
