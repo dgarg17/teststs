@@ -71,7 +71,7 @@
 <script  data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" type="text/javascript" src="${utility.serviceDomain}/api/cms/settings?token=${utility.jsApiCmsSettingsToken @ context='uri'}"></script>
 <sly data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" data-sly-test="${utility.disableEnsightenTagging != 'true'}" data-sly-include="analytics.html"/>
 <!--/* Support for Rich Relevance  */-->
-<script   data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" type="text/javascript" src="${utility.richRelevenceBootUrl @ context='uri'}"></script>
+<script data-sly-test="${utility.richRelevenceBootUrl && utility.richRelevenceBootUrl != ''}" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" type="text/javascript" src="${utility.richRelevenceBootUrl @ context='uri'}"></script>
 
 
 </head>
