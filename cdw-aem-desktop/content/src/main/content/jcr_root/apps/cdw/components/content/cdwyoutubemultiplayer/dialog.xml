@@ -8,18 +8,19 @@
         <videos
             jcr:primaryType="cq:Widget"
             title="Videos"
-            xtype="panel">
+			xtype="panel">
             <items jcr:primaryType="cq:WidgetCollection">
                 <videos
                     jcr:primaryType="cq:Widget"
                     name=""
                     prefix="./"
-                    xtype="mtmulticompositefield">
+					xtype="mtmulticompositefield">
                     <fieldConfigs jcr:primaryType="cq:WidgetCollection">
                         <videoId
                             jcr:primaryType="cq:Widget"
                             allowBlank="{Boolean}false"
-                            fieldLabel="YouTube Video Id"
+							fieldLabel="YouTube Video Id"
+							labelStyle="width:20%"
                             name="videoId"
 							autoWidth="{Boolean}false"
 		                    width="80%"
@@ -27,6 +28,7 @@
                         <trackingId
                             jcr:primaryType="cq:Widget"
                             fieldLabel="Tracking Id"
+							labelStyle="width:20%"
                             name="trackingId"
 							autoWidth="{Boolean}false"
 		                    width="80%"
@@ -34,6 +36,7 @@
                         <fullSizeImage
                             jcr:primaryType="cq:Widget"
                             fieldLabel="Hero Image"
+							labelStyle="width:20%"
                             name="heroImage/fileReference"
                             rootPath="/content/dam"
 							autoWidth="{Boolean}false"
@@ -43,6 +46,7 @@
                             jcr:primaryType="cq:Widget"
                             allowBlank="{Boolean}false"
                             fieldLabel="Thumbnail Image"
+							labelStyle="width:20%"
                             name="thumbnailImage/fileReference"
                             rootPath="/content/dam"
 							autoWidth="{Boolean}false"
@@ -60,7 +64,8 @@
                             xtype="hidden"/>
                         <headlineOne
                             jcr:primaryType="cq:Widget"
-                            fieldLabel="Headline One"
+                            fieldLabel="Headline Text One"
+							labelStyle="width:20%"
                             name="headlineOne"
 							autoWidth="{Boolean}false"
 		                    width="80%"
@@ -69,6 +74,7 @@
                             jcr:primaryType="cq:Widget"
                             fieldDescription="If a value is defined here, Headline Text One and Headline Text Two will be combined with an 'and' glyph in between."
                             fieldLabel="Headline Text Two"
+							labelStyle="width:20%"
                             name="headlineTwo"
 							autoWidth="{Boolean}false"
 		                    width="80%"
@@ -76,6 +82,7 @@
                         <videoTitle
                             jcr:primaryType="cq:Widget"
                             fieldLabel="Video Title"
+							labelStyle="width:20%"
                             name="videoTitle"
 							autoWidth="{Boolean}false"
 		                    width="80%"
@@ -83,6 +90,7 @@
                         <videoDescription
                             jcr:primaryType="cq:Widget"
                             fieldLabel="Video Summary"
+							labelStyle="width:20%"
                             name="videoSummary"
 							autoWidth="{Boolean}false"
 		                    width="80%"
