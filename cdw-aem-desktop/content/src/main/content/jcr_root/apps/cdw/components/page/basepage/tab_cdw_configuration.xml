@@ -3,11 +3,18 @@
     jcr:primaryType="cq:Panel"
     title="CDW Configuration">
     <items jcr:primaryType="cq:WidgetCollection">
-        <prefixsubheadline
+        <breadcrumbs
                 jcr:primaryType="cq:Widget"
                 fieldLabel="BreadCrumbs"
                 fieldDescription="BreadCrumbs are disabled by default"
                 name="./enableBreadcrumbs"
+                type="checkbox"
+                xtype="selection"/>
+        <socialShare
+                jcr:primaryType="cq:Widget"
+                fieldLabel="Social Share"
+                fieldDescription="Social Share are disabled by default"
+                name="./enableSocialShare"
                 type="checkbox"
                 xtype="selection"/>
 		<seo
