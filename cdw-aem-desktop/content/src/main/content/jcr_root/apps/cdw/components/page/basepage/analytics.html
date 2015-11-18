@@ -30,11 +30,6 @@
 <sly data-sly-use.scrollTriggerHelper="${'com.cdw.aem.util.components.EnsightenScrollTriggersWCMUseHelper' @json=properties.ensightenScrollTriggers}">
 <script data-sly-test="${scrollTriggerHelper.hasScrollTriggers}" type="text/javascript">
 var scrollTriggers = JSON.parse("[${scrollTriggerHelper.scrollTriggers @ context='scriptString'}]");
-/**
-for (var i=0; i < scrollTriggers.length; i ++) {
-	window.alert("Scroll Trigger : " + scrollTriggers[i][0] + "|" + scrollTriggers[i][1]);
-}
-**/
 $(document).ready(function(){
     setupScrollTriggers(scrollTriggers, '${properties.ensightenPageName @ context="scriptString"}', 0);
 });
