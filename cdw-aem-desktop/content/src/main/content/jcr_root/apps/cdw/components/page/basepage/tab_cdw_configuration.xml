@@ -5,14 +5,14 @@
     <items jcr:primaryType="cq:WidgetCollection">
         <breadcrumbs
                 jcr:primaryType="cq:Widget"
-                fieldLabel="BreadCrumbs"
+                fieldLabel="Include Breadcrumbs"
                 fieldDescription="BreadCrumbs are disabled by default"
                 name="./enableBreadcrumbs"
                 type="checkbox"
                 xtype="selection"/>
         <socialShare
                 jcr:primaryType="cq:Widget"
-                fieldLabel="Social Share"
+                fieldLabel="Include Social Share"
                 fieldDescription="Social Share are disabled by default"
                 name="./enableSocialShare"
                 type="checkbox"
