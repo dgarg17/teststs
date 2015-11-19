@@ -1,8 +1,8 @@
 <!--/* CDW Featured Content Component */ -->
-<div class="featured-item ${properties.alignment} ${(properties.alignment=='-top'||properties.alignment=='-bottom')?'-center':''}">
+<div class="featured-item ${properties.alignment}">
 
     <div class="layout-12" data-sly-test="${properties.alignment=='-top'}">
-        <div data-sly-test="${!(properties.imagesrc=='icomoon')}" class="image-lockup">
+        <div data-sly-test="${!(properties.imagesrc=='icomoon')}" class="image-lockup   ${properties.imageAlignment}">
             <div data-sly-include="featuredcontent-img.html" data-sly-unwrap></div>
             <!--/* /data-sly-unwrap */-->
         </div>
@@ -18,9 +18,8 @@
         <!--/* /data-sly-unwrap */-->
     </div>
 
-
     <div class="layout-12" data-sly-test="${properties.alignment=='-bottom'}">
-        <div  data-sly-test="${!(properties.imagesrc=='icomoon')}"  class="image-lockup">
+        <div  data-sly-test="${!(properties.imagesrc=='icomoon')}"  class="image-lockup ${properties.imageAlignment}">
             <div data-sly-include="featuredcontent-img.html" data-sly-unwrap></div>
         </div>
           <div data-sly-test="${(properties.imagesrc=='icomoon')}" >
@@ -31,6 +30,9 @@
         <!--/* /data-sly-unwrap */-->
     </div>
 
+
+
+
     <div class="layout-4" data-sly-test="${(properties.alignment=='-left'||properties.alignment=='-right')&&!(properties.imagesrc=='icomoon')}">
         <div data-sly-include="featuredcontent-img.html" data-sly-unwrap></div>
         <!--/* /data-sly-unwrap */-->
@@ -39,6 +41,7 @@
         <div data-sly-include="featuredcontent-copy.html" data-sly-unwrap></div>
         <!--/* /data-sly-unwrap */-->
     </div>
+
 
         <div class="layout-1" data-sly-test="${(properties.alignment=='-left')&&(properties.imagesrc=='icomoon')}">
         <div data-sly-include="featuredcontent-icomoon.html" data-sly-unwrap></div>
