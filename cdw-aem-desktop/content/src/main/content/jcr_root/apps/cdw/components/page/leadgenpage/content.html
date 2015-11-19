@@ -1,23 +1,26 @@
 <main id="content" role="main" class="lead-gen">
-<div class="layout">
-  <div class="layout-12">
-  <div data-sly-resource="${ @path='herobanner', resourceType='cdw/components/content/cdwherobanner'}" data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
-  </div>
-</div>
-<div class="layout">
-  <div class="layout-7">
-  <div data-sly-resource="${ @path='leftpar', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div><!--/* /data-sly-unwrap */-->
-  </div>
-  <div class="layout-5">
-	<style data-sly-test="${wcmmode.edit}">
-		#CQ .x-panel.cq-editbar.cq-element-static-thirdpartysyndication {
-			top: 244px !important;
-		}
-	</style>
-    <div class="form">
-      <div data-sly-resource="${ @path='static-thirdpartysyndication', resourceType='cdw/components/content/cdwthirdpartysyndication'}" data-sly-unwrap> </div><!--/* /data-sly-unwrap */-->
+    <div data-sly-include="subheader.html" data-sly-unwrap></div>
+
+            <div data-sly-resource="${ @path='herobanner', resourceType='cdw/components/content/cdwherobanner'}"
+                 data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
+
+    <div class="layout">
+        <div class="layout-7">
+            <div data-sly-resource="${ @path='leftpar', resourceType='foundation/components/parsys'}"
+                 data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
+        </div>
+        <div class="layout-5">
+            <style data-sly-test="${wcmmode.edit}">
+                #CQ .x-panel.cq-editbar.cq-element-static-thirdpartysyndication {
+                top: 244px !important;
+                }
+            </style>
+            <div class="form">
+                <div data-sly-resource="${ @path='static-thirdpartysyndication', resourceType='cdw/components/content/cdwthirdpartysyndication'}"
+                     data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<div data-sly-resource="${ @path='mainpar', resourceType='foundation/components/parsys'}" data-sly-unwrap> </div><!--/* /data-sly-unwrap */-->
+    <div data-sly-resource="${ @path='mainpar', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+    <!--/* /data-sly-unwrap */-->
 </main>

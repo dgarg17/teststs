@@ -6,16 +6,11 @@
 		    url: url,
 		    cache:false,
 		    success: function(response) {
-		        //alert("success! dynamic"+eval(response));
-		        //alert("success author"+$('#products-'+productedc).val());
-		        //console.log("success! dynamic"+eval(response));
-		        //Uncomment this call when API is working and temporary static call is removed
-		        compareProductJSON(response, eval($("#products-"+uniqueId).val()),uniqueId);
+		        compareProductJSON(response, JSON.parse($("#products-"+uniqueId).val().replace(/'/g, '"')),uniqueId);
 		    },
 		    error: function(hr, txtStatus, error) {
 		      $("#productError-"+uniqueId).append("<h5>\"Service Timeout\", \"No Data Returned From Service\"</h5>");
-		      //  console.log(hr);
-		        //alert("error! " + txtStatus);
+
 		    }
 		});
 
