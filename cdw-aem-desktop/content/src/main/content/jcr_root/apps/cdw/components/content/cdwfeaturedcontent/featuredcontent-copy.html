@@ -1,4 +1,4 @@
-<div class="copy">
+<div class="copy ${properties.textAlignment}">
     <h5 data-sly-test="${properties.headline && !properties.redbarhighlight}"
         style="color:#${properties.textcolor @ context='styleString'}">
 
@@ -27,7 +27,7 @@
         ${properties.bodytext@context="html"}
     </p>
 
-    <div class="button-lockup"
+    <div class="button-lockup ${properties.ctaAlignment}"
          data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.secondaryLinks}"
          data-sly-test="${properties.secondaryLinks&&secondaryLinks.count==1}">
 
@@ -45,7 +45,7 @@
 
     </div>
 
-    <div class="button-lockup" data-sly-test="${secondaryLinks.count>1}">
+    <div class="button-lockup  ${properties.ctaAlignment}" data-sly-test="${secondaryLinks.count>1}">
         <select class="sub-cat-select partner-links" data-secondary-label="${properties.secondaryLabel}"
                 data-sly-use.secondaryLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.secondaryLinks,elementType='link-secondary'}" >
 
