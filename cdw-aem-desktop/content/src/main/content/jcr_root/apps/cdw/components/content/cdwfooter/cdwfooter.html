@@ -11,7 +11,7 @@
         <div class="text-center disclaimer" data-sly-use.footerLink="${'com.cdw.aem.components.FooterLinkWCMUseHelper' @json= properties.links}">
             <br>
             <sly data-sly-list.footer="${footerLink.footerLinks}" >
-            <a  href="${footer.link}" class="" data-test="${footer.toString}">${footer.title}</a>
+            <a  href="${footer.link}" class="" >${footer.title}</a>
                 <sly data-sly-test="${!footerList.last}">|</sly>
 
             </sly> <br>
