@@ -17,7 +17,12 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+.ico-wifi-rays:before {
+	content: "\e6e1";
+}
+.ico-x:before {
+	content: "\e6df";
+}
 .ico-person-signals-phone:before {
 	content: "\e637";
 }
