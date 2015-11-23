@@ -2,7 +2,7 @@
     <div class="layout-4"  data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" >
         <a class="PGA" data-sly-test="${properties.logoLink}"
            data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url= properties.logoLink}"
-           href="${link.urlUpdate}" title="${properties.logoAltText}" target="_blank"
+           href="${link.urlUpdate}" title="${properties.logoAltText}" target="_blank">
             <img src="${utility.s7ImageRoot}${properties.logoImage}?$mfg_large$" alt="${properties.logoAltText}" border="0" class="img-responsive">
         </a>
         <img data-sly-test="${!properties.logoLink}"  src="${utility.s7ImageRoot}${properties.logoImage}?$mfg_large$" alt="${properties.logoAltText}" border="0" class="img-responsive">

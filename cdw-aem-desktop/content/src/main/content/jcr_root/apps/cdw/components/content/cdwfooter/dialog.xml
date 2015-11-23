@@ -62,8 +62,9 @@
                                     jcr:primaryType="cq:Widget"
                                     allowBlank="{Boolean}false"
                                     emptyText="link url"
+                                    cls="csspathfield"
                                     key="link"
-                                    width="80%"
+                                    width="100%"
                                     xtype="pathfield"/>
                         </items>
                     </fieldConfig>
