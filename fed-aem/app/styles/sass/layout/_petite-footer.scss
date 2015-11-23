@@ -1,0 +1,22 @@
+.petite-footer{
+	.text-center{text-align: center;}
+	.pFooter-hold{text-align: right;}
+	
+	@media screen and (max-width: $screen-sm-min) {
+	.layout { @include outer-container;
+		.layout-4 { @include span-columns(4); 
+			.pFooter-hold{margin: 10px auto; text-align: center}
+		}
+		img{margin: 0px auto;}
+		}
+	}
+	
+	@media screen and (max-width: $screen-xs-min) {
+	.layout { @include outer-container;
+		.layout-4 { @include span-columns(12); 
+			.pFooter-hold{margin: 10px auto; text-align: center}
+		}
+		img{margin: 0px auto;}
+		}
+	}
+}
