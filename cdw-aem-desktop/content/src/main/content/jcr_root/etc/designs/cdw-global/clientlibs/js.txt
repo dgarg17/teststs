@@ -13,3 +13,4 @@ partnerLinks.js
 rrcms.js
 youtubePlaylist.js
 scrollTriggers.js
+openModal.js

@@ -1,8 +1,14 @@
-/*
- * Icomoon Font
- *
- * DO NOT COPY FONT FACE DECLARATION!!!!!
-*/
+@font-face {
+	font-family: 'cdw-icons-global';
+	src:url('fonts/cdw-icons-global.eot?69yiux');
+	src:url('fonts/cdw-icons-global.eot?69yiux#iefix') format('embedded-opentype'),
+		url('fonts/cdw-icons-global.woff2?69yiux') format('woff2'),
+		url('fonts/cdw-icons-global.ttf?69yiux') format('truetype'),
+		url('fonts/cdw-icons-global.woff?69yiux') format('woff'),
+		url('fonts/cdw-icons-global.svg?69yiux#cdw-icons-global') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
 [class^="ico-"], [class*=" ico-"] {
 	font-family: 'cdw-icons-global';
@@ -18,6 +24,108 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.ico-three-people-v2:before {
+	content: "\e901";
+}
+.ico-untitled:before {
+	content: "\e902";
+}
+.ico-untitled2:before {
+	content: "\e903";
+}
+.ico-untitled3:before {
+	content: "\e904";
+}
+.ico-untitled4:before {
+	content: "\e905";
+}
+.ico-untitled5:before {
+	content: "\e906";
+}
+.ico-untitled6:before {
+	content: "\e907";
+}
+.ico-untitled7:before {
+	content: "\e908";
+}
+.ico-untitled8:before {
+	content: "\e909";
+}
+.ico-untitled9:before {
+	content: "\e90a";
+}
+.ico-untitled10:before {
+	content: "\e90b";
+}
+.ico-canada-flag:before {
+	content: "\e900";
+}
+.ico-x-circle:before {
+	content: "\e801";
+}
+.ico-printer-ink:before {
+	content: "\e800";
+}
+.ico-three-people:before {
+	content: "\e6e2";
+}
+.ico-long-arrow-diagnol:before {
+	content: "\e6e0";
+}
+.ico-wifi-rays:before {
+	content: "\e6e1";
+}
+.ico-x:before {
+	content: "\e6df";
+}
+.ico-bolt:before {
+	content: "\e6dc";
+}
+.ico-bullet-target:before {
+	content: "\e6dd";
+}
+.ico-check-mark:before {
+	content: "\e6de";
+}
+.ico-clock-solid:before {
+	content: "\e6d8";
+}
+.ico-dollar-sign-in-circle:before {
+	content: "\e6d9";
+}
+.ico-speedometer:before {
+	content: "\e6da";
+}
+.ico-traffic-cone:before {
+	content: "\e6cc";
+}
+.ico-chevron-pointing-down:before {
+	content: "\e6cd";
+}
+.ico-cent-sign:before {
+	content: "\e6ce";
+}
+.ico-magnifying-glass:before {
+	content: "\e6cf";
+}
+.ico-coupon-scissors:before {
+	content: "\e6d0";
+}
+.ico-wireless-router-computer-tower:before {
+	content: "\e6d1";
+}
+.ico-shopping-cart-cable-monitor-plug:before {
+	content: "\e6d2";
+}
+.ico-clock-free-time:before {
+	content: "\e6cb";
+}
+.ico-arrow-scale:before {
+	content: "\e6d6";
+}
+.ico-star-cutout:before {
+	content: "\e6ca";
+}
 .ico-person-signals-phone:before {
 	content: "\e637";
 }
@@ -471,6 +579,9 @@
 .ico-phone:before {
 	content: "\e636";
 }
+.ico-CheckAndDelete2:before {
+	content: "\e6d7";
+}
 .ico-user-laptop:before {
 	content: "\e638";
 }
@@ -864,9 +975,13 @@
 .ico-menu:before {
 	content: "\e6bb";
 }
+.ico-radio-checked:before {
+	content: "\e6db";
+}
 .ico-googleplus:before {
 	content: "\e61d";
 }
 .ico-export:before {
 	content: "\e63e";
 }
+
