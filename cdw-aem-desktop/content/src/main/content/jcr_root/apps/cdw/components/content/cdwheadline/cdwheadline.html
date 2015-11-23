@@ -2,21 +2,17 @@
 
 	<sly data-sly-test="${properties.textsize=='h2'}">
 		<h2 data-sly-test="${properties.headline1}" class="${properties.textstyle}"> ${properties.headline1}
-		<i data-sly-test="${properties.headline2 && properties.textstyle!='prelo-black'}"  class="ico-and-thinner"></i>
-        	<i data-sly-test="${properties.headline2 && properties.textstyle=='prelo-black'}"  class="ico-and"></i> ${properties.headline2}</h2>
+		<i data-sly-test="${properties.headline2}"  class="ico-and-thinner"></i> ${properties.headline2}</h2>
      </sly>
 
      <sly data-sly-test="${properties.textsize=='h3'}" >
 		<h3 data-sly-test="${properties.headline1}" class="${properties.textstyle}"> ${properties.headline1}
-		<i data-sly-test="${properties.headline2 && properties.textstyle!='prelo-black'}"  class="ico-and-thinner"></i> 
-		<i data-sly-test="${properties.headline2 && properties.textstyle=='prelo-black'}"  class="ico-and"></i> ${properties.headline2}</h3>
-
+		<i data-sly-test="${properties.headline2}"  class="ico-and-thinner"></i> ${properties.headline2}</h3>
      </sly>
 
 	<sly data-sly-test="${properties.textsize=='h4'}" >
 		<h4 data-sly-test="${properties.headline1}" class="${properties.textstyle}" > ${properties.headline1}
-		<i data-sly-test="${properties.headline2 && properties.textstyle!='prelo-black'}"  class="ico-and-thinner"></i>
-        	<i data-sly-test="${properties.headline2 && properties.textstyle=='prelo-black'}"  class="ico-and"></i> ${properties.headline2}</h4>
+		<i data-sly-test="${properties.headline2}"  class="ico-and-thinner"></i> ${properties.headline2}</h4>
     </sly>
 
  </div>

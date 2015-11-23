@@ -20,7 +20,9 @@ $(function() {
 		}
 		
 	});
-	
+
+SocialShare.init();	
+
 });
 
 //Pin Partner Nav to top on scoll

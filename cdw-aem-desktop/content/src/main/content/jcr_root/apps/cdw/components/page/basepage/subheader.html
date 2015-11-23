@@ -1,7 +1,10 @@
-<div class="layout" >
+<div class="layout" data-sly-test="${properties.enableSocialShare[0]||properties.enableBreadcrumbs[0]}">
     <div class="layout-12" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
-
-        <div data-sly-test="${utility.getSiteRootPagePath}"  data-sly-resource="${ '/jcr:content/breadcrumbs' @ prependPath=utility.getSiteRootPagePath, resourceType='/apps/cdw/components/content/cdwbreadcrumbs'}"
-             data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
+        <div class="top-row">
+            <div data-sly-test="${utility.getSiteRootPagePath}"
+                 data-sly-resource="${ '/jcr:content/breadcrumbs' @ prependPath=utility.getSiteRootPagePath, resourceType='/apps/cdw/components/content/cdwbreadcrumbs'}"
+                 data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
+            <ul data-sly-test="${properties.enableSocialShare[0]}" id="social-share" class="social-icons"></ul>
+        </div>
     </div>
 </div>

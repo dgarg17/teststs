@@ -1,6 +1,6 @@
-<div class="top-row" data-sly-use.breadCrumbs="${'com.cdw.aem.components.BreadCrumbsWCMUseHelper'}"
-     data-sly-test="${breadCrumbs.enabled}">
-    <breadcrumbs>
+
+    <breadcrumbs  data-sly-use.breadCrumbs="${'com.cdw.aem.components.BreadCrumbsWCMUseHelper'}"
+                  data-sly-test="${breadCrumbs.enabled}">
         <sly data-sly-list.child="${breadCrumbs.breadCrumbItems}">
             <a data-sly-test="${child.url}" href="${child.url}">${child.title}</a>
             <sly data-sly-test="${!childList.last}"> ${breadCrumbs.delimStr}</sly>
@@ -8,4 +8,3 @@
         </sly>
         ${breadCrumbs.trailStr}
     </breadcrumbs>
-</div>
