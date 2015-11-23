@@ -97,11 +97,11 @@
 	//Rows
 	.layout { @include outer-container;
 		.layout-6 { @include span-columns(12); }
-		.layout-4 { @include span-columns(6); 
-			&:nth-child(even) {
-				margin-right:0;
-			}
-		}
+		// .layout-4 { @include span-columns(6); 
+		// 	&:nth-child(even) {
+		// 		margin-right:0;
+		// 	}
+		// }
 		.layout-3 { @include span-columns(6); 
 			&:nth-child(even) {
 				margin-right:0;

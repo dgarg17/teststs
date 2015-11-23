@@ -43,7 +43,7 @@ var SocialShare = ( function( window, undefined ) {
 			}
 	
 		$.each(settings.networks, function (i, item) {
-			var href = settings.networkDefs[item].url.replace(/\|u\|/g, u).replace(/\|t\|/g, t).replace(/\|d\|/g, d).replace('/\|p\|/g', p).replace(/\|v\|/g, v);
+			var href = settings.networkDefs[item].url.replace(/\|u\|/g, u).replace(/\|t\|/g, t).replace(/\|d\|/g, d).replace(/\|p\|/g, p).replace(/\|v\|/g, v);
 	
 			$container.append("<li><a href='" + href + "' title='Share this page on " + item + "' class=''><i class='ico-"+ item +"'></i></a></li>");
 		});
