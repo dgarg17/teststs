@@ -1,34 +1,45 @@
 <div class="layout">
-    <div class="layout-4"  data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}" >
-        <a class="PGA" data-sly-test="${properties.logoLink"
+    <div class="layout-4" data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
+        <a class="PGA" data-sly-test="${properties.logoLink}"
            data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url= properties.logoLink}"
            href="${link.urlUpdate}" title="${properties.logoAltText}" target="_blank">
-            <img src="${utility.s7ImageRoot}${properties.logoImage}?$premiumPageLogoG$" alt="${properties.logoAltText}" border="0" class="img-responsive">
+            <img src="${utility.s7ImageRoot}${properties.logoImage}?$premiumPageLogoG$" alt="${properties.logoAltText}"
+                 border="0" class="img-responsive">
         </a>
-        <a class="PGA" data-sly-test="${(!properties.logoLink)&&utility.canonicalDomain}"      data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url= utility.canonicalDomain}"  href="${link.urlUpdate}" title="${properties.logoAltText}" target="_blank">
-        <img data-sly-test="${!properties.logoLink}"  src="${utility.s7ImageRoot}${properties.logoImage}?$premiumPageLogoG$" alt="${properties.logoAltText}" border="0" class="img-responsive">
+        <a class="PGA" data-sly-test="${(!properties.logoLink)&&utility.canonicalDomain}"
+           data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url= utility.canonicalDomain}"
+           href="${link.urlUpdate}" title="${properties.logoAltText}" target="_blank">
+            <img data-sly-test="${!properties.logoLink}"
+                 src="${utility.s7ImageRoot}${properties.logoImage}?$premiumPageLogoG$" alt="${properties.logoAltText}"
+                 border="0" class="img-responsive">
         </a>
-        <img data-sly-test="${!properties.logoLink&&!utility.canonicalDomain}"  src="${utility.s7ImageRoot}${properties.logoImage}?$premiumPageLogoG$" alt="${properties.logoAltText}" border="0" class="img-responsive">
+        <img data-sly-test="${!properties.logoLink&&!utility.canonicalDomain}"
+             src="${utility.s7ImageRoot}${properties.logoImage}?$premiumPageLogoG$" alt="${properties.logoAltText}"
+             border="0" class="img-responsive">
     </div>
     <div class="layout-4">
-        <div class="text-center disclaimer" data-sly-use.footerLink="${'com.cdw.aem.components.FooterLinkWCMUseHelper' @json= properties.links}">
+        <div class="text-center disclaimer"
+             data-sly-use.footerLink="${'com.cdw.aem.components.FooterLinkWCMUseHelper' @json= properties.links}">
             <br>
-            <sly data-sly-list.footer="${footerLink.footerLinks}" >
-            <a  href="${footer.link}" class="" >${footer.title}</a>
+            <sly data-sly-list.footer="${footerLink.footerLinks}">
+                <a href="${footer.link}" class="">${footer.title}</a>
                 <sly data-sly-test="${!footerList.last}">|</sly>
 
-            </sly> <br>
+            </sly>
+            <br>
 
-           ${properties.copyright}
+            ${properties.copyright}
         </div>
     </div>
     <div class="layout-4">
         <div class="pFooter-hold">
             <a class="" href="javascript:void();" onclick="" target="_blank">
-                <img src="https://img.cdw.com/cdw/shop/e-account/verisign.gif" alt="Verisign Secured" border="0" class="">
+                <img src="https://img.cdw.com/cdw/shop/e-account/verisign.gif" alt="Verisign Secured" border="0"
+                     class="">
             </a>
             <a class="" href="javascript:void();" onclick="" target="_blank">
-                <img src="https://webobjects2.cdw.com/is/image/CDW/BetterBusinessBureau-horizontal?$mfg_large$" alt="BBB Accredited Busines" class="">
+                <img src="https://webobjects2.cdw.com/is/image/CDW/BetterBusinessBureau-horizontal?$mfg_large$"
+                     alt="BBB Accredited Busines" class="">
             </a>
         </div>
     </div>
