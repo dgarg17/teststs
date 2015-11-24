@@ -137,6 +137,10 @@
                                     </linkAttributes>
                                 </linkDialogConfig>
                             </links>
+							<texthighlight
+	                            jcr:primaryType="nt:unstructured"
+	                            colors="[8C8C8E,00A8E2,00AFAB,F8BF00,76BD22,F28B00,A45B96,FF828A]"
+	                            features="*"/>
                             <misctools
                                 jcr:primaryType="nt:unstructured"
                                 features="[specialchars]">
