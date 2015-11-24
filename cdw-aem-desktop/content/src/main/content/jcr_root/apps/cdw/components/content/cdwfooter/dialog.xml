@@ -27,7 +27,7 @@
                 jcr:primaryType="cq:Widget"
                 fieldLabel="Copyright"
                 name="./copyright"
-                 xtype="pathfield"/>
+                xtype="textfield"/>
         <links
                 jcr:primaryType="cq:Widget"
                 collapsed="{Boolean}true"
