@@ -36,6 +36,7 @@ ExperienceAEM.TextHighlight.Plugin = new Class({
 
         var colorField = new CQ.form.ColorField({
             fieldLabel: "Highlight Color",
+			fieldDescription: "When highlight is applied, text color will render as white.",
             showHexValue: true
         });
 
@@ -146,7 +147,7 @@ ExperienceAEM.TextHighlight.Cmd = new Class({
                 return;
             }
 
-            nodeList.surround(execDef.editContext, "span", { style: "background-color:#" + execDef.value } );
+            nodeList.surround(execDef.editContext, "span", { style: "color:#FFFFFF;background-color:#" + execDef.value } );
         }catch(err){
             console.log("Error applying or removing highlight - " + err);
         }
