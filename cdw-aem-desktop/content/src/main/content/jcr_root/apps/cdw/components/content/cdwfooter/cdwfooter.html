@@ -3,18 +3,18 @@
         <a  data-sly-test="${properties.logoLink}"
            data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url= properties.logoLink}"
            href="${link.urlUpdate}" title="${properties.logoAltText}" target="_blank">
-            <img src="${utility.s7ImageRoot}${properties.logoImage}?$premiumPageLogoG$" alt="${properties.logoAltText}"
+            <img src="${utility.s7ImageRoot}${properties.logoImage}?$petite-footer$" alt="${properties.logoAltText}"
                  border="0" class="img-responsive">
         </a>
         <a data-sly-test="${(!properties.logoLink)&&utility.canonicalDomain}"
            data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url= utility.canonicalDomain}"
            href="${link.urlUpdate}" title="${properties.logoAltText}" target="_blank">
             <img data-sly-test="${!properties.logoLink}"
-                 src="${utility.s7ImageRoot}${properties.logoImage}?$premiumPageLogoG$" alt="${properties.logoAltText}"
+                 src="${utility.s7ImageRoot}${properties.logoImage}?$petite-footer$" alt="${properties.logoAltText}"
                  border="0" class="img-responsive">
         </a>
         <img data-sly-test="${!properties.logoLink&&!utility.canonicalDomain}"
-             src="${utility.s7ImageRoot}${properties.logoImage}?$premiumPageLogoG$" alt="${properties.logoAltText}"
+             src="${utility.s7ImageRoot}${properties.logoImage}?$petite-footer$" alt="${properties.logoAltText}"
              border="0" class="img-responsive">
     </div>
     <div class="layout-4">
