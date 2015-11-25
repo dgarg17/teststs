@@ -4,4 +4,4 @@
     jcr:title="CDW - Footer"
     sling:resourceSuperType="foundation/components/parbase"
     allowedParents="[*/parsys]"
-    componentGroup="CDW - General"/>
+    componentGroup=".hidden"/>

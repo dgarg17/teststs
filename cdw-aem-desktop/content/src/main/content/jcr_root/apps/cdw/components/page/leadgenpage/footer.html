@@ -1,5 +1,0 @@
-<footer data-sly-use.utility="${'com.cdw.aem.util.components.UtilityWCMUseHelper'}">
-  <div data-sly-test="${utility.getSiteRootPagePath}"  data-sly-resource="${ '/jcr:content/footer' @ prependPath=utility.getSiteRootPagePath, resourceType='/apps/cdw/components/content/cdwfooter'}"
-       data-sly-unwrap></div><!--/* /data-sly-unwrap */-->
-  <div data-sly-test="${!utility.getSiteRootPagePath && (wcmmode.edit || wcmmode.design)}" >Site Root not configured for this site, please create a Site Root page at the base of this site </div>
-</footer>
