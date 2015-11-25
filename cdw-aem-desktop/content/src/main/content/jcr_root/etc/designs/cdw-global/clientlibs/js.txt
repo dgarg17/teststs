@@ -11,9 +11,8 @@ youtube.js
 secondaryLinks.js
 partnerLinks.js
 rrcms.js
-<<<<<<< HEAD
 youtubePlaylist.js
 scrollTriggers.js
-=======
 social-share.js
->>>>>>> FED-Sprint9
+jquery-ui.min.js
+
