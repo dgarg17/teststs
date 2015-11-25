@@ -7,8 +7,13 @@ openModal.prototype.open = function(url, ensightenEventType, ensightenEventData)
 	var width = 800;
 	var height = 600;
 
-	if (typeof CdwTagMan !== 'undefined') {
-		CdwTagMan.createElementPageTag(window.cdwTagManagementData.page_name, ensightenEventData);
+	if (typeof CdwTagMan !== 'undefined' && ensightenEventData.length > 0) {
+		if (ensightenEventType == 'pEvent') {
+			CdwTagMan.createPromotionTag('Site Promotion', ensightenEventData);
+		}
+		else {
+			CdwTagMan.createElementPageTag(window.cdwTagManagementData.page_name, ensightenEventData);
+		}
 	}
 	
 	$.ajax({
