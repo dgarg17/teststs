@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Breadcrumb (Design)"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <logoImage
+                jcr:primaryType="cq:Widget"
+                fieldDescription="Scene7 Image name for footer logo"
+                fieldLabel="Logo Image"
+                allowBlank="{Boolean}false"
+                name="./logoImage"
+                xtype="textfield"/>
+        <logoAltText
+                jcr:primaryType="cq:Widget"
+                fieldDescription="Alt text for the logo"
+                fieldLabel="Logo Alt Text"
+                name="./logoAltText"
+                xtype="textfield"/>
+        <logoLink
+                jcr:primaryType="cq:Widget"
+                fieldDescription="Link for the logo"
+                fieldLabel="Logo link"
+                name="./logoLink"
+                xtype="pathfield"/>
+        <copyright
+                jcr:primaryType="cq:Widget"
+                fieldLabel="Copyright"
+                name="./copyright"/>
+        <links
+                jcr:primaryType="cq:Widget"
+                collapsed="{Boolean}true"
+                collapsible="{Boolean}true"
+                title="links"
+                xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <linkItems
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add link"
+                        autoScroll="{Boolean}true"
+                        hideLabel="{Boolean}true"
+                        cls="multifieldcls"
+                        width="100%"
+                        name="./links"
+                        title="footer links"
+                        xtype="multifield">
+                    <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            baseCls="multifieldpanelbasecls"
+                            cls="cssmultifieldpanel"
+                            ctCls="multifieldpanelcollapsedctcls"
+                            xtype="multifieldpanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <link
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    emptyText="link"
+                                    key="title"
+                                    width="80%"
+                                    xtype="textfield"/>
+                            <linkUrl
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    emptyText="link url"
+                                    key="link"
+                                    width="80%"
+                                    xtype="pathfield"/>
+                        </items>
+                    </fieldConfig>
+                </linkItems>
+            </items>
+        </links>
+    </items>
+</jcr:root>

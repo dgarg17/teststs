@@ -1,4 +1,8 @@
 $(function() {
+	
+	// jQuery UI tabs
+	$( "#tabs" ).tabs();
+	
 	/* Partner Solution Nav */
 	$('header').find('.nav-collapsed').on('click', function() {
 		$(this).next('.nav').slideToggle(300);
@@ -20,7 +24,10 @@ $(function() {
 		}
 		
 	});
-	
+
+SocialShare.init();	
+
+
 });
 
 //Pin Partner Nav to top on scoll
