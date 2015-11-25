@@ -2,38 +2,31 @@ var openModal = function (o) {
 	// No Constructor
 };
 
-openModal.prototype.open = function(url, description, width, height, iframe) {
+openModal.prototype.open = function(url, ensightenEventType, ensightenEventData) {
 	var self = this;
-	
+	var width = 800;
+	var height = 600;
+
 	if (typeof CdwTagMan !== 'undefined') {
-		CdwTagMan.createElementPageTag(window.cdwTagManagementData.page_name, description);
+		CdwTagMan.createElementPageTag(window.cdwTagManagementData.page_name, ensightenEventData);
 	}
 	
-	if (iframe == "iframe") {
-		$('body').append('<div class="modal-overlay"><iframe class="modal-inner" src="' + url + '"></iframe></div>');
+	$.ajax({
+		url: url,
+		context: document.body
+	}).done(function(content) {
+		$('body').append('<div class="modal-overlay"><div class="modal-inner"></div></div>');
+		$(".modal-inner").html(content);
 		$(".modal-overlay").prepend("<i class='close-button ico-x'></i>");
 		self.resize(width,height);
 		self.setupClickHandlers();
-	}
-	
-	else {
-		$.ajax({
-			url: url,
-			context: document.body
-		}).done(function(content) {
-			$('body').append('<div class="modal-overlay"><div class="modal-inner"></div></div>');
-			$(".modal-inner").html(content);
-			$(".modal-overlay").prepend("<i class='close-button ico-x'></i>");
-			self.resize(width,height);
-			self.setupClickHandlers();
-		}).error(function() {
-			$('body').append('<div class="modal-overlay"><div class="modal-inner"></div></div>');
-			$(".modal-inner").html("<div class='error-message'>Page not found.</div>");
-			$(".modal-overlay").prepend("<i class='close-button ico-x'></i>");
-			self.resize(width,height);
-			self.setupClickHandlers();
-		});
-	}
+	}).error(function() {
+		$('body').append('<div class="modal-overlay"><div class="modal-inner"></div></div>');
+		$(".modal-inner").html("<div class='error-message'>Page not found.</div>");
+		$(".modal-overlay").prepend("<i class='close-button ico-x'></i>");
+		self.resize(width,height);
+		self.setupClickHandlers();
+	});
 	
 	$(window).resize(function() {
 		self.resize(width,height);
