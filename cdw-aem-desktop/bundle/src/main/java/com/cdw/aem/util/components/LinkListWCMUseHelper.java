@@ -49,8 +49,10 @@ public class LinkListWCMUseHelper extends EnsightenTaggingWCMUseHelper {
         for(LinkList linkList:linkLists){
             if(count==1&&linkLists.size()==1){
                 linkList.setEventDetails(getTaggingEvent());
+                linkList.setModelTaggingParam(getSecondParam());
             }else {
                 linkList.setEventDetails(getTaggingEvent(getEventData(), getEventTitle(), getEventType()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, getElementType().toUpperCase() + "-" + count));
+                linkList.setModelTaggingParam(getSecondParam(getEventData(),getEventTitle()).replaceAll(COMPONENTNAME, getComponent().getName()).replaceAll(ELEMENTTYPE, getElementType().toUpperCase() + "-" + count));
 
             }count++;
         }
@@ -72,6 +74,7 @@ public class LinkListWCMUseHelper extends EnsightenTaggingWCMUseHelper {
 
         return "[" + json + "]";
     }
+
 
     public int getCount() {
         return  linksJson.length;

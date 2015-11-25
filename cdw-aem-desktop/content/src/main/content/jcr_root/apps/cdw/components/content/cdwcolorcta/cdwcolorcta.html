@@ -5,6 +5,27 @@
 	<h5 data-sly-test="${properties.headline}">${properties.headline}</h5>
 	<p data-sly-test="${properties.bodytext}">${properties.bodytext}</p>
 	<div class="button-lockup" data-sly-use.event="${'com.cdw.aem.components.EnsightenTaggingWCMUseHelper' @elementType='CTA'}">
+
+		<a
+				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
+				href="${link.urlUpdate}"
+				title="${properties.linkTitle}"
+				data-sly-test="${((properties.eventTitle||properties.eventData))&&properties.ctalink&&(properties.ctatarget!='_model')}"
+				target="${properties.ctatarget}"
+				onclick="${event.taggingEvent @context='html'}"
+				class="button -clear">
+			${properties.cdwctalabel}
+		</a>
+		<a
+				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
+				href="#"
+				title="${properties.linkTitle}"
+				data-sly-test="${((properties.eventTitle||properties.eventData))&&properties.ctalink&&(properties.ctatarget=='_model')}"
+				onclick="cdwModal.open('${link.urlUpdate}', '${event.eventType}', '${event.secondParam}');"
+				class="button -clear">
+			${properties.cdwctalabel}
+		</a>
+
 		<a
 			data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
 			href="${link.urlUpdate}"
@@ -14,16 +35,7 @@
 			class="button -clear">
 			${properties.cdwctalabel}
 		</a>
-		<a
-				data-sly-use.link="${'com.cdw.aem.util.components.LinkUtilWCMUseHelper' @url=properties.ctalink}"
-				href="${link.urlUpdate}"
-				title="${properties.linkTitle}"
-				data-sly-test="${((properties.eventTitle||properties.eventData))&&properties.ctalink}"
-				target="${(properties.eventTitle||properties.eventData)&&properties.ctatarget}"
-				onclick="${event.taggingEvent @context='html'}"
-				class="button -clear">
-			${properties.cdwctalabel}
-		</a>
+
 	</div>
 </div>
 

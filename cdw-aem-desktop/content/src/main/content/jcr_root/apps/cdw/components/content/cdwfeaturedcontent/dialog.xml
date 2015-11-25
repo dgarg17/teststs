@@ -56,6 +56,10 @@
                                 jcr:primaryType="nt:unstructured"
                                 text="Same Window (Default)"
                                 value="_self"/>
+                            <model
+                                jcr:primaryType="nt:unstructured"
+                                text="Model Window"
+                                value="_model"/>
                         </options>
                     </headLineTextTarget>
                     <redbarhighlight

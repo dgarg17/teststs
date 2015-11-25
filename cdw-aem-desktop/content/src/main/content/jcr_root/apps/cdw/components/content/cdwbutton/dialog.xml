@@ -61,6 +61,10 @@
                                         jcr:primaryType="nt:unstructured"
                                         text="New Window"
                                         value="_blank"/>
+                                    <model
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Model Window"
+                                        value="_model"/>
                                 </options>
                             </ctatarget>
                         </items>

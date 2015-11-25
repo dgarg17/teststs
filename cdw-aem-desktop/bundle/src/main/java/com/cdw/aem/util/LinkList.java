@@ -9,6 +9,7 @@ public class LinkList {
     private String ctalink;
     private String ctatarget="_blank";
     private String eventDetails="";
+    private String modelTaggingParam;
 
 
     public String getCtalabel() {
@@ -41,5 +42,13 @@ public class LinkList {
 
     public void setEventDetails(String eventDetails) {
         this.eventDetails = eventDetails;
+    }
+
+    public String getModelTaggingParam() {
+        return modelTaggingParam;
+    }
+
+    public void setModelTaggingParam(String modelTaggingParam) {
+        this.modelTaggingParam = modelTaggingParam;
     }
 }

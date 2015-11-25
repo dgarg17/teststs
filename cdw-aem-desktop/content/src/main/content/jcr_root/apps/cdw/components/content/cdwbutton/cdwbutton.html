@@ -4,12 +4,19 @@
 	<div class="button-lockup ${properties.alignment}"
          data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks,elementType='cta'}"
          data-sly-test="${properties.ctaLinks&&ctaLinks.count==1}">
-         <a href="${ctaLinks.linkDetails[0].ctalink}"
-            data-sly-test="${(properties.eventData|| properties.eventTitle)}"
+         <a href="#"
+            data-sly-test="${(properties.eventData|| properties.eventTitle)&&(ctaLinks.linkDetails[0].ctatarget=='_model')}"
             title="${properties.linkTitle}"
-           target="${ctaLinks.linkDetails[0].ctatarget}"
-            onclick="${ctaLinks.linkDetails[0].eventDetails @context='html'}"
+            onclick="cdwModal.open('${ctaLinks.linkDetails[0].ctalink @context='html'}', '${ctaLinks.eventType @context='html'}', '${ctaLinks.linkDetails[0].modelTaggingParam @context='html'}');"
            class="button ${properties.buttonStyle}">${ctaLinks.linkDetails[0].ctalabel} </a>
+
+        <a href="${ctaLinks.linkDetails[0].ctalink}"
+           data-sly-test="${(properties.eventData|| properties.eventTitle)&&(ctaLinks.linkDetails[0].ctatarget!='_model')}"
+           title="${properties.linkTitle}"
+           target="${ctaLinks.linkDetails[0].ctatarget}"
+           onclick="${ctaLinks.linkDetails[0].eventDetails @context='html'}"
+           class="button ${properties.buttonStyle}">${ctaLinks.linkDetails[0].ctalabel} </a>
+
         <a href="${ctaLinks.linkDetails[0].ctalink}"
            title="${properties.linkTitle}"
            data-sly-test="${!(properties.eventData|| properties.eventTitle)}"
@@ -22,11 +29,17 @@
                 data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks,elementType='links-secondary'}"
                 >
 			<option></option>
-            <sly data-sly-list="${ctaLinks.linkDetails}"    data-sly-test="${(properties.eventData|| properties.eventTitle)}" >
+            <sly data-sly-list="${ctaLinks.linkDetails}"    data-sly-test="${(properties.eventData|| properties.eventTitle)&&(ctaLinks.linkDetails[0].ctatarget=='_model')}" >
+            <option class="${properties.buttonStyle}" value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}" data-eventType="'${ctaLinks.eventType @context='html'}" data-modelTaggingData="${ctaLinks.linkDetails[0].modelTaggingParam @context='html'}">
+                ${item.ctalabel}
+            </option>
+        </sly>
+        <sly data-sly-list="${ctaLinks.linkDetails}"    data-sly-test="${(properties.eventData|| properties.eventTitle)&&(ctaLinks.linkDetails[0].ctatarget!='_model')}" >
             <option class="${properties.buttonStyle}" value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}" data-change="${item.eventDetails @context='html'}">
                 ${item.ctalabel}
             </option>
         </sly>
+
             <sly data-sly-list="${ctaLinks.linkDetails}"    data-sly-test="${!(properties.eventData|| properties.eventTitle)}">
                 <option class="${properties.buttonStyle}" value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}">
                     ${item.ctalabel}
@@ -37,7 +50,12 @@
                 data-sly-use.ctaLinks="${'com.cdw.aem.util.components.LinkListWCMUseHelper' @json=properties.ctaLinks,elementType='links-secondary'}">
             <option></option>
             <!--closing option-->
-            <sly data-sly-list="${ctaLinks.linkDetails}"  data-sly-test="${(properties.eventData|| properties.eventTitle)}">
+            <sly data-sly-list="${ctaLinks.linkDetails}"  data-sly-test="${(properties.eventData|| properties.eventTitle)&&(ctaLinks.linkDetails[0].ctatarget=='_model')}">
+                <option value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}"  data-eventType="'${ctaLinks.eventType @context='html'}" data-modelTaggingData="${ctaLinks.linkDetails[0].modelTaggingParam @context='html'}">
+                    ${item.ctalabel}
+                </option>
+            </sly>
+            <sly data-sly-list="${ctaLinks.linkDetails}"  data-sly-test="${(properties.eventData|| properties.eventTitle)&&(ctaLinks.linkDetails[0].ctatarget!='_model')}">
                 <option value="${item.ctalabel}" data-target="${item.ctatarget}" data-link="${item.ctalink}" data-change="${item.eventDetails @context='html'}">
                     ${item.ctalabel}
                 </option>
