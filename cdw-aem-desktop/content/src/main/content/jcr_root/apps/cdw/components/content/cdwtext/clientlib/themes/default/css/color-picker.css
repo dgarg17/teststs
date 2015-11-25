@@ -1,3 +1,7 @@
 #CQ .x-html-editor-tb .x-edit-addcolor {
     background: url(addcolor.png) center no-repeat;
 }
+
+#CQ .x-html-editor-tb .x-edit-addhighlight {
+    background: url(addhighlight.png) center no-repeat;
+}
