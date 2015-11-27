@@ -39,7 +39,7 @@
                                 <sectionId
                                     jcr:primaryType="cq:Widget"
                                     allowBlank="{Boolean}false"
-                                    fieldDescription="Numbers only in this field, two-digits maximum, and value must be completely unique per page."
+                                    fieldDescription="Numbers only in this field, two-digits maximum, and value must be completely unique per page. IMPORTANT: avoid changing this value once content is configured within the section."
                                     fieldLabel="Section Id"
                                     key="sectionId"
                                     maxLength="{Long}2"
@@ -63,51 +63,51 @@
                                         <layout-3-6-3
                                             jcr:primaryType="nt:unstructured"
                                             text="Layout 3-6-3"
-                                            value="layout-3|layout-6|layout-3"/>
+                                            value="layout-3,layout-6,layout-3"/>
                                         <layout-6-3-3
                                             jcr:primaryType="nt:unstructured"
                                             text="Layout 6-3-3"
-                                            value="layout-6|layout-3|layout-3"/>
+                                            value="layout-6,layout-3,layout-3"/>
                                         <layout-3-3-3-3
                                             jcr:primaryType="nt:unstructured"
                                             text="Layout 3-3-3-3"
-                                            value="layout-3|layout-3|layout-3|layout-3"/>
+                                            value="layout-3,layout-3,layout-3,layout-3"/>
                                         <layout-4-4-4
                                             jcr:primaryType="nt:unstructured"
                                             text="Layout 4-4-4"
-                                            value="layout-4|layout-4|layout-4"/>
+                                            value="layout-4,layout-4,layout-4"/>
                                         <layout-4-4-2-2
                                             jcr:primaryType="nt:unstructured"
                                             text="Layout 4-4-2-2"
-                                            value="layout-4|layout-4|layout-2|layout-2"/>
+                                            value="layout-4,layout-4,layout-2,layout-2"/>
                                         <layout-6-6
                                             jcr:primaryType="nt:unstructured"
                                             text="Layout 6-6"
-                                            value="layout-6|layout-6"/>
+                                            value="layout-6,layout-6"/>
                                         <layout-7-5
                                             jcr:primaryType="nt:unstructured"
                                             text="Layout 7-5"
-                                            value="layout-7|layout-5"/>
+                                            value="layout-7,layout-5"/>
                                         <layout-5-7
                                             jcr:primaryType="nt:unstructured"
                                             text="Layout 5-7"
-                                            value="layout-5|layout-7"/>
+                                            value="layout-5,layout-7"/>
                                         <layout-9-3
                                             jcr:primaryType="nt:unstructured"
                                             text="Layout 9-3"
-                                            value="layout-9|layout-3"/>
+                                            value="layout-9,layout-3"/>
                                         <layout-3-9
                                             jcr:primaryType="nt:unstructured"
                                             text="Layout 3-9"
-                                            value="layout-3|layout-9"/>
+                                            value="layout-3,layout-9"/>
                                         <layout-8-4
                                             jcr:primaryType="nt:unstructured"
                                             text="Layout 8-4"
-                                            value="layout-8|layout-4"/>
+                                            value="layout-8,layout-4"/>
                                         <layout-4-8
                                             jcr:primaryType="nt:unstructured"
                                             text="Layout 4-8"
-                                            value="layout-4|layout-8"/>
+                                            value="layout-4,layout-8"/>
                                     </options>
                                 </innerLayout>
                             </items>

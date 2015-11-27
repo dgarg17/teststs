@@ -23,8 +23,20 @@ public class MultiLayoutWCMUseHelper extends WCMUse {
 			sectionsJson = new String[1];
             sectionsJson[0] = get("json", String.class);
         }
+		initSections();
+	}
+	
+	private void initSections() {
 		sections = new Gson().fromJson(concatJson(sectionsJson), new TypeToken<List<MultiLayoutItem>>() {
         }.getType());
+		for (MultiLayoutItem section : sections) {
+			try{
+				section.initSubSections(log);
+			} catch (Exception e) {
+				log.error("Caught Exception Initializing SubSections", e);
+			}
+			
+		}
 	}
 	
 	private String concatJson(String[] jsonArray) {

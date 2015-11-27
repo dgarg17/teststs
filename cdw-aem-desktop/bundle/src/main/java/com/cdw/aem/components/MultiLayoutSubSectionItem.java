@@ -5,7 +5,7 @@ public class MultiLayoutSubSectionItem {
 	public String layoutClass = "layout-12";
 	public String parsysPath = "";
 	
-	public MultiLayoutSubSectionItem(String layoutClass, String sectionId, int index) {
+	public MultiLayoutSubSectionItem(String layoutClass, String sectionId, int index) throws Exception {
 		this.layoutClass = layoutClass;
 		this.parsysPath = "section-" + sectionId + "/col-" + index + "-par";
 	}

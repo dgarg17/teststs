@@ -2,19 +2,11 @@
 <div data-sly-test="${properties.layoutStyle && properties.layoutStyle != 'normal'}" 
      class="layout${properties.layoutStyle}">
     <div class="cc-child-bg" style="background-image:url('${currentNode.path @ context='styleString'}.img.png');background-color:#${properties.backgroundColor @ context='styleString'};">
-	<div class="layout">
-	  <div class="layout-12">
-	  <sly data-sly-test="${properties.layoutType}" data-sly-include="${properties.layoutType}"></sly>
-	  <sly data-sly-test="${!properties.layoutType}" data-sly-include="./layouts/tabs.html"></sly>
-	  </div>
-	</div>
+	<sly data-sly-test="${properties.layoutType}" data-sly-include="${properties.layoutType}"></sly>
+	<sly data-sly-test="${!properties.layoutType}" data-sly-include="./layouts/tabs.html"></sly>
 </div>
 </div>
 <div data-sly-test="${!properties.layoutStyle || properties.layoutStyle == 'normal'}" class="layout-normal">
-	<div class="layout">
-	  <div class="layout-12">
-	  <sly data-sly-test="${properties.layoutType}" data-sly-include="${properties.layoutType}"></sly>
-	  <sly data-sly-test="${!properties.layoutType}" data-sly-include="./layouts/tabs.html"></sly>
-	  </div>
-	</div>
+	<sly data-sly-test="${properties.layoutType}" data-sly-include="${properties.layoutType}"></sly>
+	<sly data-sly-test="${!properties.layoutType}" data-sly-include="./layouts/tabs.html"></sly>
 </div>

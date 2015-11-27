@@ -6,6 +6,8 @@ import java.util.List;
 
 import com.cdw.aem.components.MultiLayoutSubSectionItem;
 
+import org.slf4j.Logger;
+
 public class  MultiLayoutItem {
 	
 	public String sectionTitle = "";
@@ -35,10 +37,17 @@ public class  MultiLayoutItem {
 	
 	public void setLayout(String layout) {
 		this.layout = layout;
-		String[] tempSplit = layout.split("|");
+	}
+	
+	public void initSubSections(Logger log) throws Exception {
+		log.info("MultiLayoutItem - Raw Layout Text : " + layout);
+		String[] tempSplit = layout.split(",");
 		subSections = new ArrayList<MultiLayoutSubSectionItem>();
-		for (int i=0; i < tempSplit.length(); i ++) {
-			subSections.add(new MultiLayoutSubSectionItem(tempSplit[i], sectionId, i));
+		log.info("MultiLayoutItem - Split Layout Length : " + tempSplit.length);
+		for (int i = 0; i < tempSplit.length; i ++) {
+			log.info("MultiLayoutItem - LOOPING : " + i + " | " + tempSplit[i]);
+			MultiLayoutSubSectionItem item = new MultiLayoutSubSectionItem(tempSplit[i], sectionId, i);
+			subSections.add(item);
 		}
 	}
 	
