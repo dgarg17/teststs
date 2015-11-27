@@ -15,7 +15,7 @@ public class MultiLayoutWCMUseHelper extends WCMUse {
 
 	private List<MultiLayoutItem> sections;
 	private String[] sectionsJson;
-	private String accordionId = "accordion-closed";
+	private String accordionId = "accordion-close";
 	
 	@Override
     public void activate() throws Exception {
