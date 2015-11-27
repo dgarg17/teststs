@@ -15,6 +15,7 @@ public class MultiLayoutWCMUseHelper extends WCMUse {
 
 	private List<MultiLayoutItem> sections;
 	private String[] sectionsJson;
+	private String accordionId = "accordion-closed";
 	
 	@Override
     public void activate() throws Exception {
@@ -24,6 +25,9 @@ public class MultiLayoutWCMUseHelper extends WCMUse {
             sectionsJson[0] = get("json", String.class);
         }
 		initSections();
+		if ("true".equals(getProperties().get("expandFirstOnLoad", "false"))) {
+			accordionId = "accordion";
+		}
 	}
 	
 	private void initSections() {
@@ -58,5 +62,9 @@ public class MultiLayoutWCMUseHelper extends WCMUse {
 
 	public List<MultiLayoutItem> getSections(){
 		return sections;
+	}
+	
+	public String getAccordionId() {
+		return accordionId;
 	}
 }

@@ -1,1 +1,36 @@
-ACCORDION
+<sly data-sly-use.multiLayoutHelper="${'com.cdw.aem.components.MultiLayoutWCMUseHelper' @json=properties.sections}">
+<div class="layout">
+	<div class="layout-12">
+		<div id="${multiLayoutHelper.accordionId}" class="accordion-section ${properties.accordionStyle}">
+			<sly data-sly-test="${(!wcmmode.edit && !wcmmode.design)}">
+				<sly data-sly-list.section="${multiLayoutHelper.sections}">
+					<h5><span class="ico-plus"></span>${section.sectionTitle}</h5>
+					<div class="accordion-divider">
+						<div class="layout">
+							<sly data-sly-list.subSection="${section.subSections}">
+							<div class="${subSection.layoutClass}">
+							<sly data-sly-resource="${ @path=subSection.parsysPath, resourceType='foundation/components/parsys'}"></sly>
+							</div>
+							</sly>
+						</div>
+					</div>
+				</sly>
+			</sly>
+			<sly data-sly-test="${(wcmmode.edit || wcmmode.design)}">
+				<h6>Accordion Behavior Disabled in Edit and Design mode - please configure your content using the component dialog and the paragraph systems below below.</h6>
+				<p>To preview accordion behavior, switch to Preview mode and refresh browser.</p>
+				<sly data-sly-list.section="${multiLayoutHelper.sections}">
+					<h3>${section.sectionTitle}<h3>
+					<div class="layout">
+						<sly data-sly-list.subSection="${section.subSections}">
+						<div class="${subSection.layoutClass}">
+						<sly data-sly-resource="${ @path=subSection.parsysPath, resourceType='foundation/components/parsys'}"></sly>
+						</div>
+						</sly>
+					</div>
+				</sly>
+			</sly>
+		</div>
+	</div>
+</div>
+</sly>

@@ -184,6 +184,29 @@
                                 value="-border-dark"/>
                         </options>
                     </tabStyle>
+					<accordionStyle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="-noBorder-lite"
+                        fieldDescription="This style definition will only apply when the Accordion layout type is selected."
+                        fieldLabel="Accordion Style"
+                        name="./accordionStyle"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <noBorder-Lite
+                                jcr:primaryType="nt:unstructured"
+                                text="Large (Default)"
+                                value="-size24"/>
+                            <noBorder-Dark
+                                jcr:primaryType="nt:unstructured"
+                                text="Medium"
+                                value="-size16"/>
+                            <Border-Lite
+                                jcr:primaryType="nt:unstructured"
+                                text="Small"
+                                value="-size14"/>
+                        </options>
+                    </accordionStyle>
                     <backgroundcolor
                         jcr:primaryType="cq:Widget"
                         colors="[FFFFFF,898B8E,4D4E53,CC0000]"
@@ -196,6 +219,7 @@
                         jcr:primaryType="cq:Widget"
                         fieldDescription="This field will only take effect for the Accordion layout - by nature the tab layout always shows the first section."
                         fieldLabel="Expand First Section On Load?"
+						name="./expandFirstOnLoad"
                         type="checkbox"
                         xtype="selection"/>
                 </items>
