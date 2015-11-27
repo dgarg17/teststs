@@ -8,10 +8,69 @@
         jcr:primaryType="cq:Widget"
         xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
-            <secondarryLinks
-                jcr:primaryType="cq:Widget"
-                path="/apps/cdw/components/content/cdwsubcategoryproduct/dialog/items/secondaryLinks.infinity.json"
-                xtype="cqinclude"/>
+            <secondaryLinks
+                    jcr:primaryType="cq:Widget"
+                    autoScroll="{Boolean}true"
+                    cls="multifieldcls"
+                    name="./secondaryLinks"
+                    title="Secondary Links "
+                    addItemLabel="Add New Link"
+                    xtype="multifield">
+                <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        baseCls="multifieldpanelbasecls"
+                        cls="cssmultifieldpanel"
+                        ctCls="multifieldpanelcollapsedctcls"
+                        xtype="multifieldpanel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <ctalabel
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Maximum of 30 characters"
+                                fieldLabel="CTA Label"
+                                maxLength="{Long}30"
+                                width="80%"
+                                name="secondaryCtaLabel"
+                                allowBlank="{Boolean}false"
+                                key="ctalabel"
+                                xtype="textfield"/>
+                        <ctalink
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="CTA Link"
+                                cls="csspathfield"
+                                name="secondaryCtalink"
+                                key="ctalink"
+                                allowBlank="{Boolean}false"
+                                xtype="pathfield"/>
+                        <ctatarget
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="_self"
+                                fieldDescription="CTA link opens in same window by default."
+                                fieldLabel="CTA Target"
+                                name="secondaryCtaTarget"
+                                cls="cssselectfield"
+                                key="ctatarget"
+                                type="select"
+                                xtype="selection">
+                            <options jcr:primaryType="cq:WidgetCollection">
+                                <same
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Same Window (Default)"
+                                        value="_self"/>
+                                <new
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New Window"
+                                        value="_blank"/>
+                                <model
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Model Window"
+                                        value="_model"/>
+
+                            </options>
+                        </ctatarget>
+
+                    </items>
+                </fieldConfig>
+            </secondaryLinks>
             <tab1
                 jcr:primaryType="cq:Widget"
                 anchor="100%"
@@ -56,10 +115,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 text="Same Window (Default)"
                                 value="_self"/>
-                            <model
-                                jcr:primaryType="nt:unstructured"
-                                text="Model Window"
-                                value="_model"/>
+
                         </options>
                     </headLineTextTarget>
                     <redbarhighlight
