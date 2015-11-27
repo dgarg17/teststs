@@ -24,6 +24,16 @@
                         <section jcr:primaryType="nt:unstructured"/>
                     </parsys>
                 </cdwcolumnlayout>
+				<cdwmultilayout jcr:primaryType="nt:unstructured">
+                    <parsys
+                        jcr:lastModified="{Date}2015-08-25T14:20:10.842-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys"
+                        components="[group:AEM - General,group:CDW - General]">
+                        <section jcr:primaryType="nt:unstructured"/>
+                    </parsys>
+                </cdwmultilayout>
             </mainpar>
         </openlayoutpage>
         <leadgenpage jcr:primaryType="nt:unstructured">
@@ -44,6 +54,16 @@
                         <section jcr:primaryType="nt:unstructured"/>
                     </parsys>
                 </cdwcolumnlayout>
+				<cdwmultilayout jcr:primaryType="nt:unstructured">
+                    <parsys
+                        jcr:lastModified="{Date}2015-08-25T14:20:10.842-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys"
+                        components="[group:AEM - General,group:CDW - General]">
+                        <section jcr:primaryType="nt:unstructured"/>
+                    </parsys>
+                </cdwmultilayout>
             </mainpar>
             <leftpar
                 jcr:lastModified="{Date}2015-08-25T14:33:54.217-07:00"
@@ -62,6 +82,26 @@
                 sling:resourceType="foundation/components/parsys"
                 components="[group:CDW - General,group:CDW - Layout]">
                 <section jcr:primaryType="nt:unstructured"/>
+				<cdwcolumnlayout jcr:primaryType="nt:unstructured">
+                    <parsys
+                        jcr:lastModified="{Date}2015-08-25T14:34:58.622-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys"
+                        components="[group:AEM - General,group:CDW - General]">
+                        <section jcr:primaryType="nt:unstructured"/>
+                    </parsys>
+                </cdwcolumnlayout>
+				<cdwmultilayout jcr:primaryType="nt:unstructured">
+                    <parsys
+                        jcr:lastModified="{Date}2015-08-25T14:20:10.842-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys"
+                        components="[group:AEM - General,group:CDW - General]">
+                        <section jcr:primaryType="nt:unstructured"/>
+                    </parsys>
+                </cdwmultilayout>
             </mainpar>
         </caaspage>
     </jcr:content>

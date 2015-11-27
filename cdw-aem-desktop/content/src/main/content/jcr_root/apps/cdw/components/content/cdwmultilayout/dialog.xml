@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Config for Column Layout"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <sections
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Sections Config"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <sections
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add New Section"
+                        autoScroll="{Boolean}true"
+                        cls="multifieldcls"
+                        name="./sections"
+                        title="Sections"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            baseCls="multifieldpanelbasecls"
+                            cls="cssmultifieldpanel"
+                            ctCls="multifieldpanelcollapsedctcls"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <sectionTitle
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldLabel="Section Title"
+                                    key="sectionTitle"
+                                    name="sectionTitle"
+                                    width="80%"
+                                    xtype="textfield"/>
+                                <sectionId
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldDescription="Numbers only in this field, two-digits maximum, and value must be completely unique per page."
+                                    fieldLabel="Section Id"
+                                    key="sectionId"
+                                    maxLength="{Long}2"
+                                    name="sectionId"
+                                    width="80%"
+                                    xtype="numberfield"/>
+                                <innerLayout
+                                    jcr:primaryType="cq:Widget"
+                                    cls="cssselectfield"
+                                    fieldLabel="Column Layout"
+                                    key="layout"
+                                    name="layout"
+                                    type="select"
+                                    width="80%"
+                                    xtype="selection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <layout-12
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Full Width Layout (Default)"
+                                            value="layout-12"/>
+                                        <layout-3-6-3
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Layout 3-6-3"
+                                            value="layout-3|layout-6|layout-3"/>
+                                        <layout-6-3-3
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Layout 6-3-3"
+                                            value="layout-6|layout-3|layout-3"/>
+                                        <layout-3-3-3-3
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Layout 3-3-3-3"
+                                            value="layout-3|layout-3|layout-3|layout-3"/>
+                                        <layout-4-4-4
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Layout 4-4-4"
+                                            value="layout-4|layout-4|layout-4"/>
+                                        <layout-4-4-2-2
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Layout 4-4-2-2"
+                                            value="layout-4|layout-4|layout-2|layout-2"/>
+                                        <layout-6-6
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Layout 6-6"
+                                            value="layout-6|layout-6"/>
+                                        <layout-7-5
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Layout 7-5"
+                                            value="layout-7|layout-5"/>
+                                        <layout-5-7
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Layout 5-7"
+                                            value="layout-5|layout-7"/>
+                                        <layout-9-3
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Layout 9-3"
+                                            value="layout-9|layout-3"/>
+                                        <layout-3-9
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Layout 3-9"
+                                            value="layout-3|layout-9"/>
+                                        <layout-8-4
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Layout 8-4"
+                                            value="layout-8|layout-4"/>
+                                        <layout-4-8
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Layout 4-8"
+                                            value="layout-4|layout-8"/>
+                                    </options>
+                                </innerLayout>
+                            </items>
+                        </fieldConfig>
+                    </sections>
+                </items>
+            </sections>
+            <global
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Global Config"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <layoutType
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="./layouts/tabs.html"
+                        fieldLabel="Layout Type"
+                        name="./layoutType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <tabs
+                                jcr:primaryType="nt:unstructured"
+                                text="Tabs (Default)"
+                                value="./layouts/tabs.html"/>
+                            <accordion
+                                jcr:primaryType="nt:unstructured"
+                                text="Accordion"
+                                value="./layouts/accordion.html"/>
+                        </options>
+                    </layoutType>
+                    <layoutStyle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="normal"
+                        fieldLabel="Layout Style"
+                        name="./layoutStyle"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <normal
+                                jcr:primaryType="nt:unstructured"
+                                text="Normal (Default)"
+                                value="normal"/>
+                            <extended
+                                jcr:primaryType="nt:unstructured"
+                                text="Extended"
+                                value="-extended"/>
+                        </options>
+                    </layoutStyle>
+                    <tabStyle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="-noBorder-lite"
+                        fieldDescription="This style definition will only apply when the Tab layout type is selected."
+                        fieldLabel="Tab Style"
+                        name="./tabStyle"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <noBorder-Lite
+                                jcr:primaryType="nt:unstructured"
+                                text="No Border - Light (Default)"
+                                value="-noBorder-lite"/>
+                            <noBorder-Dark
+                                jcr:primaryType="nt:unstructured"
+                                text="No Border - Dark"
+                                value="-noBorder-dark"/>
+                            <Border-Lite
+                                jcr:primaryType="nt:unstructured"
+                                text="Border - Light"
+                                value="-border-lite"/>
+                            <Border-Dark
+                                jcr:primaryType="nt:unstructured"
+                                text="Border - Dark"
+                                value="-border-dark"/>
+                        </options>
+                    </tabStyle>
+                    <backgroundcolor
+                        jcr:primaryType="cq:Widget"
+                        colors="[FFFFFF,898B8E,4D4E53,CC0000]"
+                        defaultValue="FFFFFF"
+                        fieldDescription="Background color and background image will only take effect given 'Extended' layout style option."
+                        fieldLabel="Background Color"
+                        name="./backgroundColor"
+                        xtype="colorfield"/>
+                    <expandOnLoad
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This field will only take effect for the Accordion layout - by nature the tab layout always shows the first section."
+                        fieldLabel="Expand First Section On Load?"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </global>
+            <image
+                jcr:primaryType="cq:Widget"
+                allowUpload="{Boolean}false"
+                cropParameter=""
+                ddGroups="[media]"
+                disableZoom="{Boolean}true"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter=""
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter=""
+                title="Background Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>
