@@ -1,8 +1,22 @@
 $(function() {
 	
 	// jQuery UI tabs
+	var icons = {
+         header: "iconClosed",
+         activeHeader: "iconOpen"
+     };
 	$( "#tabs" ).tabs();
-	
+	$( "#accordion" ).accordion({
+		heightStyle: "content",
+		icons: icons,
+		collapsible: true,
+	});
+	$( "#accordion-close" ).accordion({
+		heightStyle: "content",
+		icons: icons,
+		collapsible: true,
+		active: false,
+	});
 	/* Partner Solution Nav */
 	$('header').find('.nav-collapsed').on('click', function() {
 		$(this).next('.nav').slideToggle(300);
