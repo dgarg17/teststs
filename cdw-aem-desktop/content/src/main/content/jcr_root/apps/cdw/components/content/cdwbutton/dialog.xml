@@ -15,7 +15,7 @@
                     autoScroll="{Boolean}true"
                     cls="multifieldcls"
                     name="./ctaLinks"
-                    title="CTA  Link Configuration"
+                    title="CTA  Linkssss Configuration"
                     xtype="multifield">
                     <fieldConfig
                         jcr:primaryType="cq:Widget"
