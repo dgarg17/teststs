@@ -6,7 +6,7 @@
     <items jcr:primaryType="cq:WidgetCollection">
         <ctaLinks
             jcr:primaryType="cq:Widget"
-            title="CTA Link Configurationsss”
+            title="CTAss Link Configurationsss”
             xtype="panel">
             <items jcr:primaryType="cq:WidgetCollection">
                 <ctaLinks
