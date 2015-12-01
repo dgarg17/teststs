@@ -6,6 +6,7 @@
     <items jcr:primaryType="cq:WidgetCollection">
         <ctaLinks
             jcr:primaryType="cq:Widgets”
+            jcr:primaryType="cq:Widget”
             title="CTAs aaLink Conffghigurationsssdd”
             xtype="panel">
             <items jcr:primaryType="cq:WidgetCollection">
